@@ -1,7 +1,10 @@
+from urllib.parse import quote
+
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 def get_main_menu():
     buttons = [
+        [InlineKeyboardButton(text="👤 حسابي", callback_data="user_profile")],
         [InlineKeyboardButton(text="✨ خدمات البوت الأخرى", callback_data="menu_services_main")],
         [InlineKeyboardButton(text="📚 تدريب دورات", callback_data="menu_training")],
         [InlineKeyboardButton(text="⭐ الاشتراك بالبوت", callback_data="start_subscribe_flow")],
@@ -10,12 +13,66 @@ def get_main_menu():
     ]
     return InlineKeyboardMarkup(inline_keyboard=buttons)
 
-# Unified paywall message + keyboard for the in-bot ticketing system.
-# Replaces all direct tg://user admin URL buttons (no client-side user IDs).
-PAYWALL_TEXT = (
-    "⚠️ هذا المحتوى مخصص للمشتركين فقط.\n"
-    "للحصول على كود التفعيل أو للاستفسار، اضغط على زر التواصل بالأسفل."
-)
+# Dynamic paywall message (CMS-driven prices) + keyboard for in-bot ticketing.
+# Replaces the former static PAYWALL_TEXT so all plans/prices stay in sync
+# with admin-edited prices. Prices are ints (no HTML escaping needed).
+
+async def get_dynamic_paywall_text() -> str:
+    """Build the paywall message listing all 3 plans with current CMS prices.
+
+    Falls back to 10/5/20 on any DB failure (never raises).
+    """
+    try:
+        from database import get_current_prices
+        prices = await get_current_prices()
+    except Exception:
+        prices = {"monthly": 10, "intensive": 5, "group": 20}
+    monthly = prices.get("monthly", 10)
+    intensive = prices.get("intensive", 5)
+    group = prices.get("group", 20)
+    try:
+        monthly = int(monthly)
+        intensive = int(intensive)
+        group = int(group)
+    except (TypeError, ValueError):
+        monthly, intensive, group = 10, 5, 20
+    return (
+        "⚠️ هذا المحتوى مخصص للمشتركين فقط.\n\n"
+        f"💵 <b>الباقة الشاملة (شهر - 30 يوم):</b> ${monthly}\n"
+        f"⚡ <b>الباقة المكثفة (5 أيام):</b> ${intensive}\n"
+        f"👥 <b>باقة المجموعات (4 مستخدمين - 30 يوم):</b> ${group}\n\n"
+        "للحصول على كود التفعيل أو للاستفسار، اضغط على زر التواصل بالأسفل."
+    )
+
+
+async def get_dynamic_subscribe_text() -> str:
+    """Build the ⭐ subscription-options message with current CMS prices.
+
+    Used by start_subscribe_flow so users always see the live plans.
+    Falls back to 10/5/20 on any DB failure (never raises).
+    """
+    try:
+        from database import get_current_prices
+        prices = await get_current_prices()
+    except Exception:
+        prices = {"monthly": 10, "intensive": 5, "group": 20}
+    monthly = prices.get("monthly", 10)
+    intensive = prices.get("intensive", 5)
+    group = prices.get("group", 20)
+    try:
+        monthly = int(monthly)
+        intensive = int(intensive)
+        group = int(group)
+    except (TypeError, ValueError):
+        monthly, intensive, group = 10, 5, 20
+    return (
+        "⭐ <b>خيارات وباقات الاشتراك بالبوت:</b>\n\n"
+        f"💵 <b>الباقة الشاملة (شهر - 30 يوم):</b> ${monthly} فقط.\n"
+        f"⚡ <b>اشتراك مراجعة مكثفة (5 أيام):</b> ${intensive} فقط.\n"
+        f"👥 <b>اشتراك مجموعات:</b> ${group} (4 مستخدمين).\n\n"
+        "📲 للحصول على كود التفعيل لأي من الباقات أعلاه، تواصل مباشرة مع الأدمن/المشرف.\n\n"
+        "👇 <b>يرجى الآن إدخال كلمة السر (كود التفعيل) الخاص بك:</b>"
+    )
 
 def get_paywall_keyboard():
     """Paywall keyboard: in-bot support contact + cancel (no external URLs)."""
@@ -35,13 +92,18 @@ def get_cancel_to_main_keyboard():
 
 def get_referral_menu(referral_link: str = None, has_free_credit: bool = False):
     buttons = []
-    
+
     if referral_link:
-        buttons.append([InlineKeyboardButton(text="🔗 مشاركة رابط الإحالة", url=referral_link)])
-        
+        # Native mobile share sheet (WhatsApp, Telegram chats, ...) via t.me/share/url.
+        # URL button (no callback_data) so Telegram opens the share picker directly.
+        share_text = quote("تعلم اللغة الألمانية وتدرب على امتحانات بسهولة! اشترك عبر الرابط الخاص بي:")
+        share_link = quote(referral_link)
+        tg_share_url = f"https://t.me/share/url?url={share_link}&text={share_text}"
+        buttons.append([InlineKeyboardButton(text="📤 مشاركة الرابط", url=tg_share_url)])
+
     if has_free_credit:
         buttons.append([InlineKeyboardButton(text="⚡ استهلاك تفعيل مجاني", callback_data="claim_free_sub")])
-        
+
     buttons.append([InlineKeyboardButton(text="🔙 القائمة الرئيسية", callback_data="main_menu")])
     return InlineKeyboardMarkup(inline_keyboard=buttons)
 
@@ -62,11 +124,23 @@ def get_admin_panel():
           InlineKeyboardButton(text="👥 كود مجموعات (4 مستخدمين)", callback_data="admin_gen_group")],
         [InlineKeyboardButton(text="🔑 إدارة الأكواد الفعالة", callback_data="admin_manage_keys")],
         [InlineKeyboardButton(text="✏️ تغيير النصوص", callback_data="admin_edit_texts")],
+        [InlineKeyboardButton(text="💰 تعديل الأسعار", callback_data="admin_prices_menu")],
         [InlineKeyboardButton(text="👥 إدارة المشرفين", callback_data="admin_manage_supervisors")],
         [InlineKeyboardButton(text="💰 التسوية المالية للمشرفين", callback_data="admin_financial_settlement")],
         [InlineKeyboardButton(text="👥 قائمة المستخدمين", callback_data="admin_users_list")],
         [InlineKeyboardButton(text="🔍 بحث عن مستخدم", callback_data="admin_search_user")],
         [InlineKeyboardButton(text="🔙 القائمة الرئيسية", callback_data="main_menu")]
+    ]
+    return InlineKeyboardMarkup(inline_keyboard=buttons)
+
+
+def get_edit_prices_menu():
+    """Admin sub-menu for editing subscription prices (CMS keys price_*)."""
+    buttons = [
+        [InlineKeyboardButton(text="💵 شهري (30 يوم)", callback_data="admin_edit_price_monthly")],
+        [InlineKeyboardButton(text="⚡ مكثف (5 أيام)", callback_data="admin_edit_price_intensive")],
+        [InlineKeyboardButton(text="👥 مجموعات (4 مستخدمين)", callback_data="admin_edit_price_group")],
+        [InlineKeyboardButton(text="🔙 لوحة الأدمن", callback_data="admin_panel_back")]
     ]
     return InlineKeyboardMarkup(inline_keyboard=buttons)
 

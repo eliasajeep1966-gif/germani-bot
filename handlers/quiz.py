@@ -13,7 +13,7 @@ from database import (
     can_access_level, mark_text_completed, is_text_completed,
     record_answer_stat, is_free_content
 )
-from keyboards import get_quiz_navigation_keyboard, get_cancel_to_main_keyboard, get_paywall_keyboard, PAYWALL_TEXT
+from keyboards import get_quiz_navigation_keyboard, get_cancel_to_main_keyboard, get_paywall_keyboard, get_dynamic_paywall_text
 
 quiz_router = Router()
 
@@ -206,7 +206,7 @@ async def handle_read_text(callback: types.CallbackQuery, state: FSMContext):
     if not is_free and not await can_access_level(user_id, "b1"):
         await state.clear()
         await state.set_state(AuthState.waiting_for_key)
-        text = PAYWALL_TEXT
+        text = await get_dynamic_paywall_text()
         kb = get_paywall_keyboard()
         await callback.message.answer(text, reply_markup=kb, parse_mode="HTML")
         return
@@ -283,7 +283,7 @@ async def handle_answers(callback: types.CallbackQuery, state: FSMContext):
 
     if not is_free and not await can_access_level(user_id, "b1"):
         # P1 Strike 2: preserve quiz FSM on paywall — do NOT wipe state, just notify and return.
-        text = PAYWALL_TEXT
+        text = await get_dynamic_paywall_text()
         kb = get_paywall_keyboard()
         await callback.message.answer(text, reply_markup=kb, parse_mode="HTML")
         return
@@ -416,7 +416,7 @@ async def handle_answers(callback: types.CallbackQuery, state: FSMContext):
 
         if not await can_access_level(user_id, "b1") and not (await is_free_content(skill, teil, file_name, question_index=next_index)):
             # P1 Strike 2: preserve quiz FSM on paywall — do NOT wipe state, just notify and return.
-            text = PAYWALL_TEXT
+            text = await get_dynamic_paywall_text()
             kb = get_paywall_keyboard()
             await callback.message.answer(text, reply_markup=kb, parse_mode="HTML")
             return
@@ -460,7 +460,7 @@ async def handle_skip_question(callback: types.CallbackQuery, state: FSMContext)
 
     if not is_free and not await can_access_level(user_id, "b1"):
         # P1 Strike 2: preserve quiz FSM on paywall — do NOT wipe state, just notify and return.
-        text = PAYWALL_TEXT
+        text = await get_dynamic_paywall_text()
         kb = get_paywall_keyboard()
         await callback.message.answer(text, reply_markup=kb, parse_mode="HTML")
         return
@@ -500,7 +500,7 @@ async def handle_skip_question(callback: types.CallbackQuery, state: FSMContext)
     else:
         if not await can_access_level(user_id, "b1") and not (await is_free_content(skill, teil, file_name, question_index=next_index)):
             # P1 Strike 2: preserve quiz FSM on paywall — do NOT wipe state, just notify and return.
-            text = PAYWALL_TEXT
+            text = await get_dynamic_paywall_text()
             kb = get_paywall_keyboard()
             await callback.message.answer(text, reply_markup=kb, parse_mode="HTML")
             return
@@ -538,7 +538,7 @@ async def handle_prev_question(callback: types.CallbackQuery, state: FSMContext)
     # Do NOT update state unless the target question is free or the user has access.
     prev_is_free = await is_free_content(skill, teil, file_name, question_index=prev_index)
     if not prev_is_free and not await can_access_level(user_id, "b1"):
-        text = PAYWALL_TEXT
+        text = await get_dynamic_paywall_text()
         kb = get_paywall_keyboard()
         await callback.message.answer(text, reply_markup=kb, parse_mode="HTML")
         return
@@ -649,7 +649,7 @@ async def handle_teil3_click(callback: types.CallbackQuery, state: FSMContext):
 
     is_free = await is_free_content(skill, teil, file_name, question_index=0)
     if not is_free and not await can_access_level(callback.from_user.id, "b1"):
-        text = PAYWALL_TEXT
+        text = await get_dynamic_paywall_text()
         kb = get_paywall_keyboard()
         await callback.message.answer(text, reply_markup=kb, parse_mode="HTML")
         return

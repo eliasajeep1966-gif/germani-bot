@@ -13,6 +13,7 @@ from cachetools import TTLCache
 import time
 
 from config import LOG_CHANNEL_ID, SUPPORT_GROUP_ID, BASE_DIR
+from datetime import datetime
 from utils import get_catalog, get_content, render_progress_bar, map_filename
 from database import (
     AuthState, QuizState, SupportState, save_user_profile, get_user_subscription,
@@ -20,11 +21,13 @@ from database import (
     is_text_completed, set_user_referrer, process_referral_reward,
     get_referral_info, claim_free_subscription, get_custom_text,
     get_user_answer_stats, get_next_uncompleted_target, can_access_level,
+    get_user_dashboard_stats,
     FALLBACK_TIPS
 )
 from keyboards import (
     get_main_menu, get_training_menu, get_services_menu,
-    get_b1_skills, get_referral_menu
+    get_b1_skills, get_referral_menu, get_dynamic_subscribe_text,
+    get_cancel_to_main_keyboard
 )
 
 common_router = Router()
@@ -317,6 +320,64 @@ async def process_support_message(message: types.Message, state: FSMContext, bot
         await state.clear()
 
 
+@common_router.callback_query(F.data == "user_profile")
+async def cb_user_profile(callback: types.CallbackQuery, state: FSMContext, bot: Bot):
+    """User Profile Dashboard (ID card): subscription, study progress, referral link/stats.
+
+    Registered before the generic handle_callbacks so the specific filter wins.
+    No premium gating here — read-only stats view for every student.
+    """
+    try:
+        await callback.answer()
+    except Exception:
+        pass
+
+    user_id = callback.from_user.id
+    await state.clear()
+    await save_user_profile(callback.from_user)
+
+    sub = await get_user_subscription(user_id)
+    referred_count, completed_count = await get_user_dashboard_stats(user_id)
+
+    # Total study texts across all skills/teils (in-memory catalog cache, non-blocking).
+    catalog = await get_catalog()
+    total_texts = sum(len(files) for skill in catalog.values() for files in skill.values())
+    percentage = (completed_count / total_texts * 100) if total_texts > 0 else 0
+    bar = render_progress_bar(percentage)
+
+    if sub["is_active"]:
+        status = "✅ نشط"
+        exp_raw = str(sub.get("expire_date") or "").strip()
+        if "غير محدود" in exp_raw or exp_raw == "∞":
+            expiry = "غير محدود ♾️"
+        else:
+            try:
+                expiry = datetime.fromisoformat(exp_raw.replace("Z", "+00:00")).strftime("%Y-%m-%d")
+            except (ValueError, TypeError):
+                expiry = html.escape(exp_raw) if exp_raw else "—"
+    else:
+        status = "❌ غير نشط"
+        expiry = "منتهي ❌"
+
+    bot_info = await bot.get_me()
+    ref_link = f"https://t.me/{bot_info.username}?start=ref_{user_id}"
+
+    # Rule 8: escape untrusted profile name before HTML render (ids/counts are ints).
+    name = html.escape(callback.from_user.full_name or "غير معروف")
+    text = (
+        f"👤 الاسم: {name}\n"
+        f"🆔 الآيدي: <code>{user_id}</code>\n"
+        f"💳 حالة الاشتراك: {status}\n"
+        f"⏳ تاريخ الانتهاء: {expiry}\n"
+        f"📊 التقدم في الدراسة: {completed_count}/{total_texts}\n"
+        f"{bar} {percentage:.1f}%\n"
+        f"🔗 رابط الإحالة الخاص بك:\n"
+        f"<code>{ref_link}</code>\n"
+        f"👥 عدد الأشخاص المدعوين: {referred_count}"
+    )
+    await safe_edit_message_text(callback, text, reply_markup=get_cancel_to_main_keyboard(), parse_mode="HTML")
+
+
 @common_router.callback_query()
 async def handle_callbacks(callback: types.CallbackQuery, state: FSMContext, bot: Bot):
     try:
@@ -373,19 +434,18 @@ async def handle_callbacks(callback: types.CallbackQuery, state: FSMContext, bot
 
     elif data == "start_subscribe_flow":
         await state.set_state(AuthState.waiting_for_key)
-        default_text = (
-            "⭐ <b>خيارات وباقات الاشتراك بالبوت:</b>\n\n"
-            "💵 <b>الاشتراك الشهري:</b> $10 فقط.\n"
-            "⚡ <b>اشتراك مراجعة مكثفة (5 أيام):</b> $5 فقط.\n"
-            "👥 <b>اشتراك مجموعات:</b> $20 (4 مستخدمين بسعر اشتراكين - $5 لكل مستخدم).\n\n"
-            "📲 للحصول على كود التفعيل لأي من الباقات أعلاه، تواصل مباشرة مع الأدمن/المشرف.\n\n"
-            "👇 <b>يرجى الآن إدخال كلمة السر (كود التفعيل) الخاص بك:</b>"
-        )
-        custom_text = await get_custom_text("subscribe_flow") or default_text
+        # Dynamic plans: CMS prices always listed clearly (never static $10/$5/$20).
+        dynamic_text = await get_dynamic_subscribe_text()
+        custom_text = await get_custom_text("subscribe_flow")
+        if custom_text and "لا يوجد نص محدد لهذه الخدمة حالياً." not in str(custom_text):
+            # Admin custom intro (if set) + live plans block so prices never go stale.
+            msg_text = f"{custom_text}\n\n{dynamic_text}"
+        else:
+            msg_text = dynamic_text
         kb = InlineKeyboardMarkup(inline_keyboard=[
             [InlineKeyboardButton(text="🔙 رجوع", callback_data="main_menu")]
         ])
-        await safe_edit_message_text(callback, custom_text, reply_markup=kb, parse_mode="HTML")
+        await safe_edit_message_text(callback, msg_text, reply_markup=kb, parse_mode="HTML")
 
     elif data in ["user_progress", "check_subscription"]:
         lesen_p = await get_skill_progress(user_id, "lesen")

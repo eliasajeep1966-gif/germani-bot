@@ -47,6 +47,11 @@ DEFAULT_CUSTOM_TEXTS = {
     "tips_hören_teil2": "💡 <b>ملاحظة ونصيحة للحل (Hören Teil 2):</b>\nهذا الجزء يحتوي على أسئلة اختيار من متعدد مع ثلاثة خيارات لكل سؤال، ويمكن إضافة الملاحظات هنا لاحقاً.",
     "tips_hören_teil3": "💡 <b>ملاحظة ونصيحة للحل (Hören Teil 3):</b>\nاستمع إلى المحادثات القصيرة ثم أجب على الأسئلة بتحديد صح (Richtig) أو خطأ (Falsch).",
     "tips_hören_teil4": "💡 <b>ملاحظة ونصيحة للحل (Hören Teil 4):</b>\nاستمع إلى الحوار أو المقابلة بعناية، ثم أجب على الأسئلة باختيار الإجابة الصحيحة من بين الخيارات الثلاثة (a, b, c).",
+    # Dynamic subscription prices (admin-editable via admin_prices_menu).
+    # Stored as plain digit strings; get_current_prices() parses them to int.
+    "price_monthly": "10",
+    "price_intensive": "5",
+    "price_group": "20",
 }
 
 # Valid Teil-tips keys (CMS allowlist — prevents arbitrary custom_texts key injection).
@@ -858,6 +863,43 @@ async def get_all_custom_texts() -> dict:
             rows = await cursor.fetchall()
             return {row[0]: row[1] for row in rows}
 
+
+# Valid subscription price types (CMS allowlist — prevents arbitrary price key injection).
+VALID_PRICE_TYPES = frozenset(["monthly", "intensive", "group"])
+
+_PRICE_DEFAULTS = {"monthly": 10, "intensive": 5, "group": 20}
+_PRICE_MISSING_MARKER = "لا يوجد نص محدد لهذه الخدمة حالياً."
+
+
+async def get_current_prices() -> dict:
+    """Fetch dynamic subscription prices (admin-editable CMS).
+
+    Reads price_monthly / price_intensive / price_group via get_custom_text.
+    Missing rows, placeholder fallbacks, non-digit or non-positive values all
+    fall back to 10 / 5 / 20 respectively. Always returns ints, never raises.
+    """
+    prices: dict = {}
+    for ptype, default in _PRICE_DEFAULTS.items():
+        raw = None
+        try:
+            raw = await get_custom_text(f"price_{ptype}")
+        except Exception:
+            logging.warning(f"get_custom_text failed for price_{ptype}")
+            raw = None
+        value = default
+        try:
+            if raw is not None and _PRICE_MISSING_MARKER not in str(raw):
+                cleaned = str(raw).strip()
+                if cleaned.isdigit():
+                    parsed = int(cleaned)
+                    if parsed > 0:
+                        value = parsed
+        except Exception:
+            logging.exception(f"get_current_prices parse failed for {ptype}")
+            value = default
+        prices[ptype] = value
+    return prices
+
 async def get_user_full_details(query_input) -> dict | None:
     """
     البحث عن مستخدم باستخدام ID (كعدد صحيح) أو Username (كنص) بشكل مستقل
@@ -924,6 +966,27 @@ async def get_users_count() -> int:
         async with conn.execute('SELECT COUNT(*) FROM users') as cursor:
             row = await cursor.fetchone()
             return row[0] if row else 0
+
+async def get_user_dashboard_stats(user_id: int) -> tuple[int, int]:
+    """User Profile Dashboard stats in a single query (no N+1).
+
+    Returns (referred_count, completed_count): successful referrals made by
+    the user and study texts marked completed. Never raises — (0, 0) fallback.
+    """
+    try:
+        async with _db_connect() as conn:
+            async with conn.execute(
+                'SELECT (SELECT COUNT(*) FROM referrals WHERE referrer_id = ?), '
+                '(SELECT COUNT(*) FROM completed_texts WHERE user_id = ?)',
+                (user_id, user_id),
+            ) as cursor:
+                row = await cursor.fetchone()
+                if not row:
+                    return (0, 0)
+                return (int(row[0] or 0), int(row[1] or 0))
+    except Exception:
+        logging.exception("get_user_dashboard_stats failed")
+        return (0, 0)
 
 async def get_users_page(limit: int, offset: int) -> list[tuple]:
     """Fetch a page of users with profile info using JOIN.

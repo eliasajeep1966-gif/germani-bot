@@ -14,23 +14,24 @@ from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from cachetools import TTLCache
 
 import re
-from config import ADMIN_IDS, DB_NAME, SUPPORT_GROUP_ID, SUBSCRIPTION_PRICES
+from config import ADMIN_IDS, DB_NAME, SUPPORT_GROUP_ID
 
 # CVE-2026-008: Rate limiting for key generation (max 10 per 60 seconds per user)
 genkey_ratelimit = TTLCache(maxsize=100, ttl=60)
 from database import (
     generate_new_key, revoke_user, revoke_key, revoke_key_by_rowid,
     get_user_subscription,
-    BroadcastState, set_custom_text, get_custom_text,
+    BroadcastState, set_custom_text, get_custom_text, get_current_prices,
     get_user_full_details, get_users_page, get_users_count,
     get_active_keys, get_active_keys_count,
-    VALID_TIPS_KEYS,
+    VALID_TIPS_KEYS, VALID_PRICE_TYPES,
     _db_connect
 )
 from keyboards import (
     get_admin_panel, get_supervisor_panel,
     get_supervisors_management_menu, get_financial_settlement_menu,
-    get_edit_texts_menu, get_edit_tips_menu, get_keys_pagination_keyboard
+    get_edit_texts_menu, get_edit_tips_menu, get_edit_prices_menu,
+    get_keys_pagination_keyboard
 )
 
 admin_router = Router()
@@ -50,6 +51,7 @@ class AdminSupervisorState(StatesGroup):
 
 class AdminEditState(StatesGroup):
     waiting_for_text = State()
+    waiting_for_price = State()
 
 async def is_supervisor(user_id: int) -> bool:
     """معرفة ما إذا كان المستخدم مشرفاً نشطاً — P2 async/aio."""
@@ -379,6 +381,101 @@ async def process_admin_save_text(message: types.Message, state: FSMContext):
     else:
         await message.answer("⚠️ حدث خطأ أثناء حفظ النص، يرجى المحاولة مجدداً.")
 
+# --- إدارة أسعار الاشتراكات (Dynamic Prices CMS) ---
+
+_PRICE_TYPE_NAMES = {
+    "monthly": "💵 شهري (30 يوم)",
+    "intensive": "⚡ مكثف (5 أيام)",
+    "group": "👥 مجموعات (4 مستخدمين)",
+}
+
+
+@admin_router.callback_query(F.data == "admin_prices_menu")
+async def cb_admin_prices_menu(callback: types.CallbackQuery):
+    """Show current CMS prices + edit menu (main admin only)."""
+    if callback.from_user.id not in ADMIN_IDS:
+        await callback.answer("⚠️ مقتصر على الأدمن الرئيسي.", show_alert=True)
+        return
+
+    prices = await get_current_prices()
+    await safe_edit_message_text(
+        callback,
+        "💰 <b>أسعار الاشتراكات الحالية:</b>\n"
+        f"💵 شهري (30 يوم): <b>${prices.get('monthly', 10)}</b>\n"
+        f"⚡ مكثف (5 أيام): <b>${prices.get('intensive', 5)}</b>\n"
+        f"👥 مجموعات (4 مستخدمين): <b>${prices.get('group', 20)}</b>\n\n"
+        "اختر السعر الذي تريد تعديله:",
+        reply_markup=get_edit_prices_menu(),
+        parse_mode="HTML",
+    )
+    await callback.answer()
+
+
+@admin_router.callback_query(F.data.startswith("admin_edit_price_"))
+async def cb_admin_start_edit_price(callback: types.CallbackQuery, state: FSMContext):
+    if callback.from_user.id not in ADMIN_IDS:
+        await callback.answer("⚠️ مقتصر على الأدمن الرئيسي.", show_alert=True)
+        return
+
+    # Treat callback_data as UNTRUSTED (Rule 2): strict allowlist.
+    price_type = (callback.data.replace("admin_edit_price_", "") or "").strip().lower()
+    if price_type not in VALID_PRICE_TYPES:
+        await callback.answer("⚠️ نوع سعر غير معروف.", show_alert=True)
+        return
+
+    await state.set_state(AdminEditState.waiting_for_price)
+    await state.update_data(price_type=price_type)
+
+    prices = await get_current_prices()
+    current = prices.get(price_type)
+    type_name = _PRICE_TYPE_NAMES.get(price_type, price_type)
+    await safe_edit_message_text(
+        callback,
+        f"💰 <b>تعديل سعر {html.escape(str(type_name))}:</b>\n"
+        f"السعر الحالي: <b>${current}</b>\n\n"
+        "✏️ <b>يرجى إرسال السعر الجديد كرقم صحيح فقط (مثال: 10).</b>\n"
+        "(أو /cancel للإلغاء)",
+        parse_mode="HTML",
+    )
+    await callback.answer()
+
+
+@admin_router.message(AdminEditState.waiting_for_price)
+async def process_admin_save_price(message: types.Message, state: FSMContext):
+    if message.from_user.id not in ADMIN_IDS:
+        return
+
+    text = message.text.strip() if message.text else ""
+    if text.startswith("/"):
+        await state.clear()
+        if text.startswith("/cancel"):
+            await message.answer("❌ تم إلغاء عملية تعديل السعر.")
+        else:
+            # F-04: escape echoed admin input before HTML render.
+            await message.answer(f"⚠️ تم إلغاء تعديل السعر. أعد إرسال الأمر <code>{html.escape(text)}</code> لتنفيذه.", parse_mode="HTML")
+        return
+
+    data = await state.get_data()
+    price_type = (data.get("price_type") or "").strip().lower()
+    if price_type not in VALID_PRICE_TYPES:
+        await state.clear()
+        await message.answer("⚠️ حدث خطأ أثناء حفظ السعر (نوع غير معروف)، يرجى المحاولة مجدداً.")
+        return
+
+    if not text.isdigit():
+        await message.answer("⚠️ يرجى إدخال السعر كرقم صحيح فقط (مثال: 10).")
+        return
+
+    value = int(text)
+    if value <= 0 or value > 10000:
+        await message.answer("⚠️ السعر يجب أن يكون بين 1 و 10000.")
+        return
+
+    await set_custom_text(f"price_{price_type}", str(value))
+    await state.clear()
+    type_name = _PRICE_TYPE_NAMES.get(price_type, price_type)
+    await message.answer(f"✅ تم تحديث سعر {html.escape(str(type_name))} إلى <b>${value}</b> بنجاح!", parse_mode="HTML")
+
 # --- إمكانية إنشاء مفاتيح للأدمن ---
 
 @admin_router.message(Command("genkey"))
@@ -439,22 +536,23 @@ async def cb_sup_gen_key(callback: types.CallbackQuery):
 
     action = callback.data.replace("sup_gen_", "")
     max_uses = 1
+    prices = await get_current_prices()
     if action == "monthly_b1":
         sub_type = "b1"
-        price = SUBSCRIPTION_PRICES.get('monthly', 10)
+        price = prices.get('monthly', 10)
     elif action == "monthly_b2":
         await callback.answer("⚠️ مستوى B2 غير متاح حالياً.", show_alert=True)
         return
     elif action == "intensive":
         sub_type = "intensive"
-        price = SUBSCRIPTION_PRICES.get('intensive', 5)
+        price = prices.get('intensive', 5)
     elif action == "group":
         sub_type = "group"
-        price = SUBSCRIPTION_PRICES.get('group', 20)
+        price = prices.get('group', 20)
         max_uses = 4
     else:
         sub_type = "b1"
-        price = 10
+        price = prices.get('monthly', 10)
 
     new_key = await generate_new_key(sub_type, created_by=user_id, max_uses=max_uses)
     uses_text = f"\n• عدد المستخدمين المسموح: <b>{max_uses}</b>" if max_uses > 1 else ""
@@ -532,13 +630,14 @@ async def cb_sup_finance(callback: types.CallbackQuery):
     unsettled_amount = 0
     settled_amount = 0
 
+    prices = await get_current_prices()
     for sub_type, is_settled, sold in rows:
         if sub_type == 'intensive':
-            price = SUBSCRIPTION_PRICES.get('intensive', 5)
+            price = prices.get('intensive', 5)
         elif sub_type == 'group':
-            price = SUBSCRIPTION_PRICES.get('group', 20)
+            price = prices.get('group', 20)
         else:
-            price = SUBSCRIPTION_PRICES.get('monthly', 10)
+            price = prices.get('monthly', 10)
 
         total = price * (sold or 0)
         if is_settled == 1:
@@ -691,6 +790,7 @@ async def cb_financial_settlement(callback: types.CallbackQuery):
             rows = await cursor.fetchall()
 
     grouped = {}
+    prices = await get_current_prices()
     for sup_id, sup_name, profile_name, sub_type, sold in rows:
         if sup_id not in grouped:
             display_name = sup_name or profile_name or f"ID: {sup_id}"
@@ -700,11 +800,11 @@ async def cb_financial_settlement(callback: types.CallbackQuery):
             continue
         grouped[sup_id]["count"] += sold
         if sub_type == 'intensive':
-            price = SUBSCRIPTION_PRICES.get('intensive', 5)
+            price = prices.get('intensive', 5)
         elif sub_type == 'group':
-            price = SUBSCRIPTION_PRICES.get('group', 20)
+            price = prices.get('group', 20)
         else:
-            price = SUBSCRIPTION_PRICES.get('monthly', 10)
+            price = prices.get('monthly', 10)
         grouped[sup_id]["total"] += price * sold
 
     settlements = [(s_id, v["display_name"], v["count"], v["total"]) for s_id, v in grouped.items()]

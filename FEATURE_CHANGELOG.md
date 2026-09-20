@@ -1,5 +1,43 @@
 # FEATURE CHANGELOG
 
+## 2026-09-20 — Referral Native Share Sheet (t.me/share/url)
+- **Files Modified:**
+  - `keyboards.py` — imported `urllib.parse.quote`; `get_referral_menu()` share button now `📤 مشاركة الرابط` with `url=https://t.me/share/url?url={quoted_ref}&text={quoted_text}` (no `callback_data`); free-credit claim + main-menu buttons untouched
+- **Feature Description:**
+  - Tapping share opens Telegram's native share picker (WhatsApp, chats, etc.) prefilled with the Arabic promo text + personal referral link, instead of a plain link button.
+- **Technical Details:**
+  - Both `url` and `text` params percent-encoded via `quote` (stdlib, no new deps); share URL verified to carry the encoded `ref_` link and promo text; `None`-link / no-credit variants still render 2 / 1 rows correctly.
+  - Verification: `py_compile` OK; mocked-menu assertions (button text, `callback_data is None`, share-URL prefix + encoded payload, intact `claim_free_sub`/`main_menu` rows) pass.
+
+## 2026-09-20 — User Profile Dashboard (ID Card)
+- **Files Modified:**
+  - `database.py` — added `get_user_dashboard_stats(user_id) -> tuple[int, int]` (single query, two scalar subqueries on `referrals`/`completed_texts` via `_db_connect()`; `(0, 0)` fallback, never raises)
+  - `keyboards.py` — `get_main_menu()` new prominent first-row `👤 حسابي` (`user_profile`) button
+  - `handlers/common.py` — added `cb_user_profile` (`F.data == "user_profile"`, registered before generic `handle_callbacks`); imports `get_user_dashboard_stats`, `get_cancel_to_main_keyboard`, `datetime` (`render_progress_bar`/`get_catalog` were already imported)
+- **Feature Description:**
+  - Students tap `👤 حسابي` for an ID-card view: escaped name, ID, subscription status, formatted expiry (`YYYY-MM-DD`, `غير محدود ♾️` for staff, `منتهي ❌` when inactive), study progress `{completed}/{total}` + bar + 1-decimal %, referral link (`?start=ref_{id}`) and invited count; back button to main menu.
+- **Technical Details:**
+  - No N+1: one dashboard query (counts) + cached `get_catalog()` total (106 texts) + existing `get_user_subscription`; no premium gating (read-only stats, consistent with `menu_referral` precedent).
+  - Rule 8: `html.escape()` on `full_name`; ids/counts/percentages are ints/floats, referral link is bot-generated (no user input in HTML).
+  - `safe_edit_message_text` (common.py's local helper) used for the edit — `safe_edit_message_text_or_send` lives in `quiz.py` and is not cross-imported (layering).
+  - Verification: `py_compile` OK; live-DB stats `(0, 18)` + unknown-user `(0, 0)`; mocked handler confirms escaping (`&lt;b&gt;`), admin-unlimited expiry, inactive (`غير نشط`/`منتهي ❌`) and zero-progress paths, `parse_mode="HTML"` + `main_menu` back button; mock-created `user_profiles` rows removed afterward (pre-existing legacy `users` test row left untouched).
+
+## 2026-09-20 — Dynamic Subscription Prices (Admin CMS) & Dynamic Paywall UX
+- **Files Modified:**
+  - `database.py` — added `price_monthly/price_intensive/price_group` defaults ("10"/"5"/"20") to `DEFAULT_CUSTOM_TEXTS` (seeded via `init_db`); added `VALID_PRICE_TYPES` allowlist + `get_current_prices() -> dict` (missing/placeholder/non-digit/non-positive fall back to 10/5/20, always ints, never raises)
+  - `keyboards.py` — removed static `PAYWALL_TEXT`; added `get_dynamic_paywall_text()` + `get_dynamic_subscribe_text()` (CMS prices, 10/5/20 fallback); `get_admin_panel()` new `💰 تعديل الأسعار` (`admin_prices_menu`) button; added `get_edit_prices_menu()` (monthly/intensive/group + back)
+  - `handlers/admin.py` — `AdminEditState` new `waiting_for_price` state (lives here, not `database.py`); removed `SUBSCRIPTION_PRICES` import (zero static uses left); added `cb_admin_prices_menu`, `cb_admin_start_edit_price` (allowlist-validated), `process_admin_save_price` (`isdigit` + 1–10000 range, retry-preserving, `/cancel` aware, persists via `set_custom_text(price_*)`); `cb_sup_gen_key`, `cb_sup_finance`, `cb_financial_settlement` now use `await get_current_prices()`
+  - `handlers/common.py` — `start_subscribe_flow` uses `get_dynamic_subscribe_text()` (live plans) + appends admin `subscribe_flow` custom intro when set (never stale prices in default path)
+  - `handlers/quiz.py` — all 7 paywall triggers now `await get_dynamic_paywall_text()` (import updated, no static string left)
+- **Feature Description:**
+  - Admins edit prices from panel → Prices menu → per-plan prompt; users always see live prices in subscribe flow and every paywall block (monthly 30d / intensive 5d / group 4-users line items with $ values).
+  - Finance/settlement math (supervisor + admin views) and supervisor key-gen display price follow the same CMS source.
+- **Technical Details:**
+  - AuthZ (Rule 2): price UI stays in `admin.py`+`keyboards.py` behind `AdminAuthMiddleware` + explicit `ADMIN_IDS` main-admin checks; `callback.data` + FSM `price_type` allowlist-validated (`VALID_PRICE_TYPES`); price input strictly `isdigit` + range-guarded.
+  - SQL: parameterized `set_custom_text`/`get_custom_text` only; seeding via existing `INSERT OR IGNORE` loop (no fake migrations); `config.SUBSCRIPTION_PRICES` left untouched as env-level source (DB overrides at runtime).
+  - HTML/limits (Rules 8/16): prices are ints (no escaping needed); texts stay well under 4096.
+  - Verification: `py_compile` OK; `get_current_prices` defaults/override/invalid-fallback OK; dynamic paywall/subscribe render OK; live price override reflected in paywall OK; `AdminEditState.waiting_for_price` + 3 price callbacks + panel button present; `SUBSCRIPTION_PRICES` count 0 in `admin.py`, `PAYWALL_TEXT` constant removed.
+
 ## 2026-09-20 — Bot Commands Menu (Role-Based Scopes)
 - **Files Modified:**
   - `main.py` — imported `BotCommand`, `BotCommandScopeDefault`, `BotCommandScopeChat` (+ `ADMIN_IDS`); added `setup_bot_commands(bot)`; called it in `main()` before `dp.start_polling(bot)`
