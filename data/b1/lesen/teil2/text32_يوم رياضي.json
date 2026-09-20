@@ -1,0 +1,33 @@
+{
+  "title": "Sporttag in der Stadt (يوم رياضي في المدينة - يوم خالي من السيارات - تجربة جديدة)",
+  "summary": "يتحدث النص عن مسير رياضي يتم تنظيمه كل سنة، ولكن في هذه السنة هناك شيء جديد.",
+  "questions": [
+    {
+      "question": "Worum geht es im Text?",
+      "options": {
+        "a": "ein Ereignis, das jährlich stattfindet.",
+        "b": "Die Teilnehmer können jederzeit beginnen und aufhören.",
+        "c": "Die Stadt soll bekannter und berühmter werden."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Was ist die neue Änderung?",
+      "options": {
+        "a": "ein Ereignis, das jährlich stattfindet.",
+        "b": "Die Teilnehmer können jederzeit beginnen und aufhören.",
+        "c": "Die Stadt soll bekannter und berühmter werden."
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Was ist das Ziel dieser Aktion?",
+      "options": {
+        "a": "ein Ereignis, das jährlich stattfindet.",
+        "b": "Die Teilnehmer können jederzeit beginnen und aufhören.",
+        "c": "Die Stadt soll bekannter und berühmter werden."
+      },
+      "answer": "C"
+    }
+  ]
+}

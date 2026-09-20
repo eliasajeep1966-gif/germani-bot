@@ -1,0 +1,30 @@
+{
+  "title": "Altersbeschränkung für Filme",
+  "fixed_question": "Sind die folgenden Personen für eine Altersbeschränkung bei Filmen?",
+  "questions": [
+    {
+      "text": "Ich finde, dass eine Altersbeschränkung für Filme richtig ist.",
+      "answer": "J"
+    },
+    {
+      "text": "Gewaltfilme sind gefährlich und jetzt weiß ich, warum Kinder in der Schule gewalttätig sind.",
+      "answer": "J"
+    },
+    {
+      "text": "Mein Sohn hat einen Horrorfilm gesehen, hatte große Angst und konnte nicht schlafen.",
+      "answer": "J"
+    },
+    {
+      "text": "Gewalt ist natürlich etwas Schlechtes, aber ich sehe viele Horrorfilme und bin keine gewalttätige Person. Das Anschauen verursacht nicht immer Gewalt.",
+      "answer": "N"
+    },
+    {
+      "text": "Mein Sohn wird von Filmen nicht beeinflusst, aber meine Tochter sehr. Deshalb sollten die Eltern das selbst entscheiden.",
+      "answer": "N"
+    },
+    {
+      "text": "Wir verbieten Kindern das Rauchen und den Alkohol und wir verbieten ihnen auch viele andere Dinge. Was sollen sie denn überhaupt noch machen?",
+      "answer": "N"
+    }
+  ]
+}

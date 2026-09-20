@@ -1,0 +1,33 @@
+{
+  "title": "Winter erholung",
+  "summary": "نص يتكلم عن ان هناك منتجع للاسترخاء فيه خدمات كثيره.",
+  "questions": [
+    {
+      "question": "Die wintererholung:",
+      "options": {
+        "a": "gibt einen eigenen Park.",
+        "b": "1500 euro.",
+        "c": "auf dem Parkplatz der U-Bahn geparkt werden."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Eintrittskarte kostet:",
+      "options": {
+        "a": "auf dem Parkplatz der U-Bahn geparkt werden.",
+        "b": "1500 euro.",
+        "c": "gibt einen eigenen Park."
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Das Auto muss:",
+      "options": {
+        "a": "1500 euro.",
+        "b": "gibt einen eigenen Park.",
+        "c": "auf dem Parkplatz der U-Bahn geparkt werden."
+      },
+      "answer": "C"
+    }
+  ]
+}

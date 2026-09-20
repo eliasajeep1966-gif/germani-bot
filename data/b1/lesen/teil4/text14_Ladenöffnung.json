@@ -1,0 +1,38 @@
+{
+  "title": "Ladenöffnung an Sonn- und Feiertagen",
+  "fixed_question": "Sind die Personen für oder gegen die Ladenöffnung am Sonntag?",
+  "questions": [
+    {
+      "text": "Ich kaufe meine Sachen immer am Samstag ein. Wenn ich manchmal etwas vergesse, gibt es ein Problem, weil der Sonntag ein Feiertag ist. Deshalb wäre es schön, wenn dieses Problem gelöst würde.",
+      "answer": "Ja"
+    },
+    {
+      "text": "Ich arbeite als Kassierer im Supermarkt. Für mich macht es keinen Unterschied, welcher Tag in der Woche frei ist. Hauptsache ist, dass ich einen freien Tag bekomme – egal ob es der Sonntag oder ein anderer Tag ist.",
+      "answer": "Ja"
+    },
+    {
+      "text": "Ich mag die Straßen am Feiertag. Ich finde es schöner und unterhaltsamer, wenn die Geschäfte zum Einkaufen geöffnet sind, anstatt dass es so ruhig ist.",
+      "answer": "Ja"
+    },
+    {
+      "text": "Ich wohne in der Stadt. Am Sonntag ist es schon sehr voll. Wie wird die Situation erst sein, wenn auch noch die Geschäfte öffnen? Ich glaube, dann ziehe ich aus der Stadt weg.",
+      "answer": "Nein"
+    },
+    {
+      "text": "Es ist zwar gut, wenn die Geschäfte am Sonntag geöffnet haben, aber ich halte dieses Thema für unwichtig. Es gibt wichtigere Dinge, über die man sprechen sollte.",
+      "answer": "Nein"
+    },
+    {
+      "text": "Ich arbeite im Ausland. Dort schließen die Geschäfte nie, und das ist toll. Aber im Inland ist die Situation anders. خلافي",
+      "answer": "Nein"
+    },
+    {
+      "text": "Ich kaufe meine Sachen gerne morgens ein. Ich bin zwar für die Öffnung der Geschäfte, aber ich weiß auch, wie wichtig der freie Tag für die Menschen ist.",
+      "answer": "Nein"
+    },
+    {
+      "text": "Für uns Ökonomen und Händler zählt nur das Geld. Die Öffnung der Geschäfte am Sonntag bedeutet jedoch höhere Lohnkosten für die Mitarbeiter.",
+      "answer": "Nein"
+    }
+  ]
+}

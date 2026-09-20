@@ -1,0 +1,55 @@
+{
+  "summary": "هنا يمكنك كتابة ملخص النص الخاص ببرج الإذاعة والتلفاز لكي يظهره البوت للمستخدم.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Der Fernsehturm wird von mehr als",
+      "options": {
+        "a": "50000 Besucher pro Jahr",
+        "b": "einer Million Touristen besucht",
+        "c": "einer Million Berliner Bürger"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 2,
+      "question": "Was kann man dort essen?",
+      "options": {
+        "a": "Internationales Fast Food",
+        "b": "Regionale Gerichte",
+        "c": "Traditionelle Hausmannskost"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 3,
+      "question": "Was ist verboten?",
+      "options": {
+        "a": "Große Taschen mitzunehmen",
+        "b": "Getränke dabei zu haben",
+        "c": "Fotos mit Blitz zu machen"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 4,
+      "question": "Wann sollte man die Stadt besuchen?",
+      "options": {
+        "a": "Hauptsächlich in den Sommermonaten",
+        "b": "Unterschiedlich nach Jahreszeit",
+        "c": "Vor allem während der Feiertage"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 5,
+      "question": "Welchen Rat gab der Reiseleiter?",
+      "options": {
+        "a": "Das historische Zentrum zu besichtigen",
+        "b": "öffentliche Verkehersmittel zu benutzen",
+        "c": "Zum Alexanderplatz gehen"
+      },
+      "correct_answer": "b"
+    }
+  ]
+}

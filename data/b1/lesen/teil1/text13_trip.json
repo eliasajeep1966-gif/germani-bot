@@ -1,0 +1,30 @@
+{
+  "title": "رحلة غير موفقة لزوجين",
+  "summary": "زوجان خرجا من البيت في رحلة، لكن الطريق كان مسدوداً وعازو يعبو بانزبن.",
+  "questions": [
+    {
+      "question": "Das Paar wollte unterwegs frühstücken",
+      "answer": "R"
+    },
+    {
+      "question": "Sie mussten das Auto mit Benzin auffüllen",
+      "answer": "R"
+    },
+    {
+      "question": "Sie hatten die Reise verpasst",
+      "answer": "R"
+    },
+    {
+      "question": "Es gab ein technisches Problem mit der Bankkarte",
+      "answer": "F"
+    },
+    {
+      "question": "Während des Mittagessens entstand ein Streit zwischen ihnen",
+      "answer": "F"
+    },
+    {
+      "question": "Die Frau entschuldigte sich bei ihrem Mann",
+      "answer": "F"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "title": "Deutsche Familie (عائلة ألمانية)",
+  "summary": "سفر العائلات معاً واستغلال السفر للالتقاء رغم الانشغال (خلافي).",
+  "questions": [
+    {
+      "question": "In dem Text geht es um:",
+      "options": {
+        "a": "Erneuerung von Reiseideen und Buchungen.",
+        "b": "wird alle Familienmitglieder zusammenbringen.",
+        "c": "Es sollte spezielle Unterkünfte für Familien geben, die gemeinsam reisen möchten."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Die Frau sagt:",
+      "options": {
+        "a": "Es sollte spezielle Unterkünfte für Familien geben, die gemeinsam reisen möchten.",
+        "b": "Erneuerung von Reiseideen und Buchungen.",
+        "c": "wird alle Familienmitglieder zusammenbringen."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Das Treffen:",
+      "options": {
+        "a": "wird alle Familienmitglieder zusammenbringen.",
+        "b": "Erneuerung von Reiseideen und Buchungen.",
+        "c": "Es sollte spezielle Unterkünfte für Familien geben, die gemeinsam reisen möchten."
+      },
+      "answer": "A"
+    }
+  ]
+}

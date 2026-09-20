@@ -1,0 +1,45 @@
+{
+  "summary": "هنا يمكنك كتابة ملخص النص الخاص بحديقة في شمال سويسرا لكي يظهره البوت للمستخدم.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Wer mochte teilnehmen?",
+      "options": {
+        "a": "Einige Jugendliche",
+        "b": "Fast alle Familien",
+        "c": "Alle Kinder"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "id": 2,
+      "question": "Wohin geht die Reise?",
+      "options": {
+        "a": "In einem Bistro mit Aussicht",
+        "b": "In einem Panorama-cafe",
+        "c": "In einem Parkrestaurant"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 3,
+      "question": "Wann ist der Ausflug?",
+      "options": {
+        "a": "Am Abend",
+        "b": "Am späten Nachmittag",
+        "c": "Am frühen Morgen"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 4,
+      "question": "Wie viele Tagen?",
+      "options": {
+        "a": "Ein ganzes Wochenende",
+        "b": "Fast zwei Tage",
+        "c": "Drei Tage"
+      },
+      "correct_answer": "c"
+    }
+  ]
+}

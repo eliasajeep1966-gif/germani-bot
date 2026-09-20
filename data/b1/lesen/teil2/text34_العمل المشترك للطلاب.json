@@ -1,0 +1,33 @@
+{
+  "title": "Gemeinsame Arbeit der Studenten (العمل المشترك للطلاب - تجربة جديدة)",
+  "summary": "قام الأساتذة بفكرة جديدة لكي يأتي الطلاب مبكراً إلى المحاضرات ويستطيعون تنظيم وقتهم بشكل أفضل.",
+  "questions": [
+    {
+      "question": "Worum geht es im Text?",
+      "options": {
+        "a": "die Gruppenarbeit von Studenten.",
+        "b": "Ergebnisse zu den Vorlesungen präsentieren.",
+        "c": "einen positiven Einfluss auf die Studenten."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Was müssen die Gruppen machen?",
+      "options": {
+        "a": "die Gruppenarbeit von Studenten.",
+        "b": "Die Gruppen sollen Ergebnisse zu den Vorlesungen präsentieren.",
+        "c": "einen positiven Einfluss auf die Studenten."
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Was sagt der Lehrer über diese Idee?",
+      "options": {
+        "a": "die Gruppenarbeit von Studenten.",
+        "b": "Ergebnisse zu den Vorlesungen präsentieren.",
+        "c": "dass diese Idee einen positiven Einfluss auf die Studenten hat."
+      },
+      "answer": "C"
+    }
+  ]
+}

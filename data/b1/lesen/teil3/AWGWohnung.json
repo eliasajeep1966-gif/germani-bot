@@ -1,0 +1,40 @@
+{
+  "title": "Lesen Teil 3 - WGWohnung",
+  "pairs": [
+    {
+      "question": "Ein Mann namens Max sucht ein Einzelzimmer neben der Universität.",
+      "answer": "keine",
+      "keywords": "Einzelzimmer - Universität"
+    },
+    {
+      "question": "Ein Mann sucht eine günstige Unterkunft und hilft gerne anderen Menschen.",
+      "answer": "Eine ältere Frau braucht jemanden, der ihr bei kleinen Arbeiten hilft, im Gegenzug für eine günstige Unterkunft.",
+      "keywords": "günstige Unterkunft - kleinen Arbeiten hilft - Einkaufszentrum"
+    },
+    {
+      "question": "Er und seine Freunde sind eine Musikband.",
+      "answer": "keine Nachbarn",
+      "keywords": "keine Nachbarn - laut spielen - stören - Keller"
+    },
+    {
+      "question": "Ein Mann sucht eine Wohngemeinschaft in der Nähe der Stadt und interessiert sich für die Umwelt.",
+      "answer": "Müll trennen - sauber",
+      "keywords": "Müll trennen - sauber"
+    },
+    {
+      "question": "Ein Mann und sein Freund suchen eine günstige Unterkunft in der Nähe der Universität.",
+      "answer": "Studentenwohnheim / Doppelzimmer",
+      "keywords": "Studentenwohnheim - Doppelzimmer - verfügba - Einzelzimmer ist schon weg"
+    },
+    {
+      "question": "Eine Frau sucht eine Wohnung für sich allein im Stadtzentrum. Sie möchte keine Wohngemeinschaft.",
+      "answer": "Einzelzimmer - Innenstadt - im Herz der Stadt",
+      "keywords": "Einzelzimmer - Innenstadt - im Herz der Stadt"
+    },
+    {
+      "question": "Eine Frau namens Hanna sucht ein Zimmer in einer WG.",
+      "answer": "Mitbewohnerin gesucht - nur für Frauen",
+      "keywords": "Mitbewohnerin gesucht - nur für Frauen"
+    }
+  ]
+}

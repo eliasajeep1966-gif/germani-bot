@@ -1,0 +1,321 @@
+{
+  "group_id": 2,
+  "title": "Menge 2 (31-60)",
+  "questions": [
+    {
+      "id": 1,
+      "type": "true_false",
+      "text": "Neue Fahrradgeschäfte",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 2,
+      "type": "multiple_choice",
+      "text": "Was ist notwendig?",
+      "options": [
+        "Sicherheitsschulung / Sicherheitstraining",
+        "Fahrradversicherung",
+        "Ticket buchen"
+      ],
+      "answer": "Sicherheitsschulung / Sicherheitstraining"
+    },
+    {
+      "id": 3,
+      "type": "true_false",
+      "text": "Ein Schulbeamter möchte mit dem Schüler sprechen",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 4,
+      "type": "multiple_choice",
+      "text": "Welches Dokument ist erforderlich?",
+      "options": [
+        "Reisepass",
+        "Schülerausweis",
+        "Geburtsurkunde"
+      ],
+      "answer": "Geburtsurkunde"
+    },
+    {
+      "id": 5,
+      "type": "true_false",
+      "text": "Der Verkehr ist auf die schlechte Sicht der Autofahrer zurück zu führen über Straßenverkehrszeug",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Richtig"
+    },
+    {
+      "id": 6,
+      "type": "multiple_choice",
+      "text": "Schwierigkeiten, die Straße A-12 zu sehen, wegen?",
+      "options": [
+        "Nebel",
+        "Dichtem Verkehr",
+        "Straßenbauarbeiten"
+      ],
+      "answer": "Nebel"
+    },
+    {
+      "id": 7,
+      "type": "true_false",
+      "text": "Herr X muss sein Auto abholen / Abholung für das Auto",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 8,
+      "type": "multiple_choice",
+      "text": "Sie haben ihn gefragt?",
+      "options": [
+        "Das Auto zu parken",
+        "Um Wieder anzurufen / Zurückrufen",
+        "Die Abholung zu vereinbaren"
+      ],
+      "answer": "Um Wieder anzurufen / Zurückrufen"
+    },
+    {
+      "id": 9,
+      "type": "true_false",
+      "text": "Die Eröffnungsfeier des Ladens / Neueröffnung Geschäft",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 10,
+      "type": "multiple_choice",
+      "text": "Was gibt es in der Rubrik Natur zu kaufen?",
+      "options": [
+        "Produkte / Obst und Gemüse von anderen Ländern",
+        "Neue Ideen anbieten",
+        "Ausrüstung abholen lassen"
+      ],
+      "answer": "Produkte / Obst und Gemüse von anderen Ländern"
+    },
+    {
+      "id": 11,
+      "type": "true_false",
+      "text": "Das Mädchen rief ihre Freund an und fragte ihn um Rat geben",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 12,
+      "type": "multiple_choice",
+      "text": "Ihre Freund hat große / viele Erfahrungen mit?",
+      "options": [
+        "Möbel kaufen",
+        "Produkte von anderen Ländern",
+        "Präsentationen"
+      ],
+      "answer": "Präsentationen"
+    },
+    {
+      "id": 13,
+      "type": "true_false",
+      "text": "Das Mädchen geht zum Termin",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 14,
+      "type": "multiple_choice",
+      "text": "Was passiert?",
+      "options": [
+        "Ihre Familie soll schnell kommen",
+        "Ihr Bruder und ihre Familie / Eltern stritten",
+        "Ihre Nachbarin besucht ihre Großeltern"
+      ],
+      "answer": "Ihr Bruder und ihre Familie / Eltern stritten"
+    },
+    {
+      "id": 15,
+      "type": "true_false",
+      "text": "Es gibt Angebote Einzelzimmer",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 16,
+      "type": "multiple_choice",
+      "text": "Die Person muss im?",
+      "options": [
+        "Voraus buchen / Reisevereinigung",
+        "Restaurant Mittagessen",
+        "Hotel Abendessen"
+      ],
+      "answer": "Voraus buchen / Reisevereinigung"
+    },
+    {
+      "id": 17,
+      "type": "true_false",
+      "text": "Es gibt Bauarbeiten am Zug / um bau",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 18,
+      "type": "multiple_choice",
+      "text": "Was passiert?",
+      "options": [
+        "Wird ausgetauscht",
+        "Wird gereinigt",
+        "Wird repariert"
+      ],
+      "answer": "Wird repariert"
+    },
+    {
+      "id": 19,
+      "type": "true_false",
+      "text": "Ein neues Buch wird vorgestellt/Ankündigung eines neuen Magazins",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 20,
+      "type": "multiple_choice",
+      "text": "Im Inhalt findet man?",
+      "options": [
+        "Interview",
+        "Reportagen",
+        "Artikel über Kultur"
+      ],
+      "answer": "Interview"
+    },
+    {
+      "id": 21,
+      "type": "true_false",
+      "text": "Das Wetter wird in überall Deutschland besser sein",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 22,
+      "type": "multiple_choice",
+      "text": "Das Wetter im Westen wird ?",
+      "options": [
+        "Im Süden sonnig",
+        "Im Westen regnerisch",
+        "Der Frühling kommt"
+      ],
+      "answer": "Der Frühling kommt"
+    },
+    {
+      "id": 23,
+      "type": "true_false",
+      "text": "Ein Mädchen dankte ihrer Nachbarin, dass sie die Pflanzen gegossen hatte, während sie außer Haus",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 24,
+      "type": "multiple_choice",
+      "text": "Das Mädchen versprach der Nachbarin?",
+      "options": [
+        "ihr bei ihrer Großmutter ein Geschenk zu machen",
+        "ihr bei ihrer Rückkehr ein Geschenk zu machen",
+        "ihr nach der Reise ein Dankeschön zu schicken"
+      ],
+      "answer": "ihr bei ihrer Rückkehr ein Geschenk zu machen"
+    },
+    {
+      "id": 25,
+      "type": "true_false",
+      "text": "Es war flughafenbedingt und die Verzögerung war wetterbedingt",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 26,
+      "type": "multiple_choice",
+      "text": "Der Pilot / Kapitän forderte die Passagiere auf, an ihren?",
+      "options": [
+        "Plätzen zu bleiben/Setzen bleiben",
+        "Plätzen ruhiger zu sitzen",
+        "Anschnallgurten zu bleiben"
+      ],
+      "answer": "Plätzen zu bleiben/Setzen bleiben"
+    },
+    {
+      "id": 27,
+      "type": "true_false",
+      "text": "Das Wetter am Wochenende/am Ende der Woche ist gut",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Richtig"
+    },
+    {
+      "id": 28,
+      "type": "multiple_choice",
+      "text": "Im Allgemeinen wird am nächsten Tag?",
+      "options": [
+        "Es schneit",
+        "Es bleibt trocken",
+        "Es regnet"
+      ],
+      "answer": "Es regnet"
+    },
+    {
+      "id": 29,
+      "type": "true_false",
+      "text": "Sie sprachen über ein Kulturveranstaltung",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 30,
+      "type": "multiple_choice",
+      "text": "Wo wurde der Film produziert?",
+      "options": [
+        "In der Schweiz",
+        "In Berlin",
+        "Film produziert in der gleichen Stadt \"Neuenberg\""
+      ],
+      "answer": "Film produziert in der gleichen Stadt \"Neuenberg\""
+    }
+  ]
+}

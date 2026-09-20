@@ -1,0 +1,33 @@
+{
+  "title": "العناية بالبشرة في الشتاء",
+  "summary": "في الشتاء يحتاج الجلد إلى ترطيب ودهون خاصة المناطق المكشوفة.",
+  "questions": [
+    {
+      "question": "In diesem Text geht es um:",
+      "options": {
+        "a": "den Schutz der Haut gegen Sonne und Kälte.",
+        "b": "Sonnencremes mit hohem Schutzfaktor.",
+        "c": "tagsüber durch eine Fettcreme geschützt werden."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Im Gebirge braucht man:",
+      "options": {
+        "a": "den Schutz der Haut gegen Sonne und Kälte.",
+        "b": "Sonnencremes mit hohem Schutzfaktor.",
+        "c": "tagsüber durch eine Fettcreme geschützt werden."
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Gesicht und Hände sollten:",
+      "options": {
+        "a": "den Schutz der Haut gegen Sonne und Kälte.",
+        "b": "Sonnencremes mit hohem Schutzfaktor.",
+        "c": "tagsüber durch eine Fettcreme geschützt werden."
+      },
+      "answer": "C"
+    }
+  ]
+}

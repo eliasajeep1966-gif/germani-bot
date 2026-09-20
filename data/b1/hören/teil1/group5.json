@@ -1,0 +1,321 @@
+{
+  "group_id": 5,
+  "title": "Menge 5",
+  "questions": [
+    {
+      "id": 1,
+      "type": "true_false",
+      "text": "Werbung für eine Pizzeria:",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Richtig"
+    },
+    {
+      "id": 2,
+      "type": "multiple_choice",
+      "text": "Wann ist das Angebot gültig?",
+      "options": [
+        "Von Montag bis Mittwoch",
+        "Nur an Feiertagen",
+        "Samstag und Sonntag"
+      ],
+      "answer": "Samstag und Sonntag"
+    },
+    {
+      "id": 3,
+      "type": "true_false",
+      "text": "Im Text geht es um den Kauf von Möbeln für das Haus:",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Richtig"
+    },
+    {
+      "id": 4,
+      "type": "multiple_choice",
+      "text": "Das Sofa ist?",
+      "options": [
+        "nicht geeignet",
+        "perfekt geeignet",
+        "zu teuer"
+      ],
+      "answer": "nicht geeignet"
+    },
+    {
+      "id": 5,
+      "type": "true_false",
+      "text": "Der Termin wurde geändert?",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Richtig"
+    },
+    {
+      "id": 6,
+      "type": "multiple_choice",
+      "text": "Das Mädchen muss der:",
+      "options": [
+        "Hausmeisterin Bescheid geben",
+        "Nachbarin den Schlüssel übergeben",
+        "Haushälterin die Schlüssel abnehmen"
+      ],
+      "answer": "Haushälterin die Schlüssel abnehmen"
+    },
+    {
+      "id": 7,
+      "type": "true_false",
+      "text": "Der Text handelt von einem Konzert:",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Richtig"
+    },
+    {
+      "id": 8,
+      "type": "multiple_choice",
+      "text": "Was wird die Band tun?",
+      "options": [
+        "Das Ausstellungsprogramm selbst organisieren",
+        "Neue Lieder im Studio aufnehmen",
+        "Eine Autogrammstunde geben"
+      ],
+      "answer": "Das Ausstellungsprogramm selbst organisieren"
+    },
+    {
+      "id": 9,
+      "type": "true_false",
+      "text": "Leonie möchte ihr Haus einrichten:",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 10,
+      "type": "multiple_choice",
+      "text": "Das Sofa?",
+      "options": [
+        "Der Preis wird im Geschäft reduziert",
+        "Der Preis wird direkt im Internet - online reduziert",
+        "Der Preis bleibt unverändert hoch"
+      ],
+      "answer": "Der Preis wird direkt im Internet - online reduziert"
+    },
+    {
+      "id": 11,
+      "type": "true_false",
+      "text": "Straßen - Polizei B-30:",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 12,
+      "type": "multiple_choice",
+      "text": "Was soll man tun?",
+      "options": [
+        "Wiederanrufen",
+        "Eine Nachricht hinterlassen",
+        "Persönlich vorbeikommen"
+      ],
+      "answer": "Eine Nachricht hinterlassen"
+    },
+    {
+      "id": 13,
+      "type": "true_false",
+      "text": "Eine Werbung für einen Supermarkt namens Timmy:",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Richtig"
+    },
+    {
+      "id": 14,
+      "type": "multiple_choice",
+      "text": "Was ist passiert?",
+      "options": [
+        "Die Süßwarenabteilung befindet sich im zweiten Stock",
+        "Die Süßwarenabteilung wurde im Erdgeschoss eröffnet",
+        "Die Bäckerei befindet sich im zweiten Stock"
+      ],
+      "answer": "Die Süßwarenabteilung befindet sich im zweiten Stock"
+    },
+    {
+      "id": 15,
+      "type": "true_false",
+      "text": "Abendnachrichten aus Brandenburg:",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Richtig"
+    },
+    {
+      "id": 16,
+      "type": "multiple_choice",
+      "text": "Worüber wurde berichtet?",
+      "options": [
+        "Fußgänger",
+        "Radfahrer",
+        "Autofahrer"
+      ],
+      "answer": "Radfahrer"
+    },
+    {
+      "id": 17,
+      "type": "true_false",
+      "text": "Termin beim Frisör:",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 18,
+      "type": "multiple_choice",
+      "text": "Bis wann ist der Termin gültig?",
+      "options": [
+        "bis Montag",
+        "bis Freitag",
+        "bis Samstag"
+      ],
+      "answer": "bis Montag"
+    },
+    {
+      "id": 19,
+      "type": "true_false",
+      "text": "Sie verreist allein nach Halien",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 20,
+      "type": "multiple_choice",
+      "text": "Sie wird:",
+      "options": [
+        "ein Geschenk für ihren Nachbarn kaufen",
+        "frisches Obst mitbringen",
+        "ein kleines Souvenir bestellen"
+      ],
+      "answer": "ein Geschenk für ihren Nachbarn kaufen"
+    },
+    {
+      "id": 21,
+      "type": "true_false",
+      "text": "Katia kann nicht ins Kino gehen.",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Richtig"
+    },
+    {
+      "id": 22,
+      "type": "multiple_choice",
+      "text": "Was passiert?",
+      "options": [
+        "Ihre Nachbarin und ihre Großeltern streiten",
+        "Ihr Bruder und ihre Familie / Eltern stritten",
+        "Ihre Familie kommt überraschend zu Besuch"
+      ],
+      "answer": "Ihr Bruder und ihre Familie / Eltern stritten"
+    },
+    {
+      "id": 23,
+      "type": "true_false",
+      "text": "Ein Hotel eine Checkpoint-Einheit im Hotel kontaktierte:",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Richtig"
+    },
+    {
+      "id": 24,
+      "type": "multiple_choice",
+      "text": "Was wurde mitgeteilt?",
+      "options": [
+        "Es gibt eine Preisermäßigung",
+        "Der Preis bleibt unverändert gleich",
+        "Preisanstieg / Mehr kosten"
+      ],
+      "answer": "Preisanstieg / Mehr kosten"
+    },
+    {
+      "id": 25,
+      "type": "true_false",
+      "text": "Verkehrsnachrichten",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Richtig"
+    },
+    {
+      "id": 26,
+      "type": "multiple_choice",
+      "text": "Die Straße ist gesperrt",
+      "options": [
+        "wegen einer Baustelle",
+        "wegen Unfall",
+        "wegen schlechten Wetters"
+      ],
+      "answer": "wegen Unfall"
+    },
+    {
+      "id": 27,
+      "type": "true_false",
+      "text": "Sie möchte neue Küche",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Richtig"
+    },
+    {
+      "id": 28,
+      "type": "multiple_choice",
+      "text": "Sie",
+      "options": [
+        "hat neue Rezepte ausprobiert",
+        "hat neue Möbel ausgewählt",
+        "hat neue Gerichte bestellt"
+      ],
+      "answer": "hat neue Gerichte bestellt"
+    },
+    {
+      "id": 29,
+      "type": "true_false",
+      "text": "Sie sprechen mit ihr, um den Termin zu verschieben",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 30,
+      "type": "multiple_choice",
+      "text": "Man muss unbedingt",
+      "options": [
+        "pünktlich anrufen",
+        "ins Restaurant gehen",
+        "eine Nachricht schreiben"
+      ],
+      "answer": "ins Restaurant gehen"
+    }
+  ]
+}

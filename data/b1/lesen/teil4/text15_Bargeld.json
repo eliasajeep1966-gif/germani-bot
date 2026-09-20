@@ -1,0 +1,34 @@
+{
+  "title": "Abschaffung von Bargeld",
+  "fixed_question": "Soll Bargeld in Zukunft vollständig abgeschafft werden?",
+  "questions": [
+    {
+      "text": "Es stimmt, dass das Bezahlen mit Kreditkarte sehr praktisch ist, weil es schnell und einfach geht. Aber Bargeld ist trotzdem besser, besonders in Notfallsituationen.",
+      "answer": "N"
+    },
+    {
+      "text": "Meine Frau benutzt oft die Kreditkarte, aber ich persönlich bevorzuge immer noch die Zahlung mit Bargeld.",
+      "answer": "N"
+    },
+    {
+      "text": "Die Kreditkarte macht das Einkaufen und Bezahlen viel einfacher. Außerdem hat man am Monatsende eine genaue Übersicht über alle Ausgaben.",
+      "answer": "J"
+    },
+    {
+      "text": "Warum sollte ich jedes Mal zusätzliche Gebühren zahlen, wenn ich etwas kaufen möchte?",
+      "answer": "N"
+    },
+    {
+      "text": "Es gibt heutzutage viel Betrug. Bargeld kann zwar auch gestohlen werden, aber es ist trotzdem sicherer als Kreditkarten, weil bei Karten auch Daten und das ganze Konto gestohlen werden können.",
+      "answer": "N"
+    },
+    {
+      "text": "Die Bank oder Firma weiß genau, was ich kaufe. Das geht niemanden etwas an. Deshalb bietet Bargeld einfach mehr Privatsphäre.",
+      "answer": "N"
+    },
+    {
+      "text": "Mit einer Plastikkarte merkt man gar nicht, wie schnell das Geld verschwindet, und man gibt mehr aus. Wenn man das Geld direkt im Portemonnaie sieht, hat man eine bessere Kontrolle.",
+      "answer": "N"
+    }
+  ]
+}

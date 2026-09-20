@@ -1,0 +1,40 @@
+{
+  "title": "Lesen Teil 3 - Einkaufen",
+  "pairs": [
+    {
+      "question": "Eine Frau sucht fertigen Silberschmuck für ihre Tochter und interessiert sich dafür",
+      "answer": "keine",
+      "keywords": "Silberschmuck"
+    },
+    {
+      "question": "Vater sucht Unterhaltung für Tochter (7 Jahre)",
+      "answer": "Kinderfest",
+      "keywords": "Spiele für kinder - Kinderprogramm - Clown - Spaß"
+    },
+    {
+      "question": "Interesse an Fotografie und alten Fotos",
+      "answer": "Ausstellung mit alten Fotos aus dem Jahr 1900",
+      "keywords": "Ausstellung - alte Fotos - 1900"
+    },
+    {
+      "question": "Mädchen interessiert sich für Kleidung, möchte sie aber nicht kaufen",
+      "answer": "Street-Fashion-Festival",
+      "keywords": "Street-Fashion-Festival - Geschäfte"
+    },
+    {
+      "question": "Mädchen möchte an den Strand und sucht Strandkleidung",
+      "answer": "Werbung für Sonnenbrillen mit 10% Rabatt",
+      "keywords": "Sonnenbrillen - Rabatt - Strandkleidung"
+    },
+    {
+      "question": "Mädchen möchte deutsches Essen essen",
+      "answer": "deutsches Essen - traditional",
+      "keywords": "deutsches Essen - traditional"
+    },
+    {
+      "question": "Junger Mensch interessiert sich für Musik und Live-Konzerte",
+      "answer": "eine werbung konzert das sie besuchen",
+      "keywords": "österreich - bühnen - konzert - Live-Konzerte"
+    }
+  ]
+}

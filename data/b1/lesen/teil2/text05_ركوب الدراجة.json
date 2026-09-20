@@ -1,0 +1,33 @@
+{
+  "title": "ركوب الدراجة في ألمانيا",
+  "summary": "في ألمانيا يوجد حوالي 73 مليون دراجة، ركوب الدراجة يقلل التكاليف.",
+  "questions": [
+    {
+      "question": "In diesem Text geht es darum:",
+      "options": {
+        "a": "dass Radfahrer etwas für ihre Gesundheit tun.",
+        "b": "benutzt das Rad für kurze Fahrten.",
+        "c": "im Frühling die Fahrradteile kontrollieren."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Die Mehrheit der deutschen Radfahrer:",
+      "options": {
+        "a": "dass Radfahrer etwas für ihre Gesundheit tun.",
+        "b": "benutzt das Rad für kurze Fahrten.",
+        "c": "im Frühling die Fahrradteile kontrollieren."
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Radfahrer sollen:",
+      "options": {
+        "a": "dass Radfahrer etwas für ihre Gesundheit tun.",
+        "b": "benutzt das Rad für kurze Fahrten.",
+        "c": "im Frühling die Fahrradteile kontrollieren."
+      },
+      "answer": "C"
+    }
+  ]
+}

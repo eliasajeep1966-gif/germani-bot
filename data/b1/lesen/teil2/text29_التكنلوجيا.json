@@ -1,0 +1,33 @@
+{
+  "title": "Technologie und Bildung (التكنولوجيا والتعليم)",
+  "summary": "إدخال التكنولوجيا في التعليم وآراء الأساتذة حول استخدام الأدوات الحديثة.",
+  "questions": [
+    {
+      "question": "In dem Text geht es um:",
+      "options": {
+        "a": "wie hat die Technologie die Bildung verändert.",
+        "b": "dass sie weiterhin mit dem Stift schreiben sollen.",
+        "c": "Die Schüler sollen in Gruppen lernen."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Der Lehrer sagt:",
+      "options": {
+        "a": "Die Schüler sollen in Gruppen lernen.",
+        "b": "wie hat die Technologie die Bildung verändert.",
+        "c": "dass sie weiterhin mit dem Stift schreiben sollen."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Was will der Lehrer:",
+      "options": {
+        "a": "dass sie weiterhin mit dem Stift schreiben sollen.",
+        "b": "Die Schüler sollen in Gruppen lernen.",
+        "c": "wie hat die Technologie die Bildung verändert."
+      },
+      "answer": "A"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "title": "Autofreie Innenstädte",
+  "fixed_question": "Sind die Personen für ein Verbot von Autos in der Stadt?",
+  "questions": [
+    {
+      "text": "Susanne (29)\nIch finde, dass die meisten Autofahrer keine Rücksicht auf Fußgänger und Kinder nehmen. Es passieren schnell Unfälle. Eine autofreie Stadt ist ein erfolgreicher Schritt in die richtige Richtung.",
+      "answer": "Ja"
+    },
+    {
+      "text": "Patriza (43)\nDie Diskussion gibt es schon lange, aber ohne Lösungen. Ich finde es schwierig, eine komplett autofreie Stadt zu haben. Wie sollen die Geschäfte mit Waren beliefert werden? Aber weniger Autos wären gut. Ich habe also nichts dagegen.",
+      "answer": "Ja"
+    },
+    {
+      "text": "Thomas (39)\nWissenschaftler in Österreich haben herausgefunden, dass 70 % der Autofahrten in der Stadt kürzer als 5 Kilometer sind. Autos in der Stadt sind wirklich nicht notwendig.",
+      "answer": "Ja"
+    },
+    {
+      "text": "Lars (14)\nAutos machen viel Lärm und verbrauchen sehr viel Energie. Eine autofreie Stadt reicht nicht aus. Die Nutzung von Bussen und Straßenbahnen sollte kostenlos sein. So stelle ich mir die Zukunft vor.",
+      "answer": "Ja"
+    },
+    {
+      "text": "Jens (38)\nIch bin Einzelhändler und habe ein Elektronikgeschäft. Wenn Autos verboten werden, kommen weniger Kunden zu mir. Für uns Geschäftsleute ist das bestimmt keine gute Lösung.",
+      "answer": "Nein"
+    },
+    {
+      "text": "Jürgen (54)\nSchon wieder ein neues Risiko! Was denken sich die Politiker eigentlich? Ich bin für die Freiheit jedes Einzelnen. Dazu gehört auch, dass man mit dem Auto überall hinfahren kann. Wenn die Leute keine Parkplätze im Zentrum finden, kommen sie von selbst auf die Idee, ihr Auto zu Hause zu lassen.",
+      "answer": "Nein"
+    },
+    {
+      "text": "Grazia (65)\nIn meiner Stadt ist das historische Zentrum eine riesige Fußgängerzone. Das macht sehr viel Spaß. Man kann bequem einkaufen, ruhig im Café sitzen und das öffentliche Leben genießen. Ich kann mir vorstellen, dass sich andere Städte das auch wünschen. Trotzdem bin ich gegen ein Verbot, denn eine autofreie Innenstadt ist nicht automatisch eine lebenswerte Stadt.",
+      "answer": "Nein"
+    }
+  ]
+}

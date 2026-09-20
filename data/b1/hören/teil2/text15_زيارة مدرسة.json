@@ -1,0 +1,55 @@
+{
+  "summary": "هنا يمكنك كتابة ملخص النص الخاص بزيارة المدرسة لكي يظهره البوت للمستخدم.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Die Schule ist berühmt für ihre?",
+      "options": {
+        "a": "internationalen Sprachzertifikate",
+        "b": "Fremdsprachen",
+        "c": "speziellen Sprachförderkurse"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 2,
+      "question": "Was können Eltern in der Schule tun?",
+      "options": {
+        "a": "Sie sehen eine Präsentation der Schule an",
+        "b": "Sie sehen ein Bild der Schule an",
+        "c": "Sie sehen ein Video über die Schule an"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 3,
+      "question": "Können die Eltern?",
+      "options": {
+        "a": "Klassische Musik hören",
+        "b": "Live-Musik hören",
+        "c": "Ein Musikkonzert besuchen"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 4,
+      "question": "Was können Eltern im Fitnessstudio tun?",
+      "options": {
+        "a": "Basketball spielen",
+        "b": "Fußball spielen",
+        "c": "Volleyball spielen"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 5,
+      "question": "Welche zusätzliche Arbeit können Eltern leisten?",
+      "options": {
+        "a": "Sie kaufen ein Buch über die Schule",
+        "b": "Sie schreiben ein Buch über die Schule",
+        "c": "Sie lesen ein Buch über die Schule"
+      },
+      "correct_answer": "a"
+    }
+  ]
+}

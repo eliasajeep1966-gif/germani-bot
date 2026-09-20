@@ -1,0 +1,105 @@
+{
+  "summary": "هنا يمكنك كتابة ملخص النص الأول الخاص بالتايل الثاني سماعي لكي يظهره البوت للمستخدم.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Welche Rolle hat die Burg gespielt?",
+      "options": {
+        "a": "Eine militärische Rolle",
+        "b": "Wichtige Rolle in der Geschichte",
+        "c": "Keine besondere Rolle"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 2,
+      "question": "Wie lange dauert die Pause?",
+      "options": {
+        "a": "Eine Stunde",
+        "b": "Zwei Stunden",
+        "c": "Drei Stunden"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 3,
+      "question": "Es wird empfohlen:",
+      "options": {
+        "a": "Ein Schloss zu besichtigen",
+        "b": "die Kirche zu besichtigen",
+        "c": "Das Museum"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 4,
+      "question": "Vom oberen Teil der Burg aus kann man die...",
+      "options": {
+        "a": "Stadt Wachau sehen.",
+        "b": "Einen Fluss",
+        "c": "Ein Frau"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 5,
+      "question": "Die Donau-Reise beinhaltet einen Panoramablick von einer Burg..",
+      "options": {
+        "a": "Spaziergang",
+        "b": "die sich oberhalb der Stadt Donau befindet.",
+        "c": "Mittagessen"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 6,
+      "question": "Wie viele Besucher pro Jahr?",
+      "options": {
+        "a": "Million Besucher pro Jahr.",
+        "b": "10.000",
+        "c": "100.000"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 7,
+      "question": "Was ist am Ende zu sehen?",
+      "options": {
+        "a": "Kirche",
+        "b": "Fernblick",
+        "c": "Museum"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 8,
+      "question": "Wem gehört das Schloss?",
+      "options": {
+        "a": "Dem Bürgermeister",
+        "b": "Dem Englischen König",
+        "c": "Der Stadtverwaltung"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 9,
+      "question": "wofür ist die stadt berühmt ?",
+      "options": {
+        "a": "für die Herstellung von Wein .",
+        "b": "für Süßigkeiten",
+        "c": "für Autos"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 10,
+      "question": "Wann wurde die Stadt gegründet?",
+      "options": {
+        "a": "vor 1000 jahren",
+        "b": "vor 100 jahren",
+        "c": "vor 50 jahren"
+      },
+      "correct_answer": "a"
+    }
+  ]
+}

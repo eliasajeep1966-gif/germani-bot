@@ -1,0 +1,40 @@
+{
+  "title": "اعلان شراء كتب",
+  "pairs": [
+    {
+      "question": "Dr. Maier möchte Bücher kaufen.",
+      "answer": "Diverse Bücher und filme zu kaufen",
+      "keywords": "Diverse Bücher - filme - kinder"
+    },
+    {
+      "question": "paul möchte seiner Großmutter etwas zum Geburtstag schenken",
+      "answer": "Buchhandlung stein",
+      "keywords": "Buchhandlung stein"
+    },
+    {
+      "question": "stefan ist ein student und möchte sich informieren",
+      "answer": "universitätsbuchhandlung Facultas",
+      "keywords": "fachbücher - Wissenschaftliche"
+    },
+    {
+      "question": "leonie liest gerne Romane und Erzählungen",
+      "answer": "Literaturhaus Nuernberg",
+      "keywords": "Literaturhaus - Romane - Erzählungen"
+    },
+    {
+      "question": "Martin möchte während seines Aufenthalts in Italien einkaufen, was er kann.",
+      "answer": "Im Sommer",
+      "keywords": "Kunstführer - Reiseführer aus aller welt"
+    },
+    {
+      "question": "petra liest gerne fremdsprachige Bücher und sucht ein Buch in Englisch und spanisch",
+      "answer": "keine",
+      "keywords": "fremdsprachige Bücher - Englisch - spanisch"
+    },
+    {
+      "question": "Martina fährt ans Meer und möchte ein spannendes E-book",
+      "answer": "ihre lieblingsbücher immer dabei",
+      "keywords": "lieblingsbücher - E-book"
+    }
+  ]
+}

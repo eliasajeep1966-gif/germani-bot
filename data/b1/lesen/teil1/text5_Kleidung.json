@@ -1,0 +1,30 @@
+{
+  "title": "ملابس الأطفال",
+  "summary": "يوهانا أعطت ابن أخيها توماس ملابس أطفال مستعملة، وكانت سابقاً تخيط الملابس بيدها.",
+  "questions": [
+    {
+      "question": "Johanna hat Kleidungsstücke auch selbst gemacht",
+      "answer": "R"
+    },
+    {
+      "question": "Tomas verzichtet auf gebrauchte Sachen",
+      "answer": "F"
+    },
+    {
+      "question": "Tomas fehlt das Geld, um alle Babyartikel selbst zu besorgen",
+      "answer": "F"
+    },
+    {
+      "question": "Mari lehnt getragene Babykleidung ab",
+      "answer": "R"
+    },
+    {
+      "question": "Johanna glaubt, dass Verwandte mehr schenken, als man braucht",
+      "answer": "R"
+    },
+    {
+      "question": "Johannas Sohn trug auch sogenannte Mädchenfarben",
+      "answer": "F"
+    }
+  ]
+}

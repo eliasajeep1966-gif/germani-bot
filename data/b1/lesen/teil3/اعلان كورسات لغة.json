@@ -1,0 +1,45 @@
+{
+  "title": "Lesen Teil 3 - Sprachkurs",
+  "pairs": [
+    {
+      "question": "Ein Mädchen sucht nach einer Möglichkeit, ihre Englischkenntnisse kostenlos zu verbessern.",
+      "answer": "Sprach-Treffen im Café! Wir organisieren kostenlose Gesprächsgruppen für europäische Sprachen, einschließlich Englisch. Teilnahme kostenlos.",
+      "keywords": "Sprach-Treffen - Gesprächsgruppen - kostenlos - Englisch"
+    },
+    {
+      "question": "Ein junger Mann sucht nach einer Möglichkeit, seine Ausbildung im Computerbereich online von zu Hause aus fortzusetzen.",
+      "answer": "Online-PC-Kurs. Wir suchen Teilnehmerinnen und Teilnehmer, die sich im Bereich PC weiterbilden möchten. Es ist kein persönliches Treffen nötig, der Kurs findet komplett online statt. Für Personen mit Erfahrung verkürzt sich die Kursdauer.",
+      "keywords": "Online-PC-Kurs - online stattfinden - kein persönliches Treffen"
+    },
+    {
+      "question": "Ein Mädchen sucht nach einer Möglichkeit, ihre Deutschkenntnisse von zu Hause aus zu verbessern.",
+      "answer": "Möchten Sie am Computer lernen? Wir bieten Online-Unterricht in verschiedenen Sprachen an, darunter Deutsch, Englisch und Spanisch. Preis: 8 Euro pro Unterrichtsstunde.",
+      "keywords": "am Computer lernen - Online-Unterricht - Deutsch"
+    },
+    {
+      "question": "Eine Frau möchte im Juli Englisch in einer group lernen.",
+      "answer": "Intensivsprachkurs. Wir bieten das ganze Jahr über Intensivkurse an. Die Kurse dauern von 2 bis 6 Wochen und finden in Gruppen statt",
+      "keywords": "Intensivsprachkurs - Gruppen - das ganze Jahr"
+    },
+    {
+      "question": "Eine Frau möchte ihren Beruf wechseln und Deutschlehrerin werden",
+      "answer": "keine",
+      "keywords": "Beruf wechseln – Deutschlehrerin"
+    },
+    {
+      "question": "Eine Person sucht Unterricht in den Ferien.",
+      "answer": "Unsere Kurse finden von Mittwoch bis Sonntag statt, einschließlich der Wochenendtage.",
+      "keywords": "Mittwoch bis Sonntag - einschließlich der Wochenendtage - Ferien"
+    },
+    {
+      "question": "Eine Frau sucht nach einer Möglichkeit, ihre Englischkenntnisse im Ausland zu verbessern.",
+      "answer": "Arbeiten Sie in einem Hotel mit internationalen Touristen und verbessern Sie dabei Ihr Englisch. Die Kosten für Ihre Unterkunft übernehmen wir.",
+      "keywords": "Hotel - internationale Touristen - Englisch verbessern - Unterkunft"
+    },
+    {
+      "question": "Ein Mädchen ist frisch von der Universität absolviert und möchte einen Sprachkurs im Ausland machen.",
+      "answer": "Ab 18 Jahren können Sie überall auf der Welt einen Sprachkurs machen. Melden Sie sich einfach auf unserer Website an.",
+      "keywords": "ab 18 Jahren - überall auf der Welt – Sprachkurs"
+    }
+  ]
+}

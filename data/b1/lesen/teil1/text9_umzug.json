@@ -1,0 +1,30 @@
+{
+  "title": "فتاة تنتقل إلى بيت جديد",
+  "summary": "الفتاة تنتقل إلى بيت جديد، كان الطقس سيء لكنها كانت سعيدة.",
+  "questions": [
+    {
+      "question": "Die Stimmung war gut während Umzug",
+      "answer": "R"
+    },
+    {
+      "question": "Sie wünschte sich besseres Wetter",
+      "answer": "F"
+    },
+    {
+      "question": "Sie wollte die Treppe mitnehmen",
+      "answer": "F"
+    },
+    {
+      "question": "Der Besitzer hat den Schlüssel zu ihrer Wohnung",
+      "answer": "F"
+    },
+    {
+      "question": "Das Abendessen war bei den Nachbarn",
+      "answer": "F"
+    },
+    {
+      "question": "Sie möchte Gemüse auf dem Balkon pflanzen",
+      "answer": "F"
+    }
+  ]
+}

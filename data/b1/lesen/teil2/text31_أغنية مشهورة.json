@@ -1,0 +1,33 @@
+{
+  "title": "Beliebtes deutsches Lied (أغنية ألمانية محبوبة)",
+  "summary": "يتحدث النص عن فرقة موسيقية ويذكر أشهر الأغاني بكل دول العالم، أشهر أغنية في إنكلترا، فرنسا وألمانيا.",
+  "questions": [
+    {
+      "question": "Worum geht es im Text?",
+      "options": {
+        "a": "das beliebte deutschsprachige Lied.",
+        "b": "Es ist immer noch sehr populär.",
+        "c": "Er wird nicht mehr verwendet (unbenutzt)."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Wie ist das Lied heute?",
+      "options": {
+        "a": "das beliebte deutschsprachige Lied.",
+        "b": "Es ist immer noch sehr populär.",
+        "c": "Er wird nicht mehr verwendet (unbenutzt)."
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Was wird über den Songwriter gesagt?",
+      "options": {
+        "a": "das beliebte deutschsprachige Lied.",
+        "b": "Es ist immer noch sehr populär.",
+        "c": "Er wird nicht mehr verwendet (unbenutzt)."
+      },
+      "answer": "C"
+    }
+  ]
+}

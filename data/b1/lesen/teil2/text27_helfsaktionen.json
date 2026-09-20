@@ -1,0 +1,33 @@
+{
+  "title": "Hilfsaktionen in Europa (مشاريع المساعدة في أوروبا)",
+  "summary": "مشاريع مساعدة في العديد من الدول الأوروبية مثل مقاهٍ يدفع فيها الشخص ما يستطيع (خلافي).",
+  "questions": [
+    {
+      "question": "Die Idee des Textes ist:",
+      "options": {
+        "a": "Es geht um Hilfsaktionen in Europa.",
+        "b": "jeder zahlt, wie viel er möchte.",
+        "c": "kann man kostenlos einkaufen."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Im Café kann man essen:",
+      "options": {
+        "a": "und jeder zahlt, wie viel er möchte.",
+        "b": "Es geht um Hilfsaktionen in Europa.",
+        "c": "kann man kostenlos einkaufen."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "In der Bäckerei:",
+      "options": {
+        "a": "kann man kostenlos einkaufen.",
+        "b": "jeder zahlt, wie viel er möchte.",
+        "c": "Es geht um Hilfsaktionen in Europa."
+      },
+      "answer": "A"
+    }
+  ]
+}

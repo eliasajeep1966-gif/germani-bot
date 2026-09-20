@@ -1,0 +1,13 @@
+{
+  "title": "سيباستيان يمشي في الغابة",
+  "summary": "رجل يدعى سيباستيان كان يمشي في الغابة والطقس كان جميل وفجأة تغير الجو.",
+  "questions": [
+    { "question": "Sebastian berichtet von einem Ausflug zu Fuß.", "answer": "R" },
+    { "question": "Sebastian wusste dass Bäume bei Gewitter keinen Schutz bieten.", "answer": "R" },
+    { "question": "Das Ziel von Sebastian lag in einem Tal.", "answer": "R" },
+    { "question": "Er bemerkte das schlechte Wetter zu Beginn der Wanderung.", "answer": "F" },
+    { "question": "Das Gewitter begann mit Regen.", "answer": "F" },
+    { "question": "So schnell er konnte, lief Sebastian bis ins Dorf.", "answer": "F" },
+    { "question": "Sebastian rät sich vor eine Wanderung über das Wetter zu informieren.", "answer": "F" }
+  ]
+}

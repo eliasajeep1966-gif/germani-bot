@@ -1,0 +1,33 @@
+{
+  "title": "Wien fährt Rad (حملة فيينا تركب الدراجة)",
+  "summary": "تشجع فيينا استخدام الدراجات كوسيلة نقل يومية وتطوّر المسارات لتوفير بيئة آمنة للراكبين.",
+  "questions": [
+    {
+      "question": "In diesem Text geht es darum:",
+      "options": {
+        "a": "dass das Radfahren in Wien beliebter gemacht werden soll.",
+        "b": "verwenden heute mehr Mitarbeiter als früher das Fahrrad.",
+        "c": "in anderen Teilen Österreichs höher als in Wien."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "An der Technischen Universität Wien:",
+      "options": {
+        "a": "dass das Radfahren in Wien beliebter gemacht werden soll.",
+        "b": "verwenden heute mehr Mitarbeiter als früher das Fahrrad.",
+        "c": "in anderen Teilen Österreichs höher als in Wien."
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Der Anteil der Radfahrer ist:",
+      "options": {
+        "a": "dass das Radfahren in Wien beliebter gemacht werden soll.",
+        "b": "verwenden heute mehr Mitarbeiter als früher das Fahrrad.",
+        "c": "in anderen Teilen Österreichs höher als in Wien."
+      },
+      "answer": "C"
+    }
+  ]
+}

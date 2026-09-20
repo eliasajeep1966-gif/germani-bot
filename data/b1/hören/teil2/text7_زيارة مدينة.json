@@ -1,0 +1,55 @@
+{
+  "summary": "هنا يمكنك كتابة ملخص النص الخاص برحلة لزيارة مدينة لكي يظهره البوت للمستخدم.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Sie werden ... verbringen.",
+      "options": {
+        "a": "fünf Tage zusammen",
+        "b": "sieben Tage zusammen",
+        "c": "sechs Tage zusammen"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 2,
+      "question": "Was werden sie tun?",
+      "options": {
+        "a": "Sie werden eine Bierverkostung machen",
+        "b": "Sie werden lokale Spezialitäten kochen",
+        "c": "Sie werden Wein probieren"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "id": 3,
+      "question": "Für die Organisation der Reise sind...?",
+      "options": {
+        "a": "die Teilnehmer für die Verpflegung selbst verantwortlich",
+        "b": "sie sorgen selbst für die Verpflegung",
+        "c": "die Veranstalter für die volle Verpflegung zuständig"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 4,
+      "question": "Es wird...?",
+      "options": {
+        "a": "Platz für Fahrräder geben",
+        "b": "Platz für Motorräder geben",
+        "c": "Platz für E-Scooter geben"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 5,
+      "question": "Sie sollten...?",
+      "options": {
+        "a": "eine kleine Reiseapotheke mitbringen",
+        "b": "Erste-Hilfe-Material mitbringen",
+        "c": "Sicherheitswesten mitbringen"
+      },
+      "correct_answer": "b"
+    }
+  ]
+}

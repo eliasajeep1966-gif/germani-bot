@@ -1,0 +1,34 @@
+{
+  "title": "Verbot von Feiern im Freien ab 22:00 Uhr",
+  "fixed_question": "Sind die folgenden Personen für ein Verbot von Feiern im Freien ab 22:00 Uhr?",
+  "questions": [
+    {
+      "text": "Paul (45)\nEs ist zwar richtig, dass die Anwohner nach 22:00 Uhr das Recht auf einen ruhigen Schlaf haben, aber im Sommer, wenn es bis 22:00 Uhr hell ist und alle draußen sitzen und Spaß haben wollen, gibt es meiner Meinung nach zu viele Streitigkeiten.",
+      "answer": "N"
+    },
+    {
+      "text": "Hames (40)\nVielleicht haben andere nicht so viel Arbeitsstress wie ich. Wie soll man sich entspannen, wenn der Lärm auch nach Feierabend noch weitergeht?",
+      "answer": "J"
+    },
+    {
+      "text": "Eva (51)\nViele beschweren sich über den Lärm, aber der Lärm wird nicht aufhören, nur weil man den Leuten verbietet, nach 22:00 Uhr nach draußen zu gehen. Es gibt immer noch Autos und Motorräder. Meiner Meinung nach spricht man hier über ein Problem, das gar nicht existiert.",
+      "answer": "N"
+    },
+    {
+      "text": "Nick (25)\nIch verstehe dieses Problem nicht. Ich bin Krankenpfleger, arbeite oft nachts und schlafe tagsüber. Die Leute können doch nicht Tag und Nacht leise sein.",
+      "answer": "N"
+    },
+    {
+      "text": "Manuella (46)\nMan sollte manchen Leuten nicht mehr erlauben als anderen. Feiern ist schön, aber es hat seine Grenzen, und man muss an diejenigen denken, die ihre Ruhe haben wollen.",
+      "answer": "J"
+    },
+    {
+      "text": "Lukas (62)\nIch feiere mit meinen Freunden und genieße diesen Teil des Lebens, aber es muss Grenzen geben und man muss aufhören, wenn es notwendig ist. Junge Leute kennen diese Grenzen manchmal nicht. Ein Verbot wäre hilfreich.",
+      "answer": "J"
+    },
+    {
+      "text": "Fernando (19)\nDie Party fängt doch erst nach 22:00 Uhr an! Im Sommer ist das Feiern auf dem Balkon oder im Garten mit einem Bier einfach toll. Wollen sie uns jetzt auch noch unseren Spaß verbieten? Im Herbst und Winter sorgt das Wetter sowieso draußen für Ruhe. Haben die Politiker nichts Besseres zu tun?",
+      "answer": "N"
+    }
+  ]
+}

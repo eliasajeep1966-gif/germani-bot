@@ -1,0 +1,34 @@
+{
+  "title": "Mädchenschulen / Getrennte Schulen",
+  "fixed_question": "Sind die folgenden Personen für Mädchenschulen?",
+  "questions": [
+    {
+      "text": "Karolin (40)\nIch weiß nicht, wie es an einer gemischten Schule gewesen wäre, aber ich bin glücklich, so wie es ist. Früher war ich sehr schüchtern. Für jemanden wie mich ist eine Mädchenschule bestimmt eine gute Sache.",
+      "answer": "Ja"
+    },
+    {
+      "text": "Rebeca (32)\nDurch meine persönliche Erfahrung kann ich vielen Vorurteilen gegen Mädchenschulen widersprechen. Viele sagen, dass Frauen es später schwerer haben, sich durchzusetzen. Bei uns war das Gegenteil der Fall: Viele von uns sind im Beruf sehr erfolgreich und behaupten sich gut.",
+      "answer": "Ja"
+    },
+    {
+      "text": "Melanie (18)\nIch gehe seit drei Jahren auf eine Mädchenschule, davor war ich auf einer gemischten Schule. Ich kann euch sagen, das war wirklich kindisch. Allein die Zeit, die man verschwendet hat, nur um die Aufmerksamkeit der Jungs zu bekommen, war schrecklich.",
+      "answer": "Ja"
+    },
+    {
+      "text": "Katja (37)\nWozu braucht man eine Mädchenschule? Ich glaube, es kommt vielmehr auf ein gutes Schulkonzept an, das den Schülerinnen hilft, ihren eigenen Weg zu finden, und auf kompetente Lehrkräfte, die sie unterstützen. Ich bin Ingenieurin geworden und habe Jungs nie als Konkurrenz gesehen.",
+      "answer": "Nein"
+    },
+    {
+      "text": "Jessika (14)\nVielleicht kann man sich ohne Jungs besser konzentrieren, weil sie oft die Klassenclowns sind. Aber sie lockern die Stimmung im Unterricht auch auf und wir können bestimmt etwas von ihnen lernen.",
+      "answer": "Nein"
+    },
+    {
+      "text": "Anna (15)\nViele glauben, dass getrennte Schulen besser sind. Aber ich kann mir die Schule ohne meinen Sitznachbarn gar nicht vorstellen. Wir verstehen uns super, machen Witze und blödeln herum. Ohne Jungs macht die Schule nur halb so viel Spaß.",
+      "answer": "Nein"
+    },
+    {
+      "text": "Liana (17)\nIch gehe auf eine Mädchenschule, aber wenn ich noch einmal wählen könnte, würde ich es mir gut überlegen. Meine Eltern dachten, dass ich ohne Jungs besser lerne. In Wirklichkeit achten wir aber oft nur aufs Aussehen. Ich denke, man kann sich an beiden Schulformen gut konzentrieren – am Ende hängt es von den Schülern selbst ab.",
+      "answer": "Nein"
+    }
+  ]
+}

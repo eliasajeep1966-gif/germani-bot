@@ -1,0 +1,13 @@
+{
+  "title": "باول ومحاولة سرقة دراجته",
+  "summary": "شاب يضع دراجته يوميا في محطة القطار قبل ذهابه للعمل. في أحد الأيام لم يستطع فتح القفل وتوجب عليه إيجاد حل.",
+  "questions": [
+    { "question": "In Pauls Stadt werden jede Woche Fahrräder gestohlen.", "answer": "R" },
+    { "question": "Paul stellt sein Fahrrad häufig am Bahnhof ab.", "answer": "R" },
+    { "question": "Paul hatte sein Fahrrad am Morgen abgeschlossen.", "answer": "R" },
+    { "question": "Der Angestellte konnte Paul helfen.", "answer": "R" },
+    { "question": "Als Paul das Kabel durchtrennte, ging das Werkzeug kaputt.", "answer": "F" },
+    { "question": "Paul wartete lange auf den Bus, um nach Hause zu fahren.", "answer": "F" },
+    { "question": "Paul empfiehlt, sichere Schlösser zu kaufen.", "answer": "F" }
+  ]
+}

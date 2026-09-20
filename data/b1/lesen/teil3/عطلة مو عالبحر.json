@@ -1,0 +1,40 @@
+{
+  "title": "Lesen Teil 3 - Urlaub aber nicht am Meer",
+  "pairs": [
+    {
+      "question": "Jenny möchte in eine großstadt fahren zum Jahreswechsel",
+      "answer": "Neujahr in einer Metropole",
+      "keywords": "Silvester - Feuerwerk - Neujahr - Metropole"
+    },
+    {
+      "question": "suzan möchte die Nordseeküste mit ihren Inseln kennenlernen",
+      "answer": "lernen Sie - Nordsee - erleben - entdecken",
+      "keywords": "lernen Sie - Nordsee - erleben - entdecken"
+    },
+    {
+      "question": "Leonard möchte im Urlaub seine sprachkenntnisse verbessern",
+      "answer": "Lernen / Sprachreise / study Global - language Travel - sprachkurs - austauschen",
+      "keywords": "study Global - language Travel - sprachkurs - austauschen"
+    },
+    {
+      "question": "Timo interessant sich für kultur und möchte deutsche städte besuchen",
+      "answer": "erleben - entdecken - besichtigen - kulturreise - konzert - mehrere orte - Bühne frei für Musik und Theater",
+      "keywords": "erleben - entdecken - besichtigen - kulturreise - konzert - mehrere orte - Bühne frei für Musik und Theater"
+    },
+    {
+      "question": "Nadin möchte im urlaub reiten lernen",
+      "answer": "keine",
+      "keywords": "reiten lernen - urlaub"
+    },
+    {
+      "question": "Gerand 53 möchte seinen urlaub mit Gleichaltrigen verbringen",
+      "answer": "reise für alle ab 50plus",
+      "keywords": "senioren - ab 50plus"
+    },
+    {
+      "question": "Familie Groß möchte mit ihren zwei kindern urlaub im Gebirge machen",
+      "answer": "Inzell - Bayerische Alpen",
+      "keywords": "Familienurlaub - Aktivitäten für kinder – Gebirge"
+    }
+  ]
+}

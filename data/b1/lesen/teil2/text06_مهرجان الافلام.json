@@ -1,0 +1,33 @@
+{
+  "title": "Entspannt zum Filmfestival (مهرجان الأفلام)",
+  "summary": "يُقام في سويسرا مهرجان لوكارنو السينمائي الشهير لمدة 11 يوماً، ويُشجّع استخدام وسائل النقل العامة.",
+  "questions": [
+    {
+      "question": "In dem Text geht es darum:",
+      "options": {
+        "a": "dass weniger Festivalbesucher mit dem Auto anreisen sollen.",
+        "b": "sowohl der Eintritt als auch die Fahrkarte billiger.",
+        "c": "haben Interesse an so einem sozialen Angebot."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Mit dem neuen Angebot:",
+      "options": {
+        "a": "dass weniger Festivalbesucher mit dem Auto anreisen sollen.",
+        "b": "sowohl der Eintritt als auch die Fahrkarte billiger.",
+        "c": "haben Interesse an so einem sozialen Angebot."
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Die Veranstalter der Filmtage in Solothurn und Winterthur:",
+      "options": {
+        "a": "dass weniger Festivalbesucher mit dem Auto anreisen sollen.",
+        "b": "sowohl der Eintritt als auch die Fahrkarte billiger.",
+        "c": "haben Interesse an so einem sozialen Angebot."
+      },
+      "answer": "C"
+    }
+  ]
+}

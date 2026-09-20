@@ -1,0 +1,33 @@
+{
+  "title": "Gemüsenernte (حصاد الخضار مباشرة من البستان)",
+  "summary": "الاهتمام بالزراعة ومعرفة مصدر الأغذية وجهد العمل الزراعي وأهمية الزراعة.",
+  "questions": [
+    {
+      "question": "In dem Text geht es um:",
+      "options": {
+        "a": "das zunehmende Interesse an Gärten.",
+        "b": "woher Lebensmittel kommen.",
+        "c": "Die Landwirtschaft ist anstrengend und kostspielig."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Die Menschen wollen wissen:",
+      "options": {
+        "a": "woher Lebensmittel kommen.",
+        "b": "das zunehmende Interesse an Gärten.",
+        "c": "Die Landwirtschaft ist anstrengend und kostspielig."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Die Mehrheit hat im Fragebogen geantwortet:",
+      "options": {
+        "a": "Die Landwirtschaft ist anstrengend und kostspielig.",
+        "b": "das zunehmende Interesse an Gärten.",
+        "c": "woher Lebensmittel kommen."
+      },
+      "answer": "A"
+    }
+  ]
+}

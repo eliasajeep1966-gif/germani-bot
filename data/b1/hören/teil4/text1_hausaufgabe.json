@@ -1,0 +1,71 @@
+{
+  "title": "Hausaufgabe",
+  "media_files": false,
+  "options": [
+    {
+      "key": "a",
+      "text": "السيدة"
+    },
+    {
+      "key": "b",
+      "text": "الرجل"
+    },
+    {
+      "key": "c",
+      "text": "المذيعة"
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "text": "Eltern schreiben Hausaufgaben für ihre Kinder // Eltern sind von ihrer Arbeit sehr müde",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: السيدة"
+    },
+    {
+      "id": 2,
+      "text": "Jobs bereiten Studierende auf das Berufsleben vor.",
+      "correct_answer": "b",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: الرجل"
+    },
+    {
+      "id": 3,
+      "text": "Hausaufgaben sind langweilig.",
+      "correct_answer": "c",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المذيعة"
+    },
+    {
+      "id": 4,
+      "text": "Kinder haben viele Hausaufgaben zu erledigen oder zu machen",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: السيدة"
+    },
+    {
+      "id": 5,
+      "text": "Hobbys sind genauso wichtig wie Hausaufgaben",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: السيدة"
+    },
+    {
+      "id": 6,
+      "text": "Die Taschen sind für die Schüler schwer und sie legen Bücher hinein.",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: السيدة"
+    },
+    {
+      "id": 7,
+      "text": "Hausaufgaben helfen, eine gute Kontrolle zu haben / Für junge Männer gibt es gute Kontrolle.",
+      "correct_answer": "b",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: الرجل"
+    },
+    {
+      "id": 8,
+      "text": "Die Studierenden haben viel Freizeit.",
+      "correct_answer": "b",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: الرجل"
+    }
+  ],
+  "end_of_text_summary": {
+    "keywords": "الكلمات المفتاحية"
+  }
+}

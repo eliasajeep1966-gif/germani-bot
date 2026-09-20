@@ -1,0 +1,55 @@
+{
+  "summary": "هنا يمكنك كتابة ملخص النص الخاص برحلة مدرسية إلى المتحف لكي يظهره البوت للمستخدم.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Wo wird der Reiseleiter sie treffen?",
+      "options": {
+        "a": "Am Reisebus",
+        "b": "Am Haupteingang des Museums",
+        "c": "Am Bahnhof in der Nähe"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 2,
+      "question": "Sag ihnen, dass wir...?",
+      "options": {
+        "a": "ins / in einem Dorf gehen",
+        "b": "in eine historische Altstadt gehen",
+        "c": "in ein kleines Stadtviertel gehen"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 3,
+      "question": "Sag ihnen, dass Sie nach einer...?",
+      "options": {
+        "a": "ganzen Stunde das Meer sehen und Fotos machen können",
+        "b": "halben Stunde das Meer sehen und Fotos machen können",
+        "c": "dreiviertel Stunde das Meer sehen und Pause machen können"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 4,
+      "question": "Sag ihnen, dass...?",
+      "options": {
+        "a": "Sie Schnee sehen können, obwohl es Sommer ist",
+        "b": "Sie Schnee sehen können, obwohl es Winter ist",
+        "c": "Sie Eis sehen können, obwohl es Frühling ist"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 5,
+      "question": "Das Museum...?",
+      "options": {
+        "a": "zeigt Bilder aus der Natur",
+        "b": "zeigt Gemälde aus der Geschichte",
+        "c": "zeigt Kunstwerke aus der Region"
+      },
+      "correct_answer": "a"
+    }
+  ]
+}

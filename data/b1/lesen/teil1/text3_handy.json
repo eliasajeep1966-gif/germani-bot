@@ -1,0 +1,12 @@
+{
+  "title": "فتاة تفقد جوالها",
+  "summary": "بنت عم تحكي عن الإجازة عم تقول حست انو جهازها ما عم يرن.",
+  "questions": [
+    { "question": "Zuerst dachte sie, dass ihr Handy gestohlen wurde.", "answer": "R" },
+    { "question": "Der Verlust von Daten ist schlimm.", "answer": "R" },
+    { "question": "Das Handy hatte geringe Schäden durch den Sturz.", "answer": "R" },
+    { "question": "Ihre Freundin hat den Finder des Handys angerufen.", "answer": "F" },
+    { "question": "Sie haben zusammen mit dem Finder zu Abend gegessen.", "answer": "F" },
+    { "question": "Sie vereinbarten einen Termin mit dem Finder.", "answer": "F" }
+  ]
+}

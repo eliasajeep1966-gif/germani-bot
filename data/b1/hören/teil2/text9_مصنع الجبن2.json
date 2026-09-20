@@ -1,0 +1,55 @@
+{
+  "summary": "هنا يمكنك كتابة ملخص النص الخاص بمصنع الحليب والجبن لكي يظهره البوت للمستخدم.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Wofür werden sechs Millionen Liter Milch verwendet?",
+      "options": {
+        "a": "Käseherstellung",
+        "b": "Milchprodukte",
+        "c": "Milchgetränke"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 2,
+      "question": "Wie konsumieren die Schweizer eine bestimmte Käsesorte?",
+      "options": {
+        "a": "Mit Gemüse",
+        "b": "Mit Kartoffeln",
+        "c": "Mit Brot"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 3,
+      "question": "Worauf sie während des Besuchs achten sollten?",
+      "options": {
+        "a": "Unten schauen",
+        "b": "Oben schauen",
+        "c": "Zur Seite schauen"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 4,
+      "question": "Mit...?",
+      "options": {
+        "a": "Heizung",
+        "b": "Klimaanlage",
+        "c": "Wärmepumpe"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 5,
+      "question": "Der Käse ... geschützt verkauft.",
+      "options": {
+        "a": "gesetzlich",
+        "b": "markenrechtlich",
+        "c": "regional"
+      },
+      "correct_answer": "b"
+    }
+  ]
+}

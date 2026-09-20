@@ -1,0 +1,33 @@
+{
+  "title": "Kleine Projekte (مشاريع صغيرة)",
+  "summary": "أهمية المشاريع الصغيرة في دعم الشباب لبدء مسيرتهم.",
+  "questions": [
+    {
+      "question": "In dem Text geht es um:",
+      "options": {
+        "a": "Kleine Projekte sind der Anfang des Erfolgs.",
+        "b": "benötigen keinen großen Geldbetrag.",
+        "c": "für Jugendliche."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Diese Projekte:",
+      "options": {
+        "a": "benötigen keinen großen Geldbetrag.",
+        "b": "für Jugendliche.",
+        "c": "Kleine Projekte sind der Anfang des Erfolgs."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Es ist wichtig für:",
+      "options": {
+        "a": "Jugendliche.",
+        "b": "Kleine Projekte sind der Anfang des Erfolgs.",
+        "c": "benötigen keinen großen Geldbetrag."
+      },
+      "answer": "A"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "title": "Wirkung pflanzlicher Lebensmittel (الأكل الملون وفوائده)",
+  "summary": "تناول الفواكه والخضروات الملونة يمد الجسم بالفيتامينات ويعزز المناعة والصحة العامة.",
+  "questions": [
+    {
+      "question": "In diesem Text geht es um:",
+      "options": {
+        "a": "die Wirkung von pflanzlichen Lebensmitteln.",
+        "b": "abhängig von der Zeit der Ernte.",
+        "c": "wenn man nicht krank werden möchte."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Die Qualität von Obst und Gemüse ist:",
+      "options": {
+        "a": "die Wirkung von pflanzlichen Lebensmitteln.",
+        "b": "abhängig von der Zeit der Ernte.",
+        "c": "wenn man nicht krank werden möchte."
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Obst und Gemüse sollte man essen:",
+      "options": {
+        "a": "die Wirkung von pflanzlichen Lebensmitteln.",
+        "b": "abhängig von der Zeit der Ernte.",
+        "c": "wenn man nicht krank werden möchte."
+      },
+      "answer": "C"
+    }
+  ]
+}

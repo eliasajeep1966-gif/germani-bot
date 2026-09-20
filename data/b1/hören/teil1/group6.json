@@ -1,0 +1,258 @@
+{
+  "group_id": 6,
+  "title": "Menge 6",
+  "questions": [
+    {
+      "id": 1,
+      "type": "true_false",
+      "text": "Sie hören eine Werbung für Sehenswürdigkeiten.",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 2,
+      "type": "multiple_choice",
+      "text": "Mit dem Citypass kann man",
+      "options": [
+        "Sehenswürdigkeiten gratis besuchen",
+        "ermäßigt in der Stadt einkaufen",
+        "Busse und Bahnen in und um München nutzen"
+      ],
+      "answer": "Busse und Bahnen in und um München nutzen"
+    },
+    {
+      "id": 3,
+      "type": "true_false",
+      "text": "Alle Linien einer bestimmten Linie werden geschlossen sein.",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 4,
+      "type": "multiple_choice",
+      "text": "Wohin geht die Reise?",
+      "options": [
+        "nach Zürich",
+        "Nach Berlin",
+        "nach Genf"
+      ],
+      "answer": "Nach Berlin"
+    },
+    {
+      "id": 5,
+      "type": "true_false",
+      "text": "Das Mädchen spricht wegen der Versicherung",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 6,
+      "type": "multiple_choice",
+      "text": "Sie wird",
+      "options": [
+        "den Mechaniker anrufen",
+        "das Auto in die Werkstatt bringen",
+        "eine neue Versicherung abschließen"
+      ],
+      "answer": "das Auto in die Werkstatt bringen"
+    },
+    {
+      "id": 7,
+      "type": "true_false",
+      "text": "Die Angebote gelten nicht für Wassersport",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 8,
+      "type": "multiple_choice",
+      "text": "Die Angebote sind",
+      "options": [
+        "für Erwachsene",
+        "für Familien",
+        "für Kinder"
+      ],
+      "answer": "für Kinder"
+    },
+    {
+      "id": 9,
+      "type": "true_false",
+      "text": "147. Die Verkehrsbetriebe informieren über den Ausfall eines Verkehrsmittels",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Richtig"
+    },
+    {
+      "id": 10,
+      "type": "multiple_choice",
+      "text": "148. Die Straßenbahnlinie 2",
+      "options": [
+        "Nach Berlin",
+        "wird gerade repariert",
+        "nach Genf"
+      ],
+      "answer": "wird gerade repariert"
+    },
+    {
+      "id": 11,
+      "type": "true_false",
+      "text": "149. Die Wassersport-Aktivät findet am Samstag um 16 Uhr statt",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 12,
+      "type": "multiple_choice",
+      "text": "150. Um wie viel Uhr beginnt fie Wassersport-Aktivität ?",
+      "options": [
+        "um 18Uhr",
+        "um 16Uhr",
+        "um 19 Uhr"
+      ],
+      "answer": "um 18Uhr"
+    },
+    {
+      "id": 13,
+      "type": "true_false",
+      "text": "151. Wassersport und Motorboote fur eine Wasserfahrt",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 14,
+      "type": "multiple_choice",
+      "text": "152. Die Aktivität",
+      "options": [
+        "Samstag",
+        "freitag",
+        "Sonntag"
+      ],
+      "answer": "Sonntag"
+    },
+    {
+      "id": 15,
+      "type": "true_false",
+      "text": "153. Wassersport und Motorboote fur eine Wasserfahrt",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 16,
+      "type": "multiple_choice",
+      "text": "154. Und?",
+      "options": [
+        "Das wird alles durch die Wasserfahrt erklärt",
+        "Das wird alles durch die wassersoprt-Aktivität erklärt",
+        "Das wird alles durch die Teilnahme erklärt"
+      ],
+      "answer": "Das wird alles durch die wassersoprt-Aktivität erklärt"
+    },
+    {
+      "id": 17,
+      "type": "true_false",
+      "text": "155. Er sucht nach fahrradgeschäften",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 18,
+      "type": "multiple_choice",
+      "text": "156. Er muss",
+      "options": [
+        "Sicherheit",
+        "Ausprobieren",
+        "Neue Designs anzeigen"
+      ],
+      "answer": "Ausprobieren"
+    },
+    {
+      "id": 19,
+      "type": "true_false",
+      "text": "157. Sie hören Werbung für eine neue Radiosendung",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 20,
+      "type": "multiple_choice",
+      "text": "158. Auf dem Film",
+      "options": [
+        "Es gibt nach dem Film noch Gespräche",
+        "Ausprobieren",
+        "Neue Film sehen"
+      ],
+      "answer": "Es gibt nach dem Film noch Gespräche"
+    },
+    {
+      "id": 21,
+      "type": "true_false",
+      "text": "159. Sie hören infos zur Sicherheit am Flughafen (غالبا نفسو 63):",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 22,
+      "type": "multiple_choice",
+      "text": "Welcher Flug fällt aus?",
+      "options": [
+        "Frankfurt",
+        "Genf",
+        "Kopenhagen"
+      ],
+      "answer": "Genf"
+    },
+    {
+      "id": 23,
+      "type": "true_false",
+      "text": "161. Der Bankamgestellt informiert uber neue Kreditangebote",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 24,
+      "type": "multiple_choice",
+      "text": "162. Durch das Internet kann man (غالبا نفسو 95)",
+      "options": [
+        "fur Bankgeschafte weniger zahlen",
+        "mehr zahlen",
+        "schell melden"
+      ],
+      "answer": "fur Bankgeschafte weniger zahlen"
+    }
+  ]
+}

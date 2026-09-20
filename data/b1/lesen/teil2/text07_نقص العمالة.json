@@ -1,0 +1,33 @@
+{
+  "title": "نقص العمالة في سويسرا",
+  "summary": "بحلول 2030 قد يفتقد سوق العمل السويسري 40,000 عامل يطالب بزيادة الاستثمار بالتعليم وتحسين ظروف العمل .",
+  "questions": [
+    {
+      "question": "In diesem Text geht es darum:",
+      "options": {
+        "a": "dass einigen Berufen Arbeitnehmer fehlen werden.",
+        "b": "weil einige Berufe bei jungen Menschen unbeliebt sind.",
+        "c": "wenn mehr Frauen eine bezahlte Arbeit aufnehmen würden."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Das Problem besteht:",
+      "options": {
+        "a": "dass einigen Berufen Arbeitnehmer fehlen werden.",
+        "b": "weil einige Berufe bei jungen Menschen unbeliebt sind.",
+        "c": "wenn mehr Frauen eine bezahlte Arbeit aufnehmen würden."
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Laut Travailsuisse wäre das Problem zu lösen:",
+      "options": {
+        "a": "dass einigen Berufen Arbeitnehmer fehlen werden.",
+        "b": "weil einige Berufe bei jungen Menschen unbeliebt sind.",
+        "c": "wenn mehr Frauen eine bezahlte Arbeit aufnehmen würden."
+      },
+      "answer": "C"
+    }
+  ]
+}

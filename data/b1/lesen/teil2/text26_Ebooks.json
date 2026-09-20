@@ -1,0 +1,33 @@
+{
+  "title": "E-books (الكتب الإلكترونية)",
+  "summary": "فكرة مكتبة إلكترونية لتسهيل حمل الكتب والتسجيل عبر الموقع.",
+  "questions": [
+    {
+      "question": "In dem Text geht es um:",
+      "options": {
+        "a": "Das ist eine clevere Idee, um das Tragen von Büchern zu erleichtern.",
+        "b": "muss man ein Konto erstellen und seine persönlichen Daten eingeben.",
+        "c": "dass er stolz auf den Erfolg dieser Idee ist."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Um Bücher zu bestellen:",
+      "options": {
+        "a": "muss man ein Konto erstellen und seine persönlichen Daten eingeben.",
+        "b": "Das ist eine clevere Idee, um das Tragen von Büchern zu erleichtern.",
+        "c": "dass er stolz auf den Erfolg dieser Idee ist."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Der Autor erwähnte:",
+      "options": {
+        "a": "dass er stolz auf den Erfolg dieser Idee ist.",
+        "b": "Das ist eine clevere Idee, um das Tragen von Büchern zu erleichtern.",
+        "c": "muss man ein Konto erstellen und seine persönlichen Daten eingeben."
+      },
+      "answer": "A"
+    }
+  ]
+}

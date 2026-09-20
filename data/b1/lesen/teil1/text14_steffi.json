@@ -1,0 +1,34 @@
+{
+  "title": "ستيفي وزميلتها المزعجة في العمل",
+  "summary": "وحدة سعيدة بأخذ زميلتها إجازة لأنها أخيراً ستتمكن من العمل بسرعة.",
+  "questions": [
+    {
+      "question": "Bevor ihre Kollegin gekommen ist, hat Steffi mehr gearbeitet",
+      "answer": "R"
+    },
+    {
+      "question": "Die Kollegin erinnert Steffi an ihre Mutter",
+      "answer": "R"
+    },
+    {
+      "question": "Steffi hilft ihrer Kollegin bei Problemen mit Computer",
+      "answer": "R"
+    },
+    {
+      "question": "Steffi erfährt von ihrer Kollegin, was im Büro los ist",
+      "answer": "R"
+    },
+    {
+      "question": "Steffis Kollegin fährt für zwei Wochen in den Urlaub",
+      "answer": "F"
+    },
+    {
+      "question": "Die Kollegin wird Steffi fehlen",
+      "answer": "F"
+    },
+    {
+      "question": "Steffis Kollegin erklärt gern mehrmals das gleiche",
+      "answer": "F"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "title": "شاب لا يتحدث الإنجليزية بطلاقة",
+  "summary": "شاب يسافر بالقطار، وكان عليه كتابة إيميل باللغة الإنجليزية لكنه لا يتحدثها بطلاقة.",
+  "questions": [
+    {
+      "question": "Der junge Mann erledigt Aufgaben im Zug, um den Arbeitsdruck zu verringern",
+      "answer": "R"
+    },
+    {
+      "question": "Während er E-Mails schreibt, achtet er auf seine Fehler",
+      "answer": "F"
+    },
+    {
+      "question": "Seine kanadische Freundin hat eine Ausbildung, mit der sie in Österreich und Deutschland arbeitet",
+      "answer": "F"
+    },
+    {
+      "question": "Er hat sich sehr bemüht, Englisch zu lernen",
+      "answer": "F"
+    },
+    {
+      "question": "Seine Freundin wird ihm Geld abnehmen, um ihm die Sprache beizubringen",
+      "answer": "F"
+    },
+    {
+      "question": "Sie haben einen Termin am Telefon vereinbart",
+      "answer": "F"
+    }
+  ]
+}

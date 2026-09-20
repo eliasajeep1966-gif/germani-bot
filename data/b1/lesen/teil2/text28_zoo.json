@@ -1,0 +1,33 @@
+{
+  "title": "Zoo Park (حديقة الحيوان)",
+  "summary": "جذب الزوار لحديقة الحيوان عبر اقتراح أسماء للأسود الجديدة.",
+  "questions": [
+    {
+      "question": "In dem Text geht es um:",
+      "options": {
+        "a": "Wie kann der Zoo für Besucher attraktiver gemacht werden.",
+        "b": "geringer / weniger als im letzten Jahr.",
+        "c": "Die Besucher."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Die Besucherzahl ist in diesem Jahr:",
+      "options": {
+        "a": "geringer / weniger als im letzten Jahr.",
+        "b": "Wie kann der Zoo für Besucher attraktiver gemacht werden.",
+        "c": "Die Besucher."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Wer nennt die Löwen:",
+      "options": {
+        "a": "Die Besucher.",
+        "b": "Wie kann der Zoo für Besucher attraktiver gemacht werden.",
+        "c": "geringer / weniger als im letzten Jahr."
+      },
+      "answer": "A"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "summary": "ملخص نص مصنع الشوكولا (Schokoladenfabrik)",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Schokolade?",
+      "options": {
+        "a": "die Fair-Trade Kakao enthält",
+        "b": "die Bio Kakao enthält",
+        "c": "die Pflanzliche Milch enthält"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 2,
+      "question": "Schokoladenfarmen?",
+      "options": {
+        "a": "Informationen von Suchard Firma",
+        "b": "Informationen von Zotter Firma",
+        "c": "Informationen von Lindt Firma"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 3,
+      "question": "In einer Schokoladenfabrik kann man...",
+      "options": {
+        "a": "Er macht aus den Bohnen flüssige Kakaomasse",
+        "b": "Er macht aus den Bohnen Schokolade, bis daraus Tafel wird",
+        "c": "Er verpackt die fertigen Schokoladentafeln automatisch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 4,
+      "question": "Einige Schokoladenmaterialien müssen...?",
+      "options": {
+        "a": "aus der Schweiz kommen",
+        "b": "aus Österreich kommen",
+        "c": "aus Deutschland kommen"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 5,
+      "question": "Das Wichtigste für das Unternehmen ist...?",
+      "options": {
+        "a": "die Qualität der Zutaten",
+        "b": "der Geschmack der Schokolade",
+        "c": "Verpackungen"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "id": 6,
+      "question": "Wo kann man kostenlose Schokolade bekommen?",
+      "options": {
+        "a": "In einer Verkostung",
+        "b": "In einer Manufaktur",
+        "c": "In einer Ausstellung"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "id": 7,
+      "question": "Wer ist für die Gestaltung der Verpackung verantwortlich?",
+      "options": {
+        "a": "Andreas",
+        "b": "Alexander",
+        "c": "Adrian"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 8,
+      "question": "Seit wie vielen Jahren gibt es Schokoladenriegel in Österreich?",
+      "options": {
+        "a": "seit 140 Jahren",
+        "b": "seit 160 Jahren",
+        "c": "seit 150 Jahren"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "id": 9,
+      "question": "Wie berühmt ist dieses Schokoladenmodell?",
+      "options": {
+        "a": "in ganz Europa",
+        "b": "in allen deutschsprachigen Ländern",
+        "c": "um ganz Welt"
+      },
+      "correct_answer": "c"
+    }
+  ]
+}

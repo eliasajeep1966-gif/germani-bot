@@ -1,0 +1,40 @@
+{
+  "title": "Lesen Teil 3 - Ferien",
+  "pairs": [
+    {
+      "question": "stefan wandert gern. Er lebt die Natur und die Ruhe in den Bergen",
+      "answer": "gasthof fichtenhof in Tirol",
+      "keywords": "wandern - Bergen - Natur - Ruhe"
+    },
+    {
+      "question": "Mona interessant sich für Geschichte",
+      "answer": "Erlebnis stadt Dresden",
+      "keywords": "Erlebnis - Stadt - Historisch - Urlaub - S.w.k"
+    },
+    {
+      "question": "carl und seine frau eine stadtreise übernachtung im fünf sterne Hotel schenken",
+      "answer": "keine",
+      "keywords": "fünf sterne Hotel - stadtreise"
+    },
+    {
+      "question": "Michael 22 ist straßenmusikant Hat aber nur wenig Geld",
+      "answer": "Rabatt 15%",
+      "keywords": "Rabatt 15 - Budget beschränkt - günstig"
+    },
+    {
+      "question": "patrik sucht ferienart für seine Tochter Alina10 die Tiere liebt",
+      "answer": "Reitferien auf dem pferdenhof",
+      "keywords": "Bauernhof - Pferdehof - Tierfreundlich - Reitferien"
+    },
+    {
+      "question": "Tobias möchte neue leute kennenlernen und zu toller Musik tanzen",
+      "answer": "party in zürich / Laute Musik",
+      "keywords": "veranstaltung - DJ - Leute treffen - party"
+    },
+    {
+      "question": "Franziska möchte sich nach der Arbeit im Schwimmbad erholen",
+      "answer": "Waldbad Grund",
+      "keywords": "Waldbad Grund – Entspannung"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Ein Gesetz zur Mülltrennung",
+  "fixed_question": "Sind die folgenden Personen für ein Gesetz zur Mülltrennung?",
+  "questions": [
+    {
+      "text": "Wenn es kein Gesetz gibt, halten sich die Leute nicht daran. Deshalb ist ein Gesetz unbedingt notwendig.“",
+      "answer": "J"
+    },
+    {
+      "text": "Das Gesetz könnte für große Familien schwierig sein. Ich persönlich habe aber kein Problem damit, weil ich schon lange daran gewöhnt bin. Für mich ändert sich also nichts.“",
+      "answer": "J"
+    },
+    {
+      "text": "Die Leute bringen leere Flaschen zurück, weil sie dafür Geld bekommen. Dieses Pfandsystem funktioniert sehr gut. Ein finanzieller Anreiz ist deshalb viel besser als ein Gesetz.“",
+      "answer": "N"
+    },
+    {
+      "text": "Manche Menschen verdienen Geld damit, Müll zu verkaufen. Dieses Gesetz zwingt uns zu Dingen gegen unseren Willen.“",
+      "answer": "N"
+    }
+  ]
+}

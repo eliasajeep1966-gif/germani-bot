@@ -1,0 +1,38 @@
+{
+  "title": "Arbeitskleidung / Uniform am Arbeitsplatz",
+  "fixed_question": "Sind die Personen für eine einheitliche Kleidung am Arbeitsplatz?",
+  "questions": [
+    {
+      "text": "Ich war zuerst absolut gegen eine Pflicht für Arbeitskleidung, aber als ich den praktischen Nutzen im Alltag gesehen habe, hat sich meine Meinung geändert.",
+      "answer": "J"
+    },
+    {
+      "text": "Kleidung ist mir im Privatleben wie auch im Beruf eigentlich egal. Trotzdem denke ich, dass einheitliche Kleidung sehr viele Vorteile hat.",
+      "answer": "J"
+    },
+    {
+      "text": "Ich bin ein sportlicher Typ und trage am liebsten bequeme Sachen. Ehrlich gesagt mag ich Uniformen nicht besonders, aber im Büro habe ich nichts dagegen.",
+      "answer": "J"
+    },
+    {
+      "text": "Meine Kollegin trägt immer Jeans. Es sollte keine Pflicht sein, sondern ein Tipp vom Chef reicht völlig aus.",
+      "answer": "N"
+    },
+    {
+      "text": "Ich brauche keine Regel oder ein Gesetz, das mir sagt, was ich im Büro tragen soll. Ich weiß von allein, was passend ist.",
+      "answer": "N"
+    },
+    {
+      "text": "Ich finde, dass der Chef ein Vorbild für die Mitarbeiter sein sollte. Strenge offizielle Regeln sind deshalb nicht nötig.",
+      "answer": "N"
+    },
+    {
+      "text": "Es gibt schon Arbeitskleidung für Ärzte und Schulkleidung für Schüler. Und jetzt möchte man auch noch im normalen Beruf eine Pflicht einführen!",
+      "answer": "N"
+    },
+    {
+      "text": "Ich bin Polizist und die Dienstkleidung ist gut, obwohl manche Leute sich darüber lustig machen. Wir tragen die Uniform auch ohne ein festes Gesetz, deshalb braucht man keine schriftliche Regelung.",
+      "answer": "N"
+    }
+  ]
+}

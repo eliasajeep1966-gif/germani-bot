@@ -1,0 +1,40 @@
+{
+  "title": "Lesen Teil 3 - sportliche Aktivitäten",
+  "pairs": [
+    {
+      "question": "Vater möchte mit seinem 4_6jährigen Sohn einen Ausflug machen",
+      "answer": "Ein Ausflug zu einem ort mit flora und fauna, der für famillien geeignet sein könnte",
+      "keywords": "Ausflug - flora und fauna - für familien geeignet"
+    },
+    {
+      "question": "Eine sportliche frau, die Morgenaktivitäten liebt",
+      "answer": "Atmen, und Abfahrtszeit ist 5:30 uhr",
+      "keywords": "Atmen - Abfahrtszeit 5:30 uhr - Morgenaktivitäten"
+    },
+    {
+      "question": "Eine Frau, die Wassersport liebt und etwas Neues auprobieren möchte",
+      "answer": "Aqua zumba",
+      "keywords": "Aqua zumba - Wassersport"
+    },
+    {
+      "question": "Ein Mann, der gerne Fahrrad fährt und die Gegend alleine erkunden möchte",
+      "answer": "Fahrrad - alleine - Gegend erkunden",
+      "keywords": "Fahrrad - alleine - Gegend erkunden"
+    },
+    {
+      "question": "Mann fährt gerne Motorrad und möchte am Rennen(Mitbewerb) teilnehmen",
+      "answer": "Rennen - Motorradbike",
+      "keywords": "Rennen - Motorradbike"
+    },
+    {
+      "question": "Frau die lokales Essen liebt. Sie möchte es mit ihrer familie versuchen",
+      "answer": "Essen - traditional - Deutsche Gerichte",
+      "keywords": "Essen - traditional - Deutsche Gerichte"
+    },
+    {
+      "question": "Die frau, die bei schlechtem Wetter arbeitet und spaß daran hat. Eine bestimmte sportart auszuüben",
+      "answer": "trend - in der halle - einen geschlossenen Raum - Fitnessstudio - Yoga",
+      "keywords": "trend - in der halle - einen geschlossenen Raum - Fitnessstudio – Yoga"
+    }
+  ]
+}

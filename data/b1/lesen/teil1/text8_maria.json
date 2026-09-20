@@ -1,0 +1,34 @@
+{
+  "title": "ماريا تفقد حقائبها بالمطار",
+  "summary": "ماريا وصلت المطار بعد رحلة طويلة، ارتاحت وشربت قهوة واكتشفت بعدها أن الحقائب مفقودة.",
+  "questions": [
+    {
+      "question": "Maria wird in Zukunft eine Versicherung für ihre Sachen abschließen",
+      "answer": "R"
+    },
+    {
+      "question": "Maria hat einige Tage (oder ein paar tage frei), um sich zu entspannen",
+      "answer": "R"
+    },
+    {
+      "question": "Der Flughafen war für das lange Warten vorbereitet",
+      "answer": "F"
+    },
+    {
+      "question": "Maria stellte schnell fest, dass ihre Koffer verloren waren",
+      "answer": "F"
+    },
+    {
+      "question": "Die Firma wird die Koffer nach Hause liefern",
+      "answer": "F"
+    },
+    {
+      "question": "Der Mitarbeiter hat keinen Grund für das Verschwinden des Koffers",
+      "answer": "F"
+    },
+    {
+      "question": "Sie war die ganze Zeit unterwegs und viel gelaufen.",
+      "answer": "F"
+    }
+  ]
+}

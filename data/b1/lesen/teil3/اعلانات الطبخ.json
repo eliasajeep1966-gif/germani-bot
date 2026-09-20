@@ -1,0 +1,40 @@
+{
+  "title": "Lesen Teil 3 - اعلانات الطبخ",
+  "pairs": [
+    {
+      "question": "Eine Person hat angefangen, Kochen zu lernen",
+      "answer": "Kochkurs für Süditalienische Küche. Wir bieten auch Ausflüge (Ausflug) an. Der Kurs ist nur für Erwachsene.",
+      "keywords": "Kochkurs - Ausflüge – Erwachsene"
+    },
+    {
+      "question": "Eine Person möchte mit ihrer 10-jährigen Tochter einen Kochkurs besuchen.",
+      "answer": "Kochkurse ohne Vorkenntnisse. Geeignet für Kinder und Erwachsene.",
+      "keywords": "Kinder - Erwachsene - ohne Vorkenntnisse"
+    },
+    {
+      "question": "Ein Mann möchte nach der Hochzeit einen besonderen Abend für seine Frau vorbereiten.",
+      "answer": "Eine professionelle Autorin hat ein Buch geschrieben, das mehr als fünf Rezepte und Desserts aus verschiedenen Küchen der Welt enthält - von Indien bis Frankreich.",
+      "keywords": "Buch - Rezepte - Desserts - Küchen der Welt"
+    },
+    {
+      "question": "Eine Person möchte lernen, Kuchen für ihren Kinder zu machen, hat aber keine Erfahrung",
+      "answer": "Wir zeigen Ihnen, wie man Kuchen backt. Vorkenntnisse sind nicht nötig.",
+      "keywords": "Kuchen backt - Vorkenntnisse nicht nötig - Kindergeburtstage - Hochzeiten - Abschlussfeiern"
+    },
+    {
+      "question": "Eine Person interessiert sich für Kochen als Hobby und sammelt alte und neue KochBücher",
+      "answer": "keine",
+      "keywords": "Kochbücher - Hobby - sammeln"
+    },
+    {
+      "question": "Eine Person ist sehr talentiert im Kochen und möchte an einem Kochwettbewerb teilnehmen",
+      "answer": "Die Gewinner bekommen eine Reise in eine Stadt.",
+      "keywords": "Gewinner - Reise - Kochwettbewerb"
+    },
+    {
+      "question": "Eine Person hat gesundheitliche Probleme (Milchallergie)",
+      "answer": "Organisation / App für Ernährung. Wir helfen Ihnen, passende Mahlzeiten für Ihre Gesundheit auszuwählen",
+      "keywords": "Organisation - App - Ernährung - Gesundheit - passende Mahlzeiten"
+    }
+  ]
+}

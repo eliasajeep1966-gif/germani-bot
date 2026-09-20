@@ -1,0 +1,77 @@
+{
+  "summary": "ملخص نص Stevie und ihr Begleiter للتايل الثالث سماعي.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Die Schwester des jungen Mannes möchte im Ausland studieren.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 2,
+      "question": "Die Familie des Mädchens war bei der Familie des Jungen.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 3,
+      "question": "Ihr Lehrer arbeitet seit 5 Jahren in Argentinien.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 4,
+      "question": "Der Junge und das Mädchen sind in der gleichen Schule.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 5,
+      "question": "Am Ende der Woche war sie bei ihrer Familie.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 6,
+      "question": "Sie sieht ihn immer wieder.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 7,
+      "question": "Ihr Lehrer unterrichtet jetzt Spanisch.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 8,
+      "question": "Sie lieben die deutsche Sprache.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    }
+  ]
+}

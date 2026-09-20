@@ -1,0 +1,65 @@
+{
+  "summary": "هنا يمكنك كتابة ملخص النص الخاص بليتنهايم لكي يظهره البوت للمستخدم.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Was gibt es in der Stadt?",
+      "options": {
+        "a": "Historische Fachwerkhäuser",
+        "b": "Stadtmauern",
+        "c": "Alte Stadtkirchen"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 2,
+      "question": "Ist die Stadt in der Nähe von ...?",
+      "options": {
+        "a": "Luxemburg",
+        "b": "Frankreich",
+        "c": "Österreich"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 3,
+      "question": "Was ist darin am meisten zu finden?",
+      "options": {
+        "a": "Angebote auf Rotwein",
+        "b": "Angebote auf Roséwein",
+        "c": "Angebote auf Weißwein"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "id": 4,
+      "question": "Was können Sie tun?",
+      "options": {
+        "a": "Gute Radfahrmöglichkeiten",
+        "b": "Gute Wandermöglichkeiten",
+        "c": "Gute Klettermöglichkeiten"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 5,
+      "question": "Sie können das Bürgerbüro besuchen:",
+      "options": {
+        "a": "Donnerstag bis 18 Uhr",
+        "b": "Donnerstag bis 20 Uhr",
+        "c": "Dienstag bis 20 Uhr"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 6,
+      "question": "Wo liegt diese Stadt?",
+      "options": {
+        "a": "Odenwald",
+        "b": "Bayerischer Wald",
+        "c": "Schwarzwald"
+      },
+      "correct_answer": "c"
+    }
+  ]
+}

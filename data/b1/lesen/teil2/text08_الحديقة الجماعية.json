@@ -1,0 +1,33 @@
+{
+  "title": "الحديقة الجماعية في غراتس",
+  "summary": "في غراتس، مشروع حديقة جماعية يجمع عائلات محلية ومهاجرة لزراعة قطع أرض خاصة بهم وتبادل الخبرات.",
+  "questions": [
+    {
+      "question": "In diesem Text geht es darum:",
+      "options": {
+        "a": "dass ein Garten die Kommunikation zwischen Menschen fördern soll.",
+        "b": "damit die Bevölkerung etwas über Landwirtschaft lernen kann.",
+        "c": "von MitEinNander arbeiten Hobbygärtner aus verschiedenen Kulturen zusammen."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Die Schule möchte beim Gartenprojekt mitmachen:",
+      "options": {
+        "a": "dass ein Garten die Kommunikation zwischen Menschen fördern soll.",
+        "b": "damit die Bevölkerung etwas über Landwirtschaft lernen kann.",
+        "c": "von MitEinNander arbeiten Hobbygärtner aus verschiedenen Kulturen zusammen."
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Im Gemeinschaftsgarten:",
+      "options": {
+        "a": "dass ein Garten die Kommunikation zwischen Menschen fördern soll.",
+        "b": "damit die Bevölkerung etwas über Landwirtschaft lernen kann.",
+        "c": "von MitEinNander arbeiten Hobbygärtner aus verschiedenen Kulturen zusammen."
+      },
+      "answer": "C"
+    }
+  ]
+}

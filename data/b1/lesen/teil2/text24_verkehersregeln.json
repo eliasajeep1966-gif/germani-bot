@@ -1,0 +1,33 @@
+{
+  "title": "Verkehrsregeln (قواعد السلامة أو المرور)",
+  "summary": "قواعد قيادة السيارة وتجديد الرخصة والتصرف عند الطوارئ.",
+  "questions": [
+    {
+      "question": "In dem Text geht es um:",
+      "options": {
+        "a": "allgemeine Regeln zur Verkehrssicherheit.",
+        "b": "jeder 4 Jahre erneuert werden.",
+        "c": "verlassen Sie in Notsituationen die rechte Straßenseite."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Der Führerschein muss:",
+      "options": {
+        "a": "jeder 4 Jahre erneuert werden.",
+        "b": "verlassen Sie in Notsituationen die rechte Straßenseite.",
+        "c": "allgemeine Regeln zur Verkehrssicherheit."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Wenn es einen Unfall gibt:",
+      "options": {
+        "a": "verlassen Sie in Notsituationen die rechte Straßenseite.",
+        "b": "allgemeine Regeln zur Verkehrssicherheit.",
+        "c": "jeder 4 Jahre erneuert werden."
+      },
+      "answer": "A"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "title": "Bong wetter (الطقس في بونج)",
+  "summary": "النص بيحكي عن الطقس في هي بلدة بونج، الطقس هنيك عطول سيء وبأثر هاد الشي على الناس والخدمات.",
+  "questions": [
+    {
+      "question": "In dem Text geht es um:",
+      "options": {
+        "a": "Die Wetteränderungen wirken sich auf die Bevölkerung aus.",
+        "b": "die Heizung bezahlen.",
+        "c": "sind geschlossen."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Die Leute müssen:",
+      "options": {
+        "a": "Die Wetteränderungen wirken sich auf die Bevölkerung aus.",
+        "b": "die Heizung bezahlen.",
+        "c": "sind geschlossen."
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Schule in schlechte Wetter:",
+      "options": {
+        "a": "die Heizung bezahlen.",
+        "b": "Die Wetteränderungen wirken sich auf die Bevölkerung aus.",
+        "c": "sind geschlossen."
+      },
+      "answer": "C"
+    }
+  ]
+}

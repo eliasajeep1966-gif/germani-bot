@@ -1,0 +1,40 @@
+{
+  "title": "Lesen Teil 3 - Arbeitsbedingungen (ظروف العمل)",
+  "pairs": [
+    {
+      "question": "Andi arbeitet am computer Teilzeitjob",
+      "answer": "teilzeit, 5 stunden",
+      "keywords": "neben job - Montag_freitag - Flexibel - Büro"
+    },
+    {
+      "question": "die Heilpädagogik christine",
+      "answer": "kinder / geistig behindert (kinder, Menschen)",
+      "keywords": "Betreuung - Pflege - Förderschule - Praktikum - Stelle"
+    },
+    {
+      "question": "Sergio im sommer restaurant 2-3 mal pro woche",
+      "answer": "Bar sucht - kellner - sympathie - gastronomie",
+      "keywords": "Flexible arbeitszeit - teamfähig"
+    },
+    {
+      "question": "sarah zwei-Monat Bergen",
+      "answer": "(juni August) Bergeinsparungen",
+      "keywords": "zeitraum - Aktiv urlaub - Abenteuer"
+    },
+    {
+      "question": "Tom ist sportlich, liebt kinder",
+      "answer": "juli (11-25), Ferienaktivität",
+      "keywords": "ferienprogramm"
+    },
+    {
+      "question": "der hobby Michael in bar konzert geben",
+      "answer": "keine",
+      "keywords": "bar - konzert - hobby"
+    },
+    {
+      "question": "kevin möchte in seiner freizeit gern filme schauen",
+      "answer": "Hochzeit - Veranstalter - Organisieren",
+      "keywords": "Hochzeit - Veranstalter – Organisieren"
+    }
+  ]
+}

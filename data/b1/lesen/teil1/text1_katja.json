@@ -1,0 +1,14 @@
+{
+  "title": "كاتيا والجارة المزعجة",
+  "summary": "زوجين يريدان مساعدة الجارة بالنقل لكن بسبب الطقس السيء ما حسنوا.",
+  "questions": [
+    { "question": "Katja war stolz auf ihren Kuchen.", "answer": "R" },
+    { "question": "Katja ist von der Bekannten enttäuscht.", "answer": "R" },
+    { "question": "Katja und ihr Mann möchten der Bekannten umzug helfen.", "answer": "R" },
+    { "question": "Die Bekannte lebt alleine mit ihren Kinder.", "answer": "F" },
+    { "question": "Katja und ihr Mann haben beim Transport eines Möbelstücks geholfen.", "answer": "F" },
+    { "question": "Katja hat ihren Lieblingskuchen gebacken.", "answer": "F" },
+    { "question": "Die Bekannte hat ihnen ein Mittagessen angeboten.", "answer": "F" },
+    { "question": "Der Kuchen der Bekannten schmeckte gut.", "answer": "F" }
+  ]
+}

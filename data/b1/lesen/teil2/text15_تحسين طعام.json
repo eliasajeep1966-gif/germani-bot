@@ -1,0 +1,33 @@
+{
+  "title": "Schulessen verbessern (تحسين الطعام المدرسي)",
+  "summary": "يدور النص عن تحسين الطعام في المدراس ويتكلمون عن جوده الطعام وكيف ممكن ان نقدمه.",
+  "questions": [
+    {
+      "question": "In dem Text geht es um:",
+      "options": {
+        "a": "die Verbesserung der Ernährung in der Schule.",
+        "b": "die Schüler kochen für einander / selbst kochen.",
+        "c": "werden sie die frisches Gemüse und Obst anbieten/servieren."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Wie kann man das Essen am besten verbessert werden:",
+      "options": {
+        "a": "die Schüler kochen für einander / selbst kochen.",
+        "b": "werden sie die frisches Gemüse und Obst anbieten/servieren.",
+        "c": "die Verbesserung der Ernährung in der Schule."
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Lösung für gesundes Essen:",
+      "options": {
+        "a": "werden sie die frisches Gemüse und Obst anbieten/servieren.",
+        "b": "die Verbesserung der Ernährung in der Schule.",
+        "c": "die Schüler kochen für einander / selbst kochen."
+      },
+      "answer": "C"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "title": "بنيامين ورحلة أصدقائه",
+  "summary": " شخص يعمل في مكتب يرسل إيميل إلى أصدقائه الذين يودون السفر إلى اليابان في رحلة عمل.",
+  "questions": [
+    {
+      "question": "Benjamin schickt die E-Mail vom Arbeitsplatz",
+      "answer": "R"
+    },
+    {
+      "question": "Eva und Uschi haben beruflich in Japan zu tun",
+      "answer": "R"
+    },
+    {
+      "question": "Benjamin ist in Japan von Anfang an gut zurechtgekommen",
+      "answer": "F"
+    },
+    {
+      "question": "Eva und Uschi haben Benjamin um Tipps für Japan gebeten",
+      "answer": "F"
+    },
+    {
+      "question": "Benjamins Mappe mit Reisetipps ist verloren gegangen",
+      "answer": "F"
+    },
+    {
+      "question": "Benjamin möchte mit den Freundinnen japanisch essen gehen",
+      "answer": "F"
+    },
+    {
+      "question": "Japanisches Obst hat Benjamin gut geschmeckt.",
+      "answer": "R"
+    }
+  ]
+}

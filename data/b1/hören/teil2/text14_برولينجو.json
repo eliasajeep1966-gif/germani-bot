@@ -1,0 +1,55 @@
+{
+  "summary": "هنا يمكنك كتابة ملخص النص الخاص بمدرسة برولينجو لكي يظهره البوت للمستخدم.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Zum heutigen Programm ...",
+      "options": {
+        "a": "gehören viele Unterhaltungsangebote",
+        "b": "gehören ausschließlich Sprachprüfungen",
+        "c": "gehört eine kurze Führung durch das Gebäude"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 2,
+      "question": "Für den Unterricht bei Prolingua ist es am wichtigsten...",
+      "options": {
+        "a": "dass man Grammatikregeln auswendig lernt",
+        "b": "dass man durch verschiedene Methoden lernt",
+        "c": "dass man im Kursraum möglichst ruhig bleibt"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 3,
+      "question": "Eine Sprachreise mit Prolingua...",
+      "options": {
+        "a": "ist nur für fortgeschrittene Erwachsene gedacht",
+        "b": "wird ausschließlich für Kinder angeboten",
+        "c": "ist für jemanden bezahlbar"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "id": 4,
+      "question": "Wo kann der Unterricht noch stattfinden?",
+      "options": {
+        "a": "auf der Dachterrasse",
+        "b": "im Park neben dem Gebäude",
+        "c": "im Garten"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "id": 5,
+      "question": "Wofür muss man zusätzlich zahlen?",
+      "options": {
+        "a": "für das Kursbuch",
+        "b": "für das gesamte Unterrichtsmaterial",
+        "c": "für heiße und kalte Getränke"
+      },
+      "correct_answer": "a"
+    }
+  ]
+}

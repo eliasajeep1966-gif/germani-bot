@@ -1,0 +1,33 @@
+{
+  "title": "Ein Tag ohne Internet in Österreich (تجربة يوم بدون إنترنت)",
+  "summary": "تجربة يوم بدون إنترنت في النمسا وتأثيراتها على الناس.",
+  "questions": [
+    {
+      "question": "In dem Text geht es um:",
+      "options": {
+        "a": "was die Leute ohne Internet machen werden.",
+        "b": "Freunde treffen.",
+        "c": "Er konnte den Wecker nicht mehr benutzen."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Was man macht ohne media:",
+      "options": {
+        "a": "Freunde treffen.",
+        "b": "was die Leute ohne Internet machen werden.",
+        "c": "Er konnte den Wecker nicht mehr benutzen."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Was hat der Jugendliche vermisst:",
+      "options": {
+        "a": "Er konnte den Wecker nicht mehr benutzen.",
+        "b": "Freunde treffen.",
+        "c": "was die Leute ohne Internet machen werden."
+      },
+      "answer": "A"
+    }
+  ]
+}

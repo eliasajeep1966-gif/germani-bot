@@ -1,0 +1,26 @@
+{
+  "title": "Gegen den Sportunterricht in der Schule",
+  "fixed_question": "Leseverstehen Teil 4: Lesen Sie die Aussagen. Sind die Personen gegen den Sportunterricht in der Schule?",
+  "questions": [
+    {
+      "text": "Sport ist für Kinder sehr notwendig und wichtig, aber das Entscheidende ist, dass es gute Sportlehrer und eine hohe Qualität des Unterrichts gibt.",
+      "answer": "N"
+    },
+    {
+      "text": "Viele Kinder leiden unter Übergewicht wegen Bewegungsmangel. Eine Sportstunde reicht nicht aus; man sollte den Sportunterricht sogar erhöhen und Sportschulen gründen.",
+      "answer": "N"
+    },
+    {
+      "text": "Es gibt Schulfächer, die viel wichtiger sind und mehr Konzentration erfordern. Die Zeit ist knapp und Sport ist nicht so bedeutend.",
+      "answer": "J"
+    },
+    {
+      "text": "Ich treibe selbstständig außerhalb der Schule Sport. Deshalb gibt es keinen Grund für den Schulsport; er ist unnötig und überflüssig.",
+      "answer": "J"
+    },
+    {
+      "text": "Kinder können sich beim Sport zwar verletzen, aber das Verletzungsrisiko ist etwas völlig Normales.",
+      "answer": "N"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "summary": "هنا يمكنك كتابة ملخص النص الخاص برحلة مدرسية الى ميونخ لكي يظهره البوت للمستخدم.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Was machen sie?",
+      "options": {
+        "a": "Sie machen eine Rundfahrt",
+        "b": "Sie machen eine Stadtführung zu Fuß",
+        "c": "Sie machen einen Ausflug ins Umland"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 2,
+      "question": "Von 4 – 6 Uhr?",
+      "options": {
+        "a": "Präsentation der Gruppenergebnisse",
+        "b": "Diskussion miteinander und Vorschläge",
+        "c": "Gemeinsames Feedback und Nachbereitung"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 3,
+      "question": "Wo werden sie schlafen?",
+      "options": {
+        "a": "In einer Pension",
+        "b": "Im Hotel",
+        "c": "In einer Ferienstätte"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 4,
+      "question": "Nach 6 Stunden?",
+      "options": {
+        "a": "Er wird Teilnahmebestätigungen ausstellen",
+        "b": "Er wird Zertifikate verteilen",
+        "c": "Er wird Urkunden überreichen"
+      },
+      "correct_answer": "b"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "title": "اعلان عطل",
+  "pairs": [
+    {
+      "question": "Manuela möchte im Juli für zehn Tage ans Meer reisen",
+      "answer": "Usedom",
+      "keywords": "Ostsee - erholen"
+    },
+    {
+      "question": "Die Familie Bergmann möchte mit dem Auto eine Reise machen. Die Kinder lieben das Meer",
+      "answer": "Büsum - Familienbad an der Nordsee",
+      "keywords": "Familienbad - Nordsee - Meer"
+    },
+    {
+      "question": "Die Familie Werner macht im Juli Urlaub. Die Kinder (10 und 12 Jahre alt) möchten gerne mit Tieren Kontakt haben",
+      "answer": "keine",
+      "keywords": "Tiere Kontakt - Kinder"
+    },
+    {
+      "question": "Julia und Christian möchten in den Sommerferien reiten gehen.",
+      "answer": "Aktiv-urlaub am Bodensee",
+      "keywords": "juli - August - Reitferien"
+    },
+    {
+      "question": "Herr und Frau Britsch möchten Urlaub in der Natur machen",
+      "answer": "die Naturfreunden am Scharmützelsee laden ein",
+      "keywords": "wanderung - Gemeinschaft"
+    },
+    {
+      "question": "Ulf und Regina möchten sich im Urlaub erholen.",
+      "answer": "hübsche Ferienwohnung am Müggelsee",
+      "keywords": "Kultur - ruhe - urlaub"
+    },
+    {
+      "question": "Jan möchte ans Meer gehen und im Urlaub fliegen lernen.",
+      "answer": "Im Hochhaus an der Nordsee",
+      "keywords": "fliegen - Hochhaus – Nordsee"
+    }
+  ]
+}

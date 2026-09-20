@@ -1,0 +1,35 @@
+{
+  "title": "Lesen Teil 3 - اعلان الات موسيقية",
+  "pairs": [
+    {
+      "question": "Ein junger Mann möchte etwas Neues ausprobieren und Gitarre lernen.",
+      "answer": "keine",
+      "keywords": "Gitarre lernen - Neues ausprobieren"
+    },
+    {
+      "question": "Eine Frau möchte einem Musikensemble beitreten, hat aber nicht genug Zeit für Präsenzproben.",
+      "answer": "Online-Musikkurs Zu hause",
+      "keywords": "Online-Musikkurs - zu hause - Musikensemble"
+    },
+    {
+      "question": "Ein Mann, der ein Instrument spielt, möchte einen Live-Auftritt geben.",
+      "answer": "Musikwettbewerb live im Fernsehen! Zeigen Sie Ihr Talent und treten Sie vor der Kamera auf. Der Gewinner erhält ein Auto!",
+      "keywords": "Musikwettbewerb - live im Fernsehen - Talent - vor der Kamera"
+    },
+    {
+      "question": "Ein Lehrer, der Klavier spielt und unterrichtet, sucht nach einer Anstellung.",
+      "answer": "Klavier-Refresher-Kurs. Ein Mann, der früher mit einem Musikensemble Klavier gespielt hat, möchte nun seine Klaviertechniken wieder auffrischen und neu lernen.",
+      "keywords": "Klavier-Refresher-Kurs - auffrischen - neu lernen"
+    },
+    {
+      "question": "Eine Frau singt gerne und möchte sich in diesem Bereich verbessern.",
+      "answer": "Deine Stimme ist dein Musikinstrument.",
+      "keywords": "Stimme - Musikinstrument"
+    },
+    {
+      "question": "Ein Mann möchte eine Ausbildung machen oder eine Ausbildung fortsetzen. Sie kann auch im Bereich Musik sein.",
+      "answer": "Hochschule / Einen Termin für die Bewerber vereinbaren.",
+      "keywords": "Hochschule / Termin für die Bewerber"
+    }
+  ]
+}

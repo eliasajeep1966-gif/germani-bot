@@ -1,0 +1,33 @@
+{
+  "title": "إمكانية العمل لكبار السن (تجربة جديدة)",
+  "summary": "يتحدث النص عن دعم كبار السن وإمكانية عملهم أو مشاركتهم في المجتمع.",
+  "questions": [
+    {
+      "question": "Worum geht es im Text?",
+      "options": {
+        "a": "Unterstützung für ältere Leute beim Lernen.",
+        "b": "Sie hat früher mit ihrer Familie gearbeitet.",
+        "c": "Sie hat Bekannte und geht regelmäßig mit ihnen essen."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Was erfahren wir über das Mädchen im Text?",
+      "options": {
+        "a": "Unterstützung für ältere Leute beim Lernen.",
+        "b": "Sie hat früher mit ihrer Familie gearbeitet.",
+        "c": "Sie hat Bekannte und geht regelmäßig mit ihnen essen."
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Was ist richtig über die Frau?",
+      "options": {
+        "a": "Unterstützung für ältere Leute beim Lernen.",
+        "b": "Sie hat früher mit ihrer Familie gearbeitet.",
+        "c": "Sie hat Bekannte und geht regelmäßig mit ihnen essen."
+      },
+      "answer": "C"
+    }
+  ]
+}

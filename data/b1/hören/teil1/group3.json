@@ -1,0 +1,321 @@
+{
+  "group_id": 3,
+  "title": "Menge 3",
+  "questions": [
+    {
+      "id": 1,
+      "type": "true_false",
+      "text": "Der Optiker ruft an, um dem Kunden mitzuteilen, dass sich der Preis für eine neue Brille geändert hat:",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 2,
+      "type": "multiple_choice",
+      "text": "Für eine neue Brille bezahlen?",
+      "options": [
+        "müssen Sie statt 350 Euro 250 Euro zusätzlich/mehr bezahlen",
+        "müssen Sie statt 350 Euro nur 150 Euro bezahlen",
+        "müssen Sie statt 300 Euro 200 Euro mehr bezahlen"
+      ],
+      "answer": "müssen Sie statt 350 Euro 250 Euro zusätzlich/mehr bezahlen"
+    },
+    {
+      "id": 3,
+      "type": "true_false",
+      "text": "Der Flughafen und die Flugzeuge werden nicht starten:",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 4,
+      "type": "multiple_choice",
+      "text": "Welcher Flug hatte Verspätung?",
+      "options": [
+        "Frankfurt",
+        "Genf",
+        "Kopenhagen"
+      ],
+      "answer": "Genf"
+    },
+    {
+      "id": 5,
+      "type": "true_false",
+      "text": "Ein Mädchen hat ihren Freund zu einem Ausflug eingeladen:",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Richtig"
+    },
+    {
+      "id": 6,
+      "type": "multiple_choice",
+      "text": "Was muss man vor der Abreise tun?",
+      "options": [
+        "Etwas essen",
+        "Das Ticket buchen",
+        "Schnell melden"
+      ],
+      "answer": "Schnell melden"
+    },
+    {
+      "id": 7,
+      "type": "true_false",
+      "text": "Der Unterricht hat begonnen und der Lehrer/Professor war noch nicht da:",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 8,
+      "type": "multiple_choice",
+      "text": "Was fand im Unterricht statt?",
+      "options": [
+        "Diskussion",
+        "Essen",
+        "Film schauen"
+      ],
+      "answer": "Essen"
+    },
+    {
+      "id": 9,
+      "type": "true_false",
+      "text": "Wetterverhältnisse in Norddeutschland",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Richtig"
+    },
+    {
+      "id": 10,
+      "type": "multiple_choice",
+      "text": "Am Sonntag wird?",
+      "options": [
+        "Windig",
+        "Regnerisch",
+        "Sonnig"
+      ],
+      "answer": "Regnerisch"
+    },
+    {
+      "id": 11,
+      "type": "true_false",
+      "text": "Sie bieten der Frau mehrere Wohnungen an:",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 12,
+      "type": "multiple_choice",
+      "text": "Für die ?",
+      "options": [
+        "Heizung muss man extra zahlen",
+        "Heizung zahlen Sie extra",
+        "Die Heizung ist schon inklusive"
+      ],
+      "answer": "Heizung muss man extra zahlen"
+    },
+    {
+      "id": 13,
+      "type": "true_false",
+      "text": "Ein jährliches Sprachprogramm für die Feiertage:",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 14,
+      "type": "multiple_choice",
+      "text": "Angelegenheiten werden?",
+      "options": [
+        "zwischen Lehrern und Schülern besprochen",
+        "zwischen Lehrern und Großeltern besprochen",
+        "zwischen Lehrern und Eltern besprochen"
+      ],
+      "answer": "zwischen Lehrern und Eltern besprochen"
+    },
+    {
+      "id": 15,
+      "type": "true_false",
+      "text": "Die Route des Zuges wurde geändert:",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Richtig"
+    },
+    {
+      "id": 16,
+      "type": "multiple_choice",
+      "text": "Was ist passiert?",
+      "options": [
+        "Verspätung nach Bagdad",
+        "Verspätung nach Pasera",
+        "Verspätung nach Köln"
+      ],
+      "answer": "Verspätung nach Köln"
+    },
+    {
+      "id": 17,
+      "type": "true_false",
+      "text": "Eine Frau kaufte eine neue Küche:",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 18,
+      "type": "multiple_choice",
+      "text": "Was ist passiert?",
+      "options": [
+        "Angebote werden an den Mann gesendet",
+        "Angebote wurden an die Frau gesendet",
+        "Angebote werden an den Jungen gesendet"
+      ],
+      "answer": "Angebote wurden an die Frau gesendet"
+    },
+    {
+      "id": 19,
+      "type": "true_false",
+      "text": "Informationen zur Vorführung des Films:",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 20,
+      "type": "multiple_choice",
+      "text": "Was ist passiert?",
+      "options": [
+        "Gespräch",
+        "Karte aktivieren",
+        "Wenig zu bezahlen"
+      ],
+      "answer": "Gespräch"
+    },
+    {
+      "id": 21,
+      "type": "true_false",
+      "text": "Die Mutter spricht mit ihrem Mann:",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 22,
+      "type": "multiple_choice",
+      "text": "Was soll er tun/ Der Sohn soll",
+      "options": [
+        "Mit Großmutter telefonieren",
+        "Abendessen vorbereiten",
+        "Mittagessen vorbereiten"
+      ],
+      "answer": "Abendessen vorbereiten"
+    },
+    {
+      "id": 23,
+      "type": "true_false",
+      "text": "Die Werbung war für eine Theateraufführung:",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 24,
+      "type": "multiple_choice",
+      "text": "Wie hoch sind die Eintrittspreise zu verschiedenen Ausstellungen?",
+      "options": [
+        "12 €",
+        "Kostenlos",
+        "15 €"
+      ],
+      "answer": "15 €"
+    },
+    {
+      "id": 25,
+      "type": "true_false",
+      "text": "Bekanntgabe von Sicherheitshinweisen am Flughafen:",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 26,
+      "type": "multiple_choice",
+      "text": "Welcher Flug wurde annulliert (ausfallen)?",
+      "options": [
+        "Wien",
+        "Graz",
+        "Berlin"
+      ],
+      "answer": "Wien"
+    },
+    {
+      "id": 27,
+      "type": "true_false",
+      "text": "Es ging um einen Wohnortwechsel / Änderung der Unterkunft:",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Richtig"
+    },
+    {
+      "id": 28,
+      "type": "multiple_choice",
+      "text": "Was wird die Dame tun?",
+      "options": [
+        "Sie besucht ein Kino",
+        "Sie nimmt an einem Golfplatz teil",
+        "Sie macht einen Spaziergang"
+      ],
+      "answer": "Sie nimmt an einem Golfplatz teil"
+    },
+    {
+      "id": 29,
+      "type": "true_false",
+      "text": "Ein Radiogespräch über ein Sportveranstaltung:",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 30,
+      "type": "multiple_choice",
+      "text": "Mit welchen Verkehrsmitteln fahren Besucher am liebsten?",
+      "options": [
+        "Mit dem Taxi",
+        "Mit dem Fahrrad",
+        "Mit Bus oder U-Bahn"
+      ],
+      "answer": "Mit Bus oder U-Bahn"
+    }
+  ]
+}

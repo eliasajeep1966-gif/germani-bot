@@ -1,0 +1,30 @@
+{
+  "title": "زوج يخون زوجته",
+  "summary": "فتاة تتحدث مع صديقتها وتقول إنها شاهدت زوجها/شريكها يخونها مع أخرى (خلافي).",
+  "questions": [
+    {
+      "question": "Das Mädchen hat ihm später keine Nachricht geschickt",
+      "answer": "R"
+    },
+    {
+      "question": "Eine Woche verging, ohne dass sie miteinander sprachen",
+      "answer": "R"
+    },
+    {
+      "question": "Das Mädchen möchte wieder mit ihm reden",
+      "answer": "R"
+    },
+    {
+      "question": "Der Junge hat das Mädchen umarmt",
+      "answer": "F"
+    },
+    {
+      "question": "Sie trafen sich in einem Elektronikgeschäft",
+      "answer": "F"
+    },
+    {
+      "question": "Der Junge sprach mit dem Mädchen laut",
+      "answer": "F"
+    }
+  ]
+}

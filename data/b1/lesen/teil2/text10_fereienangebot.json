@@ -1,0 +1,33 @@
+{
+  "title": "Ferienangebot Engelberg-Titlis (جنة جبال سويسرا)",
+  "summary": "منطقة Engelberg-Titlis تقدم أنشطة متنوعة صديقة للعائلات مثل الجولف والرحلات المجانية في الربيع.",
+  "questions": [
+    {
+      "question": "In diesem Text geht es um:",
+      "options": {
+        "a": "stellt ein Ferienangebot vor.",
+        "b": "bezahlt man nur fürs Klettern.",
+        "c": "informieren über Pflanzen und Tiere."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "In der Vorsaison:",
+      "options": {
+        "a": "stellt ein Ferienangebot vor.",
+        "b": "bezahlt man nur fürs Klettern.",
+        "c": "informieren über Pflanzen und Tiere."
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Wanderungen:",
+      "options": {
+        "a": "stellt ein Ferienangebot vor.",
+        "b": "bezahlt man nur fürs Klettern.",
+        "c": "informieren über Pflanzen und Tiere."
+      },
+      "answer": "C"
+    }
+  ]
+}

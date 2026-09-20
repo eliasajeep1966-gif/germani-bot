@@ -1,0 +1,40 @@
+{
+  "title": "Lesen Teil 3 - Urlaub",
+  "pairs": [
+    {
+      "question": "Ein Vater und seine Tochter möchten eine Reise machen und einen Sprachkurs besuchen.",
+      "answer": "keine",
+      "keywords": "Reise - Sprachkurs"
+    },
+    {
+      "question": "Ein Vater und sein Sohn möchten eine Kreuzfahrt im Mittelmeer machen.",
+      "answer": "Eine Sieben-Tage-Reise im Mittelmeer.",
+      "keywords": "Mittelmeer - Schiffreise"
+    },
+    {
+      "question": "Eine Mutter möchte eine Reise machen, aber ihr Kind ist erst fünf Monate alt.",
+      "answer": "Ein Ort, der Ihr Kind aufnimmt, es betreut und verpflegt, verfügbar von Juli bis Juni mit Kinderbetreuung.",
+      "keywords": "Kinderbetreuung"
+    },
+    {
+      "question": "Eine Mutter möchte einen Sommerurlaub mit ihren Kindern verbringen und Tiere sehen.",
+      "answer": "Sommer, auf dem Bauernhof",
+      "keywords": "Bauernhof - Sommer"
+    },
+    {
+      "question": "Sie suchen nach einem Sommerprogramm und Sommersportarten in den Bergen.",
+      "answer": "Alpen, Sommer, Juni, July, August",
+      "keywords": "Alpen - Sommer - Juni - July - August"
+    },
+    {
+      "question": "Eine Familie möchte einen Winterurlaub mit den Kindern verbringen und Wintersport treiben.",
+      "answer": "Wintersport in den Bergen und im Schnee treiben.",
+      "keywords": "Winter - Schnee - Berge - Wintersport - Skifahren"
+    },
+    {
+      "question": "Eine Frau möchte campen und eine bestimmte Brücke sehen.",
+      "answer": "Camping",
+      "keywords": "Camping"
+    }
+  ]
+}

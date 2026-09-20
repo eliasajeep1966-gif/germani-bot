@@ -1,0 +1,40 @@
+{
+  "title": "شقق سكنية طلابية",
+  "pairs": [
+    {
+      "question": "Anette sucht eine Wohnung mit einer Miete von maximal 200 Euro",
+      "answer": "günstig - maximaler Preis - Mitbewohnerin - Zimmer – WG",
+      "keywords": "günstig - maximaler Preis - Mitbewohnerin - Zimmer – WG"
+    },
+    {
+      "question": "Timo ist neu in der Stadt und sucht eine Unterkunft. Eine WG wäre auch möglich, und er möchte gerne neue Leute kennenlernen",
+      "answer": "freie Zimmer in Männer-WG",
+      "keywords": "Gemeinschaft - Kennenlernen - WG"
+    },
+    {
+      "question": "Sie möchte die Universität schnell erreichen, ohne Bus oder Zug zu benutzen",
+      "answer": "studentenwohnheim - Schlossallee 234",
+      "keywords": "zu Fuß - fußläufig"
+    },
+    {
+      "question": "Robert möchte alleine wohnen",
+      "answer": "eine grüne Gegend - Ruhe / eine ruhige Gegend - möbliert - ein kleines Zimmer",
+      "keywords": "eine grüne Gegend - Ruhe / eine ruhige Gegend - möbliert - ein kleines Zimmer"
+    },
+    {
+      "question": "Daniel sucht eine Wohnung in der Innenstadt",
+      "answer": "Wohnung im Herzen der Stadt",
+      "keywords": "Stadtzentrum - zentral - Einzelzimmer"
+    },
+    {
+      "question": "Die Kurse von Birte an der Universität haben bereits begonnen",
+      "answer": "keine",
+      "keywords": "ab sofort frei - sofort einziehen - gleich"
+    },
+    {
+      "question": "Verena möchte mit ihrem Partner eine 2,5 Zimmer Wohnung mit Balkon oder Terrasse",
+      "answer": "zum Papenberg",
+      "keywords": "für Paare - große Wohnung - Balkon/Terrasse"
+    }
+  ]
+}

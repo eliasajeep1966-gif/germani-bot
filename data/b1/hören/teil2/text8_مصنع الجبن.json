@@ -1,0 +1,55 @@
+{
+  "summary": "هنا يمكنك كتابة ملخص النص الخاص بمصنع الحليب والجبن لكي يظهره البوت للمستخدم.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Sechs Million Liter Milch ?",
+      "options": {
+        "a": "täglich in Supermärkten importiert",
+        "b": "täglich in der Milchindustrie/Produkte verwendet",
+        "c": "ausschließlich für die Käseherstellung verarbeitet"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 2,
+      "question": "Eine Frage zu einer anderen als der im Text genannten Käsesorte?",
+      "options": {
+        "a": "Es wird mit Brot gegessen",
+        "b": "Es wird nur warm serviert",
+        "c": "Es wird ungekühlt gelagert"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 3,
+      "question": "Der Käse des Unternehmens ist geschützt durch...?",
+      "options": {
+        "a": "strenge Qualitätskontrollen",
+        "b": "Warenzeichen (Marken rechtlich)",
+        "c": "spezielle Herstellungsverfahren"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 4,
+      "question": "Frage zur Käseherstellung?",
+      "options": {
+        "a": "Hergestellt aus Schafmilch",
+        "b": "Hergestellt aus Kuhmilch",
+        "c": "Hergestellt aus Rohmilch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 5,
+      "question": "Ein Thema über eine besondere Käsesorte. Wie konsumieren die Schweizer ihn?",
+      "options": {
+        "a": "Mit Kartoffeln",
+        "b": "Mit Gemüse",
+        "c": "Mit Teigwaren"
+      },
+      "correct_answer": "a"
+    }
+  ]
+}

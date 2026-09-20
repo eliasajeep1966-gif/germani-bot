@@ -1,0 +1,33 @@
+{
+  "title": "Vorlesen für Schüler (قراءة الطالب للكتب)",
+  "summary": "بيحكوا عن القراءة والقصص وتأثيرها على الأطفال وحكوا عن صفات قارئ القصص أو الكتب.",
+  "questions": [
+    {
+      "question": "In dem Text geht es um:",
+      "options": {
+        "a": "Unterstützung das Lesen.",
+        "b": "sie können dadurch sich erholen.",
+        "c": "schnell begeistert sein."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Warum sind die Geschichten für Kinder wichtig:",
+      "options": {
+        "a": "Unterstützung das Lesen.",
+        "b": "sie können dadurch sich erholen.",
+        "c": "schnell begeistert sein."
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Der Leser muss:",
+      "options": {
+        "a": "Unterstützung das Lesen.",
+        "b": "sie können dadurch sich erholen.",
+        "c": "schnell begeistert sein."
+      },
+      "answer": "C"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "title": "Zwei Leute spielen Musik",
+  "summary": "نص يتحدث عن شخصين يعزفوا موسيقا فحبوا يعملوا غنية سوا .",
+  "questions": [
+    {
+      "question": "In dem Text geht es um:",
+      "options": {
+        "a": "ihr Lied im Internet popular / hits.",
+        "b": "sind sie vom Erfolg des Liedes überrascht.",
+        "c": "sie werden eine Zusammenarbeit planen."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Waren sie:",
+      "options": {
+        "a": "ihr Lied im Internet popular / hits.",
+        "b": "sind sie vom Erfolg des Liedes überrascht.",
+        "c": "sie werden eine Zusammenarbeit planen."
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Was sie wird in Zukunft tun:",
+      "options": {
+        "a": "ihr Lied im Internet popular / hits.",
+        "b": "sind sie vom Erfolg des Liedes überrascht.",
+        "c": "sie werden eine Zusammenarbeit planen."
+      },
+      "answer": "C"
+    }
+  ]
+}

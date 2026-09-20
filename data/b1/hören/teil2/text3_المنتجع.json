@@ -1,0 +1,65 @@
+{
+  "summary": "هنا يمكنك كتابة ملخص النص الخاص برحلة إلى منتجع لكي يظهره البوت للمستخدم.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Reservierung beinhaltet?",
+      "options": {
+        "a": "Nutzung des Wellnessbereichs",
+        "b": "Frühstück",
+        "c": "Halbpension mit Getränken"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 2,
+      "question": "Wo ist der Pool?",
+      "options": {
+        "a": "Im Wellnessbereich im Erdgeschoss",
+        "b": "Auf der Terrasse im ersten Stock",
+        "c": "Auf dem Dach"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "id": 3,
+      "question": "Wann findet der Ausflug in der Stadt Rettenberg statt?",
+      "options": {
+        "a": "Am späten Vormittag",
+        "b": "Gegen Mittag",
+        "c": "Am Nachmittag"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "id": 4,
+      "question": "Was ist im ersten Stock?",
+      "options": {
+        "a": "Romane / Römisch / Romani",
+        "b": "Sachbücher und Zeitschriften",
+        "c": "Klassische Literatur und Wörterbücher"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 5,
+      "question": "Was ist im Raum?",
+      "options": {
+        "a": "Eine Minibar mit Snacks",
+        "b": "Weinkiste / Weinschachtel",
+        "c": "Ein Regalkorb mit Früchten"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 6,
+      "question": "Was gibt es im Erdgeschoss?",
+      "options": {
+        "a": "Computer",
+        "b": "Tablet-Stationen",
+        "c": "Drucker und Kopierer"
+      },
+      "correct_answer": "a"
+    }
+  ]
+}

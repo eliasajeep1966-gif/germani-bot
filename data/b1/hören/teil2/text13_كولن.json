@@ -1,0 +1,55 @@
+{
+  "summary": "هنا يمكنك كتابة ملخص النص الخاص برحلة إلى كولن لكي يظهره البوت للمستخدم.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "was bezuchen wir?",
+      "options": {
+        "a": "Kirche besichtigt",
+        "b": "Dom",
+        "c": "Kölner Münster"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 2,
+      "question": "was schuen wir?",
+      "options": {
+        "a": "Historisches Gebäude",
+        "b": "Altes Haus",
+        "c": "Renoviertes Bauwerk"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 3,
+      "question": "was trinken wir?",
+      "options": {
+        "a": "Kölsch trinken",
+        "b": "Bier",
+        "c": "Erfrischungsgetränk"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 4,
+      "question": "wie war das Wetter?",
+      "options": {
+        "a": "Das Wetter ist angenehm",
+        "b": "Das Wetter ist ausgezeichnet",
+        "c": "Das Wetter ist sonnig und warm"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 5,
+      "question": "Was war der Rat ?",
+      "options": {
+        "a": "Einkaufsstraßen erkunden",
+        "b": "Schmuck-Geschfte besuchen",
+        "c": "Lokale Souvenirläden besuchen"
+      },
+      "correct_answer": "b"
+    }
+  ]
+}

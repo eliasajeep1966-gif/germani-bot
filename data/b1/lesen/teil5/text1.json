@@ -1,0 +1,42 @@
+{
+  "title": "Flughafenordnung",
+  "text": "",
+  "questions": [
+    {
+      "question": "Wer darf sein Auto kostenlos parken?",
+      "options": {
+        "a": "Mitarbeiter.",
+        "b": "Die Behinderten erhalten 50% Ermäßigung.",
+        "c": "Wenn wir einen freien Platz finden, können wir dort parken."
+      },
+      "answer": "a"
+    },
+    {
+      "question": "Bekommen Menschen mit Behinderung eine Ermäßigung?",
+      "options": {
+        "a": "Gepäck abholen lassen (entparken).",
+        "b": "Die Behinderten erhalten 50% Ermäßigung.",
+        "c": "Mitarbeiter."
+      },
+      "answer": "b"
+    },
+    {
+      "question": "Können wir überall parken?",
+      "options": {
+        "a": "Mitarbeiter.",
+        "b": "Gepäck abholen lassen (entparken).",
+        "c": "Wenn wir einen freien Platz finden, können wir dort parken."
+      },
+      "answer": "c"
+    },
+    {
+      "question": "Was bedeutet „entparken“?",
+      "options": {
+        "a": "Gepäck abholen lassen (entparken).",
+        "b": "Die Behinderten erhalten 50% Ermäßigung.",
+        "c": "Wenn wir einen freien Platz finden, können wir dort parken."
+      },
+      "answer": "a"
+    }
+  ]
+}

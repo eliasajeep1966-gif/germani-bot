@@ -1,0 +1,33 @@
+{
+  "title": "Verbesserung die Laune (تحسين المزاج)",
+  "summary": "يتحدث النص عن الشتاء وكيف يمكن للشخص ان يحسن مزاجه في هذا الطقس.",
+  "questions": [
+    {
+      "question": "In dem Text geht es um:",
+      "options": {
+        "a": "Stimmung zu verbessern.",
+        "b": "man kann einen Freund telefonieren.",
+        "c": "ins Regen ausgehen."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Was kann man in Winter tun:",
+      "options": {
+        "a": "man kann einen Freund telefonieren.",
+        "b": "ins Regen ausgehen.",
+        "c": "Stimmung zu verbessern."
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Was ist die Rat hier:",
+      "options": {
+        "a": "ins Regen ausgehen.",
+        "b": "Stimmung zu verbessern.",
+        "c": "man kann einen Freund telefonieren."
+      },
+      "answer": "C"
+    }
+  ]
+}

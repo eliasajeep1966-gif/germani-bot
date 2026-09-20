@@ -1,0 +1,33 @@
+{
+  "title": "Schlafprobleme (مشاكل النوم في النمسا)",
+  "summary": "البالغين يعانون من مشاكل نوم بسبب العمل بنظام الورديات وعادات السهر، والشيء المهم هو الشعور بالراحة خلال النهار أكثر من عدد ساعات النوم. النوم المناسب يختلف بين الأشخاص.",
+  "questions": [
+    {
+      "question": "In diesem Text geht es darum:",
+      "options": {
+        "a": "was guter Schlaf für verschiedene Menschen bedeutet.",
+        "b": "weil sie zu spät ins Bett gehen.",
+        "c": "gut durchzuschlafen."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Viele Menschen schlafen schlecht:",
+      "options": {
+        "a": "was guter Schlaf für verschiedene Menschen bedeutet.",
+        "b": "weil sie zu spät ins Bett gehen.",
+        "c": "gut durchzuschlafen."
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Guter Schlaf bedeutet:",
+      "options": {
+        "a": "was guter Schlaf für verschiedene Menschen bedeutet.",
+        "b": "weil sie zu spät ins Bett gehen.",
+        "c": "gut durchzuschlafen."
+      },
+      "answer": "C"
+    }
+  ]
+}

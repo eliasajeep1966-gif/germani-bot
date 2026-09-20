@@ -1,0 +1,33 @@
+{
+  "title": "Fuss Tage (يوم جرى على الأقدام)",
+  "summary": "يتحدث النص انهم يخططون ليوم بدون استخدام السيارات وكان هناك مستفيدين من القرار وكان هناك استثناء.",
+  "questions": [
+    {
+      "question": "In dem Text geht es:",
+      "options": {
+        "a": "um Fußgänger mehr Platz lassen.",
+        "b": "öffentliche Verkehrsmittel.",
+        "c": "Taxifahrer."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Wer hat die sinnvoll dadurch:",
+      "options": {
+        "a": "um Fußgänger mehr Platz lassen.",
+        "b": "öffentliche Verkehrsmittel.",
+        "c": "Taxifahrer."
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Wer ist die Ausnahmer:",
+      "options": {
+        "a": "um Fußgänger mehr Platz lassen.",
+        "b": "öffentliche Verkehrsmittel.",
+        "c": "Taxifahrer."
+      },
+      "answer": "C"
+    }
+  ]
+}

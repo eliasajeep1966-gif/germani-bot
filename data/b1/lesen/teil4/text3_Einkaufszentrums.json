@@ -1,0 +1,34 @@
+{
+  "title": "Bau eines Einkaufszentrums",
+  "fixed_question": "Sind die folgenden Aussagen für den Bau eines Einkaufszentrums?",
+  "questions": [
+    {
+      "text": "Julia (29):\nEin Einkaufszentrum hat sich in vielen Städten ökonomisch gelohnt. Das Angebot steigt und es kommen mehr Kunden aus den Nachbarstädten. Obwohl es negative Aspekte wie Umweltverschmutzung und die Schließung kleiner Geschäfte gibt, überwiegen die positiven Seiten.",
+      "answer": "J"
+    },
+    {
+      "text": "Judith (49):\nIch habe in den USA gelebt und dort gibt es viele Einkaufszentren. Man bekommt alles an einem Ort. Hier fühle ich mich anders: Alle wichtigen Geschäfte sind in der Innenstadt, und das schafft eine ganz andere Atmosphäre beim Einkaufen. Einkaufszentren passen nicht hierher.",
+      "answer": "N"
+    },
+    {
+      "text": "Chiarra (32):\nÜber dieses Thema wird seit Jahren diskutiert und ich verstehe das Problem nicht wirklich. Vielleicht ist der Standort nicht ideal, weil der Bodenseestrand durch so einen Bau verloren geht, aber es gibt keine andere große Fläche. Man sollte diese Diskussion beenden und sich auf wichtigere Themen konzentrieren.",
+      "answer": "N"
+    },
+    {
+      "text": "Reiner (63):\nIch finde es praktisch, dass es viele Geschäfte an einem Ort gibt, und es ist bequem, unter einem Dach von einem Laden zum anderen zu gehen und einen Kaffee zu trinken. Trotzdem möchte ich kein Einkaufszentrum in meiner Stadt. Es ist wichtiger, die Altstadt attraktiver zu machen und den Einzelhandel zu stärken.",
+      "answer": "N"
+    },
+    {
+      "text": "Helmut (54):\nNur wenige verstehen, was der Bau eines Einkaufszentrums für unsere kleine Stadt bedeutet. Natürlich wird der Verkehr zunehmen und die Umwelt belastet. Es ist klar, dass das vielen nicht gefällt, aber 500 neue Arbeitsplätze kann man nicht einfach ablehnen.",
+      "answer": "J"
+    },
+    {
+      "text": "Horst (62):\nVor 35 Jahren habe ich ein kleines Spielzeuggeschäft von meinem Vater geerbt. Es ist ein etabliertes Geschäft in der Innenstadt. Ich befürchte, dass der Bau eines Einkaufszentrums am Stadtrand viele Kunden wegnehmen wird.",
+      "answer": "N"
+    },
+    {
+      "text": "Simon (44):\nSchon jetzt ist der Verkehr ein großes Problem für die Stadt Friedrichshafen. Bevor es zu spät ist und noch mehr Besucher kommen, muss das Verkehrsproblem gelöst werden.",
+      "answer": "N"
+    }
+  ]
+}

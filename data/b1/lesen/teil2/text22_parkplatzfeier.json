@@ -1,0 +1,33 @@
+{
+  "title": "Parkplatzfeier (أماكن لركن السيارات المجانية)",
+  "summary": "توفير أماكن مجانية لركن السيارات والاستفادة منها لحاملي البطاقات والباصات.",
+  "questions": [
+    {
+      "question": "Was ist die Lösung des Problems / In diesem Text geht es um:",
+      "options": {
+        "a": "Schaffen Sie neue Parkplätze.",
+        "b": "Karteninhaber.",
+        "c": "Besitzer von Bussen des öffentlichen Nahverkehrs."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Wer profitiert von diesem Angebot:",
+      "options": {
+        "a": "Karteninhaber.",
+        "b": "Besitzer von Bussen des öffentlichen Nahverkehrs.",
+        "c": "Schaffen Sie neue Parkplätze."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Wer interessiert sich für die Idee:",
+      "options": {
+        "a": "Besitzer von Bussen des öffentlichen Nahverkehrs.",
+        "b": "Schaffen Sie neue Parkplätze.",
+        "c": "Karteninhaber."
+      },
+      "answer": "A"
+    }
+  ]
+}

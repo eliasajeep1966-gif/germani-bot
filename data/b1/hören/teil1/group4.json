@@ -1,0 +1,321 @@
+{
+  "group_id": 4,
+  "title": "Menge 4",
+  "questions": [
+    {
+      "id": 1,
+      "type": "true_false",
+      "text": "Mädchen sprach mit ihrer Freundin über einen Kletterkurs und der Kurs findet nicht statt / abgesagt",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Richtig"
+    },
+    {
+      "id": 2,
+      "type": "multiple_choice",
+      "text": "Was sie macht am besten?",
+      "options": [
+        "Klettern",
+        "Wandern",
+        "Schwimmen"
+      ],
+      "answer": "Wandern"
+    },
+    {
+      "id": 3,
+      "type": "true_false",
+      "text": "Es gab ein Gespräch im Museum Umbau:",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 4,
+      "type": "multiple_choice",
+      "text": "Was können die Leute im Oberstockwerk tun?",
+      "options": [
+        "Bücher lesen und leihen",
+        "Warmen und kalten Speisen kaufen",
+        "Museumstickets und Postkarten kaufen"
+      ],
+      "answer": "Warmen und kalten Speisen kaufen"
+    },
+    {
+      "id": 5,
+      "type": "true_false",
+      "text": "Neue Kreditkarte:",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Richtig"
+    },
+    {
+      "id": 6,
+      "type": "multiple_choice",
+      "text": "Was ist passiert?",
+      "options": [
+        "Wenig zu kaufen",
+        "Wenig zu bleiben",
+        "Wenig zu bezahlen"
+      ],
+      "answer": "Wenig zu bezahlen"
+    },
+    {
+      "id": 7,
+      "type": "true_false",
+      "text": "Wettermeldungen über die Wetterlage in Westdeutschland:",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 8,
+      "type": "multiple_choice",
+      "text": "Wie wird das Wetter am Sonntag sein?",
+      "options": [
+        "Regnerisch",
+        "Sonnig",
+        "Windig"
+      ],
+      "answer": "Regnerisch"
+    },
+    {
+      "id": 9,
+      "type": "true_false",
+      "text": "Wettbewerb um Personen, die mehr als drei Sprachen fließend beherrschen:",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Richtig"
+    },
+    {
+      "id": 10,
+      "type": "multiple_choice",
+      "text": "Bei Wettbewerb dürfen?",
+      "options": [
+        "Die Jury bekommt ein Geschenk",
+        "Sie reisen nach Paris",
+        "Drei besten reisen nach Berlin"
+      ],
+      "answer": "Drei besten reisen nach Berlin"
+    },
+    {
+      "id": 11,
+      "type": "true_false",
+      "text": "Der Text handelt von einer Bankberatung / Beratungsgespräch:",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 12,
+      "type": "multiple_choice",
+      "text": "Die Bankangestellte?",
+      "options": [
+        "Neuen Termin verschieben",
+        "Schlägt einen neuen Termin vor",
+        "Einen alten Termin bestätigen"
+      ],
+      "answer": "Schlägt einen neuen Termin vor"
+    },
+    {
+      "id": 13,
+      "type": "true_false",
+      "text": "Frau arbeitet bei einem Friseur- Ich habe eine Dame angerufen und neue Termine vorgeschlagen:",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Richtig"
+    },
+    {
+      "id": 14,
+      "type": "multiple_choice",
+      "text": "Was kann eine Frau tun?",
+      "options": [
+        "Rückruf am nächsten Tag bis Mittag",
+        "Am gleichen Tag antworten",
+        "Gar nicht zurückrufen"
+      ],
+      "answer": "Rückruf am nächsten Tag bis Mittag"
+    },
+    {
+      "id": 15,
+      "type": "true_false",
+      "text": "Es war, als würde der Anrufer Termine eröffnen?",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Richtig"
+    },
+    {
+      "id": 16,
+      "type": "multiple_choice",
+      "text": "Was macht sie?",
+      "options": [
+        "Sie ignoriert es",
+        "Sie schreibt eine Nachricht",
+        "Wieder anrufen"
+      ],
+      "answer": "Wieder anrufen"
+    },
+    {
+      "id": 17,
+      "type": "true_false",
+      "text": "verkehr:",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 18,
+      "type": "multiple_choice",
+      "text": "und ?",
+      "options": [
+        "Abbau",
+        "Sie schreibt eine Nachricht",
+        "Wieder anrufen"
+      ],
+      "answer": "Abbau"
+    },
+    {
+      "id": 19,
+      "type": "true_false",
+      "text": "Es gab eine Veranstaltung in der Schule und die Familien/Eltern war dort eingeladen:",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Richtig"
+    },
+    {
+      "id": 20,
+      "type": "multiple_choice",
+      "text": "Was konnten die Besucher machen?",
+      "options": [
+        "Essen und trinken",
+        "Ballspiele",
+        "Musik hören"
+      ],
+      "answer": "Ballspiele"
+    },
+    {
+      "id": 21,
+      "type": "true_false",
+      "text": "Radio B-19 sagt, dass es das Unterhaltung hat:",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 22,
+      "type": "multiple_choice",
+      "text": "Was läuft im Radio?",
+      "options": [
+        "Nachrichten",
+        "Sport",
+        "Neue Hits / Musik Hits"
+      ],
+      "answer": "Neue Hits / Musik Hits"
+    },
+    {
+      "id": 23,
+      "type": "true_false",
+      "text": "Er spricht über eine Schifffahrt zum Rhein River:",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Richtig"
+    },
+    {
+      "id": 24,
+      "type": "multiple_choice",
+      "text": "Was passiert während der Fahrt?",
+      "options": [
+        "Es gibt eine kurze Pause am Ufer",
+        "Halt im Restaurant",
+        "Fahrt ohne jegliche Unterbrechung"
+      ],
+      "answer": "Halt im Restaurant"
+    },
+    {
+      "id": 25,
+      "type": "true_false",
+      "text": "Der Zug wird Verspätung haben / um begleiten:",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Richtig"
+    },
+    {
+      "id": 26,
+      "type": "multiple_choice",
+      "text": "Der nächste Bahvhof ist ?",
+      "options": [
+        "Mannheim / Müllheim (خلافي, وحدة منن)",
+        "Stuttgart",
+        "Frankfurt am Main"
+      ],
+      "answer": "Mannheim / Müllheim (خلافي, وحدة منن)"
+    },
+    {
+      "id": 27,
+      "type": "true_false",
+      "text": "Die Kinder werden von ihren Familien begleitet:",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Richtig"
+    },
+    {
+      "id": 28,
+      "type": "multiple_choice",
+      "text": "Was sind die Aktivitäten?",
+      "options": [
+        "Brettspiele",
+        "Lesestunde",
+        "Ballspiele"
+      ],
+      "answer": "Ballspiele"
+    },
+    {
+      "id": 29,
+      "type": "true_false",
+      "text": "Neuer Film:",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 30,
+      "type": "multiple_choice",
+      "text": "Was fand danach statt?",
+      "options": [
+        "Ein kurzes Filmquiz",
+        "Diskussion nach dem Film",
+        "Gemeinsames Abendessen"
+      ],
+      "answer": "Diskussion nach dem Film"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "رحلة عائلة إلى المكسيك",
+  "summary": "عائلة ذهبت في رحلة إلى المكسيك، كان الطقس رائعاً لكن الفتاة كانت تعتقد أنها مملة.",
+  "questions": [
+    {
+      "question": "Die Familie verbrachte 14 Tage in Mexiko",
+      "answer": "R"
+    },
+    {
+      "question": "Die Reise war für das Mädchen langweilig",
+      "answer": "R"
+    },
+    {
+      "question": "Sie haben selbst Fische gefangen und gekocht",
+      "answer": "F"
+    },
+    {
+      "question": "Das Wetter war von Anfang an stürmisch",
+      "answer": "F"
+    },
+    {
+      "question": "Sie werden die Reise nächstes Jahr wiederholen",
+      "answer": "F"
+    }
+  ]
+}

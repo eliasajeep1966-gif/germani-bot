@@ -1,0 +1,40 @@
+{
+  "title": "Lesen Teil 3 - Nebenarbeit",
+  "pairs": [
+    {
+      "question": "Eine Frau arbeitet während ihres Studiums in der Büroreinigung und sucht eine ähnliche Arbeit",
+      "answer": "keine",
+      "keywords": "Sommerjob - ferienjob - ab juli"
+    },
+    {
+      "question": "Eine Person, die gerne mit Kunden arbeitet und Erfahrung mit Zahlen und Mathematik hat.",
+      "answer": "Kundenservice - Berechnungen",
+      "keywords": "Kundenservice - Berechnungen"
+    },
+    {
+      "question": "Ein Mann namens Toni spricht mehrere Sprachen (Spanisch, Englisch...) und hat Erfahrung bei der Auskunft am Flughafen.",
+      "answer": "mehrsprachig - Kundenservice - Empfang",
+      "keywords": "mehrsprachig - Kundenservice - Empfang"
+    },
+    {
+      "question": "Er hat ein Auto und sucht eine Arbeit am Wochenende am besten vormittag",
+      "answer": "führerschein - minijob - teilzeit",
+      "keywords": "führerschein - minijob - teilzeit"
+    },
+    {
+      "question": "Er sucht einen Nebenjob für den Nachmittag, da er bis 16 Uhr arbeitet. Seine Hauptarbeit ist den ganzen Tag am Computer, deshalb sucht er eine Arbeit mit Bewegung.",
+      "answer": "körperlich - Möbel tragen - Bestuhlung",
+      "keywords": "körperlich - Möbel tragen - Bestuhlung"
+    },
+    {
+      "question": "Eine Frau arbeitet als Kellnerin und arbeitet gerne mit Menschen aus dem Ausland.",
+      "answer": "weiblich - Gäste aus der ganzen Welt - international",
+      "keywords": "weiblich - Gäste aus der ganzen Welt - international"
+    },
+    {
+      "question": "Eine Frau möchte Karten verkaufen",
+      "answer": "fußball",
+      "keywords": "fußball"
+    }
+  ]
+}

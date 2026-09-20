@@ -1,0 +1,34 @@
+{
+  "title": "Allgemeines Rauchverbot",
+  "fixed_question": "Sind die folgenden Personen für ein allgemeines Rauchverbot?",
+  "questions": [
+    {
+      "text": "Nadin (20):\nIch denke schon seit Langer Zeit, dass es nicht gut sein kann, dass man an Bushaltestellen, an Ampeln oder beim Gehen ständig im Rauch steht. Es ist an der Zeit, das Rauchen überall schrittweise zu stoppen.",
+      "answer": "Ja"
+    },
+    {
+      "text": "Karl (75):\nIch finde, dieses Thema wird übertrieben. Ich bin jetzt 75 Jahre alt, gesund und fit, obwohl ich lange geraucht habe. Muss denn alles durch Gesetze geregelt werden? Wo bleibt die Freiheit? Jeder sollte selbst entscheiden können.",
+      "answer": "Nein"
+    },
+    {
+      "text": "Maria (35):\nIn der Diskussion für oder gegen das Rauchen wird vergessen, dass der Staat jährlich 14,3 Milliarden Euro durch die Tabaksteuer einnimmt. Dieses Geld wird bei den hohen Schulden dringend gebraucht, sonst müssten andere Steuern erhöht werden.",
+      "answer": "Nein"
+    },
+    {
+      "text": "Stefan (46):\nNatürlich kann man sagen, dass es bereits reicht, dass das Rauchen am Arbeitsplatz und in Restaurants verboten ist, und ein allgemeines Rauchverbot zu viel wäre. Auf der anderen Seite geben Raucher Kindern ein schlechtes Vorbild. Ich denke, Kinder sollten nicht glauben, dass Rauchen normal ist. Alle, die gegen ein Verbot sind, sollten darauf achten.",
+      "answer": "Ja"
+    },
+    {
+      "text": "Vera (48):\nEs stimmt zwar, dass Rauchen vor Kindern schlecht ist, aber dürfen Erwachsene dann auch keine Schokolade essen, kein Bier trinken oder nicht am Computer sitzen? Kinder müssen selbst lernen zu unterscheiden, was gut oder schlecht ist.",
+      "answer": "Nein"
+    },
+    {
+      "text": "Max (25):\nIch habe gelesen, dass in Deutschland jährlich 140.000 Menschen an den Folgen des Rauchens sterben. Die Krankenkassen zahlen 7,5 Milliarden Euro für Folgekrankheiten. Warum zwingt man den Staat nicht dazu, das Rauchen zu verbieten? Das wäre nützlich.",
+      "answer": "Ja"
+    },
+    {
+      "text": "Uwe (52):\nEgal ob im Büro oder auf der Straße: Mit ihrer Sucht schaden Raucher ihren Partnern, ihren Freunden und ihren Kindern.",
+      "answer": "Ja"
+    }
+  ]
+}

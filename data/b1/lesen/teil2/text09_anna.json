@@ -1,0 +1,33 @@
+{
+  "title": "Annas Geschäftsidee (متجر آنا للمنتجات اليدوية)",
+  "summary": "محل آنا يعرض منتجات يدوية مصنوعة بدون آلات، حيث يمكن للناس استئجار رفوف لعرض وبيع أعمالهم.",
+  "questions": [
+    {
+      "question": "In dem Text geht es um:",
+      "options": {
+        "a": "Annas Geschäftsidee.",
+        "b": "Frauen, die in ihrer Freizeit kreativ sind.",
+        "c": "deshalb behält sie einen Teil der Einnahmen für sich."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Annas Mieter sind vor allem:",
+      "options": {
+        "a": "Annas Geschäftsidee.",
+        "b": "Frauen, die in ihrer Freizeit kreativ sind.",
+        "c": "deshalb behält sie einen Teil der Einnahmen für sich."
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Anna muss Geld verdienen:",
+      "options": {
+        "a": "Annas Geschäftsidee.",
+        "b": "Frauen, die in ihrer Freizeit kreativ sind.",
+        "c": "deshalb behält sie einen Teil der Einnahmen für sich."
+      },
+      "answer": "C"
+    }
+  ]
+}

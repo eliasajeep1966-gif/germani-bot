@@ -1,0 +1,33 @@
+{
+  "title": "Pausenkultur / Mittagsschlaf (ثقافة القيلولة في العمل)",
+  "summary": "مع زيادة الضغط في العمل، تستخدم نسبة متزايدة من الموظفين في ألمانيا قيلولة قصيرة.",
+  "questions": [
+    {
+      "question": "In diesem Text geht es darum:",
+      "options": {
+        "a": "dass Mitarbeiter nach einer Schlafpause bessere Arbeitsergebnisse erzielen.",
+        "b": "bieten ihren Mitarbeitern Ruheräume an.",
+        "c": "wird von immer mehr Arbeitnehmern genutzt."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Viele amerikanische Firmen:",
+      "options": {
+        "a": "dass Mitarbeiter nach einer Schlafpause bessere Arbeitsergebnisse erzielen.",
+        "b": "bieten ihren Mitarbeitern Ruheräume an.",
+        "c": "wird von immer mehr Arbeitnehmern genutzt."
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Die Ruhepause zur Tagesmitte:",
+      "options": {
+        "a": "dass Mitarbeiter nach einer Schlafpause bessere Arbeitsergebnisse erzielen.",
+        "b": "bieten ihren Mitarbeitern Ruheräume an.",
+        "c": "wird von immer mehr Arbeitnehmern genutzt."
+      },
+      "answer": "C"
+    }
+  ]
+}

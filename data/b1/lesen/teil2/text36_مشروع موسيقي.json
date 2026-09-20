@@ -1,0 +1,33 @@
+{
+  "title": "مشروع موسيقي بين الشباب (تجربة جديدة)",
+  "summary": "مشروع موسيقي يجمع اليافعين بين 13-18 سنة من أكثر من بلد.",
+  "questions": [
+    {
+      "question": "Worum geht es im Text?",
+      "options": {
+        "a": "Musikprojekt bringt Jugendliche aus Österreich und Italien zusammen.",
+        "b": "Sie möchte an diesem Event teilnehmen / hat letzten Sommer einen Italienischkurs besucht.",
+        "c": "Sie werden an einem einzelnen Musikinstrument üben."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Was erzählt Mary über ihre Erfahrung?",
+      "options": {
+        "a": "Musikprojekt bringt Jugendliche aus Österreich und Italien zusammen.",
+        "b": "Sie möchte an diesem Event teilnehmen / hat letzten Sommer einen Italienischkurs besucht.",
+        "c": "Sie werden an einem einzelnen Musikinstrument üben."
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Was machen die Jugendlichen im Projekt?",
+      "options": {
+        "a": "Musikprojekt bringt Jugendliche aus Österreich und Italien zusammen.",
+        "b": "Sie möchte an diesem Event teilnehmen / hat letzten Sommer einen Italienischkurs besucht.",
+        "c": "Sie werden an einem einzelnen Musikinstrument üben."
+      },
+      "answer": "C"
+    }
+  ]
+}

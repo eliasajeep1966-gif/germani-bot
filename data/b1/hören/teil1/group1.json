@@ -1,0 +1,321 @@
+{
+  "group_id": 1,
+  "title": "Menge 1 (1-30)",
+  "questions": [
+    {
+      "id": 1,
+      "type": "true_false",
+      "text": "Die neue Lebensmittelabteilung im Café",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 2,
+      "type": "multiple_choice",
+      "text": "Was bietet das Café?",
+      "options": [
+        "Nur ein festes Tagesmenü",
+        "Verschiedene / wechselnde Angebote",
+        "Ausschließlich Snacks und Getränke"
+      ],
+      "answer": "Verschiedene / wechselnde Angebote"
+    },
+    {
+      "id": 3,
+      "type": "true_false",
+      "text": "Es ging um Zugschädigung, aber der Weg war Geschlossen",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 4,
+      "type": "multiple_choice",
+      "text": "Was passiert mit dem Passagier nach Graz?",
+      "options": [
+        "Er muss eine andere Busverbindung buchen",
+        "Er bekommt die Ticketkosten erstattet",
+        "Die Passagiere werden am Morgen reisen"
+      ],
+      "answer": "Die Passagiere werden am Morgen reisen"
+    },
+    {
+      "id": 5,
+      "type": "true_false",
+      "text": "Sie Könnten in fünf Minuten gewinnen",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 6,
+      "type": "multiple_choice",
+      "text": "Was passiert?",
+      "options": [
+        "Quiz",
+        "Lotterie",
+        "Gewinnspiel"
+      ],
+      "answer": "Quiz"
+    },
+    {
+      "id": 7,
+      "type": "true_false",
+      "text": "Jemand spricht über eine Präsentation, die früher gehalten wurde",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 8,
+      "type": "multiple_choice",
+      "text": "Was sollte ein Mädchen tun?",
+      "options": [
+        "Sie muss ein Poster gestalten",
+        "Sie interessiert sich für die Bilder",
+        "Sie soll eine Präsentation halten"
+      ],
+      "answer": "Sie interessiert sich für die Bilder"
+    },
+    {
+      "id": 9,
+      "type": "true_false",
+      "text": "Die Anzeige ist Nur für die Trainer",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 10,
+      "type": "multiple_choice",
+      "text": "Was passiert?",
+      "options": [
+        "Fitnesskurs im Studio",
+        "Basketball mit Klaus",
+        "Mannschaftstraining in der Halle"
+      ],
+      "answer": "Basketball mit Klaus"
+    },
+    {
+      "id": 11,
+      "type": "true_false",
+      "text": "Eine Frau hat Fragen über ihre Bestellung",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Richtig"
+    },
+    {
+      "id": 12,
+      "type": "multiple_choice",
+      "text": "Was möchte sie?",
+      "options": [
+        "Eine Auftragsbestätigung",
+        "Nach der Wunsch",
+        "Einen Terminänderungswunsch"
+      ],
+      "answer": "Nach der Wunsch"
+    },
+    {
+      "id": 13,
+      "type": "true_false",
+      "text": "Der Reiseführer beschreibt den Weg / Strecke nach Wien",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 14,
+      "type": "multiple_choice",
+      "text": "Was werden sie am nächsten Tag tun?",
+      "options": [
+        "Sie werden die Innenstadt besichtigen",
+        "Sie nehmen an einer Führung teil",
+        "Sie werden in den Zoo/Tierpark gehen"
+      ],
+      "answer": "Sie werden in den Zoo/Tierpark gehen"
+    },
+    {
+      "id": 15,
+      "type": "true_false",
+      "text": "Stadtrundfahrt / Stadtspazierung durch Wien",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Richtig"
+    },
+    {
+      "id": 16,
+      "type": "multiple_choice",
+      "text": "Was passiert als Nächstes?",
+      "options": [
+        "Kurze Pause",
+        "Kurze Stadtführung",
+        "Kurzer Zwischenstopp"
+      ],
+      "answer": "Kurze Pause"
+    },
+    {
+      "id": 17,
+      "type": "true_false",
+      "text": "Radioprogramm / Radiosendung",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 18,
+      "type": "multiple_choice",
+      "text": "Was kann man in fünf Minuten?",
+      "options": [
+        "Geld gewinnen",
+        "Einen Preis gewinnen",
+        "Gutscheine gewinnen"
+      ],
+      "answer": "Geld gewinnen"
+    },
+    {
+      "id": 19,
+      "type": "true_false",
+      "text": "Heute scheint in ganz Deutschland die Sonne",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 20,
+      "type": "multiple_choice",
+      "text": "Das Wetter in den kommenden Tagen?",
+      "options": [
+        "Regnerisch",
+        "Bewölkt",
+        "Windig"
+      ],
+      "answer": "Windig"
+    },
+    {
+      "id": 21,
+      "type": "true_false",
+      "text": "Er geht zu einem Konzert",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Richtig"
+    },
+    {
+      "id": 22,
+      "type": "multiple_choice",
+      "text": "Wohin geht er?",
+      "options": [
+        "Museum",
+        "Ausstellung",
+        "Galerie"
+      ],
+      "answer": "Ausstellung"
+    },
+    {
+      "id": 23,
+      "type": "true_false",
+      "text": "Der Einziehen/Einzug wird verschoben",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 24,
+      "type": "multiple_choice",
+      "text": "Was ruft sie an, um zu tun?",
+      "options": [
+        "Die Schlüssel zu holen",
+        "Neue Fenster bestellen",
+        "Den Umzug verschieben"
+      ],
+      "answer": "Neue Fenster bestellen"
+    },
+    {
+      "id": 25,
+      "type": "true_false",
+      "text": "Der Umzug wird verschoben",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Richtig"
+    },
+    {
+      "id": 26,
+      "type": "multiple_choice",
+      "text": "Was ruft sie an, um zu tun?",
+      "options": [
+        "Den Umzug verschieben",
+        "Neue Fenster bekommen",
+        "Die Schlüssel zu holen"
+      ],
+      "answer": "Neue Fenster bekommen"
+    },
+    {
+      "id": 27,
+      "type": "true_false",
+      "text": "Messe stattfinden",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 28,
+      "type": "multiple_choice",
+      "text": "Wann ist der Termin?",
+      "options": [
+        "Am Samstag um 9 Uhr",
+        "Am Sonntag um 9 Uhr",
+        "Am Sonntag um 11 Uhr"
+      ],
+      "answer": "Am Sonntag um 11 Uhr"
+    },
+    {
+      "id": 29,
+      "type": "true_false",
+      "text": "Sie arbeitet als Sporttrainerin",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Falsch"
+    },
+    {
+      "id": 30,
+      "type": "multiple_choice",
+      "text": "Was soll sie tun?",
+      "options": [
+        "Den Vertrag unterschreiben",
+        "Ausweis abholen lassen",
+        "Regelmäßig trainieren"
+      ],
+      "answer": "Ausweis abholen lassen"
+    }
+  ]
+}

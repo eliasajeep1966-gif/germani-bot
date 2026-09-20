@@ -1,0 +1,25 @@
+{
+  "title": "Lesen Teil 3 - مطاعم وحفلات فالنتاين",
+  "pairs": [
+    {
+      "question": "Ein Mann, der gut Musik machen kann und am valentinstag nach einer Arbeitsmöglichkeit sucht",
+      "answer": "keine",
+      "keywords": "Musik machen - Arbeitsmöglichkeit - Valentinstag"
+    },
+    {
+      "question": "Ein mann sucht nach einem geeigneten ort für die party. Bevozugt aber keine alkoholischen Getränke.",
+      "answer": "Restaurant auf dem schiff, das keine alkoholischen Getränke ausschenkt",
+      "keywords": "Restaurant auf dem schiff - keine alkoholischen Getränke"
+    },
+    {
+      "question": "Ein Mann möchte diesen Anlass im Detail wissen und warum dieser Tag als valentinstag ausgewählt wurde",
+      "answer": "valentinsbuch, erzählt die Geschichte dieses Tages",
+      "keywords": "valentinsbuch - Geschichte dieses Tages"
+    },
+    {
+      "question": "Ein Mann ist auf Reisen und möchte mit seiner frau den Valentinstag feiern und ihr etwas schenken",
+      "answer": "Werbung für einen schokoladenladen und klare Rosensträuße",
+      "keywords": "schokoladenladen – Rosensträuße"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "title": "Finanzielle Unterstützung für Privatschulen",
+  "fixed_question": "Sind die folgenden Aussagen für eine finanzielle Unterstützung von Privatschulen?",
+  "questions": [
+    {
+      "text": "Meine Schwester, meine Freunde und ich besuchen eine Sprachschule für Spanischunterricht. Meine Freunde können sich die Kurse jedoch nicht leisten, da sie zu teuer sind.",
+      "answer": "J"
+    },
+    {
+      "text": "Ein Schüler erzählt, dass sein Freund eine Privatschule besucht. Er würde sich auch gerne anmelden, aber seine Eltern sind der Meinung, dass die Kosten zu hoch sind und es sich nicht lohnt.",
+      "answer": "J"
+    },
+    {
+      "text": "Eine Mutter berichtet, dass ihr Sohn eine Privatschule besucht. Sie fragt sich, warum diese Schulen keine finanzielle Unterstützung wie öffentliche Schulen erhalten, da diese Schule sehr teuer ist.",
+      "answer": "J"
+    },
+    {
+      "text": "Meiner Meinung nach ist dieses Projekt falsch.",
+      "answer": "N"
+    },
+    {
+      "text": "Warum diskutieren so viele über Privatschulen? Das ist nur wegen der reichen Familien.",
+      "answer": "N"
+    },
+    {
+      "text": "Privatschulen in England und den USA erhalten finanzielle Unterstützung, aber bei uns ist die Situation anders.",
+      "answer": "N"
+    },
+    {
+      "text": "Ich verstehe die ganze Diskussion nicht. Am Ende ist das doch die persönliche Entscheidung der Eltern.",
+      "answer": "N"
+    }
+  ]
+}

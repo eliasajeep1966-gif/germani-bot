@@ -1,0 +1,34 @@
+{
+  "title": "Rauchverbot an öffentlichen Orten",
+  "fixed_question": "Sind die Personen für ein Rauchverbot an öffentlichen Orten?",
+  "questions": [
+    {
+      "text": "Nadin (45)\nImmer wieder erlebe ich das Gleiche: Ein Raucher sitzt neben mir auf der Parkbank und bläst mir den Rauch ins Gesicht.",
+      "answer": "J"
+    },
+    {
+      "text": "Volker (39)\nUm Nichtraucher zu schützen, müsste das Rauchen komplett verboten werden, sonst macht es keinen Sinn. Zum Beispiel an Bahnhöfen: Dort darf man in einem markierten Bereich rauchen, an dem alle vorbeigehen und den Rauch einatmen. Was bringt das? Nichts, außer dass meine persönlichen Rechte angegriffen werden, wenn ich an der frischen Luft nicht rauchen darf.",
+      "answer": "N"
+    },
+    {
+      "text": "Mari (21)\nWenn ich auf der Terrasse in einem Café sitze und einen Kuchen esse, möchte ich nicht, dass am Nachbartisch jemand raucht. Aber ein Rauchverbot an öffentlichen Orten geht mir zu weit. Wenn alle höflich und tolerant miteinander umgehen würden, wäre das völlig ausreichend.",
+      "answer": "N"
+    },
+    {
+      "text": "Claudia (28)\nFür viele ist es völlig normal, dass das Rauchen an öffentlichen Orten wie in Parks oder Fußballstadien erlaubt ist. Ich sehe das aber anders. Obwohl viele ein allgemeines Verbot ablehnen, ist das für mich die einzige Lösung, die wirklich hilft.",
+      "answer": "J"
+    },
+    {
+      "text": "Bernhard (52)\nIch bin ein toleranter Mensch, aber Rauch ungestraft in die Luft anderer Menschen zu blasen, grenzt schon an Körperverletzung – besonders, wenn man das vor den Augen eines Kindes tut.",
+      "answer": "J"
+    },
+    {
+      "text": "Robert (44)\nSelbst als Nichtraucher finde ich die Gefahr durch das Rauchen an öffentlichen Orten übertrieben. Zum Beispiel am Strand oder am See gibt es genug Platz für alle, für Raucher und Nichtraucher. Man sollte auf gegenseitigen Respekt setzen.",
+      "answer": "N"
+    },
+    {
+      "text": "Anna (35)\nIch wäre froh, wenn auch Nichtraucher etwas toleranter und respektvoller wären. Meine Kollegin ärgert sich auf Märkten oder im Schwimmbad sehr über Raucher. Anders als ich wäre es ihr am liebsten, wenn das Rauchen an öffentlichen Orten streng verboten würde. Das kann ich nicht wirklich verstehen.",
+      "answer": "N"
+    }
+  ]
+}

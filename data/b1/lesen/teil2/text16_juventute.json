@@ -1,0 +1,33 @@
+{
+  "title": "Geburtstag von Pro Juventute (احتفال منظمة Pro Juventute في سويسرا)",
+  "summary": "منظمة Pro Juventute تحتفل منظمة بمرور 100 عام عليها من خلال فعاليات ومسابقات تهدف لجمع أفكار جديدة. المسابقات تشجع الأطفال والمدارس على المشاركة بأعمال فنية وقصص.",
+  "questions": [
+    {
+      "question": "In diesem Text geht:",
+      "options": {
+        "a": "es um den Geburtstag einer Organisation.",
+        "b": "finanzielle Unterstützung durch Firmen.",
+        "c": "werden in Bern vorgestellt."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Die besten Ideen:",
+      "options": {
+        "a": "finanzielle Unterstützung durch Firmen.",
+        "b": "werden in Bern vorgestellt.",
+        "c": "es um den Geburtstag einer Organisation."
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Die Organisation hofft auf:",
+      "options": {
+        "a": "es um den Geburtstag einer Organisation.",
+        "b": "werden in Bern vorgestellt.",
+        "c": "finanzielle Unterstützung durch Firmen."
+      },
+      "answer": "C"
+    }
+  ]
+}

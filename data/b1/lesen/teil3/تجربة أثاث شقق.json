@@ -1,0 +1,40 @@
+{
+  "title": "Lesen Teil 3 - تجربة اثاث شقق",
+  "pairs": [
+    {
+      "question": "Ein Mädchen möchte die küchenwände streichen",
+      "answer": "farbe - selbst",
+      "keywords": "farbe - selbst"
+    },
+    {
+      "question": "jemand möchte einen Esstisch für den Balkon",
+      "answer": "Bei allen Wetterbedingungen / Jeder saison",
+      "keywords": "auf dem Terasse - auf dem Balkon"
+    },
+    {
+      "question": "Es gibt diejenigen, die sicherstellen möchten, dass alles in der Wohnung sicher und funktionsfähig ist, insbesondere die stromstärke überprüfen",
+      "answer": "wir überprüfen alles, die sicherheit der Geräte und die stromstärke/stromleistung",
+      "keywords": "überprüfen - sicherheit der Geräte - stromstärke - stromleistung"
+    },
+    {
+      "question": "jemand möchte einen computer für seinen 17, oder 15 jährigen sohn.",
+      "answer": "computertisch für jugendliche- praktisch und modern / büromöbel",
+      "keywords": "computertisch - jugendliche - praktisch - modern - büromöbel"
+    },
+    {
+      "question": "das Mädchen braucht eine lampe für den Bürotisch",
+      "answer": "bürotischlampen für besseres licht",
+      "keywords": "bürotisch lampen - besseres licht"
+    },
+    {
+      "question": "jemand möchte eine Badewanne einbauen",
+      "answer": "Maßgeschneiderte Badewanne - schnell und einfach",
+      "keywords": "Maßgeschneiderte Badewanne - schnell - einfach"
+    },
+    {
+      "question": "Ein Mädchen feierte den umzug in eine neue wohnung",
+      "answer": "keine",
+      "keywords": "umzug - neue wohnung"
+    }
+  ]
+}

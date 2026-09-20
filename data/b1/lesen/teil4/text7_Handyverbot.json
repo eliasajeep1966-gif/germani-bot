@@ -1,0 +1,34 @@
+{
+  "title": "Handyverbot an Schulen",
+  "fixed_question": "Sollten Handys an Schulen verboten werden? Lesen Sie die verschiedenen Meinungen. Welche Aussagen sind für ein Handyverbot",
+  "questions": [
+    {
+      "text": "Ich bin für ein Handyverbot in der Schule, das ist wirklich notwendig.",
+      "answer": "J"
+    },
+    {
+      "text": "Schüler schauen sich Horrorfilme und Pornografie an. Das ist gefährlich und lenkt die Schüler stark ab.",
+      "answer": "J"
+    },
+    {
+      "text": "Ich liebe Musik sehr und ohne Handy kann ich keine Musik hören. Die Entscheidung für ein Verbot ist schlecht.",
+      "answer": "N"
+    },
+    {
+      "text": "Handys könnten erlaubt sein, aber nur in Ausnahmefällen. Die Entscheidung für ein Verbot ist jedoch richtig.",
+      "answer": "J"
+    },
+    {
+      "text": "Ich bin nicht gegen das Verbot.",
+      "answer": "J"
+    },
+    {
+      "text": "Ein Handyverbot ist nicht die einzige Lösung und eigentlich eine sinnlose Entscheidung.",
+      "answer": "N"
+    },
+    {
+      "text": "Schulen nutzen Handys für den Unterricht. Ich bin definitiv gegen das Verbot.",
+      "answer": "N"
+    }
+  ]
+}

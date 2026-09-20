@@ -1,0 +1,55 @@
+{
+  "summary": "هنا يمكنك كتابة ملخص النص الخاص برحلة إلى ميونخ لكي يظهره البوت للمستخدم.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Wohin geht die Reise?",
+      "options": {
+        "a": "nach Augsburg",
+        "b": "nach München",
+        "c": "nach Nürnberg"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 2,
+      "question": "Sie werden ein Hotel erreichen und innerhalb dieses Hotels?",
+      "options": {
+        "a": "Sie frühstücken im Hotelrestaurant",
+        "b": "Sie essen im Hotel zu Mittag",
+        "c": "Sie nehmen das Abendessen ein"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 3,
+      "question": "Es geht darum, dass sie ein bestimmtes von 4 bis 6 Uhr ...",
+      "options": {
+        "a": "Präsentation vorbereiten und halten",
+        "b": "Thema diskutieren und darüber sprechen",
+        "c": "Gruppenarbeit zusammenfassen"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 4,
+      "question": "Was werden sie danach Pause tun?",
+      "options": {
+        "a": "Sich für den Theoriekurs anmelden",
+        "b": "Praxiskurs registrieren 19:00 Uhr",
+        "c": "Teilnehmerzertifikat abholen"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 5,
+      "question": "Die Reise würde zwischen 14 und 16 Uhr stattfinden?",
+      "options": {
+        "a": "Für Personen, die am Kurs teilnehmen",
+        "b": "Es wird Mittwochmorgen sein",
+        "c": "الخيار هو التالت غير يلي مذكورين"
+      },
+      "correct_answer": "c"
+    }
+  ]
+}

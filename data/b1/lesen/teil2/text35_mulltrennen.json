@@ -1,0 +1,33 @@
+{
+  "title": "فصل القمامة (تجربة جديدة)",
+  "summary": "يتحدث النص عن مبادرة بيئية لفصل القمامة في مدينة لايبزيغ وما يميزها هذا العام.",
+  "questions": [
+    {
+      "question": "Worum geht es im Text?",
+      "options": {
+        "a": "eine Aktion zur Mülltrennung in Leipzig.",
+        "b": "Es gibt eine neue Veranstaltung / Konzert.",
+        "c": "Er war der Erste, der diese Ideen vorgeschlagen hat."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Was ist dieses Jahr neu?",
+      "options": {
+        "a": "eine Aktion zur Mülltrennung in Leipzig.",
+        "b": "Es gibt eine neue Veranstaltung / Konzert.",
+        "c": "Er war der Erste, der diese Ideen vorgeschlagen hat."
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Was wird über den Bürgermeister gesagt?",
+      "options": {
+        "a": "eine Aktion zur Mülltrennung in Leipzig.",
+        "b": "Es gibt eine neue Veranstaltung / Konzert.",
+        "c": "Er war der Erste, der diese Ideen vorgeschlagen hat."
+      },
+      "answer": "C"
+    }
+  ]
+}

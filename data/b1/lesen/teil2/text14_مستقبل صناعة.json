@@ -1,0 +1,33 @@
+{
+  "title": "Zukunft der Reifenindustrie (مستقبل صناعة السيارات والتنقل المستدام)",
+  "summary": "عدد السيارات عالمياً سيزيد من 800 مليون اليوم إلى 1.5 مليار عام 2050. منتدى Llantara Challenge ينظم لعرض أحدث السيارات ذات المحركات البديلة، مثل الكهربائية والهيدروجينية، مع تزايد الاهتمام بهذا المجال.",
+  "questions": [
+    {
+      "question": "In dem Text geht es um:",
+      "options": {
+        "a": "die Zukunft der Reifenindustrie.",
+        "b": "dass als 2050 über eine Milliarde Autos geben wird.",
+        "c": "konnte dieses Jahr von allen Interessierten besucht werden."
+      },
+      "answer": "A"
+    },
+    {
+      "question": "Llantara Challenge:",
+      "options": {
+        "a": "dass als 2050 über eine Milliarde Autos geben wird.",
+        "b": "konnte dieses Jahr von allen Interessierten besucht werden.",
+        "c": "die Zukunft der Reifenindustrie."
+      },
+      "answer": "B"
+    },
+    {
+      "question": "Die UNO sagt voraus:",
+      "options": {
+        "a": "die Zukunft der Reifenindustrie.",
+        "b": "konnte dieses Jahr von allen Interessierten besucht werden.",
+        "c": "dass als 2050 über eine Milliarde Autos geben wird."
+      },
+      "answer": "C"
+    }
+  ]
+}
