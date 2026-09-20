@@ -24,12 +24,13 @@ from database import (
     BroadcastState, set_custom_text, get_custom_text,
     get_user_full_details, get_users_page, get_users_count,
     get_active_keys, get_active_keys_count,
+    VALID_TIPS_KEYS,
     _db_connect
 )
 from keyboards import (
     get_admin_panel, get_supervisor_panel,
     get_supervisors_management_menu, get_financial_settlement_menu,
-    get_edit_texts_menu, get_keys_pagination_keyboard
+    get_edit_texts_menu, get_edit_tips_menu, get_keys_pagination_keyboard
 )
 
 admin_router = Router()
@@ -301,6 +302,22 @@ async def cb_admin_edit_texts_menu(callback: types.CallbackQuery):
     )
     await callback.answer()
 
+
+@admin_router.callback_query(F.data == "admin_edit_tips_menu")
+async def cb_admin_edit_tips_menu(callback: types.CallbackQuery):
+    """Tips per Teil sub-menu (CMS): pick which tips_{skill}_{teil} to edit."""
+    if callback.from_user.id not in ADMIN_IDS:
+        await callback.answer("⚠️ مقتصر على الأدمن الرئيسي.", show_alert=True)
+        return
+
+    await safe_edit_message_text(
+        callback,
+        "💡 <b>نصائح الأقسام (Tips per Teil):</b>\nاختر القسم الذي تريد تعديل نصيحته:",
+        reply_markup=get_edit_tips_menu(),
+        parse_mode="HTML"
+    )
+    await callback.answer()
+
 @admin_router.callback_query(F.data.startswith("admin_edit_text_"))
 async def cb_admin_start_edit_text(callback: types.CallbackQuery, state: FSMContext):
     if callback.from_user.id not in ADMIN_IDS:
@@ -308,6 +325,14 @@ async def cb_admin_start_edit_text(callback: types.CallbackQuery, state: FSMCont
         return
 
     key = callback.data.replace("admin_edit_text_", "")
+    # Treat callback_data as UNTRUSTED (Rule 2): allow only known service keys + tips CMS keys.
+    _allowed_service_keys = {
+        "service_visa", "service_svu", "service_engineering", "free_services",
+        "buy_courses", "subscribe_flow", "schreiben", "sprechen",
+    }
+    if not key or (key not in _allowed_service_keys and key not in VALID_TIPS_KEYS):
+        await callback.answer("⚠️ مفتاح نص غير معروف.", show_alert=True)
+        return
     await state.set_state(AdminEditState.waiting_for_text)
     await state.update_data(editing_key=key)
 
@@ -343,6 +368,10 @@ async def process_admin_save_text(message: types.Message, state: FSMContext):
     key = data.get("editing_key")
 
     if key and text:
+        # Rule 16: keep prepended tips + list headers under Telegram 4096 cap.
+        if len(text) > 3500:
+            await message.answer("⚠️ النص طويل جداً (الحد 3500 حرف للنصائح/النصوص لضمان عدم تجاوز حد التلغرام 4096). يرجى اختصاره.")
+            return
         await set_custom_text(key, text)
         await state.clear()
         # F-04: escape echoed key before HTML render.

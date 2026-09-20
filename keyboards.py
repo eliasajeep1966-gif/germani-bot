@@ -163,6 +163,30 @@ def get_edit_texts_menu():
         [InlineKeyboardButton(text="⭐ الاشتراك بالبوت", callback_data="admin_edit_text_subscribe_flow")],
         [InlineKeyboardButton(text="✍️ قسم الكتابة Schreiben", callback_data="admin_edit_text_schreiben")],
         [InlineKeyboardButton(text="🗣️ قسم المحادثة Sprechen", callback_data="admin_edit_text_sprechen")],
+        [InlineKeyboardButton(text="💡 نصائح الأقسام (Tips per Teil)", callback_data="admin_edit_tips_menu")],
+        [InlineKeyboardButton(text="🔙 لوحة الأدمن", callback_data="admin_panel_back")]
+    ]
+    return InlineKeyboardMarkup(inline_keyboard=buttons)
+
+
+def get_edit_tips_menu():
+    """Admin sub-menu for editing per-Teil tips (CMS keys tips_{skill}_{teil}).
+
+    Each button reuses the generic admin_edit_text_ flow so
+    process_admin_save_text handles persistence without changes.
+    All callback_data kept <= 64 bytes (Rule 16).
+    """
+    buttons = [
+        [InlineKeyboardButton(text="📖 Lesen Teil 1", callback_data="admin_edit_text_tips_lesen_teil1")],
+        [InlineKeyboardButton(text="📖 Lesen Teil 2", callback_data="admin_edit_text_tips_lesen_teil2")],
+        [InlineKeyboardButton(text="📖 Lesen Teil 3", callback_data="admin_edit_text_tips_lesen_teil3")],
+        [InlineKeyboardButton(text="📖 Lesen Teil 4", callback_data="admin_edit_text_tips_lesen_teil4")],
+        [InlineKeyboardButton(text="📖 Lesen Teil 5", callback_data="admin_edit_text_tips_lesen_teil5")],
+        [InlineKeyboardButton(text="🎧 Hören Teil 1", callback_data="admin_edit_text_tips_hören_teil1")],
+        [InlineKeyboardButton(text="🎧 Hören Teil 2", callback_data="admin_edit_text_tips_hören_teil2")],
+        [InlineKeyboardButton(text="🎧 Hören Teil 3", callback_data="admin_edit_text_tips_hören_teil3")],
+        [InlineKeyboardButton(text="🎧 Hören Teil 4", callback_data="admin_edit_text_tips_hören_teil4")],
+        [InlineKeyboardButton(text="🔙 النصوص", callback_data="admin_edit_texts")],
         [InlineKeyboardButton(text="🔙 لوحة الأدمن", callback_data="admin_panel_back")]
     ]
     return InlineKeyboardMarkup(inline_keyboard=buttons)
@@ -216,7 +240,7 @@ def get_services_menu():
         [InlineKeyboardButton(text="🏗️ الدورات الهندسية", callback_data="service_engineering")],
         [InlineKeyboardButton(text="✈️ الفيز والقبولات الجامعية", callback_data="service_visa")],
         [InlineKeyboardButton(text="🎓 خدمات الجامعة الافتراضية SVU", callback_data="service_svu")],
-        [InlineKeyboardButton(text="🛒 شراء الدورات منسقة", callback_data="menu_buy_courses")],
+        [InlineKeyboardButton(text="🛒 ملفات الدورات", callback_data="menu_buy_courses")],
         [InlineKeyboardButton(text="🔙 القائمة الرئيسية", callback_data="main_menu")]
     ]
     return InlineKeyboardMarkup(inline_keyboard=buttons)

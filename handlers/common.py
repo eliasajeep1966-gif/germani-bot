@@ -19,7 +19,8 @@ from database import (
     reset_user_progress, get_skill_progress, activate_subscription,
     is_text_completed, set_user_referrer, process_referral_reward,
     get_referral_info, claim_free_subscription, get_custom_text,
-    get_user_answer_stats, get_next_uncompleted_target, can_access_level
+    get_user_answer_stats, get_next_uncompleted_target, can_access_level,
+    FALLBACK_TIPS
 )
 from keyboards import (
     get_main_menu, get_training_menu, get_services_menu,
@@ -30,6 +31,37 @@ common_router = Router()
 
 # In-bot ticketing rate limiter: max 3 messages per 300s per user (TTL anti-DoS, Rule 8)
 support_rate_limit: TTLCache = TTLCache(maxsize=10000, ttl=300)
+
+_TIPS_MISSING_MARKER = "لا يوجد نص محدد لهذه الخدمة حالياً."
+
+async def get_teil_tip(skill: str, teil: str) -> str:
+    """CMS fetch for per-Teil tips (admin-editable).
+
+    Key: tips_{skill}_{teil} (lowercased). Returns DB custom text when present,
+    else the hardcoded FALLBACK_TIPS default (keeps UX identical pre-seed),
+    else "" when unknown skill/teil. Never raises — callers always get a string.
+    """
+    try:
+        skill_n = (skill or "").lower().strip()
+        teil_n = (teil or "").lower().strip()
+        # Normalize ASCII alias (hoeren) to canonical (hören) for CMS keys.
+        if skill_n == "hoeren":
+            skill_n = "hören"
+        tips_key = f"tips_{skill_n}_{teil_n}"
+        try:
+            tips_text = await get_custom_text(tips_key)
+        except Exception:
+            logging.warning(f"get_custom_text failed for {tips_key}")
+            tips_text = None
+        if tips_text and _TIPS_MISSING_MARKER not in str(tips_text):
+            txt = str(tips_text).strip()
+            if txt:
+                # Ensure trailing blank line when prepending to list headers.
+                return txt if txt.endswith("\n\n") else txt + "\n\n"
+        return FALLBACK_TIPS.get(tips_key, "")
+    except Exception:
+        logging.exception("get_teil_tip failed")
+        return ""
 
 async def safe_edit_message_text(callback: types.CallbackQuery, text: str, reply_markup=None, parse_mode=None, protect_content=False):
     """دالة مساعدة لمعالجة استثناء عدم تعديل محتوى الرسالة في التلغرام وبشكل مرن"""
@@ -562,27 +594,8 @@ async def handle_callbacks(callback: types.CallbackQuery, state: FSMContext, bot
         skill = os.path.basename(parts[2])
         teil = os.path.basename(parts[3])
 
-        tip_text = ""
-        if skill == "lesen":
-            if teil == "teil1":
-                tip_text = "💡 <b>ملاحظة ونصيحة للحل (Teil 1):</b>\nهذا الجزء يمكن حفظ نصوصه كقصة، وقد تم وضع ملخصات بسيطة جداً يمكن قراءتها قبل البدء بالحل لتذكر النص.\n\n"
-            elif teil == "teil2":
-                tip_text = "💡 <b>ملاحظة ونصيحة للحل (Teil 2):</b>\nهذا الجزء في الامتحان يأتي بنظام الاختيار من متعدد.\n\n"
-            elif teil == "teil3":
-                tip_text = "💡 <b>ملاحظة ونصيحة للحل (Teil 3):</b>\nقم بصل كل موقف بالسؤال أو الإجابة المناسبة له بالضغط عليهما بالتوالي.\n\n"
-            elif teil == "teil4":
-                tip_text = "💡 <b>ملاحظة ونصيحة للحل (Teil 4):</b>\nاختر خيار الجواب المناسب (Ja أو Nein) لكل نص بناءً على موقف وتوجه الكاتب حول السؤال المطروح.\n\n"
-            elif teil == "teil5":
-                tip_text = "💡 <b>ملاحظة ونصيحة للحل (Teil 5):</b>\nاقرأ القواعد أو اللوائح جيداً ثم اختر الإجابة الصحيحة من بين الخيارات الثلاثة لكل سؤال.\n\n"
-        elif skill == "hören":
-            if teil == "teil1":
-                tip_text = "💡 <b>ملاحظة ونصيحة للحل (Hören Teil 1):</b>\nهنا يمكنك كتابة الملاحظات والنصائح الخاصة بالجزء الأول للاستماع ويمكن تعديلها لاحقاً حسب الحاجة.\n\n"
-            elif teil == "teil2":
-                tip_text = "💡 <b>ملاحظة ونصيحة للحل (Hören Teil 2):</b>\nهذا الجزء يحتوي على أسئلة اختيار من متعدد مع ثلاثة خيارات لكل سؤال، ويمكن إضافة الملاحظات هنا لاحقاً.\n\n"
-            elif teil == "teil3":
-                tip_text = "💡 <b>ملاحظة ونصيحة للحل (Hören Teil 3):</b>\nاستمع إلى المحادثات القصيرة ثم أجب على الأسئلة بتحديد صح (Richtig) أو خطأ (Falsch).\n\n"
-            elif teil == "teil4":
-                tip_text = "💡 <b>ملاحظة ونصيحة للحل (Hören Teil 4):</b>\nاستمع إلى الحوار أو المقابلة بعناية، ثم أجب على الأسئلة باختيار الإجابة الصحيحة من بين الخيارات الثلاثة (a, b, c).\n\n"
+        # Dynamic Tips per Teil (CMS): admin-editable via custom_texts tips_{skill}_{teil}.
+        tip_text = await get_teil_tip(skill, teil)
 
         # F5/F6/F7: file lists come from the in-memory catalog cache (non-blocking).
         # No direct os.listdir / os.walk here — must use await get_catalog().
@@ -698,4 +711,5 @@ async def handle_callbacks(callback: types.CallbackQuery, state: FSMContext, bot
                 kb.append([InlineKeyboardButton(text=f"{status_icon}{title}", callback_data=f"read_{skill}_{teil}_{map_filename(file_safe)}")])
         
         kb.append([InlineKeyboardButton(text="🔙 العودة للمجموعات", callback_data=f"b1_parts_{skill}_{teil}")])
-        await safe_edit_message_text(callback, f"المجموعة {group_num} - نصوص {teil.upper()}:", reply_markup=InlineKeyboardMarkup(inline_keyboard=kb), parse_mode="HTML")
+        group_tip = await get_teil_tip(skill, teil)
+        await safe_edit_message_text(callback, f"{group_tip}المجموعة {group_num} - نصوص {teil.upper()}:", reply_markup=InlineKeyboardMarkup(inline_keyboard=kb), parse_mode="HTML")

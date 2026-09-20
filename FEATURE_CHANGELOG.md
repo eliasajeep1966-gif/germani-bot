@@ -1,5 +1,35 @@
 # FEATURE CHANGELOG
 
+## 2026-09-20 — Bot Commands Menu (Role-Based Scopes)
+- **Files Modified:**
+  - `main.py` — imported `BotCommand`, `BotCommandScopeDefault`, `BotCommandScopeChat` (+ `ADMIN_IDS`); added `setup_bot_commands(bot)`; called it in `main()` before `dp.start_polling(bot)`
+- **Feature Description:**
+  - Global (default scope) user commands: `/start` (القائمة الرئيسية 🏠), `/cancel` (إلغاء العملية الحالية ❌).
+  - Per-admin chat scope (`BotCommandScopeChat(chat_id)`) commands: user commands plus `/admin` ⚙️, `/genkey` 🔑, `/revoke_key` ❌, `/users` 👥, `/broadcast` 📢, `/health` 🩺.
+  - Per-admin failures logged + ignored (admin hasn't started the bot yet).
+- **Technical Details:**
+  - No handler logic changed; commands map 1:1 to existing `Command(...)` handlers (`/start`, `/cancel`, `/admin`, `/genkey`, `/revoke_key`, `/users`, `/broadcast`, `/health` — all already registered in routers).
+  - AuthZ unchanged: menus are UX-only; enforcement stays in `AdminAuthMiddleware` + explicit `ADMIN_IDS` checks.
+  - Verification: `py_compile` OK; mocked-`Bot` test confirms 1 default-scope call (2 cmds) + N admin-scope calls (8 cmds each, `BotCommandScopeChat`), `setup_bot_commands` awaited before `start_polling`.
+
+## 2026-09-20 — Pair-Shuffling (Hören Teil 1) & Dynamic Tips per Teil (CMS)
+- **Files Modified:**
+  - `handlers/quiz.py` — added `_build_question_order()`, `_resolve_question_order()`, `_get_ordered_question()`; `handle_read_text` builds + stores `question_order` in FSM; `send_quiz_question`, `handle_answers`, `handle_skip_question`, `handle_prev_question` resolve order with identity fallback and access via mapping (no cache mutation)
+  - `database.py` — extended `DEFAULT_CUSTOM_TEXTS` with 9 `tips_{skill}_{teil}` defaults (lesen teil1-5, hören teil1-4); added `VALID_TIPS_KEYS` allowlist + `FALLBACK_TIPS` hardcoded fallback (seeded via `init_db` `INSERT OR IGNORE`)
+  - `handlers/common.py` — added `get_teil_tip()` CMS helper (hoeren→hören normalized, missing-marker filtered, never raises); `b1_parts_` handler replaced hardcoded if/else with `await get_teil_tip()`; `t_group_` handler now prepends same tip
+  - `keyboards.py` — `get_edit_texts_menu()` new `💡 نصائح الأقسام` (`admin_edit_tips_menu`) button; added `get_edit_tips_menu()` with 9 `admin_edit_text_tips_{skill}_{teil}` buttons (all ≤64 bytes) + back buttons
+  - `handlers/admin.py` — imported `get_edit_tips_menu` + `VALID_TIPS_KEYS`; added `cb_admin_edit_tips_menu`; hardened `cb_admin_start_edit_text` with service+tips allowlist (rejects unknown keys); `process_admin_save_text` now enforces 3500-char cap (Rule 16) and already handles tips keys via generic `set_custom_text`
+- **Feature Description:**
+  - Task 1: Hören Teil 1 quizzes pair-shuffle (pairs `[0,1],[2,3],...` stay adjacent in order, pair order randomized); all other standard sections fully shuffle; Lesen Teil 3 matching keeps its custom logic (early return, untouched); per-session `question_order` stored in FSM, all consumers map `questions[order[idx]]` with legacy fallback.
+  - Task 2: Per-Teil tips are now admin-editable CMS entries (`tips_lesen_teil1…teil5`, `tips_hören_teil1…teil4`); user-facing group/file lists prepend the tip; admin edits via Texts menu → Tips sub-menu, persisted in `custom_texts`.
+- **Technical Details:**
+  - Rule 14: never `random.shuffle(cached_list)` — only fresh index lists shuffled; `_extract_quiz_content` already copies; validators check length/range/uniqueness before trusting FSM order.
+  - AuthZ (Rule 2): admin UI stays in `admin.py`+`keyboards.py` behind `AdminAuthMiddleware` + explicit `ADMIN_IDS` checks; `callback.data` treated as untrusted (allowlist validation).
+  - SQL: parameterized `set_custom_text` only; tips seeding via existing `INSERT OR IGNORE` loop (no fake migrations).
+  - HTML: tips contain trusted admin HTML (`parse_mode="HTML"` intentional, consistent with service texts); user content elsewhere still `html.escape()`d.
+  - Limits (Rules 16/20): tips callbacks ~33 bytes; save capped at 3500 chars so prepended list messages stay under 4096.
+  - Verification: `py_compile` OK; pair-shuffle keeps pairs adjacent/ordered (N=1,2,6,7,10); normal-shuffle permutation OK; resolve-fallback + no-mutate OK; keyboard 64-byte check OK; temp-DB `init_db` seeds all 9 tips, `get_teil_tip` alias/case/unknown OK, custom override roundtrip OK.
+
 ## 2026-09-19 — Active Keys Management Dashboard
 - **Files Modified:**
   - `database.py` — added `get_active_keys(limit, offset)`, `get_active_keys_count()`, `revoke_key(key_code)`, `revoke_key_by_rowid(rowid)`

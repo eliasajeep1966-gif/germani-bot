@@ -74,6 +74,53 @@ def _extract_quiz_content(content, file_name: str) -> dict:
     return parsed
 
 
+def _build_question_order(skill: str, teil: str, total: int) -> list:
+    """Build per-session question order (never mutates cached questions).
+
+    - Hören Teil 1: pair-shuffle (keep [0,1],[2,3],... pairs intact, shuffle pair order).
+    - All other standard sections: full random.shuffle.
+    - Rule 14: operates on a fresh index list only; cached question dicts untouched.
+    """
+    order = list(range(total))
+    skill_n = (skill or "").lower().strip()
+    teil_n = (teil or "").lower().strip()
+    if skill_n in ("hören", "hoeren") and teil_n == "teil1":
+        pairs = [order[i:i + 2] for i in range(0, total, 2)]
+        random.shuffle(pairs)
+        return [idx for pair in pairs for idx in pair]
+    random.shuffle(order)
+    return order
+
+
+def _resolve_question_order(state_data: dict, total: int) -> list:
+    """Return validated question_order from FSM, fallback to identity order.
+
+    Guards stale/truncated state (old sessions without order, or data-tree
+    changes altering N): length + range + uniqueness checked.
+    """
+    order = (state_data or {}).get("question_order")
+    if (
+        isinstance(order, list)
+        and len(order) == total
+        and all(isinstance(x, int) and 0 <= x < total for x in order)
+        and len(set(order)) == total
+    ):
+        return order
+    return list(range(total))
+
+
+def _get_ordered_question(questions: list, order: list, current_index: int):
+    """Access questions via order mapping without mutating the cached list."""
+    if not questions or current_index < 0 or current_index >= len(questions):
+        return None
+    if current_index >= len(order):
+        return questions[current_index]
+    mapped = order[current_index]
+    if not isinstance(mapped, int) or not 0 <= mapped < len(questions):
+        return questions[current_index]
+    return questions[mapped]
+
+
 def generate_progress_bar(current: int, total: int, length: int = 8) -> str:
     """
     توليد شريط تقدم رمزي واضح ونجمي لمساعدة المستخدم على معرفة تقدمه في الاختبار.
@@ -185,7 +232,11 @@ async def handle_read_text(callback: types.CallbackQuery, state: FSMContext):
         await callback.message.answer("⚠️ تعذر قراءة أسئلة هذا النص، يرجى إبلاغ الدعم الفني.", reply_markup=get_cancel_to_main_keyboard())
         return
 
-    # Deterministic order (no shuffle): pointers stay valid across restarts.
+    # Pair-shuffle (Hören Teil 1) / normal shuffle (others). Teil3 matching
+    # returned early above and keeps its own custom logic. Never shuffle the
+    # cached questions list — only the per-session index order (Rule 14).
+    total_q = len(questions_list)
+    question_order = _build_question_order(skill, teil, total_q)
     await state.clear()
     await state.set_state(QuizState.answering)
     await state.update_data(
@@ -194,7 +245,8 @@ async def handle_read_text(callback: types.CallbackQuery, state: FSMContext):
         file_name=file_name,
         current_index=0,
         correct_count=0,
-        wrong_count=0
+        wrong_count=0,
+        question_order=question_order
     )
     await send_quiz_question(callback, state)
 
@@ -224,6 +276,8 @@ async def handle_answers(callback: types.CallbackQuery, state: FSMContext):
     parsed = _extract_quiz_content(content, file_name)
     questions = parsed['questions']
     keywords = parsed['keywords']
+    # Per-session order (fallback to identity for legacy sessions). Never mutate cache.
+    question_order = _resolve_question_order(state_data, len(questions))
 
     is_free = await is_free_content(skill, teil, file_name, question_index=current_index)
 
@@ -244,7 +298,10 @@ async def handle_answers(callback: types.CallbackQuery, state: FSMContext):
         await callback.message.answer("ℹ️ لقد أتممت حل جميع أسئلة هذا النص سابقاً.", reply_markup=get_cancel_to_main_keyboard())
         return
 
-    current_q = questions[current_index]
+    current_q = _get_ordered_question(questions, question_order, current_index)
+    if current_q is None:
+        await callback.message.answer("⚠️ تعذر تحميل السؤال. يرجى المحاولة لاحقاً.", reply_markup=get_cancel_to_main_keyboard())
+        return
     correct_answer = str(current_q.get('correct_answer', current_q.get('answer', ''))).strip()
 
     norm_map = {
@@ -391,6 +448,9 @@ async def handle_skip_question(callback: types.CallbackQuery, state: FSMContext)
     parsed = _extract_quiz_content(content, file_name)
     questions = parsed['questions']
     keywords = parsed['keywords']
+    # Retrieve order for consistency (skip advances positional index; mapping
+    # is applied on render via send_quiz_question). Fallback keeps legacy sessions alive.
+    _resolve_question_order(state_data, len(questions))
 
     if current_index >= len(questions):
         await callback.message.answer("ℹ️ لقد أتممت حل أو تجاوز جميع أسئلة هذا النص سابقاً.", reply_markup=get_cancel_to_main_keyboard())
@@ -461,6 +521,13 @@ async def handle_prev_question(callback: types.CallbackQuery, state: FSMContext)
     teil = state_data.get('teil', '')
     file_name = state_data.get('file_name', '')
     current_index = state_data.get('current_index', 0)
+    # Retrieve order to keep session consistent (render maps via order).
+    # Fallback preserves legacy sessions without question_order.
+    try:
+        content_probe = await get_content(skill, teil, file_name)
+        _resolve_question_order(state_data, len(_extract_quiz_content(content_probe, file_name)['questions']))
+    except Exception:
+        pass
 
     if current_index <= 0:
         await callback.answer("ℹ️ أنت بالفعل عند السؤال الأول.", show_alert=True)
@@ -717,7 +784,13 @@ async def send_quiz_question(callback_or_message, state: FSMContext, show_feedba
         await safe_edit_message_text_or_send(callback_or_message, "⚠️ تعذر تحميل السؤال. يرجى المحاولة لاحقاً.")
         return
 
-    q = questions[current_index]
+    # Order mapping: positional current_index -> original question idx.
+    # Falls back to identity for legacy sessions. Never mutates cache.
+    question_order = _resolve_question_order(data, len(questions))
+    q = _get_ordered_question(questions, question_order, current_index)
+    if q is None:
+        await safe_edit_message_text_or_send(callback_or_message, "⚠️ تعذر تحميل السؤال. يرجى المحاولة لاحقاً.")
+        return
     total = len(questions)
 
     progress_bar = generate_progress_bar(current_index + 1, total)
