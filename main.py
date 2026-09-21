@@ -15,7 +15,6 @@ from handlers.common import common_router
 # استيراد طبقة تقييد الطلبات (Throttling Middleware)
 from middlewares.throttling import ThrottlingMiddleware
 
-# إعداد الـ Logging لمعرفة حالة التشغيل والتحديثات
 logging.basicConfig(level=logging.INFO)
 
 
