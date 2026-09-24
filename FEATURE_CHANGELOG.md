@@ -1,5 +1,13 @@
 # FEATURE CHANGELOG
 
+## 2026-09-24 — Back Button Routing Fix
+- **Files Modified:**
+  - `handlers/common.py` — `b1_parts_` flat-list branch (total_files <= step): back button `level_b1` → `f"b1_skill_{skill}"`, matching the grouped branch
+- **Feature Description:**
+  - Flat file lists now return to the Teils menu (`b1_skill_{skill}`) instead of jumping to the root skills menu (`level_b1`).
+- **Technical Details:**
+  - One-line change; grouped section already used `b1_skill_{skill}`. Verification: `py_compile` OK.
+
 ## 2026-09-24 — Group Button Question Ranges (dynamic UX)
 - **Files Modified:**
   - `handlers/common.py` — `b1_parts_` group keyboard: replaced file-count ranges with dynamic question ranges; `multiplier = 2` for `hören/teil1` (1 file = 2 questions) else `1`; chunks built via `files[i:i+step]`; per group `start_num = (g_idx*step*multiplier)+1`, `end_num = start_num + len(chunk)*multiplier - 1`; text `المجموعة {g} ({start_num} - {end_num})`; removed now-unused `import math`

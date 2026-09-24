@@ -714,7 +714,7 @@ async def handle_callbacks(callback: types.CallbackQuery, state: FSMContext, bot
                 # F-03: hash the filename so callback_data never exceeds 64 bytes.
                 kb.append([InlineKeyboardButton(text=f"{status_icon}{title}{tag}", callback_data=f"read_{skill}_{teil}_{map_filename(file_safe)}")])
         
-        kb.append([InlineKeyboardButton(text="🔙 العودة", callback_data="level_b1")])
+        kb.append([InlineKeyboardButton(text="🔙 العودة", callback_data=f"b1_skill_{skill}")])
         
         msg_content = f"{tip_text}قائمة نصوص {teil.upper()}:"
         await safe_edit_message_text(callback, msg_content, reply_markup=InlineKeyboardMarkup(inline_keyboard=kb), parse_mode="HTML")
