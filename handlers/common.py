@@ -3,7 +3,6 @@ import html
 import logging
 import os
 import json
-import math
 from aiogram import Router, types, Bot, F
 from aiogram.filters import CommandStart, CommandObject, Command
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, FSInputFile
@@ -667,11 +666,14 @@ async def handle_callbacks(callback: types.CallbackQuery, state: FSMContext, bot
 
         # إذا كان إجمالي عدد الملفات يتجاوز حجم الشريحة، يتم عرض تقسيم المجموعات ديناميكياً
         if total_files > step:
-            num_groups = math.ceil(total_files / step)
+            multiplier = 2 if (skill == "hören" and teil == "teil1") else 1
+            files_chunks = [files[i:i + step] for i in range(0, total_files, step)]
             kb = []
-            for g in range(1, num_groups + 1):
-                start_num = (g - 1) * step + 1
-                end_num = min(g * step, total_files)
+            for g_idx, chunk in enumerate(files_chunks):
+                g = g_idx + 1
+                start_num = (g_idx * step * multiplier) + 1
+                files_in_this_group = len(chunk)
+                end_num = start_num + (files_in_this_group * multiplier) - 1
                 kb.append([InlineKeyboardButton(
                     text=f"المجموعة {g} ({start_num} - {end_num})",
                     callback_data=f"t_group_{skill}_{teil}_{g}"

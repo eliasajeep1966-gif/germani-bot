@@ -1,5 +1,14 @@
 # FEATURE CHANGELOG
 
+## 2026-09-24 — Group Button Question Ranges (dynamic UX)
+- **Files Modified:**
+  - `handlers/common.py` — `b1_parts_` group keyboard: replaced file-count ranges with dynamic question ranges; `multiplier = 2` for `hören/teil1` (1 file = 2 questions) else `1`; chunks built via `files[i:i+step]`; per group `start_num = (g_idx*step*multiplier)+1`, `end_num = start_num + len(chunk)*multiplier - 1`; text `المجموعة {g} ({start_num} - {end_num})`; removed now-unused `import math`
+- **Feature Description:**
+  - All group buttons (including the last partial group, e.g. `Menge 3`) now show a consistent question range (`Menge 3 (61-72)` instead of bare `Menge 3` / file range).
+- **Technical Details:**
+  - Old math `start=(g-1)*step+1, end=min(g*step,total)` counted files, undercounting `hören/teil1` by 2x. New logic counts questions and sizes the tail chunk by its actual length.
+  - Verification: `py_compile` OK; checks `36 files hören/teil1 step15 → 1-30/31-60/61-72`, `36 files step10 → 1-10/11-20/21-30/31-36`, exact-multiple and single-partial tails OK.
+
 ## 2026-09-24 — Quiz False-Negative Fix (numeric correct_answer index)
 - **Files Modified:**
   - `handlers/quiz.py` — `handle_answers`: `correct_answer` now normalized with `.strip().upper()` + numeric-index mapping (`isdigit()` → `chr(65 + int(...))`: 0→A, 1→B, 2→C) placed BEFORE `norm_map` logic; fixes `"A" == "0"` false-negative and wrong-answer feedback showing raw index

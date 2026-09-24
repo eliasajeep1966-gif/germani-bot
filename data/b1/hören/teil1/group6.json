@@ -1,6 +1,6 @@
 {
   "group_id": 6,
-  "title": "Menge 6",
+  "title": "Menge 6 (151-174)",
   "questions": [
     {
       "id": 1,
@@ -89,7 +89,7 @@
     {
       "id": 9,
       "type": "true_false",
-      "text": "147. Die Verkehrsbetriebe informieren über den Ausfall eines Verkehrsmittels",
+      "text": "Die Verkehrsbetriebe informieren über den Ausfall eines Verkehrsmittels",
       "options": [
         "Richtig",
         "Falsch"
@@ -99,7 +99,7 @@
     {
       "id": 10,
       "type": "multiple_choice",
-      "text": "148. Die Straßenbahnlinie 2",
+      "text": "Die Straßenbahnlinie 2",
       "options": [
         "Nach Berlin",
         "wird gerade repariert",
@@ -110,7 +110,7 @@
     {
       "id": 11,
       "type": "true_false",
-      "text": "149. Die Wassersport-Aktivät findet am Samstag um 16 Uhr statt",
+      "text": "Die Wassersport-Aktivät findet am Samstag um 16 Uhr statt",
       "options": [
         "Richtig",
         "Falsch"
@@ -120,7 +120,7 @@
     {
       "id": 12,
       "type": "multiple_choice",
-      "text": "150. Um wie viel Uhr beginnt fie Wassersport-Aktivität ?",
+      "text": "Um wie viel Uhr beginnt fie Wassersport-Aktivität ?",
       "options": [
         "um 18Uhr",
         "um 16Uhr",
@@ -131,7 +131,7 @@
     {
       "id": 13,
       "type": "true_false",
-      "text": "151. Wassersport und Motorboote fur eine Wasserfahrt",
+      "text": "Wassersport und Motorboote fur eine Wasserfahrt",
       "options": [
         "Richtig",
         "Falsch"
@@ -141,7 +141,7 @@
     {
       "id": 14,
       "type": "multiple_choice",
-      "text": "152. Die Aktivität",
+      "text": "Die Aktivität",
       "options": [
         "Samstag",
         "freitag",
@@ -152,7 +152,7 @@
     {
       "id": 15,
       "type": "true_false",
-      "text": "153. Wassersport und Motorboote fur eine Wasserfahrt",
+      "text": "Wassersport und Motorboote fur eine Wasserfahrt",
       "options": [
         "Richtig",
         "Falsch"
@@ -162,7 +162,7 @@
     {
       "id": 16,
       "type": "multiple_choice",
-      "text": "154. Und?",
+      "text": "Und?",
       "options": [
         "Das wird alles durch die Wasserfahrt erklärt",
         "Das wird alles durch die wassersoprt-Aktivität erklärt",
@@ -173,7 +173,7 @@
     {
       "id": 17,
       "type": "true_false",
-      "text": "155. Er sucht nach fahrradgeschäften",
+      "text": "Er sucht nach fahrradgeschäften",
       "options": [
         "Richtig",
         "Falsch"
@@ -183,7 +183,7 @@
     {
       "id": 18,
       "type": "multiple_choice",
-      "text": "156. Er muss",
+      "text": "Er muss",
       "options": [
         "Sicherheit",
         "Ausprobieren",
@@ -194,7 +194,7 @@
     {
       "id": 19,
       "type": "true_false",
-      "text": "157. Sie hören Werbung für eine neue Radiosendung",
+      "text": "Sie hören Werbung für eine neue Radiosendung",
       "options": [
         "Richtig",
         "Falsch"
@@ -204,7 +204,7 @@
     {
       "id": 20,
       "type": "multiple_choice",
-      "text": "158. Auf dem Film",
+      "text": "Auf dem Film",
       "options": [
         "Es gibt nach dem Film noch Gespräche",
         "Ausprobieren",
@@ -215,7 +215,7 @@
     {
       "id": 21,
       "type": "true_false",
-      "text": "159. Sie hören infos zur Sicherheit am Flughafen (غالبا نفسو 63):",
+      "text": "Sie hören infos zur Sicherheit am Flughafen (غالبا نفسو 63):",
       "options": [
         "Richtig",
         "Falsch"
@@ -236,7 +236,7 @@
     {
       "id": 23,
       "type": "true_false",
-      "text": "161. Der Bankamgestellt informiert uber neue Kreditangebote",
+      "text": "Der Bankamgestellt informiert uber neue Kreditangebote",
       "options": [
         "Richtig",
         "Falsch"
@@ -246,7 +246,7 @@
     {
       "id": 24,
       "type": "multiple_choice",
-      "text": "162. Durch das Internet kann man (غالبا نفسو 95)",
+      "text": "Durch das Internet kann man (غالبا نفسو 95)",
       "options": [
         "fur Bankgeschafte weniger zahlen",
         "mehr zahlen",
