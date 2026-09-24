@@ -1,5 +1,15 @@
 # FEATURE CHANGELOG
 
+## 2026-09-24 — Quiz False-Negative Fix (numeric correct_answer index)
+- **Files Modified:**
+  - `handlers/quiz.py` — `handle_answers`: `correct_answer` now normalized with `.strip().upper()` + numeric-index mapping (`isdigit()` → `chr(65 + int(...))`: 0→A, 1→B, 2→C) placed BEFORE `norm_map` logic; fixes `"A" == "0"` false-negative and wrong-answer feedback showing raw index
+- **Feature Description:**
+  - Users selecting the correct option (e.g. 'A' when JSON stores `0`) are now marked correct; feedback `full_text_ans` lookup also resolves to the right option letter.
+- **Technical Details:**
+  - Root cause: JSON `correct_answer` sometimes numeric index (int `0` or str `"0"`); string compare vs letter choice always failed. Fix is type-agnostic via `str(...).strip().upper()` + `isdigit` guard, idempotent for existing letter answers.
+  - Current `data/b1/**` scan (106 files): no digit-only answers in tree today — fix is defensive for future/imported content.
+  - Verification: `py_compile` OK; mapping checks `0→A, 1→B, 2→C, "0"→A`, letter answers unchanged, `Richtig vs A` still correctly False.
+
 ## 2026-09-20 — Referral Native Share Sheet (t.me/share/url)
 - **Files Modified:**
   - `keyboards.py` — imported `urllib.parse.quote`; `get_referral_menu()` share button now `📤 مشاركة الرابط` with `url=https://t.me/share/url?url={quoted_ref}&text={quoted_text}` (no `callback_data`); free-credit claim + main-menu buttons untouched

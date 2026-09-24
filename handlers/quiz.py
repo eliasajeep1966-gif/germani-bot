@@ -302,7 +302,23 @@ async def handle_answers(callback: types.CallbackQuery, state: FSMContext):
     if current_q is None:
         await callback.message.answer("⚠️ تعذر تحميل السؤال. يرجى المحاولة لاحقاً.", reply_markup=get_cancel_to_main_keyboard())
         return
-    correct_answer = str(current_q.get('correct_answer', current_q.get('answer', ''))).strip()
+    correct_answer = str(current_q.get('correct_answer', current_q.get('answer', ''))).strip().upper()
+    if correct_answer.isdigit():
+        correct_answer = chr(65 + int(correct_answer))  # 0 -> A, 1 -> B, 2 -> C, etc.
+
+    options = current_q.get('options', [])
+    if len(correct_answer) > 1:  # It's a full text, not just 'A' or 'B'
+        if isinstance(options, list):
+            for idx, opt in enumerate(options):
+                opt_text = str(opt.get('text', '') if isinstance(opt, dict) else opt).strip().upper()
+                if opt_text == correct_answer:
+                    correct_answer = chr(65 + idx)  # Convert index to A, B, C...
+                    break
+        elif isinstance(options, dict):
+            for k, v in options.items():
+                if str(v).strip().upper() == correct_answer:
+                    correct_answer = str(k).upper()
+                    break
 
     norm_map = {
         "J": "JA", "JA": "JA", "YES": "JA",

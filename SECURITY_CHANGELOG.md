@@ -1,5 +1,16 @@
 # SECURITY CHANGELOG
 
+## Quiz False-Negative Fix (Full Text Option Mapping) — 2026-09-24
+- **Files Modified:** `handlers/quiz.py` (`handle_answers`), `SECURITY_CHANGELOG.md`
+- **Fix Description:**
+  - Removed temporary `logging.error(f"DEBUG PROBE...")` probe line (and now-unused `import logging`).
+  - Added full-text `correct_answer` → option-letter resolution right AFTER the `isdigit()` block and BEFORE `norm_map` / `user_choice` logic: when `len(correct_answer) > 1`, list options are scanned case-insensitively (`opt['text']` or plain string, `chr(65 + idx)` → A/B/C...) and dict options by value → key (`str(k).upper()`).
+- **Technical Details:**
+  - Root cause (via probe): JSON stores full option text (e.g. `Neue Fenster bestellen`) while user choice is a letter (`B`); `"B" == "NEUE FENSTER BESTELLEN"` always False.
+  - Single-letter answers (`A`/`B`/`R`/`J`...) skip the new block (`len > 1` guard); digit-index path (`0→A`) runs first and is preserved; unmatched full text falls through unchanged (fail-closed, no false-positive).
+  - Downstream `correct_norm` comparison and wrong-answer `full_text_ans` lookup now operate on the resolved letter, so feedback shows the right option.
+  - Verification: `py_compile` OK; `DEBUG PROBE` string absent; mapping checks (full-text→B, case/space tolerant, digit→letter, letter untouched, dict value→key, `RICHTIG` with `None` options no-crash) pass.
+
 ## Review 4 - Final Polish
 Final remediation phase for review_3.md findings F-01 to F-12.
 
