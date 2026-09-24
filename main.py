@@ -51,6 +51,7 @@ async def main():
     await init_db()
 
     bot = Bot(token=API_TOKEN)
+
     dp = Dispatcher()
 
     throttling_mw = ThrottlingMiddleware(slow_mode_delay=0.5)
