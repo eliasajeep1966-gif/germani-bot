@@ -110,7 +110,7 @@ def get_referral_menu(referral_link: str = None, has_free_credit: bool = False):
 def get_training_menu():
     buttons = [
         [InlineKeyboardButton(text="📘 المستوى B1", callback_data="level_b1")],
-        [InlineKeyboardButton(text="📙 المستوى B2", callback_data="level_b2")],
+        [InlineKeyboardButton(text="Telc B2 📙", callback_data="level_b2")],
         [InlineKeyboardButton(text="📊 نسب التقدم وحالة الاشتراك", callback_data="user_progress")],
         [InlineKeyboardButton(text="🔙 القائمة الرئيسية", callback_data="main_menu")]
     ]

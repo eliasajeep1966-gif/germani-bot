@@ -1,5 +1,26 @@
 # FEATURE CHANGELOG
 
+## 2026-09-27 — Rename B2 button to Telc B2 for marketing
+- **Files Modified:**
+  - `keyboards.py` — `get_training_menu()`: button text `📙 المستوى B2` → `Telc B2 📙`, `callback_data="level_b2"` unchanged
+  - `handlers/common.py` — verified (no change): `level_b2` still caught in `handle_callbacks` with `callback.answer("🚧 قسم B2 قيد الإعداد حالياً.", show_alert=True)`
+  - `FEATURE_CHANGELOG.md` — this entry
+- **Feature Description:**
+  - Rename B2 button to Telc B2 for marketing.
+- **Technical Details:**
+  - UI text-only change; routing/handler logic untouched.
+  - Verification: `callback_data` grep still `level_b2`; handler branch confirmed.
+
+## 2026-09-24 — Hören Teil 4 Full Randomization Restored
+- **Files Modified:**
+  - `handlers/quiz.py` — `_build_question_order`: verified no `elif teil_n == "teil4": return order` block exists; only `hören/hoeren + teil1` pair-shuffles, everything else (incl. Hören Teil 4) falls through to `random.shuffle(order)`; no code change needed
+  - `FEATURE_CHANGELOG.md` — this entry
+- **Feature Description:**
+  - Reverses the earlier mistaken disable: Hören Teil 4 questions are fully randomized again per session.
+- **Technical Details:**
+  - Rule 14 preserved: shuffle operates on a fresh index list only, cached question dicts untouched. `teil4` hits in `quiz.py:815,824,829` are Ja/Nein keyboard rendering for Lesen Teil 4, unrelated to ordering — left intact.
+  - Verification: `py_compile` OK; source scan confirms single `teil1` special-case, no `teil4` ordering branch.
+
 ## 2026-09-24 — Back Button Routing Fix
 - **Files Modified:**
   - `handlers/common.py` — `b1_parts_` flat-list branch (total_files <= step): back button `level_b1` → `f"b1_skill_{skill}"`, matching the grouped branch
