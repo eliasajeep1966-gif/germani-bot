@@ -554,12 +554,6 @@ async def handle_callbacks(callback: types.CallbackQuery, state: FSMContext, bot
             await callback.answer("⚠️ خطأ في البيانات.", show_alert=True)
             return
         skill = os.path.basename(skill_parts[2])
-        # Strike 2 — Broken Access Control fix: gate premium PDFs behind subscription.
-        # Preserve FSM on paywall (return before state.clear()).
-        if skill in ("schreiben", "sprechen"):
-            if not await can_access_level(user_id, 'b1'):
-                await callback.answer("⚠️ هذا القسم مخصص للمشتركين فقط. يرجى تفعيل اشتراكك للوصول إلى الملفات.", show_alert=True)
-                return
         await state.clear()
         if skill == "schreiben":
             pdf_path = os.path.join(BASE_DIR, "schreiben_guide.pdf")

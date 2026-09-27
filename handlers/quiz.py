@@ -207,8 +207,8 @@ async def handle_read_text(callback: types.CallbackQuery, state: FSMContext):
         await state.clear()
         await state.set_state(AuthState.waiting_for_key)
         text = await get_dynamic_paywall_text()
-        kb = get_paywall_keyboard()
-        await callback.message.answer(text, reply_markup=kb, parse_mode="HTML")
+        kb = get_paywall_keyboard(skill, teil)
+        await safe_edit_message_text_or_send(callback, text, reply_markup=kb, parse_mode="HTML")
         return
 
     # State Pointers refactor: content comes from the auto-invalidating cache;
@@ -284,8 +284,8 @@ async def handle_answers(callback: types.CallbackQuery, state: FSMContext):
     if not is_free and not await can_access_level(user_id, "b1"):
         # P1 Strike 2: preserve quiz FSM on paywall — do NOT wipe state, just notify and return.
         text = await get_dynamic_paywall_text()
-        kb = get_paywall_keyboard()
-        await callback.message.answer(text, reply_markup=kb, parse_mode="HTML")
+        kb = get_paywall_keyboard(skill, teil)
+        await safe_edit_message_text_or_send(callback, text, reply_markup=kb, parse_mode="HTML")
         return
 
     ans_parts = callback.data.split("_")
@@ -433,8 +433,8 @@ async def handle_answers(callback: types.CallbackQuery, state: FSMContext):
         if not await can_access_level(user_id, "b1") and not (await is_free_content(skill, teil, file_name, question_index=next_index)):
             # P1 Strike 2: preserve quiz FSM on paywall — do NOT wipe state, just notify and return.
             text = await get_dynamic_paywall_text()
-            kb = get_paywall_keyboard()
-            await callback.message.answer(text, reply_markup=kb, parse_mode="HTML")
+            kb = get_paywall_keyboard(skill, teil)
+            await safe_edit_message_text_or_send(callback, text, reply_markup=kb, parse_mode="HTML")
             return
 
         await send_quiz_question(callback, state, show_feedback=feedback)
@@ -477,8 +477,8 @@ async def handle_skip_question(callback: types.CallbackQuery, state: FSMContext)
     if not is_free and not await can_access_level(user_id, "b1"):
         # P1 Strike 2: preserve quiz FSM on paywall — do NOT wipe state, just notify and return.
         text = await get_dynamic_paywall_text()
-        kb = get_paywall_keyboard()
-        await callback.message.answer(text, reply_markup=kb, parse_mode="HTML")
+        kb = get_paywall_keyboard(skill, teil)
+        await safe_edit_message_text_or_send(callback, text, reply_markup=kb, parse_mode="HTML")
         return
 
     next_index = current_index + 1
@@ -517,8 +517,8 @@ async def handle_skip_question(callback: types.CallbackQuery, state: FSMContext)
         if not await can_access_level(user_id, "b1") and not (await is_free_content(skill, teil, file_name, question_index=next_index)):
             # P1 Strike 2: preserve quiz FSM on paywall — do NOT wipe state, just notify and return.
             text = await get_dynamic_paywall_text()
-            kb = get_paywall_keyboard()
-            await callback.message.answer(text, reply_markup=kb, parse_mode="HTML")
+            kb = get_paywall_keyboard(skill, teil)
+            await safe_edit_message_text_or_send(callback, text, reply_markup=kb, parse_mode="HTML")
             return
 
         await send_quiz_question(callback, state)
@@ -555,8 +555,8 @@ async def handle_prev_question(callback: types.CallbackQuery, state: FSMContext)
     prev_is_free = await is_free_content(skill, teil, file_name, question_index=prev_index)
     if not prev_is_free and not await can_access_level(user_id, "b1"):
         text = await get_dynamic_paywall_text()
-        kb = get_paywall_keyboard()
-        await callback.message.answer(text, reply_markup=kb, parse_mode="HTML")
+        kb = get_paywall_keyboard(skill, teil)
+        await safe_edit_message_text_or_send(callback, text, reply_markup=kb, parse_mode="HTML")
         return
 
     await state.update_data(current_index=prev_index)
@@ -666,8 +666,8 @@ async def handle_teil3_click(callback: types.CallbackQuery, state: FSMContext):
     is_free = await is_free_content(skill, teil, file_name, question_index=0)
     if not is_free and not await can_access_level(callback.from_user.id, "b1"):
         text = await get_dynamic_paywall_text()
-        kb = get_paywall_keyboard()
-        await callback.message.answer(text, reply_markup=kb, parse_mode="HTML")
+        kb = get_paywall_keyboard(skill, teil)
+        await safe_edit_message_text_or_send(callback, text, reply_markup=kb, parse_mode="HTML")
         return
 
     click_data = callback.data

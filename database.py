@@ -441,34 +441,23 @@ async def can_access_level(user_id: int, required_level: str) -> bool:
 async def is_free_content(skill: str, teil: str, file_name: str, question_index: int = 0) -> bool:
     """
     دالة فحص مجانية النص أو الأسئلة بناءً على الشروط:
-    1. القراءة (Lesen): النص الأول في المجلد/المجموعة الأولى (teil1) مجاني بالكامل.
-    2. الاستماع (Hören): النص الأول في المجلد/المجموعة الأولى (teil1) مجاني للأسئلة الستة الأولى فقط (فهرس 0 حتى 5).
+    1. القراءة (Lesen): النص الأول في كل Teil مجاني بالكامل.
+    2. الاستماع (Hören): النص الأول في كل Teil مجاني للأسئلة الستة الأولى فقط (فهرس 0 حتى 5).
     MED-003: Uses catalog cache instead of os.listdir.
     """
-    skill_clean = skill.lower().strip()
-    teil_clean = teil.lower().strip()
-
-    # التقييد بالمجلد/المجموعة الأولى فقط
-    if teil_clean != "teil1":
-        return False
-
     from utils import get_catalog
     catalog = await get_catalog()
-    
-    if skill_clean not in catalog or teil_clean not in catalog[skill_clean]:
-        return False
-    
-    files = catalog[skill_clean][teil_clean]
-    if not files or files[0] != file_name:
+    files = catalog.get(skill.lower().strip(), {}).get(teil.lower().strip(), [])
+    if not files:
         return False
 
-    # مهارة القراءة (Lesen): النص الأول مجاني بكامل أسئلته
-    if skill_clean == "lesen":
+    first_file = files[0]
+    if file_name == first_file:
+        if skill.lower().strip() == "hören" or skill.lower().strip() == "hoeren":
+            # For Hören, keep the existing limit of 6 questions for the free file
+            return question_index < 6
+        # For Lesen (and any other), the entire first file is free
         return True
-
-    # مهارة الاستماع (Hören): النص الأول مجاني حتى السؤال السادس فقط (الفهرس من 0 إلى 5)
-    if skill_clean in ["hören", "hoeren"]:
-        return question_index < 6
 
     return False
 

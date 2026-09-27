@@ -1,5 +1,51 @@
 # FEATURE CHANGELOG
 
+## 2026-09-27 — Smart back button for Paywall UI
+- **Files Modified:**
+  - `keyboards.py` — `get_paywall_keyboard(skill=None, teil=None)`: prepends `🔙 العودة للقائمة` (`b1_parts_{skill}_{teil}`) when both args present; support-contact + main-menu rows kept
+  - `handlers/quiz.py` — all 7 `get_paywall_keyboard()` calls → `get_paywall_keyboard(skill, teil)` (`handle_read_text`, `handle_answers` x2, `handle_skip_question` x2, `handle_prev_question`, `handle_teil3_click`)
+  - `FEATURE_CHANGELOG.md` — this entry
+- **Feature Description:**
+  - Smart back button for Paywall UI.
+- **Technical Details:**
+  - Context-aware back button returns users to their exact file list instead of only Main Menu.
+  - Deviation from requested snippet (intentional): kept the `💬 تواصل مع الإدارة` button since the dynamic paywall text promises it ("اضغط على زر التواصل بالأسفل"); dropping it would strand users with no contact path. Main-menu row kept (relabeled `🏠 القائمة الرئيسية`).
+  - Defaults (`None`) keep the keyboard backward-compatible for bare calls.
+  - Verification: `py_compile` OK; grep confirms 7/7 calls pass `(skill, teil)`; `skill`/`teil` are in scope at every site (callback split or FSM state).
+
+## 2026-09-27 — Fix paywall UX to edit messages instead of sending new ones
+- **Files Modified:**
+  - `handlers/quiz.py` — 7 paywall sites (`handle_read_text`, `handle_answers` x2, `handle_skip_question` x2, `handle_prev_question`, `handle_teil3_click`): `await callback.message.answer(text, reply_markup=kb, parse_mode="HTML")` → `await safe_edit_message_text_or_send(callback, text, reply_markup=kb, parse_mode="HTML")`
+  - `FEATURE_CHANGELOG.md` — this entry
+- **Feature Description:**
+  - Fix paywall UX to edit messages instead of sending new ones.
+- **Technical Details:**
+  - Paywall now replaces the current UI component via existing `safe_edit_message_text_or_send` (edit-in-place with send fallback on `TelegramBadRequest`); no more stacked messages.
+  - Non-paywall answers (session errors, finish reports, chunks) untouched.
+  - Verification: `py_compile` OK; grep confirms 7 converted, 0 old paywall sends remain.
+
+## 2026-09-27 — Unlock Schreiben and Sprechen PDFs for all users (free tier temporarily)
+- **Files Modified:**
+  - `handlers/common.py` — `b1_skill_` branch: deleted `if skill in ("schreiben", "sprechen")` + `can_access_level(user_id, 'b1')` paywall gate; free users now reach PDFs/group links directly
+  - `FEATURE_CHANGELOG.md` — this entry
+- **Feature Description:**
+  - Unlock Schreiben and Sprechen PDFs for all users (free tier temporarily).
+- **Technical Details:**
+  - Launch-period exception to the premium-PDF rule; quiz paywalls (`quiz.py`) untouched.
+  - `can_access_level` import left in place (now unused in `common.py`) for easy re-gating later.
+  - Verification: `py_compile` OK; grep confirms no remaining `schreiben`/`sprechen` access gate in `common.py`.
+
+## 2026-09-27 — Unlock the first file of every Teil for free trial
+- **Files Modified:**
+  - `database.py` — `is_free_content()`: removed `teil == "teil1"` restriction; now checks `catalog.get(skill).get(teil)` first file for any Teil; Hören/Hoeren first file free for `question_index < 6`, Lesen (and others) full first file free
+  - `FEATURE_CHANGELOG.md` — this entry
+- **Feature Description:**
+  - Unlock the first file of every Teil for free trial.
+- **Technical Details:**
+  - First text of teil1, teil2, teil3, etc. is now free so users can try each section UI/format before buying.
+  - Signature unchanged — all 8 `quiz.py` callers (`handle_view_full_text`, `handle_read_text`, `handle_answers`, `handle_skip_question`, `handle_prev_question`, `handle_teil3_click`) keep working.
+  - Verification: `py_compile` OK.
+
 ## 2026-09-27 — Rename B2 button to Telc B2 for marketing
 - **Files Modified:**
   - `keyboards.py` — `get_training_menu()`: button text `📙 المستوى B2` → `Telc B2 📙`, `callback_data="level_b2"` unchanged

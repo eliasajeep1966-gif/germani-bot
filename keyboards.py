@@ -74,12 +74,13 @@ async def get_dynamic_subscribe_text() -> str:
         "👇 <b>يرجى الآن إدخال كلمة السر (كود التفعيل) الخاص بك:</b>"
     )
 
-def get_paywall_keyboard():
-    """Paywall keyboard: in-bot support contact + cancel (no external URLs)."""
-    buttons = [
-        [InlineKeyboardButton(text="💬 تواصل مع الإدارة", callback_data="support_contact")],
-        [InlineKeyboardButton(text="❌ إلغاء / العودة للقائمة الرئيسية", callback_data="main_menu")]
-    ]
+def get_paywall_keyboard(skill: str = None, teil: str = None):
+    """Paywall keyboard: optional smart Back to List + in-bot support contact + main menu (no external URLs)."""
+    buttons = []
+    if skill and teil:
+        buttons.append([InlineKeyboardButton(text="🔙 العودة للقائمة", callback_data=f"b1_parts_{skill}_{teil}")])
+    buttons.append([InlineKeyboardButton(text="💬 تواصل مع الإدارة", callback_data="support_contact")])
+    buttons.append([InlineKeyboardButton(text="🏠 القائمة الرئيسية", callback_data="main_menu")])
     return InlineKeyboardMarkup(inline_keyboard=buttons)
 
 def get_cancel_to_main_keyboard():
