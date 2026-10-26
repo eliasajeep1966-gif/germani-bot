@@ -65,8 +65,10 @@ else:
 # --- تحديد المسار الرئيسي للمشروع بشكل مطلق (MED-015) ---
 BASE_DIR = pathlib.Path(__file__).parent.resolve()
 
-# F19: absolute DB path so CWD never changes where the SQLite file lives
-DB_NAME = str(BASE_DIR / "bot_database.db")
+# F19: absolute DB path so CWD never changes where the SQLite file lives.
+# DB_PATH allows Docker/persistent deployments to keep the database in a
+# mounted volume without changing application code or losing data on rebuild.
+DB_NAME = os.getenv('DB_PATH') or str(BASE_DIR / "bot_database.db")
 
 # --- أسعار الاشتراكات ومددها (LOW-006: env-overridable with safe int fallbacks) ---
 def _safe_int_env(name: str, default: int) -> int:
