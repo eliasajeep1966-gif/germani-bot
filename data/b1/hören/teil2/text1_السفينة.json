@@ -1,5 +1,5 @@
 {
-  "summary": "هنا يمكنك كتابة ملخص النص الأول الخاص بالتايل الثاني سماعي لكي يظهره البوت للمستخدم.",
+  "summary": "رحلة 5 ساعات على نهر الدانوب في كرمس على السفينة تتكلم عن المددينة وتاريخها.",
   "questions": [
     {
       "id": 1,
@@ -100,6 +100,16 @@
         "c": "vor 50 jahren"
       },
       "correct_answer": "a"
+    },
+    {
+      "id": 11,
+      "question": "Wo war der Schiffskapitän?",
+      "options": {
+        "a": "Im Hafen",
+        "b": "Auf dem Schiff",
+        "c": "Im Restaurant"
+      },
+      "correct_answer": "b"
     }
   ]
 }

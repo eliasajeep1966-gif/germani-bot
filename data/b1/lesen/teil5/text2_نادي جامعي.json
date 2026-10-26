@@ -1,0 +1,42 @@
+{
+  "title": "Hochschulsportclub",
+  "text": "قواعد نادي رياضي جامعي",
+  "questions": [
+    {
+      "question": "Wie viel zahlen Studenten für eine Eintrittskarte für den Club?",
+      "options": {
+        "a": "Studenten zahlen 15€ pro Semester.",
+        "b": "Studenten zahlen 25€ pro Semester.",
+        "c": "Studenten bezahlen den vollen Preis von 50€ pro Semester."
+      },
+      "answer": "a"
+    },
+    {
+      "question": "Was die Gäste betrifft?",
+      "options": {
+        "a": "Sie haben uneingeschränkten Zugang zu allen Kursen.",
+        "b": "Sie haben begrenzte Angebote.",
+        "c": "Sie dürfen den Club nicht ohne Begleitung betreten."
+      },
+      "answer": "b"
+    },
+    {
+      "question": "Wenn ein Kurs ausfällt:",
+      "options": {
+        "a": "Erhalten die Teilnehmenden automatisch ihr Geld zurück.",
+        "b": "Der Lehrer/Trainer schlägt eine neuen oder eine Ersatztermin vor.",
+        "c": "Wird der Kurs ohne Ersatz ersatzlos gestrichen."
+      },
+      "answer": "b"
+    },
+    {
+      "question": "Was empfiehlt der Club für die Teilnehmenden?",
+      "options": {
+        "a": "Die Teilnehmenden sollen ihre Haare binden.",
+        "b": "Die Teilnehmenden müssen spezielle Sportschuhe kaufen.",
+        "c": "Die Teilnehmenden sollten vor dem Training nichts essen."
+      },
+      "answer": "a"
+    }
+  ]
+}

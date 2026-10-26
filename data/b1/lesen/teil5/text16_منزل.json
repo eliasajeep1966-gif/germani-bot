@@ -1,0 +1,42 @@
+{
+  "title": "Hausordnung",
+  "text": "قواعد السكن",
+  "questions": [
+    {
+      "question": "Was ist Kindern laut Hausordnung verboten?",
+      "options": {
+        "a": "Auf dem Spielplatz neben den Gebäuden zu spielen.",
+        "b": "In der Tiefgarage zu spielen.",
+        "c": "Im Hof während der Tageszeiten zu spielen."
+      },
+      "answer": "b"
+    },
+    {
+      "question": "Wann muss man den Vermieter um Erlaubnis fragen?",
+      "options": {
+        "a": "Wenn man etwas in der Wohnung verändern möchte.",
+        "b": "Wenn man neue Möbel in die Wohnung bringt.",
+        "c": "Wenn man Besuch für ein Wochenende empfängt."
+      },
+      "answer": "a"
+    },
+    {
+      "question": "Was soll bzw. darf man um 22:00 Uhr abends tun?",
+      "options": {
+        "a": "Laute Musik im Wohnzimmer hören.",
+        "b": "Duschen.",
+        "c": "Die Waschmaschine im Keller einschalten."
+      },
+      "answer": "b"
+    },
+    {
+      "question": "Was steht in der Hausordnung bezüglich der Mieter?",
+      "options": {
+        "a": "Dass die Mieter die Waschküchen sauber halten müssen.",
+        "b": "Dass die Mieter das Treppenhaus täglich putzen müssen.",
+        "c": "Dass die Mieter die Mülltonnen jeden Abend leeren müssen."
+      },
+      "answer": "a"
+    }
+  ]
+}

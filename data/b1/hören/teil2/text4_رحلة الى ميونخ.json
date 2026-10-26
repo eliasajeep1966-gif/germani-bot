@@ -1,13 +1,13 @@
 {
-  "summary": "هنا يمكنك كتابة ملخص النص الخاص برحلة إلى ميونخ لكي يظهره البوت للمستخدم.",
+  "summary": "رحلة الى مدينة ميونخ خلالها جولى سياحية في المدينة",
   "questions": [
     {
       "id": 1,
       "question": "Wohin geht die Reise?",
       "options": {
-        "a": "nach Augsburg",
-        "b": "nach München",
-        "c": "nach Nürnberg"
+        "a": "Nach Berlin",
+        "b": "Nach München",
+        "c": "Nach Wien"
       },
       "correct_answer": "b"
     },
@@ -15,41 +15,61 @@
       "id": 2,
       "question": "Sie werden ein Hotel erreichen und innerhalb dieses Hotels?",
       "options": {
-        "a": "Sie frühstücken im Hotelrestaurant",
+        "a": "Sie frühstücken im Hotel",
         "b": "Sie essen im Hotel zu Mittag",
-        "c": "Sie nehmen das Abendessen ein"
+        "c": "Sie essen im Hotel zu Abend"
       },
       "correct_answer": "b"
     },
     {
       "id": 3,
-      "question": "Es geht darum, dass sie ein bestimmtes von 4 bis 6 Uhr ...",
+      "question": "Was werden sie nach der Pause tun?",
       "options": {
-        "a": "Präsentation vorbereiten und halten",
-        "b": "Thema diskutieren und darüber sprechen",
-        "c": "Gruppenarbeit zusammenfassen"
+        "a": "Praxiskurs registrieren 19:00 Uhr",
+        "b": "Theoriekurs buchen 18:00 Uhr",
+        "c": "Museum besuchen 19:00 Uhr"
       },
-      "correct_answer": "b"
+      "correct_answer": "a"
     },
     {
       "id": 4,
-      "question": "Was werden sie danach Pause tun?",
+      "question": "Es geht darum, dass sie ein bestimmtes von 4 bis 6 Uhr...",
       "options": {
-        "a": "Sich für den Theoriekurs anmelden",
-        "b": "Praxiskurs registrieren 19:00 Uhr",
-        "c": "Teilnehmerzertifikat abholen"
+        "a": "Projekt präsentieren und evaluieren",
+        "b": "Thema diskutieren und darüber sprechen",
+        "c": "Buch lesen und zusammenfassen"
       },
       "correct_answer": "b"
     },
     {
       "id": 5,
-      "question": "Die Reise würde zwischen 14 und 16 Uhr stattfinden?",
+      "question": "Nach 6 Stunden?",
       "options": {
-        "a": "Für Personen, die am Kurs teilnehmen",
-        "b": "Es wird Mittwochmorgen sein",
-        "c": "الخيار هو التالت غير يلي مذكورين"
+        "a": "Er wird Zertifikate verteilen",
+        "b": "Er wird Prüfungen korrigieren",
+        "c": "Er wird Geschenke überreichen"
       },
-      "correct_answer": "c"
+      "correct_answer": "a"
+    },
+    {
+      "id": 6,
+      "question": "Was machen sie?",
+      "options": {
+        "a": "Sie machen eine Stadtführung zu Fuß",
+        "b": "Sie machen eine Rundfahrt",
+        "c": "Sie machen eine Pause im Park"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 7,
+      "question": "Wo werden sie schlafen?",
+      "options": {
+        "a": "Im Hotel",
+        "b": "Im Bus",
+        "c": "In der Jugendherberge"
+      },
+      "correct_answer": "a"
     }
   ]
 }

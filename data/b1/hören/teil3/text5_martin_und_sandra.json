@@ -1,0 +1,77 @@
+{
+  "summary": "Martin und Sandra sprachen über einen Film, den sie gesehen hatten, sowie über ihre Pläne für die Ferien, Arbeit im Hotel, Reisen und ihr Studium.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Sandra hat gesehen, dass der Film unrealistisch ist.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 2,
+      "question": "Martin findet die Zugfahrt angenehmer als die Busfahrt.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 3,
+      "question": "Sandra wird im Herbst ihr Studium abschließen.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 4,
+      "question": "Martin fand den Film schlecht.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 5,
+      "question": "Sandra wird den ganzen Tag im Hotel arbeiten.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 6,
+      "question": "Er wird eine Reise mit seiner Familie machen.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 7,
+      "question": "Sie hört im Herbst mit dem Studium auf, um zu arbeiten.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 8,
+      "question": "Sie werden am Wochenende ein zweites Mal ins Kino gehen.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    }
+  ]
+}

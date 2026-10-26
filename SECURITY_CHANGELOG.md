@@ -1,43 +1,50 @@
 # SECURITY CHANGELOG
 
-## Quiz False-Negative Fix (Full Text Option Mapping) — 2026-09-24
-- **Files Modified:** `handlers/quiz.py` (`handle_answers`), `SECURITY_CHANGELOG.md`
+## 2026-10-11 — P0 Launch-Blockers (report_1.md §2.2, §3.1)
+- **Files Modified:**
+  - `handlers/quiz.py` — `handle_view_full_text`: free-check now uses the actual `current_index` from FSM data instead of hardcoded `question_index=0`.
+  - `database.py` — per-call `aiosqlite.connect()` replaced with a bounded persistent connection pool (`_POOL_SIZE = 10`) + serialized write checkout (`_db_write()` via `_WRITE_LOCK`); `PRAGMA journal_mode=WAL` moved to one-time pool creation; added `close_db()`; all 8 `BEGIN IMMEDIATE` writers switched to `_db_write()`; `get_user_details` restructured to avoid nested checkout; `_db_connect()` API unchanged (pool-backed, with rollback hygiene + broken-connection replacement).
+  - `main.py` — imports `close_db()` and calls it in the shutdown `finally` block before `bot.session.close()`.
+  - `SECURITY_CHANGELOG.md` — this entry.
 - **Fix Description:**
-  - Removed temporary `logging.error(f"DEBUG PROBE...")` probe line (and now-unused `import logging`).
-  - Added full-text `correct_answer` → option-letter resolution right AFTER the `isdigit()` block and BEFORE `norm_map` / `user_choice` logic: when `len(correct_answer) > 1`, list options are scanned case-insensitively (`opt['text']` or plain string, `chr(65 + idx)` → A/B/C...) and dict options by value → key (`str(k).upper()`).
+  - Premium Text Leak (HIGH): users standing on paid `hören` questions (index 6+) passed the `question_index=0` free test and received the full premium passage via `view_full_text`. The gate now uses the same `current_index` semantics as `handle_answers` / `handle_skip_question` / `handle_prev_question`.
+  - Database Lockup / Thread Explosion (CRITICAL): every DB helper opened its own `aiosqlite.connect()` (one OS thread each) with zero serialization, guaranteeing thread explosion and mass `SQLITE_BUSY` under load. A single shared connection was deliberately rejected (multi-statement `BEGIN IMMEDIATE...COMMIT` transactions with interleaved awaits would corrupt the atomic key/referral claims). The pool bounds threads to 10 while the write lock queues writers in asyncio instead of failing.
 - **Technical Details:**
-  - Root cause (via probe): JSON stores full option text (e.g. `Neue Fenster bestellen`) while user choice is a letter (`B`); `"B" == "NEUE FENSTER BESTELLEN"` always False.
-  - Single-letter answers (`A`/`B`/`R`/`J`...) skip the new block (`len > 1` guard); digit-index path (`0→A`) runs first and is preserved; unmatched full text falls through unchanged (fail-closed, no false-positive).
-  - Downstream `correct_norm` comparison and wrong-answer `full_text_ans` lookup now operate on the resolved letter, so feedback shows the right option.
-  - Verification: `py_compile` OK; `DEBUG PROBE` string absent; mapping checks (full-text→B, case/space tolerant, digit→letter, letter untouched, dict value→key, `RICHTIG` with `None` options no-crash) pass.
+  - `handle_view_full_text` coerces `current_index` defensively (`int(...) or 0`, `TypeError/ValueError` → 0, clamp negatives) so stale/tampered FSM data can never bypass the gate or crash it.
+  - Pool design: `asyncio.Queue` of 10 persistent connections; `_ensure_pool()` double-checked lazy init (safe for tests/offline scripts); `_db_connect()` rolls back leaked transactions on check-in and replaces connections that raised `aiosqlite.Error`; `_db_write()` = `_WRITE_LOCK` + `_db_connect()`; explicit `BEGIN IMMEDIATE` statements kept as defense-in-depth.
+  - `get_user_details` no longer holds a checkout while calling `get_user_subscription` / `get_referral_info` (hold-and-wait on a bounded pool would deadlock under fan-out); admin.py's raw-SQL blocks were audited for the same hazard (none found).
+  - Verification (isolated temp DB, real `data/b1` catalog): `init_db` builds pool=10; `is_free_content(...,0)=True` vs `(...,6)=False` on first `hören` file; key generate→activate→double-spend-rejected; 300-task mixed read/write stress with 0 errors / 0 `SQLITE_BUSY` and threads 12→12 (bounded); pool fully checked back in; `close_db` + lazy re-init OK; `py_compile` OK on all touched files.
 
-## Review 4 - Final Polish
-Final remediation phase for review_3.md findings F-01 to F-12.
+## 2026-10-11 — P0 Hotfixes batch 2 (report_1.md §1.1, §1.4/§2.1, §2.4)
+- **Files Modified:**
+  - `main.py` — added `_startup_call()` retry-with-backoff helper (3 attempts, 1s/2s/4s); `set_my_commands` (default scope) and `delete_webhook` now retried instead of crashing `main()`; per-admin command failures stay non-fatal (`fatal=False`, expected when an admin never started the bot).
+  - `handlers/common.py` — added `_stash_pending_quiz()` / `_clear_pending_quiz()` (pending_* is now the SOLE resume source); `process_key` honors `/cancel` (+`/cancel@bot` variants); success path restores the exact stashed text (standard quiz → `QuizState.answering` + re-rendered question; Teil3 → `Teil3State.matching` + re-rendered board) with catalog validation and single-use stash consumption; `start_subscribe_flow` snapshots live quiz pointers (or drops stale stash); referrer congrats now fires on even totals only (matches recurring economy).
+  - `handlers/quiz.py` — `handle_read_text` paywall stashes the clicked text (skill/teil/file @0) BEFORE `state.clear()` + `AuthState` entry; top-level import of the stash helper (no cycle: common never imports quiz at module level; common→quiz is function-local).
+  - `database.py` — `_process_referral_reward_conn`: peek + self/existence validation moved BEFORE the `UPDATE...RETURNING` flip (invalid referrers no longer burn the row; unclaimed rows stay retryable); reward changed from one-time `counted_refs == 2` to recurring `counted_refs > 0 and counted_refs % 2 == 0` (credit on 2nd, 4th, 6th, ...); atomic flip kept as the concurrency guard (racers serialize on `_db_write` + `BEGIN IMMEDIATE`, exactly one wins).
+  - `SECURITY_CHANGELOG.md` — this entry.
+- **Fix Description:**
+  - Startup Crash (HIGH): any Telegram outage during `set_my_commands`/`delete_webhook` aborted boot before polling. Retried with backoff; persistent failure degrades (logs CRITICAL, continues to polling) instead of crashing.
+  - FSM Prison (HIGH): `/cancel` typed in `AuthState` was consumed as a key attempt forever; paywall entry wiped progress with no resume; resume could land on the wrong text. Cancel now exits; every AuthState entry stashes context; activation restores and re-renders the exact position (incl. full Teil3 matching progress); any navigation (`main_menu`, lists) clears the single-use stash so nothing phantom-resumes.
+  - Referral Economy Flaw (MEDIUM→business-critical): one-time bonus contradicted the "every 2 invites" promise, and ghost referrers burned rows. Recurring threshold + validate-before-flip.
+- **Technical Details:**
+  - `TelegramRetryAfter` honors the server's `retry_after`; all other failures (covers `TelegramAPIError`/network) use exponential backoff; lambdas capture per-admin IDs correctly (`lambda admin_id=admin_id:`).
+  - Stash keys: `pending_skill/_teil/_file/_index/_correct/_wrong/_order/_teil3/_t3`; Teil3 snapshot copies the 11 matching keys; resume validates via `get_content` probe (deleted file → clean slate + notice, activation still succeeds); `selected_*` reset on restore for a clean board.
+  - Referral exactly-once preserved: second `process_referral_reward` call post-activation (common.py) now peeks `is_counted=1` → `(None, 0)`; 5-way concurrent claim test yields exactly one winner.
+  - Verification (isolated temp DBs, real catalog): retry helper recovers after 2 transient fails and returns False (never raises) on persistent outage; 4 invites → 2 credits; ghost-referrer row stays `is_counted=0` then claims once the referrer appears; `/cancel` + `/cancel@bot` clear AuthState; quiz resume restores file/index/counters + re-renders; Teil3 resume restores board; fresh activation has no phantom resume; wrong key keeps AuthState; entry paywall wipes live-A and stashes B@0; `py_compile` + import-cycle check OK.
 
-- [F-01] `utils.py` (`get_content`, `get_catalog`): all synchronous filesystem calls (`_data_max_mtime`, `find_directory_case_insensitive`, `file_path.is_file`, `json.load`) run via `await asyncio.to_thread(...)`. `handlers/common.py`: both `os.path.exists(pdf_path)` checks (schreiben/sprechen) wrapped in `await asyncio.to_thread(os.path.exists, pdf_path)`. Sync helpers (`_data_max_mtime`, `_build_catalog_sync`, `find_directory_case_insensitive`) never run on the event loop directly.
-- [F-02] `database.py`: added `_db_connect()` async context manager that executes `PRAGMA journal_mode=WAL; PRAGMA busy_timeout=5000; PRAGMA synchronous=NORMAL;` on every connection. `init_db()` uses `_db_connect()` plus explicit all-three PRAGMAs. All `aiosqlite.connect(DB_NAME)` call sites in `database.py` migrated to `_db_connect()`. `handlers/admin.py` direct DB reads also migrated to `_db_connect()` (imported from `database`).
-- [F-03] `utils.py`: global `FILENAME_MAP` dict + `get_short_hash()` (`hashlib.md5(filename.encode()).hexdigest()[:10]`) + `map_filename()` / `resolve_filename()`. `handlers/common.py`: file-list and group keyboards use `callback_data=f"read_{skill}_{teil}_{map_filename(file_safe)}"` (short hash, always <= 64 bytes). `handlers/quiz.py::handle_read_text`: resolves `file_token` via `resolve_filename()`, replies with expiry notice if unknown, then `os.path.basename()`-sanitizes before use.
-- [F-04] `import html` in `handlers/common.py`, `handlers/quiz.py`, `handlers/admin.py`. `html.escape()` applied to all untrusted interpolations into `parse_mode="HTML"` strings: `full_name`/`username` in `/start` log and activation log (`common.py`); subscription-type fallback in `user_progress`; `title`/`summary`/question text/`fixed_question`/option keys+texts/keywords/feedback/`raw_pairs` Q-A-KW in `quiz.py` (`send_quiz_question`, `handle_answers`, `render_teil3_view`, `finish_teil3_matching`, skip-finish); user report fields, echoed inputs/keys, client names, users-page names in `admin.py` (`sup_stats`, `get_user_full_details` report, edit-text preview, revoke-key echo).
-- [F-05] `handlers/common.py::cmd_start`: referral handling isolated in standalone `if command and command.args:` block; onboarding branched independently on `if is_new_user:` (log-channel record + full disclaimer + main menu) vs `else:` (short welcome + menu). New users via plain `/start` now always get disclaimer + logging regardless of `command.args`.
-- [F-06] `database.py`: `logging.exception(...)` added to every swallowed-DB-error path (`activate_subscription`, `generate_new_key`, `set_user_referrer`, `process_referral_reward`, `claim_free_subscription`, `update_custom_text`); `IntegrityError` duplicate-referral kept as idempotent but logged via `logging.debug`.
-- [F-07] `handlers/common.py` (`b1_parts_` and `t_group_` branches): per-file `get_content()` + `is_text_completed()` fetched concurrently via `asyncio.gather(*(_fetch_entry...))` instead of sequential awaits.
-- [F-08] `MAX_CHUNK = 4000` chunking applied to `handlers/quiz.py::send_quiz_question` (splits `final_text`, sends head chunks via `answer`, tail via `safe_edit_message_text_or_send` with keyboard) and `handlers/admin.py::cb_sup_stats` (splits aggregated client list), mirroring `finish_teil3_matching`.
-- [F-09] `database.py`: all `BEGIN IMMEDIATE` blocks (`activate_subscription`, `generate_new_key`, `set_user_referrer`, `process_referral_reward`, `claim_free_subscription`, `update_custom_text`) use strict `try...except...finally` with `committed` flag guaranteeing `await conn.rollback()` on any failure path; `activate_subscription` still re-raises after logging.
-- [F-10] `main.py::global_error_handler`: explicitly re-raises `asyncio.CancelledError`, `KeyboardInterrupt`, `SystemExit` before any `return True`; only `TelegramRetryAfter` and app errors are swallowed/logged.
-- [F-11] `config.py`: raises `ValueError("CRITICAL: SELLER_ID is required in .env")` immediately if `SELLER_ID` is empty; non-numeric values also rejected. Prevents silent invalid `tg://user?id=` paywall buttons.
-- [F-12] `utils.py`: `_CONTENT_CACHE` key is composite `f"{skill.lower().strip()}_{teil.lower().strip()}_{safe_name}"` (i.e. `skill_teil_basename`), preventing cross-skill/teil basename collisions; invalidation still on tree mtime.
-
-Verification: `python -m py_compile` passes on all modules.
-
-## Runtime Crash Fixes — 2026-09-19
-- **Files Modified:** `main.py`, `handlers/admin.py`, `SECURITY_CHANGELOG.md`
-- **Fix 1 — Aiogram 3.x Error Handler Signature Mismatch (`main.py`):**
-  - Imported `ErrorEvent` from `aiogram.types`.
-  - Changed `global_error_handler(event, exception)` → `global_error_handler(event: ErrorEvent)` with `exception = event.exception` extracted inside.
-  - Keeps existing logic: re-raise `CancelledError`/`KeyboardInterrupt`/`SystemExit`, `TelegramRetryAfter` warning + `return True`, otherwise `logging.exception` + `return True`.
-  - Root cause: aiogram 3.x dispatches a single `ErrorEvent` object to `@dp.errors()` handlers; the old 2-arg signature raised `TypeError` at runtime.
-- **Fix 2 — Unhandled 'Query is too old' (`handlers/admin.py::cb_revoke_key_inline`):**
-  - `TelegramBadRequest` was already imported from `aiogram.exceptions`; wrapped every `await callback.answer(...)` in `cb_revoke_key_inline` with `try...except TelegramBadRequest: logging.debug("Ignored old callback query")`.
-  - Covers stale inline buttons clicked after a bot restart (expired `callback_query.id`); uses `logging.debug` (not silent `pass`) to keep observability without cluttering error logs.
-  - Rule 19 instant-refresh `edit_text` path already guarded against `message is not modified`; unchanged.
-- **Verification:** `python -m py_compile` passes; mocked stale-query test (answer raising `TelegramBadRequest`) confirms no propagation.
+## 2026-10-11 — P1 Performance & Anti-DoS (report_1.md §3.1–§3.4)
+- **Files Modified:**
+  - `database.py` — `get_next_uncompleted_target`: single `SELECT text_id ... WHERE user_id=?` into a Python `set`, then in-memory set-difference scan (was: one pooled-checkout round-trip per file, up to ~159 sequential DB hits per `user_progress` render).
+  - `utils.py` — `_CONTENT_CACHE` + `FILENAME_MAP` changed from unbounded dicts to `TTLCache(maxsize=1000, ttl=3600)` (cachetools, already a dependency); mtime wipe uses `.clear()` (no rebinding); `Path.resolve()` pair moved into `asyncio.to_thread`; fixed `_ALLOWED_DATA_DIR` resolved once at import.
+  - `handlers/common.py` — new `_load_guide_pdf()` (m-time-validated, 2-fixed-keys-bounded bytes cache; disk read in worker thread; returns `BufferedInputFile`); Schreiben/Sprechen now upload from cached bytes while `send_document` stays on-loop (network I/O is async and must never move to a thread); `FSInputFile` import removed (zero remaining refs repo-wide).
+  - `handlers/admin.py` — broadcast rewrite: `_run_broadcast_task(bot, admin_chat_id, message_id)` streams recipients via keyset pagination (`WHERE user_id > ? ORDER BY user_id LIMIT 500`, one short checkout per chunk, never held across the broadcast); semaphore acquired ONLY around each `copy_message` (released before 429-sleep, re-acquired for the single retry); `_BROADCAST_RUNNING` single-flight flag (atomic check-then-set on the loop, always reset in `finally`); `cb_broadcast_confirm` no longer `fetchall()`s and refuses a second concurrent broadcast with a notice.
+  - `SECURITY_CHANGELOG.md` — this entry.
+- **Fix Description:**
+  - N+1 Query (HIGH): one progress render cost up to ~159 sequential DB round-trips; now exactly 1.
+  - Blocking I/O (MEDIUM): `Path.resolve()` stat syscalls and ~0.5 MB PDF disk reads no longer block the event loop; uploads remain async on-loop by design.
+  - Unbounded Caches (MEDIUM): content/file-hash maps now TTL-bounded (1000 entries / 1h) instead of growing forever.
+  - Broadcast RAM & Stall (MEDIUM): RAM flat at ~500 ids regardless of user count (was: full `fetchall()`); 429 waves no longer freeze all 30 send slots; parallel confirms can no longer stack duplicate broadcasts.
+- **Technical Details:**
+  - TTLCache check-then-set is atomic on the single-threaded loop where no `await` intervenes (`map_filename`/`resolve_filename`); `get_content`'s check-then-set spans awaits, so concurrent misses may parse twice (benign duplicate work, last-write-wins — documented, no singleflight added by design).
+  - Keyset pagination is stable under concurrent signups (unlike OFFSET); per-chunk checkouts keep pool pressure to 1 slot at a time.
+  - Verification (isolated temp DB, real catalog): caches are TTLCache(1000/3600) with map/resolve roundtrip; `get_content` works through the new path; N+1 rewrite matches old behavior on empty/partial/full completion (incl. all-159 fallback); PDF loader returns None on missing and cached `BufferedInputFile` otherwise; broadcast task lazy-copies 7/7 seeded users, sends the report, resets the flag; second confirm refused while running; real-DB `init_db`/`close_db` OK; `py_compile` clean on all touched files.

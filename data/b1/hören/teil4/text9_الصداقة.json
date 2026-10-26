@@ -1,0 +1,77 @@
+{
+  "title": "Freundschaft",
+  "media_files": false,
+  "options": [
+    {
+      "key": "a",
+      "text": "المرأة"
+    },
+    {
+      "key": "b",
+      "text": "الرجل"
+    },
+    {
+      "key": "c",
+      "text": "المذيعة"
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "text": "Das Leben ist zu stressig, um sich oft mit Freunden zu treffen.",
+      "correct_answer": "b",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: الرجل"
+    },
+    {
+      "id": 2,
+      "text": "Ein Freund sollte ehrlich seine Meinung sagen.",
+      "correct_answer": "b",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: الرجل"
+    },
+    {
+      "id": 3,
+      "text": "Für junge Leute ist es wichtig, viele Freunde im Internet zu haben!",
+      "correct_answer": "b",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: الرجل"
+    },
+    {
+      "id": 4,
+      "text": "Man hat Freunde für unterschiedliche Aktivitäten.",
+      "correct_answer": "c",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المذيعة"
+    },
+    {
+      "id": 5,
+      "text": "In jede Lebensphase gibt es einen Freunde.",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المرأة"
+    },
+    {
+      "id": 6,
+      "text": "Man muss sich um seine Freunde kümmern.",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المرأة"
+    },
+    {
+      "id": 7,
+      "text": "Für eine Freundschaft sind gemeinsame Aktivitäten wichtig.",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المرأة"
+    },
+    {
+      "id": 8,
+      "text": "Durch die neuen Medien kann man leichter in Kontakt bleiben.",
+      "correct_answer": "c",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المذيعة"
+    },
+    {
+      "id": 9,
+      "text": "Ich habe Freunde, mit denen ich über die Apps spreche.",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المرأة"
+    }
+  ],
+  "end_of_text_summary": {
+    "keywords": "الكلمات المفتاحية:\n- جمل الرجل: ehrlich - stressig - wichtig\n- جمل المذيعة: unterschiedliche Aktivitäten"
+  }
+}

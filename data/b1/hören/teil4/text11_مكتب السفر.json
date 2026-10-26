@@ -1,0 +1,77 @@
+{
+  "title": "الحجز من خلال مكتب سفريات",
+  "media_files": false,
+  "options": [
+    {
+      "key": "a",
+      "text": "الرجل"
+    },
+    {
+      "key": "b",
+      "text": "المذيعة"
+    },
+    {
+      "key": "c",
+      "text": "المرأة"
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "text": "Familien mit kleinen Kindern hingegen reisen eher alleine.",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: الرجل"
+    },
+    {
+      "id": 2,
+      "text": "Die Leute buchen ihre Reisen jetzt online.",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: الرجل"
+    },
+    {
+      "id": 3,
+      "text": "Die Art zu reisen hängt von Alter ab.",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: الرجل"
+    },
+    {
+      "id": 4,
+      "text": "Geld ausgeben/Tauschen Gelg - geld geben.",
+      "correct_answer": "b",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المذيعة"
+    },
+    {
+      "id": 5,
+      "text": "Reisen ist billiger geworden als zuvor.",
+      "correct_answer": "b",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المذيعة"
+    },
+    {
+      "id": 6,
+      "text": "Alternative ...",
+      "correct_answer": "b",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المذيعة"
+    },
+    {
+      "id": 7,
+      "text": "Spracherbesserung.",
+      "correct_answer": "c",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المرأة"
+    },
+    {
+      "id": 8,
+      "text": "Das Internet hat sich globalisierung geschaffen und die Kommunikation zwischen Menschen aus alle welt.",
+      "correct_answer": "c",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المرأة"
+    },
+    {
+      "id": 9,
+      "text": "Senioren oder Erwachsene reisen in der Regelmit einem Reisebüro.",
+      "correct_answer": "c",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المرأة"
+    }
+  ],
+  "end_of_text_summary": {
+    "keywords": "معناها بنركز على الكلمات المفتاحية\nجمل الرجل\nkleinen Kindern\nonline\nhängt von Alter\n...\nجمل المذيعة\nGeld ausgeben\nbilliger\n..."
+  }
+}

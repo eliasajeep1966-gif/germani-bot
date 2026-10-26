@@ -1,0 +1,71 @@
+{
+  "title": "الهواتف المحمولة",
+  "media_files": false,
+  "options": [
+    {
+      "key": "a",
+      "text": "السيدة"
+    },
+    {
+      "key": "b",
+      "text": "الرجل"
+    },
+    {
+      "key": "c",
+      "text": "المذيعة"
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "text": "Man muss nicht jeden Anruf anrufen.",
+      "correct_answer": "b",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: الرجل"
+    },
+    {
+      "id": 2,
+      "text": "Mobiltelefon muss auch in anderen Bereichen verboten werden.",
+      "correct_answer": "b",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: الرجل"
+    },
+    {
+      "id": 3,
+      "text": "Man kann besser lernen, das Mobiltelefon manchmal nicht benutzen zu bestätigen.",
+      "correct_answer": "b",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: الرجل"
+    },
+    {
+      "id": 4,
+      "text": "Es gibt Orte, an denen das Telefonieren absolut verboten ist.",
+      "correct_answer": "c",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المذيعة"
+    },
+    {
+      "id": 5,
+      "text": "Was das Telefonieren betrifft, kann man Arbeitszeit und Freizeit nicht klar trennen",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: السيدة"
+    },
+    {
+      "id": 6,
+      "text": "Mobiltelefone sind sehr praktisch.",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: السيدة"
+    },
+    {
+      "id": 7,
+      "text": "Das Handy ist Teil unseres Alltags geworden.",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: السيدة"
+    },
+    {
+      "id": 8,
+      "text": "Eltern sind beruhigter, wenn ihre Kinder ein Mobiltelefon haben.",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: السيدة"
+    }
+  ],
+  "end_of_text_summary": {
+    "keywords": "الكلمات المفتاحية:\n- جمل الرجل: nicht jeden Anruf - anderen Bereichen verboten - manchmal nicht benutzen\n- جملة المذيعة: Es gibt Orte ..."
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "title": "Bio Essen",
+  "media_files": false,
+  "options": [
+    {
+      "key": "a",
+      "text": "المرأة"
+    },
+    {
+      "key": "b",
+      "text": "الرجل"
+    },
+    {
+      "key": "c",
+      "text": "المذيعة"
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "text": "Bio-Lebensmittel sind teurer/hoher Preis.",
+      "correct_answer": "b",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: الرجل"
+    },
+    {
+      "id": 2,
+      "text": "Die Notwendigkeit, Lebensmittel von der Hauptquelle.",
+      "correct_answer": "b",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: الرجل"
+    },
+    {
+      "id": 3,
+      "text": "Es schmeckt schlecht.",
+      "correct_answer": "b",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: الرجل"
+    },
+    {
+      "id": 4,
+      "text": "Einfaches Einkaufen ist für den Menschen wichtig.",
+      "correct_answer": "b",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: الرجل"
+    },
+    {
+      "id": 5,
+      "text": "Bio-Lebensmittel können schädlich für die Umwelt sein.",
+      "correct_answer": "c",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المذيعة"
+    },
+    {
+      "id": 6,
+      "text": "Es kann manchmal ungesund sein.",
+      "correct_answer": "c",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المذيعة"
+    },
+    {
+      "id": 7,
+      "text": "Bio-Lebensmittel sind nicht lange haltbar Früchte verderben schnell.",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المرأة"
+    },
+    {
+      "id": 8,
+      "text": "Eine Person kann im Internet suchen, um günstige Bio-Lebensmittel zu kaufen.",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المرأة"
+    },
+    {
+      "id": 9,
+      "text": "ازرعو بالحديقة الخاصة فيكم ( Im Gegend)",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المرأة"
+    }
+  ],
+  "end_of_text_summary": {
+    "keywords": "الكلمات المفتاحية:\n- جمل الرجل: teurer/hoher Preis - Hauptquelle - schlecht - Einfaches Einkaufen\n- جمل المذيعة: schädlich für die Umwelt - manchmal ungesund\n- جمل المرأة: Im Gegend"
+  }
+}

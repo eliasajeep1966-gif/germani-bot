@@ -1,0 +1,95 @@
+{
+  "summary": "Eine Frau erzählt von ihrer Reise nach Italien. Sie sprachen über das Hotel, das Essen und die Schweizer Familie, die sie dort trafen.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Die Dame kennt italienische Gerichte, bevor sie nach Italien reist.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 2,
+      "question": "Sie liebt es, neue Gerichte auszuprobieren.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 3,
+      "question": "Das italienische Essen war köstlich.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 4,
+      "question": "Die Schweizer Familie hat Töchter.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 5,
+      "question": "Sie hatte nur einen Tag Urlaub.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 6,
+      "question": "Sie war mit dem Hotel unzufrieden.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 7,
+      "question": "Ihr Mann hat den Schlüssel an der Rezeption liegen lassen.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 8,
+      "question": "Jeden Tag mechten sie Ausflüge.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 9,
+      "question": "Die Familie der Frau macht jeden Jahr Urlaub am gleichen Ort.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 10,
+      "question": "Die Schweizer Familie hat eine Tochter.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    }
+  ]
+}

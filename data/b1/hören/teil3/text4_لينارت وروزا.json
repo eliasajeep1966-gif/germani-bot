@@ -1,0 +1,86 @@
+{
+  "summary": "Lennart und Rosa trafen sich in der U-Bahn. Lennart möchte ein Praktikum machen und hat noch Prüfungen, während Rosa Sprachkenntnisse hat, Spanisch in Argentinien studieren möchte und vorübergehend bei Verwandten wohnen wird.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Roza plant, in Berlin zu studieren.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 2,
+      "question": "Roza hat Kenntnisse in vielen Sprachen.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 3,
+      "question": "Leinart weiß nicht, in welchem Land er seinen Urlaub verbringen wird.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 4,
+      "question": "Rosa wird sich in ihrer Freizeit mit dem Lernen von Spanisch beschäftigen.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 5,
+      "question": "Linart hat noch eine Prüfung.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 6,
+      "question": "Linart hat keine Prüfung.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 7,
+      "question": "Rosa will in Argentinien Spanisch einrichten.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 8,
+      "question": "Sie möchte zu Beginn in einer Wohngemeinschaft wohnen.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 9,
+      "question": "Linart weiß genau in welcher Stadt er trainiert wird.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    }
+  ]
+}

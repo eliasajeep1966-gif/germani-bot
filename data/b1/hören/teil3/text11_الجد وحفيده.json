@@ -1,0 +1,50 @@
+{
+  "summary": "Ein Großvater erzählt seinem Enkel von seinen Erinnerungen vor dem Krieg und seinem Modegeschäft, das er 3 Jahre lang hatte.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Großvater hatte ein Modegeschäft.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 2,
+      "question": "Er ist seit 3 Jahren geöffnet.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 3,
+      "question": "Der Enkel arbeitete im Laden.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 4,
+      "question": "Der Laden wurde wegen des Brandes geschlossen.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 5,
+      "question": "Das Geschäft an der Straße befand sich in einem Hinterhaus.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    }
+  ]
+}

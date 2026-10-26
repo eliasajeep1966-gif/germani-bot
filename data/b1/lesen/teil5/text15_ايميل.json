@@ -1,0 +1,33 @@
+{
+  "title": "Regeln für das Schreiben von E-Mails",
+  "text": "قواعد كتابة الايميل",
+  "questions": [
+    {
+      "question": "Warum schreiben Sie lieber eine E-Mail als anzurufen?",
+      "options": {
+        "a": "Weil man dadurch Anrufe aufzeichnen und speichern kann.",
+        "b": "Weil wir die andere Person nicht stören möchten.",
+        "c": "Weil Telefonate immer teurer als E-Mails sind."
+      },
+      "answer": "b"
+    },
+    {
+      "question": "Wie sollte eine gute E-Mail sein?",
+      "options": {
+        "a": "Man sollte eine Frist für die E-Mail festlegen.",
+        "b": "Sie sollte möglichst lang und detailliert geschrieben sein.",
+        "c": "Sie sollte ohne Betreffzeile versendet werden."
+      },
+      "answer": "a"
+    },
+    {
+      "question": "Worauf sollte man beim Versenden von E-Mails achten?",
+      "options": {
+        "a": "Man sollte immer möglichst viele große Dateien anhängen.",
+        "b": "Man sollte E-Mails nur spät am Abend abschicken.",
+        "c": "Man sollte auf das Versenden von Anhängen verzichten, weil sie gefährlich sein können."
+      },
+      "answer": "c"
+    }
+  ]
+}

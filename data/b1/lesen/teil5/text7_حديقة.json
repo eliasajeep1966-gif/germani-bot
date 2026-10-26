@@ -1,0 +1,42 @@
+{
+  "title": "Im Gartenverein",
+  "text": "قواعد الحديقة واي الحوانات مسموح له بالدوخل",
+  "questions": [
+    {
+      "question": "Welches Tier darf in den Garten hinein?",
+      "options": {
+        "a": "Nur der Hund.",
+        "b": "Alle Katzen und kleinen Heimtiere.",
+        "c": "Nutztiere wie Ziegen und Hühner."
+      },
+      "answer": "a"
+    },
+    {
+      "question": "Welche Regel gibt es in dem Garten?",
+      "options": {
+        "a": "Bäume dürfen ohne Einschränkung beliebig hoch wachsen.",
+        "b": "Der Baum darf nicht höher als eine bestimmte Höhe sein.",
+        "c": "Es dürfen überhaupt keine Bäume gepflanzt werden."
+      },
+      "answer": "b"
+    },
+    {
+      "question": "Wer darf im Garten mitarbeiten?",
+      "options": {
+        "a": "Alle Mitglieder unabhängig vom Alter müssen mithelfen.",
+        "b": "Ältere Menschen arbeiten nicht mit (nur die Jüngeren).",
+        "c": "Nur externe Arbeiter dürfen die Pflege übernehmen."
+      },
+      "answer": "b"
+    },
+    {
+      "question": "Wie wird der Garten an eine neue Person übergeben?",
+      "options": {
+        "a": "Durch eine direkte Versteigerung unter den Nachbarn.",
+        "b": "Der Verkäufer wählt den Nachfolger frei ohne Rücksprache aus.",
+        "c": "Es gibt eine Namenliste, die von der Verwaltung genehmigt wird."
+      },
+      "answer": "c"
+    }
+  ]
+}

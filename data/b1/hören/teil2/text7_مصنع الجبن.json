@@ -1,0 +1,75 @@
+{
+  "summary": "زيارة لمصنع الحليب  والجبن السويسري تتضمن معلومات عن الانتاج والتصنيع.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Sechs 6 Millionen Liter Milch?",
+      "options": {
+        "a": "Monatlich im Export verwendet",
+        "b": "Jährlich in der Milchindustrie/Produkte verwendet",
+        "c": "Täglich an die Landwirte geliefert"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 2,
+      "question": "Worauf Sie während des Besuchs achten sollten?",
+      "options": {
+        "a": "Oben schauen",
+        "b": "Auf den Boden achten",
+        "c": "Auf die Hinweisschilder hören"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 3,
+      "question": "Eine Frage zu einer anderen als der im Text genannten Käsesorte?",
+      "options": {
+        "a": "Es wird nur warm getrunken",
+        "b": "Es wird mit Brot gegessen",
+        "c": "Es wird ausschließlich roh serviert"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 4,
+      "question": "Ein Thema über eine besondere Käsesorte. Wie konsumieren die Schweizer ihn?",
+      "options": {
+        "a": "Mit Kartoffeln",
+        "b": "Mit frischem Obst",
+        "c": "Mit Reis und Gemüse"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 5,
+      "question": "Der Käse des Unternehmens ist geschützt durch...?",
+      "options": {
+        "a": "Staatliche Subventionen",
+        "b": "Warenzeichen (Markenrechtlich)",
+        "c": "Regionale Traditionen"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 6,
+      "question": "Frage zur Käseherstellung?",
+      "options": {
+        "a": "Hergestellt aus Schafsmilch",
+        "b": "Hergestellt aus Kuhmilch",
+        "c": "Hergestellt aus Ziegenmilch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 7,
+      "question": "Mit...?",
+      "options": {
+        "a": "Lüftung",
+        "b": "Kühlung",
+        "c": "Heizung"
+      },
+      "correct_answer": "c"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "title": "Einkaufszentrum abbau",
+  "media_files": false,
+  "options": [
+    {
+      "key": "a",
+      "text": "المرأة"
+    },
+    {
+      "key": "b",
+      "text": "الرجل"
+    },
+    {
+      "key": "c",
+      "text": "المذيعة"
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "text": "Durch den Bau dieses Zentrums werden Beschäftigungsmöglichkeiten für Arbeitslose geschaffen.",
+      "correct_answer": "b",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: الرجل"
+    },
+    {
+      "id": 2,
+      "text": "Das Einkaufszentrum muss gut erreichbar sein.",
+      "correct_answer": "b",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: الرجل"
+    },
+    {
+      "id": 3,
+      "text": "es wird solche geben in Mietwohnungen.",
+      "correct_answer": "b",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: الرجل"
+    },
+    {
+      "id": 4,
+      "text": "Menschen mit wenig Geld können ins Einkaufszentrum gehen.",
+      "correct_answer": "b",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: الرجل"
+    },
+    {
+      "id": 5,
+      "text": "Dem Einkaufszentrum müssen Busse zur Verfügung gestellt werden.",
+      "correct_answer": "b",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: الرجل"
+    },
+    {
+      "id": 6,
+      "text": "Das Zentrum wird viele berühmte und internationale Geschäfte Enthhalten.",
+      "correct_answer": "c",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المذيعة"
+    },
+    {
+      "id": 7,
+      "text": "Vermieter ziehen häufig um .",
+      "correct_answer": "c",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المذيعة"
+    },
+    {
+      "id": 8,
+      "text": "Wir werden uns noch lange gegen den Bau wehren.",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المرأة"
+    },
+    {
+      "id": 9,
+      "text": "Wir stehen zusammen, um den Bau dieses Zentrums zu verhindern.",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المرأة"
+    },
+    {
+      "id": 10,
+      "text": "Tatsächlich wurden die Menschen gezwungen, ihre Häuser zu verlassen.",
+      "correct_answer": "c",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المذيعة"
+    },
+    {
+      "id": 11,
+      "text": "Die Menschen hier sind arm und haben kein Geld.",
+      "correct_answer": "b",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: الرجل"
+    }
+  ],
+  "end_of_text_summary": {
+    "keywords": "الكلمات المفتاحية:\n- جمل الرجل: Beschäftigungsmöglichkeiten für Arbeitslose - erreichbar - Mietwohnungen - wenig Geld - Verfügung gestellt\n- جملة المذيعة: internationale Geschäfte Enthhalten"
+  }
+}

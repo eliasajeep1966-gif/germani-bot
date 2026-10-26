@@ -8,6 +8,9 @@ from aiogram.fsm.context import FSMContext
 from aiogram.exceptions import TelegramBadRequest
 
 from utils import render_progress_bar, get_content, resolve_filename
+# P0 FSM-prison fix: stash helper lives in common (common never imports quiz
+# at module level, so no import cycle).
+from handlers.common import _stash_pending_quiz
 from database import (
     QuizState, Teil3State, AuthState,
     can_access_level, mark_text_completed, is_text_completed,
@@ -155,7 +158,18 @@ async def handle_view_full_text(callback: types.CallbackQuery, state: FSMContext
     teil = data.get('teil', '')
     file_name = data.get('file_name', '')
 
-    is_free = await is_free_content(skill, teil, file_name, question_index=0)
+    # P0 (report_1 §2.2): gate on the ACTUAL quiz position, not index 0.
+    # is_free_content grants hören only question_index < 6, so a hardcoded 0
+    # let users standing on paid questions (Q6+) read the full premium passage.
+    # Same semantics as handle_answers / handle_skip (question_index=current_index).
+    try:
+        current_index = int(data.get('current_index', 0) or 0)
+    except (TypeError, ValueError):
+        current_index = 0
+    if current_index < 0:
+        current_index = 0
+
+    is_free = await is_free_content(skill, teil, file_name, question_index=current_index)
     if not is_free and not await can_access_level(callback.from_user.id, "b1"):
         await callback.answer("⚠️ غير مصرح لك بعرض هذا النص. يرجى تفعيل الاشتراك.", show_alert=True)
         return
@@ -204,8 +218,12 @@ async def handle_read_text(callback: types.CallbackQuery, state: FSMContext):
     is_free = await is_free_content(skill, teil, file_name, question_index=0)
 
     if not is_free and not await can_access_level(user_id, "b1"):
+        # P0: stash THIS text (B) as the resume target BEFORE wiping. The user
+        # clicked B, so after activation they must land on B at index 0 — never
+        # on a stale text A, never on nothing. Entry always starts at 0.
         await state.clear()
         await state.set_state(AuthState.waiting_for_key)
+        await _stash_pending_quiz(state, skill, teil, file_name, 0)
         text = await get_dynamic_paywall_text()
         kb = get_paywall_keyboard(skill, teil)
         await safe_edit_message_text_or_send(callback, text, reply_markup=kb, parse_mode="HTML")

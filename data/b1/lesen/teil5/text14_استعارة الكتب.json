@@ -1,0 +1,51 @@
+{
+  "title": "Benutzungsordnung der Bibliothek",
+  "text": "قواعد المكتبة واستعارة الكتب من المكتبة",
+  "questions": [
+    {
+      "question": "Was passiert, wenn man ein Buch aus der Bibliothek verliert?",
+      "options": {
+        "a": "Es muss wieder gekauft (ersetzt) werden.",
+        "b": "Man muss eine kleine Strafe zahlen und kein neues Buch kaufen.",
+        "c": "Man darf für ein Jahr keine Bücher mehr ausleihen."
+      },
+      "answer": "a"
+    },
+    {
+      "question": "Darf man Zeitschriften ausleihen/mitnehmen?",
+      "options": {
+        "a": "Ja, man darf sie für zwei Wochen mit nach Hause nehmen.",
+        "b": "Nein, nur in der Bibliothek lesen.",
+        "c": "Ja, aber nur gegen eine zusätzliche Gebühr."
+      },
+      "answer": "b"
+    },
+    {
+      "question": "Wie bekommen Kinder und Jugendliche einen Bibliotheksausweis?",
+      "options": {
+        "a": "Wenn sie ihren Schülerausweis vorzeigen.",
+        "b": "Wenn sie mindestens 16 Jahre alt sind.",
+        "c": "Wenn die Eltern ein Dokument ausfüllen."
+      },
+      "answer": "c"
+    },
+    {
+      "question": "Welche Regeln gibt es in der Bibliothek?",
+      "options": {
+        "a": "In der Bibliothek, laute Gespräche, Telefonieren und Speisen sind verboten.",
+        "b": "Das Fotografieren ist erlaubt, aber Essen ist verboten.",
+        "c": "Man darf nur mit Kopfhörern Musik hören und Getränke mitbringen."
+      },
+      "answer": "a"
+    },
+    {
+      "question": "Was den Laptop betrifft?",
+      "options": {
+        "a": "Die Nutzung von Laptops ist in der gesamten Bibliothek verboten.",
+        "b": "Der Laptop ist nur in bestimmten Bereichen erlaubt.",
+        "c": "Laptops dürfen nur an den Arbeitsplätzen mit Steckdose benutzt werden."
+      },
+      "answer": "b"
+    }
+  ]
+}

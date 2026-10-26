@@ -1,0 +1,55 @@
+{
+  "summary": "تجربة جديدو بلا عنوان حتى الان تتحدث عن نشاط محدد.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Warum werden sie sich verspäten?",
+      "options": {
+        "a": "Wegen Verkehrsstau",
+        "b": "Wegen Zugverspätung",
+        "c": "Wegen schlechten Wetters"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 2,
+      "question": "Wann werden die Fragen beantwortet?",
+      "options": {
+        "a": "Nach 10 Minuten",
+        "b": "In 30 Minuten",
+        "c": "Am Ende des Vortrags"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 3,
+      "question": "Was werden sie fotografieren?",
+      "options": {
+        "a": "Das Gebäude oder die Natur um es herum",
+        "b": "Nur die Kunstwerke im Museum",
+        "c": "Die Besucher und Teilnehmer"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 4,
+      "question": "Mit wem werden sie sprechen?",
+      "options": {
+        "a": "Mit dem Moderator",
+        "b": "Mit dem Organisator",
+        "c": "Mit dem Journalist"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 5,
+      "question": "Wer wird an der Aktivität teilnehmen?",
+      "options": {
+        "a": "Den Schauspieler sehen / sprechen",
+        "b": "Den Chef treffen",
+        "c": "Sie werden mit dem Chef sprechen"
+      },
+      "correct_answer": "a"
+    }
+  ]
+}

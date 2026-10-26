@@ -1,0 +1,86 @@
+{
+  "summary": "Katja machte eine Reise nach Italien mit ihrer Familie. Die Reise war zu Land und zu Wasser, und trotz einiger Probleme am ersten Tag hatte sie eine sehr gute und unterhaltsame Zeit.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Die Reise hat sich gelohnt.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 2,
+      "question": "Sie hat ein Problem gemacht, um einen zusätzlichen Tag am Strand zu bleiben.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 3,
+      "question": "Beim nächsten Mal wirst du mit dem Flugzeug fliegen.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 4,
+      "question": "Die Reise war zu Land und zu Wasser.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 5,
+      "question": "Katja schlief auf dem Deck des Schiffes.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 6,
+      "question": "Ihr erster Tag war sehr gut.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 7,
+      "question": "Sie kaufte eine CD ihrer Lieblingsband.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 8,
+      "question": "Italienisches Essen schmeckt besser als das Essen zu Hause.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 9,
+      "question": "Für Katja war die Reise anstrengend.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    }
+  ]
+}

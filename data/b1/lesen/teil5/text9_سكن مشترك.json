@@ -1,0 +1,42 @@
+{
+  "title": "Fortbildung und WG Regeln",
+  "text": "قواعد السكن المشترك WG",
+  "questions": [
+    {
+      "question": "Wann und wie beginnt der Kurs genau?",
+      "options": {
+        "a": "Der Kurs beginnt am Montag um 9 Uhr, die Ankunft ist am Sonntag.",
+        "b": "Der Kurs beginnt am Sonntagabend mit einer Vorbesprechung.",
+        "c": "Der Kurs beginnt am Montag pünktlich um 8 Uhr morgens."
+      },
+      "answer": "a"
+    },
+    {
+      "question": "Was die Zimmer der Teilnehmer betrifft?",
+      "options": {
+        "a": "Jedes Zimmer verfügt über ein eigenes privates Badezimmer.",
+        "b": "Jede drei Zimmer teilen sich ein Badezimmer (kein privates Bad).",
+        "c": "Alle Teilnehmer eines Stockwerks nutzen ein gemeinsames Bad."
+      },
+      "answer": "b"
+    },
+    {
+      "question": "Was wird in den Gästezimmern angeboten?",
+      "options": {
+        "a": "Man könnte Alkohol gegen Bezahlung trinken (Bier & Wein).",
+        "b": "Kostenlose Erfrischungsgetränke und Snacks stehen bereit.",
+        "c": "Sämtliche Getränke wie Bier und Wein sind im Preis enthalten."
+      },
+      "answer": "a"
+    },
+    {
+      "question": "Was können die Teilnehmer nach dem Kurs tun?",
+      "options": {
+        "a": "Sie müssen im Schulungsraum bleiben und die Aufgaben nachbereiten.",
+        "b": "Sie können Freizeitmöglichkeiten wie Radfahren und Fußball spielen nutzen.",
+        "c": "Sie haben die Möglichkeit, an einem geführten Stadtrundgang teilzunehmen."
+      },
+      "answer": "b"
+    }
+  ]
+}

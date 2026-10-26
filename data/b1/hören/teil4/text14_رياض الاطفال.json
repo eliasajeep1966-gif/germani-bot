@@ -1,0 +1,71 @@
+{
+  "title": "Kindergarten",
+  "media_files": false,
+  "options": [
+    {
+      "key": "a",
+      "text": "المرأة"
+    },
+    {
+      "key": "b",
+      "text": "الرجل"
+    },
+    {
+      "key": "c",
+      "text": "المذيعة"
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "text": "Die Kinder sollten unter der Aufsicht der Schule bleiben.",
+      "correct_answer": "c",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المذيعة"
+    },
+    {
+      "id": 2,
+      "text": "Wir müssen die Kinder von der Familie fernhalten.",
+      "correct_answer": "c",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المذيعة"
+    },
+    {
+      "id": 3,
+      "text": "Die Eltern verbringen viel Zeit außerhalb des Hauses.",
+      "correct_answer": "c",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المذيعة"
+    },
+    {
+      "id": 4,
+      "text": "Es ist normal, dass sich das Kind beim Spielen verletzt.",
+      "correct_answer": "b",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: الرجل"
+    },
+    {
+      "id": 5,
+      "text": "Der Beruf der Kindererziehung ist schlecht bezahlt, das muss sich erhöhen. / ...Gehälter müssen steigen.",
+      "correct_answer": "b",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: الرجل"
+    },
+    {
+      "id": 6,
+      "text": "Mädchen bekommen schon früher Jobangebote.",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المرأة"
+    },
+    {
+      "id": 7,
+      "text": "Die Arbeit des Mannes im Beruf der Kindererziehung ist beliebt / akzeptiert.",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المرأة"
+    },
+    {
+      "id": 8,
+      "text": "Wir brauchen das Eingreifen der Eltern beim Spielen der Kinder. (Unterstützung / Schutz)",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المرأة"
+    }
+  ],
+  "end_of_text_summary": {
+    "keywords": "الكلمات المفتاحية:\n- جمل المذيعة: Aufsicht der Schule - von der Familie fernhalten - außerhalb des Hauses\n- جمل الرجل: beim Spielen verletzt - schlecht bezahlt / Gehälter müssen steigen\n- جمل المرأة: Mädchen - Arbeit des Mannes - Eingreifen der Eltern (Unterstützung / Schutz)"
+  }
+}

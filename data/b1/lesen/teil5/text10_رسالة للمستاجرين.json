@@ -1,0 +1,42 @@
+{
+  "title": "Rundbrief an die Mieter",
+  "text": "رسالة تعليمات للمستأجرين",
+  "questions": [
+    {
+      "question": "Was möchte der Vermieter bezüglich der Gänge?",
+      "options": {
+        "a": "Er möchte, dass keine Gegenstände in den Gängen stehen.",
+        "b": "Er möchte, dass die Gänge täglich gereinigt werden.",
+        "c": "Er möchte, dass Fahrräder in den Gängen abgestellt werden."
+      },
+      "answer": "a"
+    },
+    {
+      "question": "Was ist auf dem Balkon erlaubt?",
+      "options": {
+        "a": "Man darf dort laut Musik hören.",
+        "b": "Man darf Blumen haben.",
+        "c": "Man darf den Balkon als Abstellraum nutzen."
+      },
+      "answer": "b"
+    },
+    {
+      "question": "Was müssen die Bewohner ab nächsten Montag tun?",
+      "options": {
+        "a": "Sie müssen die Mülltonnen neu beschriften.",
+        "b": "Fahrräder müssen mit einem Namensschild markiert sein.",
+        "c": "Sie müssen den Kellerschlüssel abgeben."
+      },
+      "answer": "b"
+    },
+    {
+      "question": "Wo sollen seltene oder alte Fahrräder abgestellt werden?",
+      "options": {
+        "a": "Man soll sie im Innenhof abstellen.",
+        "b": "Man soll sie vor dem Haupteingang parken.",
+        "c": "Man soll sie in ihren Keller stellen."
+      },
+      "answer": "c"
+    }
+  ]
+}

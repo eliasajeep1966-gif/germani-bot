@@ -1,0 +1,51 @@
+{
+  "title": "Regeln für den Fahrradverleih",
+  "text": "قواعد استئجر الدراجات الهوائية",
+  "questions": [
+    {
+      "question": "Was betrifft die Versicherung?",
+      "options": {
+        "a": "Der Mietpreis beinhaltet eine vollständige Versicherung.",
+        "b": "Der Mietpreis beinhaltet keine Versicherung (Zusatzzahlung erforderlich).",
+        "c": "Die Versicherung ist nur am Wochenende kostenlos enthalten."
+      },
+      "answer": "b"
+    },
+    {
+      "question": "Wann muss der Betrag für die Miete bezahlt werden?",
+      "options": {
+        "a": "Der Betrag muss vor der Abholung/Übergabe bezahlt werden.",
+        "b": "Der Betrag wird erst nach der Rückgabe des Fahrrads abgebucht.",
+        "c": "Der Betrag muss innerhalb von 14 Tagen nach der Nutzung überwiesen werden."
+      },
+      "answer": "a"
+    },
+    {
+      "question": "Was gilt beim Zurückbringen eines Fahrrads?",
+      "options": {
+        "a": "Sie können das Fahrrad ungereinigt an der Station abstellen.",
+        "b": "Sie müssen das Fahrrad vor der Rückgabe selbst reparieren.",
+        "c": "Sie müssen es sauber zurückgeben."
+      },
+      "answer": "c"
+    },
+    {
+      "question": "Was passiert, wenn das Fahrrad kaputt geht?",
+      "options": {
+        "a": "Sie müssen die Reparaturkosten sofort vor Ort bezahlen.",
+        "b": "Sie bekommen eine neue Einheit / ein Ersatzrad.",
+        "c": "Die Miete wird ohne Ersatz beendet."
+      },
+      "answer": "b"
+    },
+    {
+      "question": "Was soll man mit den Fahrrädern tun?",
+      "options": {
+        "a": "Sie müssen am gleichen Ort zurückgegeben werden.",
+        "b": "Sie können an jeder beliebigen Stadtstation abgestellt werden.",
+        "c": "Sie dürfen nach Ablauf der Mietzeit behalten werden."
+      },
+      "answer": "a"
+    }
+  ]
+}

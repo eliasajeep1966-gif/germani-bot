@@ -1,0 +1,77 @@
+{
+  "summary": "Ein junger Mann und ein Mädchen machten eine Wanderung in den Bergen. Der junge Mann konnte wegen seines Urlaubs nicht mitkommen, während das Mädchen leicht verletzt wurde. Plötzlich begann es zu regnen.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Der junge Mann konnte nicht zum Berg gehen, weil er Urlaub hatte.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 2,
+      "question": "Das Mädchen hat leichte Verletzungen erlitten.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 3,
+      "question": "Der Regen fiel auf einmal.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 4,
+      "question": "Das Mädchen geht regelmäßig zum Berg.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 5,
+      "question": "Das Mädchen hat während der Pause geschlafen.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 6,
+      "question": "Das Mädchen war müde, weil sie ungeeignetes Schuhwerk trug.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 7,
+      "question": "Alle Teilnehmer haben an der Wanderung teilgenommen.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 8,
+      "question": "Die Teilnehmer mussten eine Stunde unter dem Regen stehen.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    }
+  ]
+}

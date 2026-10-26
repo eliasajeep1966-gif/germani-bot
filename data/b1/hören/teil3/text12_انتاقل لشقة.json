@@ -1,0 +1,68 @@
+{
+  "summary": "Ein Mädchen zog in eine neue Wohnung im fünften Stock um. Ihr muskulöser Freund, den sie seit der Schulzeit kennt, half ihr beim Umzug. Er erzählte ihr auch von einer unerwarteten, kostenlosen Reise, die er machen konnte.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Der muskulöse Freund des Mädchens hat ihr beim Umzug geholfen.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 2,
+      "question": "Er kennt seinen Freund seit der Schulzeit.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 3,
+      "question": "Die Reise war kostenlos für ihn.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 4,
+      "question": "Sie war mit dem fünften Stock einverstanden..",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 5,
+      "question": "Der Junge und das Mädchen waren einkaufen..",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 6,
+      "question": "Das Mädchen ist wegen der Nachbarn in eine neue Wohnung gezogen..",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 7,
+      "question": "Der Junge denkt seit Langem an die Reise.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    }
+  ]
+}

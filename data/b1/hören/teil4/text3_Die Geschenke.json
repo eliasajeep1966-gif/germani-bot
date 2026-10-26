@@ -1,0 +1,77 @@
+{
+  "title": "Die Geschenke",
+  "media_files": false,
+  "options": [
+    {
+      "key": "a",
+      "text": "السيدة"
+    },
+    {
+      "key": "b",
+      "text": "الرجل"
+    },
+    {
+      "key": "c",
+      "text": "المذيعة"
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "text": "Geld Geschenk kann gut verwenden.",
+      "correct_answer": "b",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: الرجل"
+    },
+    {
+      "id": 2,
+      "text": "Geschenke stärken soziale Beziehungen",
+      "correct_answer": "b",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: الرجل"
+    },
+    {
+      "id": 3,
+      "text": "Beim Schenken gelten bestimmte Regeln.",
+      "correct_answer": "b",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: الرجل"
+    },
+    {
+      "id": 4,
+      "text": "Es ist nicht notwendig, die Geschenke einzupacken.",
+      "correct_answer": "b",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: الرجل"
+    },
+    {
+      "id": 5,
+      "text": "Die Reaktionen der Menschen auf Geschenke sind von Person zu Person unterschiedlich.",
+      "correct_answer": "c",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المذيعة"
+    },
+    {
+      "id": 6,
+      "text": "Eine Sache, die mir am besten gefällt, sind besonders Überraschungsgeschenke.",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: السيدة"
+    },
+    {
+      "id": 7,
+      "text": "Geld zu schenken als Geschenk ist schlecht. (Manchmal Umtausch)",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: السيدة"
+    },
+    {
+      "id": 8,
+      "text": "Geschenkgeld kann auch zum Sinnvollmachen verwendet werden.",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: السيدة"
+    },
+    {
+      "id": 9,
+      "text": "Die Traditionen des Schenkens variieren von Land zu Land - Traditionen sind unterschiedlich.",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: السيدة"
+    }
+  ],
+  "end_of_text_summary": {
+    "keywords": "الكلمات المفتاحية:\n- جمل الرجل: verwenden - soziale Beziehungen - gelten bestimmte Regeln - einzupacken\n- جملة المذيعة: Reaktionen"
+  }
+}

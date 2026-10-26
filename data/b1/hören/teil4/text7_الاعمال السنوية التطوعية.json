@@ -1,0 +1,77 @@
+{
+  "title": "الاعمال التطوعية السنوية",
+  "media_files": false,
+  "options": [
+    {
+      "key": "a",
+      "text": "السيدة"
+    },
+    {
+      "key": "b",
+      "text": "الرجل"
+    },
+    {
+      "key": "c",
+      "text": "المذيعة"
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "text": "Das freiwillige soziale Jahr darf nicht zur Pflicht warden.",
+      "correct_answer": "b",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: الرجل"
+    },
+    {
+      "id": 2,
+      "text": "Mit dem freiwilligen sozialen Jahr verlieren manche umsonst Zeit.",
+      "correct_answer": "b",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: الرجل"
+    },
+    {
+      "id": 3,
+      "text": "Wenn man noch keine Berufspläne hat, ist die freiwillige soziale Jahr nützlich.",
+      "correct_answer": "c",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المذيعة"
+    },
+    {
+      "id": 4,
+      "text": "Das freiwillige soziale Jahr kann man weltweit machen.",
+      "correct_answer": "c",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المذيعة"
+    },
+    {
+      "id": 5,
+      "text": "Die sozialen Einrichtungen in Deutschland brauche das freiwillige soziale Jahr.",
+      "correct_answer": "c",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المذيعة"
+    },
+    {
+      "id": 6,
+      "text": "Man kann das freiwillige soziale Jahr zweimal machen",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: السيدة"
+    },
+    {
+      "id": 7,
+      "text": "Die freiwilligen Helfer im soziale Jahr verdienen schlecht.",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: السيدة"
+    },
+    {
+      "id": 8,
+      "text": "Die freiwilligen Helfer im sozialen Jahr arbeiten mit dem Angestellten zusammen.",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: السيدة"
+    },
+    {
+      "id": 9,
+      "text": "Die Soziale Einrichtungen.",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: السيدة"
+    }
+  ],
+  "end_of_text_summary": {
+    "keywords": "الكلمات المفتاحية:\n- جمل الرجل: Pflicht - verlieren\n- جمل المذيعة: nützlich - weltweit - brauche"
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "title": "Tennis Club Anweisungen",
+  "text": "يوجد اكثر من تجربة تتحدث عن قواعد نادي تنس وبعضها عن قواعد نادي رياضي تم جمعها بنص واحد لانها غالبا نفس النص باسئلة مختلفة والله اعلم",
+  "questions": [
+    {
+      "question": "Was können Besucher im Club tun?",
+      "options": {
+        "a": "Besucher können im Club einen Spielpartner finden.",
+        "b": "Besucher können kostenlose Trainerstunden buchen.",
+        "c": "Besucher dürfen die Schläger ohne Kaution ausleihen."
+      },
+      "answer": "a"
+    },
+    {
+      "question": "Was muss man beim Training mit der Ballmaschine machen?",
+      "options": {
+        "a": "Man muss vor jedem Training eine Kaution hinterlegen.",
+        "b": "Man muss eine einmalige Einweisung bekommen.",
+        "c": "Man muss die Maschine nach jeder Nutzung selbst reparieren."
+      },
+      "answer": "b"
+    },
+    {
+      "question": "Was kann man im Clubhaus machen?",
+      "options": {
+        "a": "Man kann dort ohne Voranmeldung private Partys feiern.",
+        "b": "Man kann dort Sportgeräte zum Verkauf anbieten.",
+        "c": "Man kann nach der Anmeldung Veranstaltungen organisieren."
+      },
+      "answer": "c"
+    },
+    {
+      "question": "Was können Tennisspieler im Club benutzen?",
+      "options": {
+        "a": "Tennisspieler können ein Schließfach für Wertsachen benutzen.",
+        "b": "Tennisspieler können die Sauna unbegrenzt kostenlos nutzen.",
+        "c": "Tennisspieler können private Parkplätze reservieren."
+      },
+      "answer": "a"
+    },
+    {
+      "question": "Wer darf die Ballmaschine benutzen?",
+      "options": {
+        "a": "Alle Kinder unter 10 Jahren ohne Begleitung.",
+        "b": "Zugelassen für die Nutzung ab 12 Jahren und Erfahrung ist eine Grundvoraussetzung.",
+        "c": "Nur professionelle Trainer und Vorstandsmitglieder."
+      },
+      "answer": "b"
+    },
+    {
+      "question": "Anleitung und Anmeldung",
+      "options": {
+        "a": "Sie müssen sich abmelden, um das Spielfeld zu reservieren.",
+        "b": "Eine Anmeldung ist nur im Notfall erforderlich.",
+        "c": "Sie müssen sich anmelden und können dadurch Spielpartner finden."
+      },
+      "answer": "c"
+    },
+    {
+      "question": "Regelungen für die Unterkunft im Tennisclub",
+      "options": {
+        "a": "Die Unterkunft ist für Clubmitglieder kostenlos.",
+        "b": "Die Unterkunft kostet 50 Euro pro Nacht für Mitglieder.",
+        "c": "Unterkünfte sind nur für externe Gäste zugänglich."
+      },
+      "answer": "a"
+    },
+    {
+      "question": "Der Eintritt ist ...?",
+      "options": {
+        "a": "Für alle Besucher am Wochenende völlig frei.",
+        "b": "Ohne Abo-Karte nicht möglich.",
+        "c": "Nur nach Bezahlung einer Tagesgebühr gestattet."
+      },
+      "answer": "b"
+    },
+    {
+      "question": "Was betrifft die Sportgeräte?",
+      "options": {
+        "a": "Sie dürfen nach dem Spiel auf dem Platz gelassen werden.",
+        "b": "Sie müssen einmal im Monat erneuert werden.",
+        "c": "Sie müssen sauber gehalten werden."
+      },
+      "answer": "c"
+    },
+    {
+      "question": "Was passiert im Fall einer Verlängerung des Abonnements?",
+      "options": {
+        "a": "Zahlt die Person nur die Hälfte des Abonnementbetrags.",
+        "b": "Erhält die Person eine Verdopplung der Jahresgebühr.",
+        "c": "Wird die Mitgliedschaft automatisch gekündigt."
+      },
+      "answer": "a"
+    },
+    {
+      "question": "Was den Club-Abo-Gutschein betrifft:",
+      "options": {
+        "a": "Erhalten Sie ein kostenloses Sporttrikot.",
+        "b": "Erhalten Sie eine Ermäßigung / Rabatt auf den Bus.",
+        "c": "Gilt dieser nur für die Nutzung des Restaurants."
+      },
+      "answer": "b"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "title": "Windkraft",
+  "media_files": false,
+  "options": [
+    {
+      "key": "a",
+      "text": "المرأة"
+    },
+    {
+      "key": "b",
+      "text": "الرجل"
+    },
+    {
+      "key": "c",
+      "text": "المذيعة"
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "text": "Windräder verändern das Aussehen der Landschaft negativ.",
+      "correct_answer": "b",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: الرجل"
+    },
+    {
+      "id": 2,
+      "text": "Man muss die Bevölkerung vor Lärm schützen.",
+      "correct_answer": "b",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: الرجل"
+    },
+    {
+      "id": 3,
+      "text": "Man soll nach alternativer Energie suchen.",
+      "correct_answer": "b",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: الرجل"
+    },
+    {
+      "id": 4,
+      "text": "Wind ist kostenfreie Energie.",
+      "correct_answer": "c",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المذيعة"
+    },
+    {
+      "id": 5,
+      "text": "Die Zahl an Windanlagen wächst sehr schnell.",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المرأة"
+    },
+    {
+      "id": 6,
+      "text": "Die Leute konsumieren mehr Strom als früher.",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المرأة"
+    },
+    {
+      "id": 7,
+      "text": "Man sollte Windanlagen im Meer bauen.",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المرأة"
+    },
+    {
+      "id": 8,
+      "text": "Jeder sollte Strom sparen.",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المرأة"
+    },
+    {
+      "id": 9,
+      "text": "Neue Erfindungen werden das Problem lösen.",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المرأة"
+    }
+  ],
+  "end_of_text_summary": {
+    "keywords": "الكلمات المفتاحية:\n- الرجل:\nWindräder , negativ\nBevölkerung , schützen\nAlternative Energie\n\n- المذيعة:\nkostenfreie"
+  }
+}

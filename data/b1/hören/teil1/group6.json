@@ -1,6 +1,6 @@
 {
   "group_id": 6,
-  "title": "Menge 6 (151-174)",
+  "title": "Menge 6 (151-176)",
   "questions": [
     {
       "id": 1,
@@ -183,7 +183,7 @@
     {
       "id": 18,
       "type": "multiple_choice",
-      "text": "Er muss",
+      "text": "156. Er muss",
       "options": [
         "Sicherheit",
         "Ausprobieren",
@@ -253,6 +253,25 @@
         "schell melden"
       ],
       "answer": "fur Bankgeschafte weniger zahlen"
+    },
+    {
+      "id": 25,
+      "type": "true_false",
+      "text": "Unterhaltung und Informationen",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Richtig"
+    },
+    {
+      "id": 26,
+      "type": "multiple_choice",
+      "text": "Wofür interessiert er sich?",
+      "options": [
+        "Neue Hits"
+      ],
+      "answer": "Neue Hits"
     }
   ]
 }

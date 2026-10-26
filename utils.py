@@ -3,10 +3,19 @@ import hashlib
 import json
 import os
 from pathlib import Path
+from cachetools import TTLCache
 from config import BASE_DIR
 
+# P1: bounded caches (were unbounded plain dicts growing forever).
+# FILENAME_MAP: one hash per served file button; TTL expiry replaces the old
+# live-forever semantics (stale buttons already 404 after restart; now they
+# also stop consuming RAM). Check-then-set here has no await between, so it
+# is atomic on the single-threaded event loop.
 # F-03: server-side map for short file callbacks (keeps callback_data <= 64 bytes).
-FILENAME_MAP = {}
+FILENAME_MAP: TTLCache = TTLCache(maxsize=1000, ttl=3600)
+
+# Resolved once at import (not per request): BASE_DIR never changes at runtime.
+_ALLOWED_DATA_DIR = Path(BASE_DIR, "data").resolve()
 
 
 def get_short_hash(text: str) -> str:
@@ -30,7 +39,11 @@ _CATALOG_CACHE = None
 _LAST_MTIME = 0
 
 # State Pointers refactor: auto-invalidating parsed-content cache
-_CONTENT_CACHE = {}
+# P1: TTLCache bounds memory (was: one parsed JSON per file held forever).
+# Note: check-then-set below spans awaits, so concurrent misses may parse the
+# same file twice (benign duplicate work, last-write-wins) — no corruption,
+# just no singleflight. Acceptable; mtime wipe still clears on data changes.
+_CONTENT_CACHE: TTLCache = TTLCache(maxsize=1000, ttl=3600)
 _CONTENT_LAST_MTIME = 0
 
 
@@ -146,7 +159,7 @@ async def get_content(skill: str, teil: str, file_name: str) -> dict:
     # F-01: never run blocking FS probes on the event loop.
     max_mtime = await asyncio.to_thread(_data_max_mtime)
     if max_mtime > _CONTENT_LAST_MTIME:
-        _CONTENT_CACHE = {}
+        _CONTENT_CACHE.clear()
         _CONTENT_LAST_MTIME = max_mtime
 
     safe_name = os.path.basename(file_name)
@@ -160,10 +173,13 @@ async def get_content(skill: str, teil: str, file_name: str) -> dict:
         )
         if not target_dir:
             raise FileNotFoundError(f"Unknown content dir: {skill}/{teil}")
-        allowed_data_dir = Path(BASE_DIR, "data").resolve()
-        file_path = (Path(target_dir) / safe_name).resolve()
+        # P1: Path.resolve() performs stat/symlink syscalls — off-loop.
+        # The allowed-dir boundary is a fixed import-time constant.
+        file_path = await asyncio.to_thread(
+            lambda: (Path(target_dir) / safe_name).resolve()
+        )
         try:
-            if not file_path.is_relative_to(allowed_data_dir):
+            if not file_path.is_relative_to(_ALLOWED_DATA_DIR):
                 raise FileNotFoundError(f"Blocked path escape: {safe_name}")
         except (ValueError, AttributeError):
             raise FileNotFoundError(f"Blocked path escape: {safe_name}")

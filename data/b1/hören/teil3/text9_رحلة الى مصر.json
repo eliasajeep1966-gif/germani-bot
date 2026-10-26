@@ -1,0 +1,68 @@
+{
+  "summary": "Zwei Mädchen sprechen über ihren Urlaub. Eine verbrachte zwei schöne Wochen in Ägypten. Die andere reiste nicht, weil sie beschäftigt war (Wohnung renovieren und ein Tenniskurs). Sie verbringt ihren Urlaub jedes Jahr im Haus ihrer Familie am Meer.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Das Mädchen war mit dem Urlaub in Ägypten sehr zufrieden.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 2,
+      "question": "Das zweite Mädchen hat jedes Jahr das gleiche Urlaubsziel.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 3,
+      "question": "Die beiden Mädchen lernten sich an ihrem Geburtstag kennen.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 4,
+      "question": "Der Urlaub dauerte vier Wochen.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 5,
+      "question": "Sie reiste nicht, weil sie kein Geld hatte",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 6,
+      "question": "Sie möchte ihre Wohnung wechseln.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 7,
+      "question": "Der Tenniskurs dauert eine Woche mit einem Privattrainer.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    }
+  ]
+}

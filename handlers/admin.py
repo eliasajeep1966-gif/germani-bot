@@ -1198,37 +1198,68 @@ async def cmd_broadcast(message: types.Message, state: FSMContext):
         await state.set_state(BroadcastState.waiting_for_message)
         await message.answer("📢 أرسل النص أو الرسالة التي تريد بثها لجميع المستخدمين (أو /cancel للإلغاء):")
 
-async def _run_broadcast_task(bot: Bot, admin_chat_id: int, message_id: int, users: list):
+# P1 broadcast hardening: lazy keyset-chunked fetch (no fetchall — RAM stays
+# flat at ~500 ids regardless of user count) + single-flight guard (parallel
+# confirms used to stack full broadcasts, multiplying 429s and RAM).
+_BROADCAST_RUNNING = False
+_BROADCAST_DB_CHUNK = 500
+_BROADCAST_SEND_CHUNK = 500
+
+
+async def _run_broadcast_task(bot: Bot, admin_chat_id: int, message_id: int):
     """دالة خلفية لعملية البث لتجنب تجميد البوت مع التقييد الديناميكي لأخطاء 429.
     HIGH-002 (concurrency model): up to 30 concurrent sends via semaphore;
     per-recipient failures never abort the broadcast."""
+    global _BROADCAST_RUNNING
     semaphore = asyncio.Semaphore(30)
+    success = 0
+    failed = 0
 
     async def _send_one(user_id: int) -> bool:
-        async with semaphore:
-            try:
+        # Semaphore ONLY around the actual API call — never across sleep. A
+        # 429 wave previously parked all 30 slots in sleep (30 x retry_after
+        # stall); now the slot is released before sleeping and re-acquired
+        # for the single retry.
+        try:
+            async with semaphore:
                 await bot.copy_message(chat_id=user_id, from_chat_id=admin_chat_id, message_id=message_id)
-                return True
-            except TelegramRetryAfter as e:
-                # الانتظار الديناميكي المطلوب من التلغرام عند تجاوَز الحدود
-                await asyncio.sleep(e.retry_after)
-                # Retry once after waiting
-                try:
+            return True
+        except TelegramRetryAfter as e:
+            # الانتظار الديناميكي المطلوب من التلغرام عند تجاوَز الحدود
+            await asyncio.sleep(e.retry_after)
+            # Retry once after waiting (fresh slot)
+            try:
+                async with semaphore:
                     await bot.copy_message(chat_id=user_id, from_chat_id=admin_chat_id, message_id=message_id)
-                    return True
-                except Exception:
-                    return False
+                return True
             except Exception:
                 return False
+        except Exception:
+            return False
 
-    results = []
-    for i in range(0, len(users), 500):
-        chunk = users[i:i + 500]
-        tasks = [_send_one(u[0]) for u in chunk]
-        chunk_results = await asyncio.gather(*tasks)
-        results.extend(chunk_results)
-    success = sum(1 for ok in results if ok)
-    failed = len(results) - success
+    try:
+        # Lazy keyset pagination: stable under concurrent signups (no
+        # OFFSET skip/duplication), one cheap pooled checkout per chunk —
+        # never held across the whole broadcast.
+        last_id = 0
+        while True:
+            async with _db_connect() as conn:
+                async with conn.execute(
+                    'SELECT user_id FROM user_profiles WHERE user_id > ? ORDER BY user_id LIMIT ?',
+                    (last_id, _BROADCAST_DB_CHUNK),
+                ) as cursor:
+                    rows = await cursor.fetchall()
+            if not rows:
+                break
+            last_id = rows[-1][0]
+            for i in range(0, len(rows), _BROADCAST_SEND_CHUNK):
+                chunk = rows[i:i + _BROADCAST_SEND_CHUNK]
+                chunk_results = await asyncio.gather(*(_send_one(u[0]) for u in chunk))
+                ok_n = sum(1 for ok in chunk_results if ok)
+                success += ok_n
+                failed += len(chunk_results) - ok_n
+    finally:
+        _BROADCAST_RUNNING = False
 
     try:
         await bot.send_message(
@@ -1298,23 +1329,28 @@ async def cb_broadcast_confirm(callback: types.CallbackQuery, state: FSMContext,
         await callback.answer("⚠️ لا توجد رسالة بث معلقة. أرسل /broadcast أولاً.", show_alert=True)
         return
 
-    await state.clear()
+    # P1 single-flight: refuse a second concurrent broadcast instead of
+    # stacking RAM and 429s. Check-then-set has no await between, so it is
+    # atomic on the event loop; the task always resets it in finally.
+    global _BROADCAST_RUNNING
+    if _BROADCAST_RUNNING:
+        await callback.answer("⚠️ يوجد بث جماعي قيد التنفيذ حالياً. انتظر انتهاءه أولاً.", show_alert=True)
+        return
+    _BROADCAST_RUNNING = True
 
-    async with _db_connect() as conn:
-        async with conn.execute('SELECT user_id FROM user_profiles') as cursor:
-            users = await cursor.fetchall()
+    await state.clear()
 
     await callback.message.answer("🚀 <b>بدأت عملية البث الجماعي في الخلفية.</b>\nيمكنك استخدام البوت ولوحة التحكم بشكل طبيعي، وستتلقى تقريراً فور الانتهاء.", parse_mode="HTML")
     await callback.answer()
 
     # تشغيل مهمة الإرسال في الخلفية لعدم تجميد الأحداث الأخرى
     # source = stored from_chat_id (original admin message); report goes to admin chat.
+    # P1: recipients stream lazily inside the task (no fetchall here).
     asyncio.create_task(
         _run_broadcast_task(
             bot=bot,
             admin_chat_id=from_chat_id,
             message_id=message_id,
-            users=users
         )
     )
 

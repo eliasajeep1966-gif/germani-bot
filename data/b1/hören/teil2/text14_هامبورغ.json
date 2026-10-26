@@ -1,0 +1,55 @@
+{
+  "summary": "رحلة الى مدينة هامبورغ.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Wo beginnt die Reise?",
+      "options": {
+        "a": "Die Reise beginnt in der Stadt.",
+        "b": "Die Reise beginnt am Bahnhof.",
+        "c": "Die Reise beginnt am Flughafen."
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 2,
+      "question": "Was machen sie in der Burg?",
+      "options": {
+        "a": "Sie besichtigen ein Museum in der Burg.",
+        "b": "Sie feiern einen Geburtstag in der Burg.",
+        "c": "Sie essen zu Mittag in der Burg."
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 3,
+      "question": "Was besuchen sie danach?",
+      "options": {
+        "a": "Sie besuchen das Rathaus.",
+        "b": "Sie besuchen einen Vergnügungspark.",
+        "c": "Sie besuchen die Wachsfiguren."
+      },
+      "correct_answer": "c"
+    },
+    {
+      "id": 4,
+      "question": "Was machen sie am Ende?",
+      "options": {
+        "a": "Am Ende machen sie ein Zelt am Meer und schlafen.",
+        "b": "Am Ende buchen sie ein Zimmer im Hotel.",
+        "c": "Am Ende fahren sie direkt nach Hause zurück."
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 5,
+      "question": "Wo schlafen sie?",
+      "options": {
+        "a": "Sie schlafen in einer Jugendherberge.",
+        "b": "Sie schlafen in einem Zelt neben dem Meer.",
+        "c": "Sie schlafen in einer Pension in der Stadt."
+      },
+      "correct_answer": "b"
+    }
+  ]
+}

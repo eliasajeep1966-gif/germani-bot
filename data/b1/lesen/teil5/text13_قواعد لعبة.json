@@ -1,0 +1,42 @@
+{
+  "title": "Kreis - Viereck - Dreieck",
+  "text": "قواعد لعبة بطاقات سؤال وجواب (دائرة مثلث مربع)",
+  "questions": [
+    {
+      "question": "Wie wählen die Spieler ihre Antwort aus?",
+      "options": {
+        "a": "Indem sie den passenden Chip (das passende Symbol) mit der Hand verdecken.",
+        "b": "Indem sie das passende Symbol auf ein Papier schreiben und laut vorlesen.",
+        "c": "Indem sie die Antwortkarte offen auf das Spielfeld legen."
+      },
+      "answer": "a"
+    },
+    {
+      "question": "Wie werden die Fragen in der Runde gestellt?",
+      "options": {
+        "a": "Der Spielleiter liest alle Fragen für alle Spieler gleichzeitig vor.",
+        "b": "Ein Spieler stellt die Fragen nach dem anderen.",
+        "c": "Die Fragen werden per Zufall durch das Ziehen einer Karte ausgewählt."
+      },
+      "answer": "b"
+    },
+    {
+      "question": "Was passiert bei einer falschen Antwort?",
+      "options": {
+        "a": "Man muss eine Runde aussetzen und eine Karte abgeben.",
+        "b": "Man muss zwei Felder auf dem Spielfeld zurückgehen.",
+        "c": "Man muss stehen bleiben."
+      },
+      "answer": "c"
+    },
+    {
+      "question": "Was bekommt jeder Spieler vor dem Spielbeginn?",
+      "options": {
+        "a": "Vor dem Spiel nimmt jeder Spieler drei unterschiedliche Chips und eine Spielfigur.",
+        "b": "Vor dem Spiel erhält jeder Spieler vier gleiche Chips und zwei Spielfiguren.",
+        "c": "Vor dem Spiel bekommt jeder Spieler nur eine Spielfigur ohne Chips."
+      },
+      "answer": "a"
+    }
+  ]
+}

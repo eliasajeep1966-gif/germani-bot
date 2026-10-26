@@ -1,0 +1,42 @@
+{
+  "title": "Infoblatt für Studentenwohnheim",
+  "text": "قواعد وتعليمات لطلاب السكن الجامعي",
+  "questions": [
+    {
+      "question": "Was gilt für die Raumnutzung?",
+      "options": {
+        "a": "In den Zimmern dürfen die Mieter Plakate aufhängen (außerhalb braucht Genehmigung).",
+        "b": "In den Zimmern und außerhalb sind Plakate ohne Genehmigung strengstens verboten.",
+        "c": "Außerhalb der Zimmer dürfen Plakate ohne jegliche Genehmigung aufgehängt werden."
+      },
+      "answer": "a"
+    },
+    {
+      "question": "Wo dürfen Mieter ihre Fahrräder nicht abstellen?",
+      "options": {
+        "a": "Die Mieter dürfen Fahrräder nicht im Fahrradkeller abstellen.",
+        "b": "Die Mieter dürfen Fahrräder nicht in die Zimmer mitnehmen.",
+        "c": "Die Mieter dürfen Fahrräder nicht auf dem Parkplatz abstellen."
+      },
+      "answer": "b"
+    },
+    {
+      "question": "Was gilt bei Feiern und der Nutzung des Gartens?",
+      "options": {
+        "a": "Alle externen Gäste dürfen den Garten jederzeit uneingeschränkt nutzen.",
+        "b": "Nur die Heimbewohner dürfen den Garten nutzen.",
+        "c": "Der Garten darf nur nach vorheriger Bezahlung einer Gebühr genutzt werden."
+      },
+      "answer": "b"
+    },
+    {
+      "question": "Was muss jeder Mieter tun, wenn ein Schlüssel verloren geht?",
+      "options": {
+        "a": "Jeder Mieter muss melden, wenn ein Schlüssel verloren geht.",
+        "b": "Der Mieter muss sofort das Schloss selbstständig austauschen.",
+        "c": "Der Verlust eines Schlüssels muss nicht gemeldet werden, solange ein Ersatzschlüssel existiert."
+      },
+      "answer": "a"
+    }
+  ]
+}

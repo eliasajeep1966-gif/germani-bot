@@ -5,7 +5,7 @@ import os
 import json
 from aiogram import Router, types, Bot, F
 from aiogram.filters import CommandStart, CommandObject, Command
-from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, FSInputFile
+from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, BufferedInputFile
 from aiogram.fsm.context import FSMContext
 from aiogram.exceptions import TelegramBadRequest
 from cachetools import TTLCache
@@ -15,7 +15,7 @@ from config import LOG_CHANNEL_ID, SUPPORT_GROUP_ID, BASE_DIR
 from datetime import datetime
 from utils import get_catalog, get_content, render_progress_bar, map_filename
 from database import (
-    AuthState, QuizState, SupportState, save_user_profile, get_user_subscription,
+    AuthState, QuizState, Teil3State, SupportState, save_user_profile, get_user_subscription,
     reset_user_progress, get_skill_progress, activate_subscription,
     is_text_completed, set_user_referrer, process_referral_reward,
     get_referral_info, claim_free_subscription, get_custom_text,
@@ -35,6 +35,88 @@ common_router = Router()
 support_rate_limit: TTLCache = TTLCache(maxsize=10000, ttl=300)
 
 _TIPS_MISSING_MARKER = "لا يوجد نص محدد لهذه الخدمة حالياً."
+
+# P1: PDF bytes cache (m-time-validated). The guides are static ~0.5 MB files;
+# caching avoids a disk read on every click. Keys are the 2 fixed guide paths
+# only, so this dict is bounded by construction (never grows with users).
+_PDF_CACHE: dict = {}
+
+
+async def _load_guide_pdf(pdf_path: str, filename: str) -> BufferedInputFile | None:
+    """Load a static guide PDF off the event loop (m-time-validated cache).
+
+    Only the blocking disk read runs in a worker thread. The returned
+    BufferedInputFile is uploaded by bot.send_document ON the loop — aiogram
+    network I/O is async and must never move to a thread. Returns None when
+    the file is missing/unreadable (caller renders the fallback message).
+    """
+    try:
+        mtime = await asyncio.to_thread(os.path.getmtime, pdf_path)
+    except OSError:
+        return None
+    cached = _PDF_CACHE.get(pdf_path)
+    if cached is None or cached[0] != mtime:
+        def _read_pdf() -> bytes:
+            with open(pdf_path, "rb") as f:
+                return f.read()
+        try:
+            data = await asyncio.to_thread(_read_pdf)
+        except OSError:
+            return None
+        _PDF_CACHE[pdf_path] = (mtime, data)
+    else:
+        data = cached[1]
+    return BufferedInputFile(data, filename=filename)
+
+# P0 FSM-prison fix: every jump to AuthState.waiting_for_key must snapshot the
+# exact quiz position as pending_* FIRST. process_key resumes ONLY from
+# pending_* (never from stale live keys), so the user always lands back on
+# the exact text — never a wiped session, never the wrong text.
+_TEIL3_SNAPSHOT_KEYS = (
+    "title", "questions", "answers", "correct_matches",
+    "remaining_q_ids", "remaining_a_ids", "completed_matches",
+    "keywords", "raw_pairs",
+)
+
+
+async def _stash_pending_quiz(
+    state: FSMContext,
+    skill: str,
+    teil: str,
+    file_name: str,
+    current_index: int = 0,
+    correct: int = 0,
+    wrong: int = 0,
+    order: list | None = None,
+    t3_snapshot: dict | None = None,
+) -> None:
+    """Snapshot quiz context as pending_* (sole resume source for process_key)."""
+    try:
+        current_index = int(current_index or 0)
+    except (TypeError, ValueError):
+        current_index = 0
+    if current_index < 0:
+        current_index = 0
+    await state.update_data(
+        pending_skill=os.path.basename(str(skill or "")),
+        pending_teil=os.path.basename(str(teil or "")),
+        pending_file=os.path.basename(str(file_name or "")),
+        pending_index=current_index,
+        pending_correct=correct if isinstance(correct, int) and correct >= 0 else 0,
+        pending_wrong=wrong if isinstance(wrong, int) and wrong >= 0 else 0,
+        pending_order=list(order) if isinstance(order, list) else None,
+        pending_teil3=bool(t3_snapshot),
+        pending_t3=dict(t3_snapshot) if isinstance(t3_snapshot, dict) else None,
+    )
+
+
+async def _clear_pending_quiz(state: FSMContext) -> None:
+    """Drop any stale stash so a fresh subscribe can never resurrect old text."""
+    await state.update_data(
+        pending_skill=None, pending_teil=None, pending_file=None,
+        pending_index=None, pending_correct=None, pending_wrong=None,
+        pending_order=None, pending_teil3=None, pending_t3=None,
+    )
 
 async def get_teil_tip(skill: str, teil: str) -> str:
     """CMS fetch for per-Teil tips (admin-editable).
@@ -173,6 +255,14 @@ async def process_key(message: types.Message, state: FSMContext, bot: Bot):
         await message.answer("⚠️ يرجى إرسال كود التفعيل كنص مكتوب فقط.")
         return
     user_key = message.text.strip()
+    # P0 FSM-prison fix: process_key is registered before cmd_cancel_common,
+    # so it wins the match — /cancel MUST be honored here or the user is stuck
+    # (their "/cancel" would otherwise be consumed as a key attempt forever).
+    first_token = user_key.split()[0] if user_key else ""
+    if first_token == "/cancel" or first_token.startswith("/cancel@"):
+        await state.clear()
+        await message.answer("❌ تم إلغاء عملية التفعيل والعودة للوضع الطبيعي.", reply_markup=get_main_menu())
+        return
     try:
         success, sub_type = await activate_subscription(message.from_user.id, user_key)
     except Exception as e:
@@ -180,22 +270,76 @@ async def process_key(message: types.Message, state: FSMContext, bot: Bot):
         await message.answer("⚠️ حدث خطأ في السيرفر أثناء تفعيل الكود. يرجى إبلاغ الدعم.")
         return
     if success:
-        # FSM Blackhole fix: resume an interrupted quiz instead of wiping it.
-        # Pointers refactor: quiz sessions keep only skill/teil/file_name + counters.
+        # P0: resume the EXACT stashed text (pending_* set at every AuthState
+        # entry). pending_* is the ONLY resume source — stale live keys can no
+        # longer resurrect the wrong text, and a validated stash can no longer
+        # be wiped. Invalid/missing stash -> clean slate (no surprise resume).
         data = await state.get_data()
-        if "file_name" in data and "current_index" in data:
+        resume_kind = None  # None | "quiz" | "teil3"
+        pending_file = data.get("pending_file")
+        if pending_file:
+            try:
+                await get_content(data.get("pending_skill", ""), data.get("pending_teil", ""), pending_file)
+                t3 = data.get("pending_t3") or {}
+                if data.get("pending_teil3") and t3.get("remaining_q_ids"):
+                    resume_kind = "teil3"
+                else:
+                    resume_kind = "quiz"
+            except Exception:
+                resume_kind = None
+        had_stale_pending = bool(pending_file) and resume_kind is None
+
+        if resume_kind == "quiz":
+            try:
+                pending_index = int(data.get("pending_index", 0) or 0)
+            except (TypeError, ValueError):
+                pending_index = 0
+            pending_index = max(0, pending_index)
+            await state.update_data(
+                skill=data.get("pending_skill", ""),
+                teil=data.get("pending_teil", ""),
+                file_name=pending_file,
+                current_index=pending_index,
+                correct_count=data.get("pending_correct", 0) or 0,
+                wrong_count=data.get("pending_wrong", 0) or 0,
+                question_order=data.get("pending_order"),
+            )
             await state.set_state(QuizState.answering)
-            resume_quiz = True
+        elif resume_kind == "teil3":
+            t3 = data.get("pending_t3") or {}
+            await state.update_data(
+                skill=data.get("pending_skill", ""),
+                teil=data.get("pending_teil", ""),
+                file_name=pending_file,
+                title=t3.get("title", ""),
+                questions=t3.get("questions", []),
+                answers=t3.get("answers", []),
+                correct_matches=t3.get("correct_matches", {}),
+                remaining_q_ids=t3.get("remaining_q_ids", []),
+                remaining_a_ids=t3.get("remaining_a_ids", []),
+                completed_matches=t3.get("completed_matches", {}),
+                correct_count=t3.get("correct_count", 0) or 0,
+                wrong_count=t3.get("wrong_count", 0) or 0,
+                selected_q=None, selected_a=None, error_pair=None,
+                keywords=t3.get("keywords", {}),
+                raw_pairs=t3.get("raw_pairs", []),
+            )
+            await state.set_state(Teil3State.matching)
         else:
             await state.clear()
-            resume_quiz = False
+        # The stash is single-use: consume it so a later activation can never
+        # replay an old position (covers the quiz/teil3 paths where the state
+        # was NOT cleared above).
+        if resume_kind in ("quiz", "teil3"):
+            await _clear_pending_quiz(state)
 
         referrer_id, new_points = await process_referral_reward(message.from_user.id)
         if referrer_id:
             try:
                 msg_text = f"🎉 <b>قام أحد المستخدمين المدعوين من قبلك بتفعيل اشتراكه!</b>\nحصلت على نقطة إحالة. إجمالي نقاطك الآن: <b>{new_points}</b>"
-                if new_points >= 2:
-                    msg_text += "\n🎁 <b>تهانينا! لقد حصلت على تفعيل مجاني لتجمعك نقطتي إحالة!</b> يمكنك استهلاكه من قسم الإحالات."
+                # Recurring economy: a credit is earned on every EVEN total.
+                if new_points >= 2 and new_points % 2 == 0:
+                    msg_text += "\n🎁 <b>تهانينا! لقد حصلت على تفعيل مجاني!</b> يمكنك استهلاكه من قسم الإحالات."
                 await bot.send_message(referrer_id, msg_text, parse_mode="HTML")
             except Exception as e:
                 logging.error(f"Failed to send referral notification to {referrer_id}: {e}")
@@ -228,8 +372,19 @@ async def process_key(message: types.Message, state: FSMContext, bot: Bot):
                 logging.error(f"Failed to send log to channel: {e}")
 
         await message.answer(f"✅ تم تفعيل اشتراكك بنجاح في ({type_str}) لمدة {days_str}!", reply_markup=get_main_menu(), protect_content=True)
-        if resume_quiz:
-            await message.answer("✅ تم التفعيل! يمكنك الآن إكمال الاختبار من حيث توقفت.")
+        # P0: land the user back inside the exact text (re-rendered), not just
+        # a "you may continue" note. Function-local import: quiz never imports
+        # common at module level, so no cycle either way.
+        if resume_kind == "quiz":
+            await message.answer("✅ تم التفعيل! نكمل الاختبار من حيث توقفت.")
+            from handlers.quiz import send_quiz_question
+            await send_quiz_question(message, state)
+        elif resume_kind == "teil3":
+            await message.answer("✅ تم التفعيل! نكمل اختبار التوصيل من حيث توقفت.")
+            from handlers.quiz import render_teil3_view
+            await render_teil3_view(message, state)
+        elif had_stale_pending:
+            await message.answer("⚠️ تعذر استئناف النص المحفوظ (غير متوفر حالياً). اختر نصاً آخر من القائمة.")
     else:
         await message.answer("❌ كود التفعيل غير صحيح أو مستخدم سابقاً. يرجى التأكد من الكود أو التواصل مع الدعم للتحقق.")
 
@@ -432,6 +587,21 @@ async def handle_callbacks(callback: types.CallbackQuery, state: FSMContext, bot
         await safe_edit_message_text(callback, custom_text, reply_markup=kb, parse_mode="HTML")
 
     elif data == "start_subscribe_flow":
+        # P0: snapshot any live quiz position BEFORE entering AuthState, so a
+        # successful activation resumes it. No live quiz -> drop stale stash.
+        live = await state.get_data()
+        if live.get("file_name"):
+            t3_snap = None
+            if live.get("remaining_q_ids"):
+                t3_snap = {k: live.get(k) for k in _TEIL3_SNAPSHOT_KEYS if k in live}
+            await _stash_pending_quiz(
+                state,
+                live.get("skill", ""), live.get("teil", ""), live.get("file_name", ""),
+                live.get("current_index", 0), live.get("correct_count", 0),
+                live.get("wrong_count", 0), live.get("question_order"), t3_snap,
+            )
+        else:
+            await _clear_pending_quiz(state)
         await state.set_state(AuthState.waiting_for_key)
         # Dynamic plans: CMS prices always listed clearly (never static $10/$5/$20).
         dynamic_text = await get_dynamic_subscribe_text()
@@ -571,10 +741,10 @@ async def handle_callbacks(callback: types.CallbackQuery, state: FSMContext, bot
             default_caption = f"✍️ <b>قسم الكتابة (Schreiben):</b>\n\n📄 <b>ملف دليل الكتابة</b>\n\nللاستفسار يرجى مراسلة: @{contact_username}"
             caption_text = await get_custom_text("schreiben") or default_caption
 
-            # F-01: os.path.exists is blocking — off-loop.
-            if await asyncio.to_thread(os.path.exists, pdf_path):
+            # P1: disk read off-loop (cached); upload stays on-loop (async I/O).
+            document = await _load_guide_pdf(pdf_path, "schreiben_guide.pdf")
+            if document is not None:
                 await bot.send_chat_action(chat_id=callback.message.chat.id, action="upload_document")
-                document = FSInputFile(pdf_path)
                 await bot.send_document(
                     chat_id=callback.message.chat.id,
                     document=document,
@@ -612,10 +782,10 @@ async def handle_callbacks(callback: types.CallbackQuery, state: FSMContext, bot
             )
             caption_text = await get_custom_text("sprechen") or default_caption
 
-            # F-01: os.path.exists is blocking — off-loop.
-            if await asyncio.to_thread(os.path.exists, pdf_path):
+            # P1: disk read off-loop (cached); upload stays on-loop (async I/O).
+            document = await _load_guide_pdf(pdf_path, "sprechen_guide.pdf")
+            if document is not None:
                 await bot.send_chat_action(chat_id=callback.message.chat.id, action="upload_document")
-                document = FSInputFile(pdf_path)
                 await bot.send_document(
                     chat_id=callback.message.chat.id,
                     document=document,

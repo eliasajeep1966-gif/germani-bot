@@ -1,0 +1,77 @@
+{
+  "title": "بناء مشروع",
+  "media_files": false,
+  "options": [
+    {
+      "key": "a",
+      "text": "المرأة"
+    },
+    {
+      "key": "b",
+      "text": "الرجل"
+    },
+    {
+      "key": "c",
+      "text": "المذيعة"
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "text": "Die Preise für Wohnungen und Immobilien sind im Vergleich zu früher drastisch gestiegen.",
+      "correct_answer": "b",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: الرجل"
+    },
+    {
+      "id": 2,
+      "text": "Der Ausbau der öffentlichen Verkehrsmittel bringt meiner Meinung nach keinen echten Nutzen.",
+      "correct_answer": "b",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: الرجل"
+    },
+    {
+      "id": 3,
+      "text": "Dieses Projekt ist erst seit Kurzem (oder: schon seit längerer Zeit) bekannt.",
+      "correct_answer": "c",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المذيعة"
+    },
+    {
+      "id": 4,
+      "text": "Grünflächen sind besonders wichtig für ein schönes Stadtbild.",
+      "correct_answer": "c",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المذيعة"
+    },
+    {
+      "id": 5,
+      "text": "Grünflächen bieten viele Vorteile für die Umwelt und schützen das Klima.",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المرأة"
+    },
+    {
+      "id": 6,
+      "text": "Mehr Grünflächen in der Stadt verbessern die Lebensqualität der Bewohner.",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المرأة"
+    },
+    {
+      "id": 7,
+      "text": "Pflanzen sind für die Umwelt und das ökologische Gleichgewicht unverzichtbar.",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المرأة"
+    },
+    {
+      "id": 8,
+      "text": "Es ist unsere Pflicht, die Umwelt zu schützen und für die Zukunft zu bewahren.",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المرأة"
+    },
+    {
+      "id": 9,
+      "text": "Es gibt genügend Grünflächen.",
+      "correct_answer": "b",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: الرجل"
+    }
+  ],
+  "end_of_text_summary": {
+    "keywords": "الكلمات المفتاحية:\n- جمل الرجل: Wohnungen und Immobilien - Verkehrsmittel - Grünflächen\n- جمل المذيعة: Projekt - Stadtbild\n- جمل المرأة: Vorteile für die Umwelt - Lebensqualität - Pflanzen - Pflicht"
+  }
+}

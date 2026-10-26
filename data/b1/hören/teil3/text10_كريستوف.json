@@ -1,0 +1,86 @@
+{
+  "summary": "Zwei junge Männer trafen sich überraschend am Bahnhof. Sie reisten aus beruflichen Gründen nach Brüssel, aßen gemeinsam Pizza, die sich um 40 Minuten verspätete, und zahlten 25 Euro für das Zugticket.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Er reiste aus beruflichen Gründen nach Brüssel.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 2,
+      "question": "Die beiden jungen Männer stiegen gemeinsam in den Zug.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 3,
+      "question": "Michal fährt nach Interlaken.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 4,
+      "question": "Er hat 25 Euro für das Tickt bezahlt.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 5,
+      "question": "Die beiden jungen Männer hatten ein Treffen geplant.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 6,
+      "question": "Sie warteten eine Viertelstunde auf die Pizza.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 7,
+      "question": "Er hat 25 Euro für die Pizza bezahlt.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 8,
+      "question": "Er musste in Euro bezahlen.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 9,
+      "question": "Michael war vom Festival begeistert.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    }
+  ]
+}

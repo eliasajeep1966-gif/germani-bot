@@ -1,0 +1,42 @@
+{
+  "title": "Umzugsplaner",
+  "text": "قواعد عند الانتقال من شقة لاخرى",
+  "questions": [
+    {
+      "question": "Was gilt für das Packen der Kisten?",
+      "options": {
+        "a": "Packen Sie so, dass nichts beschädigt werden kann (Kisten nie ganz voll).",
+        "b": "Füllen Sie die Kisten bis zum Rand, um Platz zu sparen.",
+        "c": "Schwere Gegenstände müssen immer ganz oben in die Kisten gepackt werden."
+      },
+      "answer": "a"
+    },
+    {
+      "question": "Was sollten Sie tun, bevor Sie umziehen?",
+      "options": {
+        "a": "Sie sollten alle alten Möbel sofort auf dem Sperrmüll entsorgen.",
+        "b": "Sie sollten entscheiden, was Sie mit unnötigen Sachen machen.",
+        "c": "Sie sollten die neue Wohnung komplett renovieren lassen."
+      },
+      "answer": "b"
+    },
+    {
+      "question": "Was müssen die Umzugshelfer vor dem Start wissen?",
+      "options": {
+        "a": "Die Helfer müssen wissen, wie viel die neuen Möbel gekostet haben.",
+        "b": "Die Helfer müssen den genauen Zeitplan für die Pausen kennen.",
+        "c": "Die Helfer müssen wissen, wohin die Möbel kommen."
+      },
+      "answer": "c"
+    },
+    {
+      "question": "Damit der Umzugswagen vor dem Haus halten kann, was muss man tun?",
+      "options": {
+        "a": "Man muss den Umzug bei der Polizei anmelden (Haltezone einrichten / lassen).",
+        "b": "Man muss die Nachbarn bitten, ihre Autos woanders zu parken.",
+        "c": "Man muss eine Parkgebühr direkt beim Straßenverkehrsamt bezahlen."
+      },
+      "answer": "a"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "title": "Flughafen Parkregeln",
+  "text": "قواعد المطارات وصف السيارات",
+  "questions": [
+    {
+      "question": "Was gilt für Menschen mit Behinderungen beim Parken?",
+      "options": {
+        "a": "Sie parken völlig kostenlos auf allen Parkflächen.",
+        "b": "Sie haben 50% Rabatt auf die Parkgebühren.",
+        "c": "Sie erhalten einen Rabatt von 20% auf die Tageskarte."
+      },
+      "answer": "b"
+    },
+    {
+      "question": "Was müssen die Fahrer machen?",
+      "options": {
+        "a": "Sie schreiben die genauen Auskünfte über ihr Fahrzeug.",
+        "b": "Sie müssen den Fahrzeugschein am Schalter abgeben.",
+        "c": "Sie müssen die Ankunftszeit auf einem Zettel im Auto hinterlassen."
+      },
+      "answer": "a"
+    },
+    {
+      "question": "Was ist der besondere Service für Kunden?",
+      "options": {
+        "a": "Ein Mitarbeiter wäscht Ihr Auto während Ihres Fluges.",
+        "b": "Ein Mitarbeiter am Flughafen nimmt Ihnen das Gepäck ab.",
+        "c": "Ein Fahrer bringt Sie direkt kostenlos zum Flugsteig."
+      },
+      "answer": "b"
+    },
+    {
+      "question": "Wie wird man von den Parkgebühren / Parkkosten befreit?",
+      "options": {
+        "a": "Wenn man in den Geschäften am Flughafen einkauft.",
+        "b": "Wenn man das Flugticket im Original am Parkautomaten vorlegt.",
+        "c": "Wenn man weniger als zwei Stunden auf dem Gelände parkt."
+      },
+      "answer": "a"
+    },
+    {
+      "question": "Darf man an jedem freien Platz auf dem Flughafen gelände parken?",
+      "options": {
+        "a": "Ja, man darf überall parken, sobald ein Platz frei ist.",
+        "b": "Nein, das Parken ist nur auf ausgewiesenen Parkflächen erlaubt.",
+        "c": "Ja, aber nur für eine maximale Dauer von 15 Minuten."
+      },
+      "answer": "b"
+    }
+  ]
+}

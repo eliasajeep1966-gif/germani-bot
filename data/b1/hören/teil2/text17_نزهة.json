@@ -1,0 +1,55 @@
+{
+  "summary": "تجربة جديدة بعنوان التحضير لنزهة غير مجمعة وخلافية ايضا والاسئلة غير منشورة وغير واضحة موجود فقط الاجوبة الخلافية.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Was passiert?",
+      "options": {
+        "a": "Bäckerei",
+        "b": "Eine süße Torte",
+        "c": "Eine leckere Brezel"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 2,
+      "question": "Worüber wurde im Gespräch gesprochen?",
+      "options": {
+        "a": "Süßigkeiten",
+        "b": "Kaltgetränke",
+        "c": "Obst und Gemüse"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 3,
+      "question": "Wie war das Wetter während des Ausflugs?",
+      "options": {
+        "a": "Es war sonnig und warm",
+        "b": "Das Wetter war nicht gut",
+        "c": "Es war leicht bewölkt"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 4,
+      "question": "Was wünscht sich der Reiseleiter für die Teilnehmer?",
+      "options": {
+        "a": "Gute Gesundheit",
+        "b": "Ein gutes Ausflugswetter",
+        "c": "Eine schnelle Anreise"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 5,
+      "question": "Was mussten die Teilnehmer beachten?",
+      "options": {
+        "a": "Sie mussten bestimmte Anweisungen befolgen",
+        "b": "Sie mussten pünktlich am Treffpunkt sein",
+        "c": "Sie mussten ihre Personalausweise vorzeigen"
+      },
+      "correct_answer": "a"
+    }
+  ]
+}

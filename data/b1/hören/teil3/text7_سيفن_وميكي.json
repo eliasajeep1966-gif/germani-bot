@@ -1,0 +1,95 @@
+{
+  "summary": "Seven reist beruflich nach Schottland und sucht nach Urlaubsangeboten sowie einer Unterkunft. Mike ist begeistert, arbeitet bei ihrer Schwester und verbringt die Zeit dort, da Mikes Schwager Michael seit Langem in Schottland arbeitet. Es gab nicht viele Angestellte und das Wetter war schön, aber das Wasser war kalt.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Seven geht zur Arbeit/beruflich in Schottland.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 2,
+      "question": "Mike war begeistert von dem.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 3,
+      "question": "Mikeil, der Ehemann der Schwester, arbeitet seit langem in Schottland.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 4,
+      "question": "Seven sucht nach Angeboten für seinen Urlaub.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 5,
+      "question": "Sefen sucht nach einem Ort zum Wohnen.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 6,
+      "question": "Mike arbeitet bei ihrer Schwester.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 7,
+      "question": "Es gab viele Angestellte.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 8,
+      "question": "Mike wird ihren Tag bei jemandem verbringen.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 9,
+      "question": "Das Wetter war schön aber wasser für بنت اختها War kalt",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 10,
+      "question": "Mike suchte einen Aufenthaltsort.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    }
+  ]
+}

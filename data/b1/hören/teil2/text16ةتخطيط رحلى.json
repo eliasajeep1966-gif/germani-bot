@@ -1,0 +1,55 @@
+{
+  "summary": "تجربة جديدة عن تخطيط لرحلة موجود تجربتين صغار تم دمجهم سوا لكن لا يوجد اي قصة والحل بالكامل خلافي وحتى مو أكيد انو التجربتين لنفس النص يرجى توخي الحذر واذا تم تاكيد القصة الاخبار, الاسئلة ايضا تخمين المنشور كان الحل فقط.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Wie war die Stimmung bezüglich der Reiseorganisation?",
+      "options": {
+        "a": "Sie war unzufrieden mit den Details des Programms",
+        "b": "Sie war zufrieden mit der Organisation der Reise",
+        "c": "Sie war zögerlich, an der Reise teilzunehmen"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 2,
+      "question": "Wo werden sie zu Mittag essen?",
+      "options": {
+        "a": "Sie werden unterwegs im Bus zu Mittag essen",
+        "b": "Sie werden in einem Restaurant zu Mittag essen",
+        "c": "Sie werden im Freien im Park zu Mittag essen"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 3,
+      "question": "Wie werden sie an der Reise teilnehmen?",
+      "options": {
+        "a": "In Gruppen / Grüßengruppen",
+        "b": "Mit individuellen öffentlichen Verkehrsmitteln",
+        "c": "Mit kleinen privaten Autos"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 4,
+      "question": "Was wird während der Reise passieren?",
+      "options": {
+        "a": "Eine Kunstausstellung und ein historischer Vortrag",
+        "b": "Ein Konzert und eine Veranstaltung",
+        "c": "Ein Sportwettbewerb und eine Shoppingtour"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 5,
+      "question": "Wann wird der Termin veröffentlicht?",
+      "options": {
+        "a": "Er wird Anfang nächster Woche veröffentlicht",
+        "b": "Er wird veröffentlicht, sobald er verfügbar ist",
+        "c": "Er wird direkt nach dem Ticketbuchungsabschluss veröffentlicht"
+      },
+      "correct_answer": "b"
+    }
+  ]
+}

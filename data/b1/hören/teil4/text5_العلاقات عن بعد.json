@@ -1,0 +1,71 @@
+{
+  "title": "العلاقات عن بعد",
+  "media_files": false,
+  "options": [
+    {
+      "key": "a",
+      "text": "السيدة"
+    },
+    {
+      "key": "b",
+      "text": "الرجل"
+    },
+    {
+      "key": "c",
+      "text": "المذيعة"
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "text": "Eine Person muss unabhängig sein. /selbstständig/",
+      "correct_answer": "b",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: الرجل"
+    },
+    {
+      "id": 2,
+      "text": "Wir müssen die Entscheidungen der anderen Parteien akzeptieren.",
+      "correct_answer": "b",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: الرجل"
+    },
+    {
+      "id": 3,
+      "text": "Sie sagte: Flüge sind günstig/Billigflüge",
+      "correct_answer": "c",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المذيعة"
+    },
+    {
+      "id": 4,
+      "text": "Beide Parteien müssen gemeinsame Ziele und Pläne haben.",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: السيدة"
+    },
+    {
+      "id": 5,
+      "text": "Wenn sie sich treffen, kommt es zu Streitigkeiten zwischen den beiden Parteien.",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: السيدة"
+    },
+    {
+      "id": 6,
+      "text": "Technologie hat die Kommunikation einfacher gemacht // um Beziehungen zu verbessern.",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: السيدة"
+    },
+    {
+      "id": 7,
+      "text": "Warten Sie lange, bis Sie die zweite Person sehen.",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: السيدة"
+    },
+    {
+      "id": 8,
+      "text": "Das Job ist wichtiger als Beziehungen.",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: السيدة"
+    }
+  ],
+  "end_of_text_summary": {
+    "keywords": "الكلمات المفتاحية:\n- جمل الرجل: selbstständig - akzeptieren\n- جملة المذيعة: günstig/Billigflüge"
+  }
+}

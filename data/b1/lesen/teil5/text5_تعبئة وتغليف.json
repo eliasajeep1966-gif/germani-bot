@@ -1,0 +1,42 @@
+{
+  "title": "Verpackungsmaterial",
+  "text": "قواعد التعبئة والتغليف",
+  "questions": [
+    {
+      "question": "Was die Verpackungsmaterialien betrifft?",
+      "options": {
+        "a": "Es wird von der Firma bereitgestellt und geliefert.",
+        "b": "Sie müssen vom Kunden selbst im Fachgeschäft gekauft werden.",
+        "c": "Die Verpackungsmaterialien werden nur gegen eine Kaution ausgeliehen."
+      },
+      "answer": "a"
+    },
+    {
+      "question": "Was die Firma/das Unternehmen betrifft?",
+      "options": {
+        "a": "Sie bietet nur standardisierte Umzugspakete ohne Ausnahme an.",
+        "b": "Sie achten auf persönliche Wünsche.",
+        "c": "Sie übernimmt keine Haftung für beschädigte Gegenstände."
+      },
+      "answer": "b"
+    },
+    {
+      "question": "Was passiert, wenn das Unternehmen Ihre Sachen verpacken soll?",
+      "options": {
+        "a": "Der Kunde muss alle Kartons vorab selbst beschriften.",
+        "b": "Das Unternehmen/Die Firma muss einen Mitarbeiter entsenden.",
+        "c": "Man muss eine zusätzliche Versicherung im Büro abschließen."
+      },
+      "answer": "b"
+    },
+    {
+      "question": "Wie muss man die Transportkosten bezahlen?",
+      "options": {
+        "a": "Zahlen Sie einen Teil des Betrags vor dem Transport.",
+        "b": "Der Gesamtbetrag muss vollständig erst nach der Lieferung bezahlt werden.",
+        "c": "Die Transportkosten werden automatisch vom Bankkonto abgebucht."
+      },
+      "answer": "a"
+    }
+  ]
+}

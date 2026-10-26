@@ -1,0 +1,83 @@
+{
+  "title": "الاعمال الاجتماعية",
+  "media_files": false,
+  "options": [
+    {
+      "key": "a",
+      "text": "السيدة"
+    },
+    {
+      "key": "b",
+      "text": "الرجل"
+    },
+    {
+      "key": "c",
+      "text": "المذيعة"
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "text": "Verlieren die Zeit /Zeitverschwendung/Es verursacht Zeit verlieren.",
+      "correct_answer": "b",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: الرجل"
+    },
+    {
+      "id": 2,
+      "text": "Mit gutem Gewinn verdient man gutes Geld verdienen.",
+      "correct_answer": "b",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: الرجل"
+    },
+    {
+      "id": 3,
+      "text": "Um soziales Jahr zu leisten, ist es nicht notwendig, Mitglied einer bestimmten Organisation zu sein.",
+      "correct_answer": "b",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: الرجل"
+    },
+    {
+      "id": 4,
+      "text": "Überall.",
+      "correct_answer": "c",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المذيعة"
+    },
+    {
+      "id": 5,
+      "text": "Eine positive Ergänzung zur Bewerbung und zum Lebenslauf.",
+      "correct_answer": "c",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المذيعة"
+    },
+    {
+      "id": 6,
+      "text": "Sozialen Werken hilft Ihnen, e in professioneller Experte zu warden.",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: السيدة"
+    },
+    {
+      "id": 7,
+      "text": "Erfahrung muss ge sammelt warden.",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: السيدة"
+    },
+    {
+      "id": 8,
+      "text": "Sozialen Werken hilft bei der Berufswahl.",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: السيدة"
+    },
+    {
+      "id": 9,
+      "text": "Es macht das Projekt oder die Arbeit meistens besser.",
+      "correct_answer": "c",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المذيعة"
+    },
+    {
+      "id": 10,
+      "text": "Man macht dieses soziale Jahr nicht, wenn man etwas anderes machen möchte.",
+      "correct_answer": "c",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المذيعة"
+    }
+  ],
+  "end_of_text_summary": {
+    "keywords": "الكلمات المفتاحية:\n- جمل الرجل: Verlieren - Geld verdienen - nicht notwendig\n- جمل المذيعة: Überall - positive ... Lebenslauf"
+  }
+}

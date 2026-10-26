@@ -1,0 +1,83 @@
+{
+  "title": "تخفيض الوزن",
+  "media_files": false,
+  "options": [
+    {
+      "key": "a",
+      "text": "المربية"
+    },
+    {
+      "key": "b",
+      "text": "المذيعة"
+    },
+    {
+      "key": "c",
+      "text": "صاحبة المشروع"
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "text": "Spielerisch kann man Nützliches zum Thema Gesundheit lernen.",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المربية"
+    },
+    {
+      "id": 2,
+      "text": "Eltern spielen eine wichtige Rolle beider Beeinflussung des Verhaltens von Kindern.",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المربية"
+    },
+    {
+      "id": 3,
+      "text": "Schlechte Essgewohnheiten spielen eine große Rolle beider Beeinträchtigung der Gesundheit.",
+      "correct_answer": "a",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المربية"
+    },
+    {
+      "id": 4,
+      "text": "Es gibt einen Test, der die Gewichtszunahme/elektronischen Gewichtstest bestimmt.",
+      "correct_answer": "b",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المذيعة"
+    },
+    {
+      "id": 5,
+      "text": "Schüler haben Probleme in der Schule.",
+      "correct_answer": "b",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: المذيعة"
+    },
+    {
+      "id": 6,
+      "text": "Kinder bewegen sich nicht mehr wie früher, deshalb haben sie Probleme mit der Gewichtszunahme.",
+      "correct_answer": "c",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: صاحبة المشروع"
+    },
+    {
+      "id": 7,
+      "text": "Der elektronischen Test ist kostenlos und erkennt übergewichtige Kinder.",
+      "correct_answer": "c",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: صاحبة المشروع"
+    },
+    {
+      "id": 8,
+      "text": "Kindergärtnerinnen spielen eine wichtige Rolle beider Beeinflussung des Verhaltens von Kindern.",
+      "correct_answer": "c",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: صاحبة المشروع"
+    },
+    {
+      "id": 9,
+      "text": "Das Problem des Übergewichts war früher nicht so verbreitet.",
+      "correct_answer": "c",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: صاحبة المشروع"
+    },
+    {
+      "id": 10,
+      "text": "Kinder tun spielerisch etwas Gutes für ihre Gesundheit.",
+      "correct_answer": "c",
+      "feedback_on_incorrect": "الإجابة الصحيحة هي: صاحبة المشروع"
+    }
+  ],
+  "end_of_text_summary": {
+    "keywords": "الكلمات المفتاحية:\n- جمل المربية: Nützliches - Verhaltens von Kindern - Schlechte Essgewohnheiten\n- جمل المذيعة: Test - Probleme in der Schule\n- ملاحظة: إذا ذكر Test مجاني تكون الإجابة لصاحبة المشروع لأن المذيعة لا تعرف أنه مجاني."
+  }
+}

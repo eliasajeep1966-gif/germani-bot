@@ -1,0 +1,68 @@
+{
+  "summary": "George und Anna sprechen über Schüleraustausch. Georges Söhne waren in England bei einer Gastfamilie. Sein ältester Sohn Leonie findet schnell Freunde und ist nicht sehr emotional.",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Georges Söhne waren in England.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 2,
+      "question": "Anna glaubt, dass Georges ältester Sohn Leonie schnell Freunde findet.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 3,
+      "question": "George erhielt die Adresse der Gastfamilie sechs Monate vor dem Austausch.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 4,
+      "question": "Annas Tochter ist älter als Georges Kinder.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 5,
+      "question": "Georges Kinder lebten bei verschiedenen Familien.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 6,
+      "question": "George wird Anna die wesentlichen Informationen beim nächsten Treffen mitbringen.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    },
+    {
+      "id": 7,
+      "question": "Georges ältester Sohn vermisste seine Eltern sehr.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "b"
+    }
+  ]
+}

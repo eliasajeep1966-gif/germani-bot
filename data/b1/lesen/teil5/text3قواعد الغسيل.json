@@ -1,0 +1,42 @@
+{
+  "title": "Wäscheregeln",
+  "text": "قواعد الغسيل",
+  "questions": [
+    {
+      "question": "Was wird von den Personen verlangt, die dort leben?",
+      "options": {
+        "a": "Sie dürfen die Wäsche erst am nächsten Tag aus der Waschmaschine holen.",
+        "b": "Sie dürfen die Wäsche aus der Waschmaschine nehmen, wenn der Waschgang beendet ist.",
+        "c": "Sie müssen die Wäsche anderer Personen vor dem Waschgang herausholen."
+      },
+      "answer": "b"
+    },
+    {
+      "question": "Was müssen die Hausbewohner tun?",
+      "options": {
+        "a": "Sie müssen den Waschraum putzen/reinigen.",
+        "b": "Sie müssen eine neue Waschmaschine für das Haus kaufen.",
+        "c": "Sie müssen den Waschraum jeden Abend um 22:00 Uhr abschließen."
+      },
+      "answer": "a"
+    },
+    {
+      "question": "Wo kann man die Kleidungsstücke aufhängen/trocknen?",
+      "options": {
+        "a": "Direkt im Flur vor den Wohnungen.",
+        "b": "Auf dem Balkon des Nachbarn.",
+        "c": "Unter dem Dach."
+      },
+      "answer": "c"
+    },
+    {
+      "question": "Wie bezahlt man für das Waschen?",
+      "options": {
+        "a": "Man bezahlt eine Münze.",
+        "b": "Man bezahlt ausschließlich mit einer Kreditkarte.",
+        "c": "Man überweist den Betrag Ende des Monats mit der Miete."
+      },
+      "answer": "a"
+    }
+  ]
+}

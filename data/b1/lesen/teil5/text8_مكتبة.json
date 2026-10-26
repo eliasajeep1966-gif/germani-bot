@@ -1,0 +1,42 @@
+{
+  "title": "Bibliotheksregeln",
+  "text": "قواعد المكتبة",
+  "questions": [
+    {
+      "question": "Was gibt es am Nachmittag und Abend?",
+      "options": {
+        "a": "Es gibt kalte und heiße Getränke.",
+        "b": "Es werden nur warme Mahlzeiten serviert.",
+        "c": "Es gibt ausschließlich kostenloses Wasser."
+      },
+      "answer": "a"
+    },
+    {
+      "question": "Wie sind die Termine geregelt?",
+      "options": {
+        "a": "Die Termine finden jeden Tag zur gleichen Uhrzeit statt.",
+        "b": "Die Termine sind an verschiedenen / unterschiedlichen Tagen in der Woche.",
+        "c": "Die Termine sind nur am Wochenende nach Vereinbarung möglich."
+      },
+      "answer": "b"
+    },
+    {
+      "question": "Was machen die Mitarbeiter in den Büros?",
+      "options": {
+        "a": "Sie verkaufen neue Bücher und Zeitschriften.",
+        "b": "Sie kontrollieren ausschließlich die Ausweise am Eingang.",
+        "c": "Sie helfen den Besuchern und beantworten ihre Fragen."
+      },
+      "answer": "c"
+    },
+    {
+      "question": "Was machen die Teilnehmer nach dem Kurs?",
+      "options": {
+        "a": "Sie lesen Bücher oder setzen das Studium fort.",
+        "b": "Sie verlassen sofort das Gebäude ohne Rücksprache.",
+        "c": "Sie organisieren Sportaktivitäten im Garten."
+      },
+      "answer": "a"
+    }
+  ]
+}

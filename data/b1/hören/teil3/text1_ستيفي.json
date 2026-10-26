@@ -1,5 +1,5 @@
 {
-  "summary": "ملخص نص Stevie und ihr Begleiter للتايل الثالث سماعي.",
+  "summary": "Stevie und ihr Begleiter trafen sich wieder. Sie sprachen über ihre Schulzeit, ihren ehemaligen Deutschlehrer, der seit 5 Jahren in Argentinien arbeitet, und die Pläne der Schwester des jungen Mannes, im Ausland zu studieren.",
   "questions": [
     {
       "id": 1,
@@ -39,7 +39,7 @@
     },
     {
       "id": 5,
-      "question": "Am Ende der Woche war sie bei ihrer Familie.",
+      "question": "Am Ende der Woche war sie bei den Eltern des Bräutigams.",
       "options": {
         "a": "Richtig",
         "b": "Falsch"

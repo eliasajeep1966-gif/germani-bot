@@ -1,3 +1,4 @@
+import asyncio
 import logging
 import os
 import aiosqlite
@@ -98,22 +99,141 @@ ALLOWED_MIGRATION_COLUMNS = {
     }
 }
 
-# --- F-02: per-connection SQLite tuning (WAL + busy timeout + sync mode) ---
-@asynccontextmanager
-async def _db_connect():
-    """Open a configured connection: WAL mode, 5s busy timeout, NORMAL sync.
+# --- P0 (report_1 §3.1): bounded persistent connection pool + serialized writes ---
+# Why not per-call connect: aiosqlite.connect() spawns one OS thread per
+# connection; under load (thousands of users x ~5 conns/click x 15-way gather
+# fan-out) this explodes into thousands of threads plus mass SQLITE_BUSY on
+# SQLite's single-writer lock.
+# Why not one shared connection: multi-statement transactions
+# (BEGIN IMMEDIATE ... COMMIT with awaits between) would interleave across
+# coroutines on a single connection and break the atomic key/referral claims.
+# So: a small pool of persistent connections (bounded threads, configured
+# once, reused) + one asyncio write lock serializing all BEGIN IMMEDIATE
+# sections. Readers proceed concurrently (WAL); writers queue in asyncio
+# (bounded latency) instead of racing into SQLITE_BUSY.
+_POOL_SIZE = 10
+_DB_POOL: asyncio.Queue | None = None
+_POOL_INIT_LOCK = asyncio.Lock()
+_WRITE_LOCK = asyncio.Lock()
 
-    WAL persists in the DB file after first set, but busy_timeout and
-    synchronous are per-connection, so every connection must set all three.
-    """
+
+async def _new_connection(first: bool = False) -> aiosqlite.Connection:
+    """Open one configured connection. WAL is persistent: set once (first)."""
     conn = await aiosqlite.connect(DB_NAME)
     try:
-        await conn.execute("PRAGMA journal_mode=WAL;")
+        if first:
+            await conn.execute("PRAGMA journal_mode=WAL;")
         await conn.execute("PRAGMA busy_timeout=5000;")
         await conn.execute("PRAGMA synchronous=NORMAL;")
+        return conn
+    except Exception:
+        try:
+            await conn.close()
+        except Exception:
+            pass
+        raise
+
+
+async def _create_pool() -> None:
+    """Create the module-global pool of persistent connections."""
+    global _DB_POOL
+    opened: list = []
+    try:
+        for i in range(_POOL_SIZE):
+            opened.append(await _new_connection(first=(i == 0)))
+    except Exception:
+        for c in opened:
+            try:
+                await c.close()
+            except Exception:
+                pass
+        raise
+    pool: asyncio.Queue = asyncio.Queue()
+    for c in opened:
+        pool.put_nowait(c)
+    _DB_POOL = pool
+
+
+async def _ensure_pool() -> None:
+    """Lazily create the pool (double-checked) so DB helpers also work when
+    init_db() was not called first (tests, offline scripts)."""
+    global _DB_POOL
+    if _DB_POOL is not None:
+        return
+    async with _POOL_INIT_LOCK:
+        if _DB_POOL is None:
+            await _create_pool()
+
+
+@asynccontextmanager
+async def _db_connect():
+    """Check out one pooled connection (API unchanged — all call sites keep working).
+
+    Pool hygiene: rolls back any leaked open transaction before check-in, and
+    replaces connections that raised a DB error so one broken connection
+    cannot poison the pool.
+    """
+    await _ensure_pool()
+    conn = await _DB_POOL.get()
+    broken = False
+    try:
         yield conn
+    except aiosqlite.Error:
+        broken = True
+        raise
     finally:
-        await conn.close()
+        if not broken:
+            # Never hand a dirty connection to the next borrower (no-op when
+            # nothing is pending; sqlite3 rollback outside a txn is harmless).
+            try:
+                await conn.rollback()
+            except Exception:
+                broken = True
+        if broken:
+            try:
+                await conn.close()
+            except Exception:
+                pass
+            try:
+                _DB_POOL.put_nowait(await _new_connection())
+            except Exception:
+                logging.exception("DB pool: failed to replace a broken connection")
+        else:
+            _DB_POOL.put_nowait(conn)
+
+
+@asynccontextmanager
+async def _db_write():
+    """Serialized write checkout: exactly one BEGIN IMMEDIATE holder at a time.
+
+    Writers queue in asyncio (bounded latency) instead of racing into
+    SQLITE_BUSY. Keep the explicit BEGIN IMMEDIATE inside callers as
+    defense-in-depth (also guards against external processes touching the DB).
+    """
+    async with _WRITE_LOCK:
+        async with _db_connect() as conn:
+            yield conn
+
+
+async def close_db() -> None:
+    """Gracefully drain and close the pool (called on shutdown — see main.py)."""
+    global _DB_POOL
+    pool, _DB_POOL = _DB_POOL, None
+    if pool is None:
+        return
+    while True:
+        try:
+            conn = pool.get_nowait()
+        except asyncio.QueueEmpty:
+            break
+        try:
+            try:
+                await conn.rollback()
+            except Exception:
+                pass
+            await conn.close()
+        except Exception:
+            pass
 
 
 # --- Date utilities (HIGH-005): ISO 8601 standard ---
@@ -147,12 +267,10 @@ def _parse_iso_or_legacy(date_str: str) -> datetime | None:
 
 # --- دوال قاعدة البيانات (P2: migrated to aiosqlite — all blocking sqlite3 I/O now non-blocking) ---
 async def init_db():
+    # P0: pool (and its one-time WAL setup) first; every checkout below reuses
+    # a pre-configured persistent connection — no per-request PRAGMA writes.
+    await _ensure_pool()
     async with _db_connect() as conn:
-        # F-02: WAL mode + busy timeout + NORMAL sync so concurrent readers/writers
-        # don't fail with "database is locked" under load.
-        await conn.execute("PRAGMA journal_mode=WAL;")
-        await conn.execute("PRAGMA busy_timeout=5000;")
-        await conn.execute("PRAGMA synchronous=NORMAL;")
         # جدول users (تم إضافة حقول الأجوبة الإجمالية والصحيحة)
         await conn.execute('''
             CREATE TABLE IF NOT EXISTS users (
@@ -317,11 +435,16 @@ async def get_user_details(user_identifier) -> dict:
             
         user_id, full_name, username, joined_at = profile_row
 
-        # 2. معلومات الاشتراك الحالي
-        subscription_info = await get_user_subscription(user_id)
+    # P0 pool safety: get_user_subscription / get_referral_info check out
+    # their own pooled connections — call them WITHOUT holding this checkout
+    # (hold-and-wait on a bounded pool would deadlock under fan-out).
+    # 2. معلومات الاشتراك الحالي
+    subscription_info = await get_user_subscription(user_id)
 
-        # 3. معلومات الإحالات والرصيد المجاني
-        referral_info = await get_referral_info(user_id)
+    # 3. معلومات الإحالات والرصيد المجاني
+    referral_info = await get_referral_info(user_id)
+
+    async with _db_connect() as conn:
 
         # 4. البحث عن الشخص الداعي (الذي قام بدعوته)
         async with conn.execute('''
@@ -513,12 +636,20 @@ async def get_skill_progress(user_id: int, skill_name: str) -> dict:
 async def get_next_uncompleted_target(user_id: int) -> dict:
     """
     تحديد أولوية وأول جزء أو مهارة لم تكتمل بعد لإنشاء زر المتابعة التفاعلي
-    P2: async — awaits is_text_completed (DB).
+    P1: single SELECT of all completed text_ids -> Python set, then in-memory
+    set-difference scan (was: one pooled-checkout round-trip PER FILE, up to
+    ~159 sequential DB hits for a single user_progress render).
     F5/F6/F7: file lists come from the in-memory catalog cache (non-blocking).
     No direct os.listdir / os.walk here — must use await get_catalog().
     """
     from utils import get_catalog
     catalog = await get_catalog()
+    async with _db_connect() as conn:
+        async with conn.execute(
+            'SELECT text_id FROM completed_texts WHERE user_id = ?', (user_id,)
+        ) as cursor:
+            rows = await cursor.fetchall()
+    completed = {r[0] for r in rows} if rows else set()
     skills = ["lesen", "hören"]
     for skill in skills:
         parts_count = 4 if skill == "hören" else 5
@@ -526,8 +657,7 @@ async def get_next_uncompleted_target(user_id: int) -> dict:
             teil = f"teil{i}"
             files = catalog.get(skill, {}).get(teil, [])
             for file_name in files:
-                text_id = f"{skill}_{teil}_{file_name}"
-                if not await is_text_completed(user_id, text_id):
+                if f"{skill}_{teil}_{file_name}" not in completed:
                     return {
                         "skill": skill,
                         "teil": teil,
@@ -539,7 +669,8 @@ async def activate_subscription(user_id: int, key: str) -> tuple[bool, str]:
     # P2: async + aiosqlite. Atomic key activation to prevent TOCTOU (CVE-2026-004).
     # Uses single UPDATE ... RETURNING to atomically claim key and get sub_type/max_uses.
     # F17: aiosqlite.Error is NOT swallowed — it raises naturally for the global error handler.
-    async with _db_connect() as conn:
+    # P0: serialized write checkout (single BEGIN IMMEDIATE holder at a time).
+    async with _db_write() as conn:
         # F-09: any failure after BEGIN IMMEDIATE must roll back before
         # propagating, otherwise the RESERVED lock is held until close.
         # F-06/F-09: strict try...except...finally guarantees rollback on failure.
@@ -615,7 +746,8 @@ async def activate_subscription(user_id: int, key: str) -> tuple[bool, str]:
 
 async def generate_new_key(sub_type: str = "b1", created_by: int = None, max_uses: int = 1) -> str:
     key = f"KEY-{sub_type.upper()}-" + secrets.token_urlsafe(16)
-    async with _db_connect() as conn:
+    # P0: serialized write checkout (single BEGIN IMMEDIATE holder at a time).
+    async with _db_write() as conn:
         # F-06/F-09: strict try...except...finally guarantees rollback on failure.
         committed = False
         try:
@@ -645,7 +777,8 @@ async def set_user_referrer(referred_id: int, referrer_id: int):
     if referred_id == referrer_id:
         return
 
-    async with _db_connect() as conn:
+    # P0: serialized write checkout (single BEGIN IMMEDIATE holder at a time).
+    async with _db_write() as conn:
         # F-06/F-09: strict try...except...finally guarantees rollback on failure.
         committed = False
         try:
@@ -673,27 +806,26 @@ async def set_user_referrer(referred_id: int, referrer_id: int):
 async def _process_referral_reward_conn(conn: aiosqlite.Connection, user_id: int) -> tuple[int, int]:
     """دالة مساعدة تنفيذية تخدم عملية الإحالات داخل معاملة مسبقة القفل — async/aio.
     CVE-2026-005 fix: Atomic claim using UPDATE ... RETURNING to prevent double-count race.
+    P0 (report_1 §2.4): validation now runs BEFORE the flip (invalid referrers
+    no longer burn the referral row), and the reward is a recurring threshold
+    (credit on every EVEN total: 2nd, 4th, 6th, ...) instead of one-time == 2.
     conn is an open aiosqlite connection already in BEGIN IMMEDIATE.
     """
-    # Atomic claim: flip is_counted 0->1 and return referrer_id in single statement
-    async with conn.execute('''
-        UPDATE referrals 
-        SET is_counted = 1 
-        WHERE referred_id = ? AND is_counted = 0
-        RETURNING referrer_id
-    ''', (user_id,)) as cursor:
-        row = await cursor.fetchone()
-    
-    if not row:
+    # Peek first: no row, or already claimed -> idempotent no-op (no write).
+    async with conn.execute(
+        'SELECT referrer_id, is_counted FROM referrals WHERE referred_id = ?', (user_id,)
+    ) as cursor:
+        existing = await cursor.fetchone()
+    if not existing or existing[1] != 0:
         return None, 0
-    
-    referrer_id = row[0]
 
-    # Prevent self-referral farming
+    referrer_id = existing[0]
+
+    # Prevent self-referral farming (before any write — never burns the row).
     if not referrer_id or referrer_id == user_id:
         return None, 0
 
-    # Verify referrer actually exists before granting any reward
+    # Verify referrer actually exists before granting any reward (before flip).
     async with conn.execute('SELECT 1 FROM user_profiles WHERE user_id = ?', (referrer_id,)) as cursor:
         referrer_exists = await cursor.fetchone() is not None
     if not referrer_exists:
@@ -702,13 +834,26 @@ async def _process_referral_reward_conn(conn: aiosqlite.Connection, user_id: int
     if not referrer_exists:
         return None, 0
 
+    # Atomic claim: flip is_counted 0->1 in a single statement. Still the
+    # concurrency guard: racers serialize on _db_write + BEGIN IMMEDIATE, so
+    # exactly one flip matches is_counted = 0; a lost race returns no row.
+    async with conn.execute('''
+        UPDATE referrals
+        SET is_counted = 1
+        WHERE referred_id = ? AND is_counted = 0
+        RETURNING referrer_id
+    ''', (user_id,)) as cursor:
+        claimed = await cursor.fetchone()
+    if not claimed:
+        return None, 0
+
     # Count total successful referrals for this referrer (including this one)
     async with conn.execute('SELECT COUNT(*) FROM referrals WHERE referrer_id = ? AND is_counted = 1', (referrer_id,)) as cursor:
         row = await cursor.fetchone()
         counted_refs = row[0] if row else 0
 
-    # شرط محدد بدقة: إضافة الرصيد المجاني لمرة واحدة فقط عند الوصول لـ 2 أو أكثر بدلاً من استخدام المودولو المفتوح
-    if counted_refs == 2:
+    # Recurring economy: a credit for EVERY 2 successful invites (2nd, 4th, ...).
+    if counted_refs > 0 and counted_refs % 2 == 0:
         await conn.execute('''
             INSERT INTO free_credits (user_id, credits_count)
             VALUES (?, 1)
@@ -718,7 +863,8 @@ async def _process_referral_reward_conn(conn: aiosqlite.Connection, user_id: int
 
 async def process_referral_reward(user_id: int) -> tuple[int, int]:
     """احتساب نقاط الإحالة والمكافأة للداعي عند تفعيل المدعو لااشتراكه — async/aio."""
-    async with _db_connect() as conn:
+    # P0: serialized write checkout (single BEGIN IMMEDIATE holder at a time).
+    async with _db_write() as conn:
         # F-06/F-09: strict try...except...finally guarantees rollback on failure.
         committed = False
         try:
@@ -753,7 +899,8 @@ async def get_referral_info(user_id: int) -> dict:
 
 async def claim_free_subscription(user_id: int) -> tuple[bool, str]:
     """تطبيق تفعيل اشتراك مجاني مقابل رصيد الإحالة — async/aio (keeps BEGIN IMMEDIATE). HIGH-005: ISO 8601 datetime."""
-    async with _db_connect() as conn:
+    # P0: serialized write checkout (single BEGIN IMMEDIATE holder at a time).
+    async with _db_write() as conn:
         # F-06/F-09: strict try...except...finally guarantees rollback on failure.
         committed = False
         try:
@@ -817,7 +964,8 @@ async def get_custom_text(service_key: str) -> str:
 
 async def update_custom_text(service_key: str, new_content: str) -> bool:
     """تحديث أو إدراج نص جديد لخدمة معينة من قبل الأدمن والتأكيد بـ commit — async/aio."""
-    async with _db_connect() as conn:
+    # P0: serialized write checkout (single BEGIN IMMEDIATE holder at a time).
+    async with _db_write() as conn:
         # F-06/F-09: strict try...except...finally guarantees rollback on failure.
         committed = False
         try:
@@ -1045,7 +1193,8 @@ async def revoke_key(key_code: str) -> bool:
     if not key_code or not str(key_code).strip():
         return False
     key_code = str(key_code).strip()
-    async with _db_connect() as conn:
+    # P0: serialized write checkout (single BEGIN IMMEDIATE holder at a time).
+    async with _db_write() as conn:
         committed = False
         try:
             await conn.execute('BEGIN IMMEDIATE')
@@ -1076,7 +1225,8 @@ async def revoke_key_by_rowid(rowid: int) -> str | None:
         rowid = int(rowid)
     except (TypeError, ValueError):
         return None
-    async with _db_connect() as conn:
+    # P0: serialized write checkout (single BEGIN IMMEDIATE holder at a time).
+    async with _db_write() as conn:
         committed = False
         try:
             await conn.execute('BEGIN IMMEDIATE')
