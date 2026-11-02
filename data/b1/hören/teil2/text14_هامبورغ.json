@@ -23,33 +23,33 @@
     },
     {
       "id": 3,
-      "question": "Was besuchen sie danach?",
+      "question": "Was werden sie auf dem Marktplatz sehen?",
       "options": {
-        "a": "Sie besuchen das Rathaus.",
-        "b": "Sie besuchen einen Vergnügungspark.",
-        "c": "Sie besuchen die Wachsfiguren."
+        "a": "Ein Geschäft, das Geschichten verkauft.",
+        "b": "Eine alte Kirche.",
+        "c": "Ein historisches Museum."
       },
-      "correct_answer": "c"
+      "correct_answer": "a"
     },
     {
       "id": 4,
-      "question": "Was machen sie am Ende?",
+      "question": "Wo schlafen sie?",
       "options": {
-        "a": "Am Ende machen sie ein Zelt am Meer und schlafen.",
-        "b": "Am Ende buchen sie ein Zimmer im Hotel.",
-        "c": "Am Ende fahren sie direkt nach Hause zurück."
+        "a": "In den Häusern von Stolz.",
+        "b": "In Zelten neben dem Fluss.",
+        "c": "Auf der Straße."
       },
       "correct_answer": "a"
     },
     {
       "id": 5,
-      "question": "Wo schlafen sie?",
+      "question": "Was empfiehlt der Reiseführer?",
       "options": {
-        "a": "Sie schlafen in einer Jugendherberge.",
-        "b": "Sie schlafen in einem Zelt neben dem Meer.",
-        "c": "Sie schlafen in einer Pension in der Stadt."
+        "a": "Das traditionelle Essen zu probieren.",
+        "b": "Eine bestimmte historische Sehenswürdigkeit zu besuchen.",
+        "c": "Die öffentlichen Verkehrsmittel zu benutzen."
       },
-      "correct_answer": "b"
+      "correct_answer": "a"
     }
   ]
 }

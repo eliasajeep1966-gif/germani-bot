@@ -50,6 +50,36 @@
         "c": "Sie mussten ihre Personalausweise vorzeigen"
       },
       "correct_answer": "a"
+    },
+    {
+      "id": 6,
+      "question": "Wann muss man sich für den Ausflug anmelden?",
+      "options": {
+        "a": "Zwei Wochen vor dem Ausflug",
+        "b": "Am Tag des Ausflugs",
+        "c": "Einen Monat vor dem Ausflug"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 7,
+      "question": "Was müssen die Teilnehmer vor dem Ausflug mit ihren Fahrrädern tun?",
+      "options": {
+        "a": "Sie waschen",
+        "b": "Sie verkaufen",
+        "c": "Sie prüfen, ob sie Defekte haben"
+      },
+      "correct_answer": "c"
+    },
+    {
+      "id": 8,
+      "question": "Was besuchen sie bei dem Ausflug?",
+      "options": {
+        "a": "Ein Museum",
+        "b": "Einen Zoo",
+        "c": "Ein Schwimmbad"
+      },
+      "correct_answer": "a"
     }
   ]
 }

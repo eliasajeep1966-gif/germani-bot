@@ -1,0 +1,33 @@
+{
+  "title": "Ein europäisches Projekt zur Reduzierung der Lebensmittelverschwendung",
+  "summary": "مشروع أوروبي مقترح جديد لمكافحة هدر الطعام او مخلفاته تجربة خلافية جديدة وغير مجمعة بشكل كامل",
+  "questions": [
+    {
+      "question": "Die allgemeine Idee des Textes dreht sich um:",
+      "options": {
+        "a": "Einen neuen Vorschlag zur Bekämpfung der Lebensmittelverschwendung und zur Reduzierung des Konsums.",
+        "b": "Eine Lösung für das Problem der hohen Temperaturen.",
+        "c": "Ein Programm zur Erhöhung der Anzahl der Bäume."
+      },
+      "answer": "a"
+    },
+    {
+      "question": "Was gehört zu den Aufgaben dieser Person?",
+      "options": {
+        "a": "Sie gehört zu den Gründern des Vereins und gibt Ideen zur Reduzierung von Verschwendung und Abfällen",
+        "b": "Wohltätige Projekte in der Praxis umzusetzen.",
+        "c": "Die Arbeitslosigkeit zu bekämpfen."
+      },
+      "answer": "a"
+    },
+    {
+      "question": "Was wird über die Lebensmittel gesagt?",
+      "options": {
+        "a": "Es wird etwas über Lebensmittel gesagt.",
+        "b": "Die Verschwendung von Wasser zu reduzieren.",
+        "c": "Arbeitsplätze zu schaffen."
+      },
+      "answer": "a"
+    }
+  ]
+}

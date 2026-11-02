@@ -50,6 +50,16 @@
         "c": "für heiße und kalte Getränke"
       },
       "correct_answer": "a"
+    },
+    {
+      "id": 6,
+      "question": "Wo finden die Buchkurse statt?",
+      "options": {
+        "a": "In der Bibliothek von Prolingia.",
+        "b": "Im Park.",
+        "c": "In den Räumen, die für die Kurse vorgesehen sind."
+      },
+      "correct_answer": "a"
     }
   ]
 }

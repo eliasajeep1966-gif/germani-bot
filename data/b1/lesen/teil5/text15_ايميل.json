@@ -28,6 +28,15 @@
         "c": "Man sollte auf das Versenden von Anhängen verzichten, weil sie gefährlich sein können."
       },
       "answer": "c"
+    },
+    {
+      "question": "Worauf muss man achten, wenn man eine E-Mail schreibt?",
+      "options": {
+        "a": "Man muss auf die richtige Schreibweise und die passende Form achten, je nachdem, ob die E-Mail formell oder informell ist.",
+        "b": "Man muss sicherstellen, dass die E-Mail an die richtige Person geschickt wird.",
+        "c": "Man muss das Versanddatum angeben."
+      },
+      "answer": "a"
     }
   ]
 }

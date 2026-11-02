@@ -269,9 +269,53 @@
       "type": "multiple_choice",
       "text": "Wofür interessiert er sich?",
       "options": [
-        "Neue Hits"
+        "Neue Hits",
+        "mehr zahlen",
+        "Kopenhagen"
       ],
       "answer": "Neue Hits"
+    },
+    {
+      "id": 27,
+      "type": "true_false",
+      "text": "Sie hören infos zum Inhalt einer Sendung",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Richtig"
+    },
+    {
+      "id": 28,
+      "type": "multiple_choice",
+      "text": "Die Sendung \"Anpfiff\":",
+      "options": [
+        "hat eine neue Sendezeit",
+        "Sie wird geschlossen",
+        "Sie wirbt für gute Angebote"
+      ],
+      "answer": "hat eine neue Sendezeit"
+    },
+    {
+      "id": 29,
+      "type": "true_false",
+      "text": "Das Geschäft informiert über eine Reparatur",
+      "options": [
+        "Richtig",
+        "Falsch"
+      ],
+      "answer": "Richtig"
+    },
+    {
+      "id": 30,
+      "type": "multiple_choice",
+      "text": "Das Brille geschäft:",
+      "options": [
+        "macht einen Sonderpreis",
+        "Er wird seinen Standort wechseln",
+        "Er hat schlechte Angebote"
+      ],
+      "answer": "macht einen Sonderpreis"
     }
   ]
 }

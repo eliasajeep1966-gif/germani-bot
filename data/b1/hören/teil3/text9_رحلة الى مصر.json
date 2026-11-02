@@ -63,6 +63,33 @@
         "b": "Falsch"
       },
       "correct_answer": "b"
+    },
+    {
+      "id": 8,
+      "question": "Die Reise dauert zehn Tage.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 9,
+      "question": "Sie und ihre Familie fahren immer ans Meer.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
+    },
+    {
+      "id": 10,
+      "question": "Sie haben ein Haus am Meer und fahren jedes Jahr dorthin.",
+      "options": {
+        "a": "Richtig",
+        "b": "Falsch"
+      },
+      "correct_answer": "a"
     }
   ]
 }
