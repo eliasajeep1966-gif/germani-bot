@@ -126,7 +126,7 @@
         "Eine Nachricht hinterlassen",
         "Persönlich vorbeikommen"
       ],
-      "answer": "Eine Nachricht hinterlassen"
+      "answer": "Wiederanrufen"
     },
     {
       "id": 13,
@@ -257,7 +257,7 @@
     {
       "id": 25,
       "type": "true_false",
-      "text": "Verkehrsnachrichten",
+      "text": "Sie horen eine informationen zur Verkehrssituation in und um die Stadt Graz",
       "options": [
         "Richtig",
         "Falsch"
@@ -267,13 +267,13 @@
     {
       "id": 26,
       "type": "multiple_choice",
-      "text": "Die Straße ist gesperrt",
+      "text": "Auf der Autobahn gibt es Stau wegen",
       "options": [
         "wegen einer Baustelle",
         "wegen Unfall",
         "wegen schlechten Wetters"
       ],
-      "answer": "wegen Unfall"
+      "answer": "wegen einer Baustelle"
     },
     {
       "id": 27,

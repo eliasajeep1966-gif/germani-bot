@@ -17,11 +17,11 @@
       "type": "multiple_choice",
       "text": "Für eine neue Brille bezahlen?",
       "options": [
-        "müssen Sie statt 350 Euro 250 Euro zusätzlich/mehr bezahlen",
+        "müssen Sie statt 250 Euro 350 Euro zusätzlich/mehr bezahlen",
         "müssen Sie statt 350 Euro nur 150 Euro bezahlen",
         "müssen Sie statt 300 Euro 200 Euro mehr bezahlen"
       ],
-      "answer": "müssen Sie statt 350 Euro 250 Euro zusätzlich/mehr bezahlen"
+      "answer": "müssen Sie statt 250 Euro 350 Euro zusätzlich/mehr bezahlen"
     },
     {
       "id": 3,
@@ -283,7 +283,7 @@
         "Richtig",
         "Falsch"
       ],
-      "answer": "Richtig"
+      "answer": "Falsch"
     },
     {
       "id": 28,

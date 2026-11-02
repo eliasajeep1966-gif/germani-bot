@@ -17,11 +17,11 @@
       "type": "multiple_choice",
       "text": "Was ist notwendig?",
       "options": [
-        "Sicherheitsschulung / Sicherheitstraining",
+        "Sie werden Fahrräder ausprobieren",
         "Fahrradversicherung",
         "Ticket buchen"
       ],
-      "answer": "Sicherheitsschulung / Sicherheitstraining"
+      "answer": "Sie werden Fahrräder ausprobieren"
     },
     {
       "id": 3,
@@ -59,11 +59,11 @@
       "type": "multiple_choice",
       "text": "Schwierigkeiten, die Straße A-12 zu sehen, wegen?",
       "options": [
-        "Nebel",
+        "gab es einen Unfall",
         "Dichtem Verkehr",
         "Straßenbauarbeiten"
       ],
-      "answer": "Nebel"
+      "answer": "gab es einen Unfall"
     },
     {
       "id": 7,
@@ -101,21 +101,21 @@
       "type": "multiple_choice",
       "text": "Was gibt es in der Rubrik Natur zu kaufen?",
       "options": [
-        "Produkte / Obst und Gemüse von anderen Ländern",
+        "Günstig ware für 5 Euro",
         "Neue Ideen anbieten",
         "Ausrüstung abholen lassen"
       ],
-      "answer": "Produkte / Obst und Gemüse von anderen Ländern"
+      "answer": "Günstig ware für 5 Euro"
     },
     {
       "id": 11,
       "type": "true_false",
-      "text": "Das Mädchen rief ihre Freund an und fragte ihn um Rat geben",
+      "text": "Robin bietet Stefan, ihr einen Rat zu geben",
       "options": [
         "Richtig",
         "Falsch"
       ],
-      "answer": "Falsch"
+      "answer": "Richtig"
     },
     {
       "id": 12,

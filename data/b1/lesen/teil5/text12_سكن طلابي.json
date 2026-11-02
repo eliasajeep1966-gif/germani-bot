@@ -37,6 +37,15 @@
         "c": "Der Verlust eines Schlüssels muss nicht gemeldet werden, solange ein Ersatzschlüssel existiert."
       },
       "answer": "a"
+    },
+    {
+      "question": "Was gilt für die Duschzeiten?",
+      "options": {
+        "a": "Es gibt bestimmte Zeiten, zu denen man duschen darf.",
+        "b": "Man darf jederzeit duschen.",
+        "c": "Man muss sich eine bestimmte Zeit vor dem Duschen anmelden."
+      },
+      "answer": "a"
     }
   ]
 }

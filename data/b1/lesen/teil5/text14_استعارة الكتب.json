@@ -32,7 +32,7 @@
     {
       "question": "Welche Regeln gibt es in der Bibliothek?",
       "options": {
-        "a": "In der Bibliothek, laute Gespräche, Telefonieren und Speisen sind verboten.",
+        "a": "In der Bibliothek, laute Gespräche, kopfhörer, Telefonieren und Speisen sind verboten",
         "b": "Das Fotografieren ist erlaubt, aber Essen ist verboten.",
         "c": "Man darf nur mit Kopfhörern Musik hören und Getränke mitbringen."
       },
@@ -46,6 +46,24 @@
         "c": "Laptops dürfen nur an den Arbeitsplätzen mit Steckdose benutzt werden."
       },
       "answer": "b"
+    },
+    {
+      "question": "Was das Ausleihen von Büchern betrifft:",
+      "options": {
+        "a": "Man kann die Bücher für einen bestimmten Zeitraum (30 Tage) ausleihen.",
+        "b": "Man kann die Bücher für einen bestimmten Zeitraum (20 Tage) ausleihen.",
+        "c": "Man kann die Bücher für einen bestimmten Zeitraum (zwei Monate) ausleihen."
+      },
+      "answer": "a"
+    },
+    {
+      "question": "Was passiert, wenn etwas beschädigt wird?",
+      "options": {
+        "a": "Man muss den Schaden melden oder dokumentieren.",
+        "b": "In diesem Fall muss man nichts unternehmen.",
+        "c": "Die Person, die den Schaden verursacht hat, bekommt Hausverbot."
+      },
+      "answer": "a"
     }
   ]
 }

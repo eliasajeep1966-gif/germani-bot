@@ -50,6 +50,16 @@
         "c": "Zum Alexanderplatz gehen"
       },
       "correct_answer": "b"
+    },
+    {
+      "id": 6,
+      "question": "Die Öffnungszeiten sind :",
+      "options": {
+        "a": "von der jahrezzeit abhängig",
+        "b": "Dauerhaft",
+        "c": "Über sie wurde nicht gesprochen"
+      },
+      "correct_answer": "a"
     }
   ]
 }

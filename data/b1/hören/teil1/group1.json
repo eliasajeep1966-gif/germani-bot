@@ -157,7 +157,7 @@
         "Richtig",
         "Falsch"
       ],
-      "answer": "Richtig"
+      "answer": "Falsch"
     },
     {
       "id": 16,
@@ -252,7 +252,7 @@
         "Neue Fenster bestellen",
         "Den Umzug verschieben"
       ],
-      "answer": "Neue Fenster bestellen"
+      "answer": "Die Schlüssel zu holen"
     },
     {
       "id": 25,
