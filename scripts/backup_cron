@@ -1,0 +1,3 @@
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+30 3 * * * root /opt/germani-bot/scripts_backup_db.sh >> /var/log/germani-bot-backup.log 2>&1
